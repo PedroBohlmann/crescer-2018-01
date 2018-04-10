@@ -13,6 +13,18 @@ public class ConversorDeTempo {
         return construtorDeString.toString();
     }
 
+    String formatSec(int seconds){
+        StringBuilder construtorDeString=new StringBuilder();
+        int hours = secToHour(seconds);
+        int minutes = secToMinutes(seconds);
+
+        construtorDeString.append(hours);
+        construtorDeString.append(" hora(s) e ");
+        construtorDeString.append(minutes);
+        construtorDeString.append(" minuto(s)");
+        return construtorDeString.toString();
+    }
+
     int minToHour(int minutes){
         Calculadora calc=new Calculadora();
         return (int)calc.dividir(minutes,60);
@@ -22,5 +34,16 @@ public class ConversorDeTempo {
         Calculadora calc=new Calculadora();
         int hours=minToHour(minutes);
         return calc.subtrair(minutes,(int)calc.multiplicar(hours,60));
+    }
+    int secToHour(int seconds){
+        Calculadora calc=new Calculadora();
+        int minutes=(int)calc.dividir(seconds,60);
+        int hours=minToHour(minutes);
+        return hours;
+    }
+    int secToMinutes(int seconds){
+        Calculadora calc=new Calculadora();
+        int minutes=(int)calc.dividir(seconds,60);
+        return removeHours(minutes);
     }
 }
