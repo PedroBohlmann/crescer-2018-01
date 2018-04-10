@@ -12,20 +12,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConversorDeTempo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConversorDeTempo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConversorDeTempoTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConversorDeTempoTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="47" selection-start-line="46" selection-end-line="47" />
+            <state relative-caret-position="131">
+              <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,8 +59,8 @@
         <option value="$PROJECT_DIR$/src/aula/ConversorTest.java" />
         <option value="$PROJECT_DIR$/src/aula/Calculadora.java" />
         <option value="$PROJECT_DIR$/src/aula/Conversor.java" />
-        <option value="$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java" />
         <option value="$PROJECT_DIR$/src/aula/ConversorDeTempo.java" />
+        <option value="$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java" />
       </list>
     </option>
   </component>
@@ -123,7 +123,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ConversorDeTempoTest.testarConversorFormatSec1800To0HorasE30Minutos">
+  <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -289,11 +289,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatMin3600To12HorasE30Minutos" />
         <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatSec1800To0HorasE30Minutos" />
         <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatSec3600To1HoraE0Minutos" />
         <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatSec9600To2HorasE40Minutos" />
         <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatMin160To2HorasE30Minutos" />
-        <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatMin3600To12HorasE30Minutos" />
       </list>
     </recent_temporary>
   </component>
@@ -311,21 +311,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConversorTest_testarConversorFormatMin3600To12HorasE30Minutos - 2018.04.10 at 17h 00m 42s.xml">
-      <configuration name="ConversorTest.testarConversorFormatMin3600To12HorasE30Minutos" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ConversorTest_testarConversorFormatMin3600To12HorasE30Minutos - 2018.04.10 at 17h 00m 53s.xml">
-      <configuration name="ConversorTest.testarConversorFormatMin3600To12HorasE30Minutos" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ConversorTest_testarConversorFormatMin160To2HorasE30Minutos - 2018.04.10 at 17h 00m 59s.xml">
-      <configuration name="ConversorTest.testarConversorFormatMin160To2HorasE30Minutos" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ConversorTest_testarConversorFormatMin30To0HorasE30Minutos - 2018.04.10 at 17h 01m 08s.xml">
-      <configuration name="ConversorTest.testarConversorFormatMin30To0HorasE30Minutos" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ConversorTest_testarConversorFormatMin30To0HorasE30Minutos - 2018.04.10 at 17h 02m 56s.xml">
-      <configuration name="ConversorTest.testarConversorFormatMin30To0HorasE30Minutos" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ConversorTest_testarConversorFormatMin160To2HorasE30Minutos - 2018.04.10 at 17h 03m 01s.xml">
       <configuration name="ConversorTest.testarConversorFormatMin160To2HorasE30Minutos" configurationId="JUnit" />
     </history-entry>
@@ -340,6 +325,21 @@
     </history-entry>
     <history-entry file="ConversorDeTempoTest_testarConversorFormatSec9600To2HorasE40Minutos - 2018.04.10 at 17h 19m 08s.xml">
       <configuration name="ConversorDeTempoTest.testarConversorFormatSec9600To2HorasE40Minutos" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConversorDeTempoTest_testarConversorFormatSec9600To2HorasE40Minutos - 2018.04.10 at 17h 19m 55s.xml">
+      <configuration name="ConversorDeTempoTest.testarConversorFormatSec9600To2HorasE40Minutos" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConversorDeTempoTest_testarConversorFormatSec3600To1HoraE0Minutos - 2018.04.10 at 17h 21m 19s.xml">
+      <configuration name="ConversorDeTempoTest.testarConversorFormatSec3600To1HoraE0Minutos" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConversorDeTempoTest_testarConversorFormatSec1800To0HorasE30Minutos - 2018.04.10 at 17h 21m 33s.xml">
+      <configuration name="ConversorDeTempoTest.testarConversorFormatSec1800To0HorasE30Minutos" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConversorDeTempoTest_testarConversorFormatSec1800To0HorasE30Minutos - 2018.04.10 at 17h 23m 22s.xml">
+      <configuration name="ConversorDeTempoTest.testarConversorFormatSec1800To0HorasE30Minutos" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConversorDeTempoTest_testarConversorFormatMin3600To12HorasE30Minutos - 2018.04.10 at 17h 30m 17s.xml">
+      <configuration name="ConversorDeTempoTest.testarConversorFormatMin3600To12HorasE30Minutos" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -438,20 +438,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="47" selection-start-line="46" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempo.java">
+    <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+        <state relative-caret-position="131">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

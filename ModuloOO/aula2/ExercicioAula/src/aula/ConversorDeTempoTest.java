@@ -32,7 +32,7 @@ public class ConversorDeTempoTest {
     }
 
     @Test
-    void testarConversorFormatMin3600To12HorasE30Minutos(){
+    void testarConversorFormatMin360To12HorasE30Minutos(){
         //Arrange
         ConversorDeTempo conv=new ConversorDeTempo();
         int minutes=360;
@@ -43,7 +43,7 @@ public class ConversorDeTempoTest {
         //Assert
         assertEquals(expectedText.toString(),formatedMin);
     }
-
+    //Conversor de segundos
     @Test
     void testarConversorFormatSec9600To2HorasE40Minutos(){
         //Arrange
