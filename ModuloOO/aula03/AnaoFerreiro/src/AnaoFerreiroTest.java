@@ -9,7 +9,7 @@ class AnaoFerreiroTest {
         Machado machado=anaoFerreiro.forjaMachado();
         int poderMachadoEsperado= 20;
 
-        int poderMachadoObtido = anaoFerreiro.melhoraMachado(machado).getPoderDoMachado();
+        int poderMachadoObtido = machado.getPoderDoMachado();
 
         assertEquals(poderMachadoEsperado,poderMachadoObtido);
     }
@@ -19,8 +19,8 @@ class AnaoFerreiroTest {
         AnaoFerreiro anaoFerreiro=new AnaoFerreiro(260,16);
         Machado machado= new Machado(16);
         int poderMachadoEsperado= 19;
-
-        int poderMachadoObtido = anaoFerreiro.melhoraMachado(machado).getPoderDoMachado();
+        anaoFerreiro.melhoraMachado(machado);
+        int poderMachadoObtido = machado.getPoderDoMachado();
 
         assertEquals(poderMachadoEsperado,poderMachadoObtido);
     }
@@ -30,8 +30,8 @@ class AnaoFerreiroTest {
         AnaoFerreiro anaoFerreiro=new AnaoFerreiro(260,17);
         Machado machado=anaoFerreiro.forjaMachado();
         int poderMachadoEsperado= 20;
-
-        int poderMachadoObtido = anaoFerreiro.melhoraMachado(machado).getPoderDoMachado();
+        anaoFerreiro.melhoraMachado(machado);
+        int poderMachadoObtido = machado.getPoderDoMachado();
 
         assertEquals(poderMachadoEsperado,poderMachadoObtido);
     }

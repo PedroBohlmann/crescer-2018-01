@@ -27,9 +27,9 @@ public class AnaoFerreiro {
             return new Machado(poderMachado);
         }
     }
-    public Machado melhoraMachado(Machado machado){
+    public void melhoraMachado(Machado machado){
         if(machado==null){
-            return null;
+            return;
         }
         if(idade>150&&nivel>=5){
             if(nivel>=6&&nivel<=10){
@@ -39,6 +39,5 @@ public class AnaoFerreiro {
                 machado.melhoraMachado(3);
             }
         }
-        return machado;
     }
 }
