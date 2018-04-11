@@ -12,20 +12,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConversorDeTempo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempo.java">
+      <file leaf-file-name="Calculadora.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aula/Calculadora.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConversorDeTempoTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java">
+      <file leaf-file-name="CalculadoraInteligente.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aula/CalculadoraInteligente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalculadoraInteligenteTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/aula/CalculadoraInteligenteTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculadora.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aula/Calculadora.java">
+      <file leaf-file-name="Auxiliar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aula/Auxiliar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="120">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -48,6 +57,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -57,18 +67,32 @@
         <option value="$PROJECT_DIR$/src/Calculadora.java" />
         <option value="$PROJECT_DIR$/src/aula/CalculadoraTest.java" />
         <option value="$PROJECT_DIR$/src/aula/ConversorTest.java" />
-        <option value="$PROJECT_DIR$/src/aula/Calculadora.java" />
         <option value="$PROJECT_DIR$/src/aula/Conversor.java" />
         <option value="$PROJECT_DIR$/src/aula/ConversorDeTempo.java" />
         <option value="$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java" />
+        <option value="$PROJECT_DIR$/src/aula/CalculadoraTestA.java" />
+        <option value="$PROJECT_DIR$/src/aula/Calculadora.java" />
+        <option value="$PROJECT_DIR$/src/aula/CalculadoraInteligente.java" />
+        <option value="$PROJECT_DIR$/src/aula/Auxiliar.java" />
+        <option value="$PROJECT_DIR$/src/aula/CalculadoraInteligenteTest.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -93,6 +117,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="aula" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ExercicioAula" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -106,10 +134,23 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.31609195" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="aula" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -123,11 +164,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CalculadoraInteligenteTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="ConversorDeTempoTest.testarConversorFormatMin160To2HorasE30Minutos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculadoraInteligenteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExercicioAula" />
       <extension name="coverage">
         <pattern>
@@ -138,8 +179,31 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="aula" />
-      <option name="MAIN_CLASS_NAME" value="aula.ConversorDeTempoTest" />
-      <option name="METHOD_NAME" value="testarConversorFormatMin160To2HorasE30Minutos" />
+      <option name="MAIN_CLASS_NAME" value="aula.CalculadoraInteligenteTest" />
+      <option name="METHOD_NAME" value="testApresentaMultiplicacaoDe6Por111" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="CalculadoraInteligenteTest.testApresentaDivisaoDe72Por12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExercicioAula" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aula.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="aula" />
+      <option name="MAIN_CLASS_NAME" value="aula.CalculadoraInteligenteTest" />
+      <option name="METHOD_NAME" value="testApresentaDivisaoDe72Por12" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -150,7 +214,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ConversorDeTempoTest.testarConversorFormatMin3600To12HorasE30Minutos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculadoraInteligenteTest.testApresentaMultiplicacaoDe12Por12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExercicioAula" />
       <extension name="coverage">
         <pattern>
@@ -161,8 +225,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="aula" />
-      <option name="MAIN_CLASS_NAME" value="aula.ConversorDeTempoTest" />
-      <option name="METHOD_NAME" value="testarConversorFormatMin3600To12HorasE30Minutos" />
+      <option name="MAIN_CLASS_NAME" value="aula.CalculadoraInteligenteTest" />
+      <option name="METHOD_NAME" value="testApresentaMultiplicacaoDe12Por12" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -173,7 +237,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ConversorDeTempoTest.testarConversorFormatSec1800To0HorasE30Minutos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculadoraInteligenteTest.testApresentaSomaDe256Com128" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExercicioAula" />
       <extension name="coverage">
         <pattern>
@@ -184,8 +248,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="aula" />
-      <option name="MAIN_CLASS_NAME" value="aula.ConversorDeTempoTest" />
-      <option name="METHOD_NAME" value="testarConversorFormatSec1800To0HorasE30Minutos" />
+      <option name="MAIN_CLASS_NAME" value="aula.CalculadoraInteligenteTest" />
+      <option name="METHOD_NAME" value="testApresentaSomaDe256Com128" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -196,7 +260,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ConversorDeTempoTest.testarConversorFormatSec3600To1HoraE0Minutos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculadoraInteligenteTest.testApresentaSubtracaoDe666Com333" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExercicioAula" />
       <extension name="coverage">
         <pattern>
@@ -207,8 +271,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="aula" />
-      <option name="MAIN_CLASS_NAME" value="aula.ConversorDeTempoTest" />
-      <option name="METHOD_NAME" value="testarConversorFormatSec3600To1HoraE0Minutos" />
+      <option name="MAIN_CLASS_NAME" value="aula.CalculadoraInteligenteTest" />
+      <option name="METHOD_NAME" value="testApresentaSubtracaoDe666Com333" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -219,7 +283,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ConversorDeTempoTest.testarConversorFormatSec9600To2HorasE40Minutos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConversorDeTempoTest.testarConversorFormatMin360To12HorasE30Minutos" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="ExercicioAula" />
       <extension name="coverage">
         <pattern>
@@ -231,11 +295,11 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="aula" />
       <option name="MAIN_CLASS_NAME" value="aula.ConversorDeTempoTest" />
-      <option name="METHOD_NAME" value="testarConversorFormatSec9600To2HorasE40Minutos" />
+      <option name="METHOD_NAME" value="testarConversorFormatMin360To12HorasE30Minutos" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
@@ -281,19 +345,20 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatMin3600To12HorasE30Minutos" />
-      <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatMin160To2HorasE30Minutos" />
-      <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatSec9600To2HorasE40Minutos" />
-      <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatSec3600To1HoraE0Minutos" />
-      <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatSec1800To0HorasE30Minutos" />
+      <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatMin360To12HorasE30Minutos" />
+      <item itemvalue="JUnit.CalculadoraInteligenteTest" />
+      <item itemvalue="JUnit.CalculadoraInteligenteTest.testApresentaSomaDe256Com128" />
+      <item itemvalue="JUnit.CalculadoraInteligenteTest.testApresentaSubtracaoDe666Com333" />
+      <item itemvalue="JUnit.CalculadoraInteligenteTest.testApresentaDivisaoDe72Por12" />
+      <item itemvalue="JUnit.CalculadoraInteligenteTest.testApresentaMultiplicacaoDe12Por12" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatMin3600To12HorasE30Minutos" />
-        <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatSec1800To0HorasE30Minutos" />
-        <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatSec3600To1HoraE0Minutos" />
-        <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatSec9600To2HorasE40Minutos" />
-        <item itemvalue="JUnit.ConversorDeTempoTest.testarConversorFormatMin160To2HorasE30Minutos" />
+        <item itemvalue="JUnit.CalculadoraInteligenteTest" />
+        <item itemvalue="JUnit.CalculadoraInteligenteTest.testApresentaMultiplicacaoDe12Por12" />
+        <item itemvalue="JUnit.CalculadoraInteligenteTest.testApresentaDivisaoDe72Por12" />
+        <item itemvalue="JUnit.CalculadoraInteligenteTest.testApresentaSubtracaoDe666Com333" />
+        <item itemvalue="JUnit.CalculadoraInteligenteTest.testApresentaSomaDe256Com128" />
       </list>
     </recent_temporary>
   </component>
@@ -307,82 +372,175 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523382333799</updated>
+      <workItem from="1523396702585" duration="100000" />
+      <workItem from="1523401884564" duration="660000" />
+      <workItem from="1523406240992" duration="5095000" />
+      <workItem from="1523412668586" duration="45000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConversorTest_testarConversorFormatMin160To2HorasE30Minutos - 2018.04.10 at 17h 03m 01s.xml">
-      <configuration name="ConversorTest.testarConversorFormatMin160To2HorasE30Minutos" configurationId="JUnit" />
+    <history-entry file="CalculadoraInteligenteTest_testApresentaDivisaoDe6Por111 - 2018.04.10 at 22h 44m 18s.xml">
+      <configuration name="CalculadoraInteligenteTest.testApresentaDivisaoDe6Por111" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConversorTest_testarConversorFormatMin3600To12HorasE30Minutos - 2018.04.10 at 17h 03m 08s.xml">
-      <configuration name="ConversorTest.testarConversorFormatMin3600To12HorasE30Minutos" configurationId="JUnit" />
+    <history-entry file="CalculadoraInteligenteTest_testApresentaMultiplicacaoDe6Por111 - 2018.04.10 at 22h 45m 21s.xml">
+      <configuration name="CalculadoraInteligenteTest.testApresentaMultiplicacaoDe6Por111" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConversorDeTempoTest_testarConversorFormatMin160To2HorasE30Minutos - 2018.04.10 at 17h 05m 24s.xml">
-      <configuration name="ConversorDeTempoTest.testarConversorFormatMin160To2HorasE30Minutos" configurationId="JUnit" />
+    <history-entry file="CalculadoraInteligenteTest - 2018.04.10 at 22h 47m 39s.xml">
+      <configuration name="CalculadoraInteligenteTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConversorDeTempoTest_testarConversorFormatSec9600To2HorasE40Minutos - 2018.04.10 at 17h 18m 22s.xml">
-      <configuration name="ConversorDeTempoTest.testarConversorFormatSec9600To2HorasE40Minutos" configurationId="JUnit" />
+    <history-entry file="CalculadoraInteligenteTest_testApresentaSomaDe256Com128 - 2018.04.10 at 22h 49m 48s.xml">
+      <configuration name="CalculadoraInteligenteTest.testApresentaSomaDe256Com128" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConversorDeTempoTest_testarConversorFormatSec9600To2HorasE40Minutos - 2018.04.10 at 17h 19m 08s.xml">
-      <configuration name="ConversorDeTempoTest.testarConversorFormatSec9600To2HorasE40Minutos" configurationId="JUnit" />
+    <history-entry file="CalculadoraInteligenteTest_testApresentaSubtracaoDe666Com333 - 2018.04.10 at 22h 50m 53s.xml">
+      <configuration name="CalculadoraInteligenteTest.testApresentaSubtracaoDe666Com333" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConversorDeTempoTest_testarConversorFormatSec9600To2HorasE40Minutos - 2018.04.10 at 17h 19m 55s.xml">
-      <configuration name="ConversorDeTempoTest.testarConversorFormatSec9600To2HorasE40Minutos" configurationId="JUnit" />
+    <history-entry file="CalculadoraInteligenteTest_testApresentaDivisaoDe72Por12 - 2018.04.10 at 22h 52m 05s.xml">
+      <configuration name="CalculadoraInteligenteTest.testApresentaDivisaoDe72Por12" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConversorDeTempoTest_testarConversorFormatSec3600To1HoraE0Minutos - 2018.04.10 at 17h 21m 19s.xml">
-      <configuration name="ConversorDeTempoTest.testarConversorFormatSec3600To1HoraE0Minutos" configurationId="JUnit" />
+    <history-entry file="CalculadoraInteligenteTest_testApresentaMultiplicacaoDe12Por12 - 2018.04.10 at 22h 52m 44s.xml">
+      <configuration name="CalculadoraInteligenteTest.testApresentaMultiplicacaoDe12Por12" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConversorDeTempoTest_testarConversorFormatSec1800To0HorasE30Minutos - 2018.04.10 at 17h 21m 33s.xml">
-      <configuration name="ConversorDeTempoTest.testarConversorFormatSec1800To0HorasE30Minutos" configurationId="JUnit" />
+    <history-entry file="CalculadoraInteligenteTest - 2018.04.10 at 22h 52m 50s.xml">
+      <configuration name="CalculadoraInteligenteTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConversorDeTempoTest_testarConversorFormatSec1800To0HorasE30Minutos - 2018.04.10 at 17h 23m 22s.xml">
-      <configuration name="ConversorDeTempoTest.testarConversorFormatSec1800To0HorasE30Minutos" configurationId="JUnit" />
+    <history-entry file="CalculadoraInteligenteTest - 2018.04.10 at 22h 57m 55s.xml">
+      <configuration name="CalculadoraInteligenteTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConversorDeTempoTest_testarConversorFormatMin3600To12HorasE30Minutos - 2018.04.10 at 17h 30m 17s.xml">
-      <configuration name="ConversorDeTempoTest.testarConversorFormatMin3600To12HorasE30Minutos" configurationId="JUnit" />
+    <history-entry file="CalculadoraInteligenteTest - 2018.04.10 at 23h 11m 48s.xml">
+      <configuration name="CalculadoraInteligenteTest" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5900000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3290938" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32756132" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32756132" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.32930514" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32756132" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32900432" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20204978" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21374622" />
+      <window_info anchor="right" id="Database" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990461" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3982684" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/aula/Calculadora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/CalculadoraInteligente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/Auxiliar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/CalculadoraInteligenteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/Calculadora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/Calculadora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/Calculadora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/aula/Calculadora.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -400,20 +558,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.0.0/junit-jupiter-api-5.0.0.jar!/org/junit/jupiter/api/Assertions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.0.0/junit-platform-commons-1.0.0.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="173" selection-start-line="173" selection-end-line="173" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.0.0/junit-jupiter-api-5.0.0.jar!/org/junit/jupiter/api/Assertions.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.0.0/junit-platform-commons-1.0.0.jar!/org/junit/platform/commons/util/ReflectionUtils.class" />
     <entry file="file://$PROJECT_DIR$/ExercicioAula.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -421,10 +567,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/CalculadoraTestA.java" />
     <entry file="file://$PROJECT_DIR$/src/aula/CalculadoraTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="300">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -433,22 +590,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aula/Calculadora.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempo.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.1.0/junit-jupiter-api-5.1.0.jar!/org/junit/jupiter/api/Assertions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1930">
+          <caret line="227" column="69" selection-start-line="227" selection-start-column="69" selection-end-line="227" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/CalculadoraInteligente.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret lean-forward="true" />
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aula/ConversorDeTempoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/aula/Auxiliar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        <state relative-caret-position="120">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aula/CalculadoraInteligenteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -458,6 +629,30 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
@@ -471,10 +666,23 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ExercicioAula</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.31609195" />
               </list>
             </option>
           </splitter-proportions>
@@ -494,10 +702,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>org.junit.jupiter:junit-jupiter-api:5.1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31609195" />
               </list>
             </option>
           </splitter-proportions>
