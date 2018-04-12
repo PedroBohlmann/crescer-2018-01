@@ -8,9 +8,7 @@ public class AcademiaArcanaTest {
         MagoArcano magoArcano=new MagoArcano();
         AcademiaArcana academiaArcana=new AcademiaArcana();
         int poderMagicoEsperado=21;
-
         academiaArcana.treinaMago(magoArcano);
-
         academiaArcana.treinaMago(magoArcano);
         academiaArcana.treinaMago(magoArcano);
         int poderMagicoObtido= magoArcano.getPoderMagico();
@@ -25,6 +23,19 @@ public class AcademiaArcanaTest {
         int poderMagicoEsperado=4;
         academiaArcana.treinaMago(magoArcano);
 
+        int poderMagicoObtido= magoArcano.getPoderMagico();
+
+        assertEquals(poderMagicoEsperado,poderMagicoObtido);
+    }
+    @Test
+    void testaAcademiaArcanaQueTreinaUmMagoQueTreinaQuatroVezesProvandoBonusUnico(){
+        MagoArcano magoArcano=new MagoArcano();
+        AcademiaArcana academiaArcana=new AcademiaArcana();
+        int poderMagicoEsperado=42;
+        academiaArcana.treinaMago(magoArcano);
+        academiaArcana.treinaMago(magoArcano);
+        academiaArcana.treinaMago(magoArcano);
+        academiaArcana.treinaMago(magoArcano);
         int poderMagicoObtido= magoArcano.getPoderMagico();
 
         assertEquals(poderMagicoEsperado,poderMagicoObtido);
