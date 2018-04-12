@@ -30,7 +30,7 @@ public class Veiculo extends Produto {
     }
 
     private void calcularIPI() {
-        IPI = (potencia>=1)? 0.08:0.02;
+        IPI = (potencia>1)? 0.08 : 0.02;
     }
 
     @Override

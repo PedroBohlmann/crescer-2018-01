@@ -11,21 +11,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CalculadoraDesconto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/calculadora/CalculadoraDesconto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="CalculadoraDescontoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/CalculadoraDescontoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="451">
+              <caret line="82" column="44" lean-forward="true" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,11 +24,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CalculadoraDesconto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/calculadora/CalculadoraDesconto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Veiculo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/produtos/Veiculo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="436">
+              <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
               <folding>
                 <element signature="e#960#961#0" expanded="true" />
                 <element signature="e#1006#1007#0" expanded="true" />
@@ -49,7 +49,7 @@
       <file leaf-file-name="Produto.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/produtos/Produto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="300">
               <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
               <folding>
                 <element signature="e#519#520#0" expanded="true" />
@@ -80,17 +80,24 @@
         <option value="$PROJECT_DIR$/src/produtos/ArtigoTest.java" />
         <option value="$PROJECT_DIR$/src/produtos/VeiculoTest.java" />
         <option value="$PROJECT_DIR$/src/calculadora.fxml" />
-        <option value="$PROJECT_DIR$/src/produtos/Veiculo.java" />
         <option value="$PROJECT_DIR$/src/test/VeiculoTest.java" />
         <option value="$PROJECT_DIR$/src/test/CalculadoraDescontoTest.java" />
-        <option value="$PROJECT_DIR$/src/calculadora/CalculadoraDesconto.java" />
         <option value="$PROJECT_DIR$/src/produtos/Produto.java" />
+        <option value="$PROJECT_DIR$/src/calculadora/CalculadoraDesconto.java" />
+        <option value="$PROJECT_DIR$/src/produtos/Veiculo.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="22" />
     <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="height" value="700" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -98,7 +105,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -138,15 +144,19 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -171,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CalculadoraDescontoTest.testaDescontoEmVeiculo">
+  <component name="RunManager" selected="JUnit.CalculadoraDescontoTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -337,10 +347,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalculadoraDescontoTest.testaDescontoEmVeiculo" />
         <item itemvalue="JUnit.CalculadoraDescontoTest" />
-        <item itemvalue="JUnit.CalculadoraDescontoTest.testarCalcularDescontoVeiculoSemDescontoAplicado" />
         <item itemvalue="JUnit.CalculadoraDescontoTest.testarCalcularDescontoVeiculoComDescontoAplicado" />
+        <item itemvalue="JUnit.CalculadoraDescontoTest.testarCalcularDescontoVeiculoSemDescontoAplicado" />
+        <item itemvalue="JUnit.CalculadoraDescontoTest.testaDescontoEmVeiculo" />
         <item itemvalue="JUnit.CalculadoraDescontoTest.testarCalcularDescontoProdutoComZeroDePercentual" />
       </list>
     </recent_temporary>
@@ -355,16 +365,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523559267573</updated>
+      <workItem from="1523569416942" duration="298000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CalculadoraDescontoTest_testarCalcularDescontoProdutoComZeroDePercentual - 2018.04.12 at 17h 13m 22s.xml">
-      <configuration name="CalculadoraDescontoTest.testarCalcularDescontoProdutoComZeroDePercentual" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculadoraDescontoTest - 2018.04.12 at 17h 13m 31s.xml">
-      <configuration name="CalculadoraDescontoTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CalculadoraDescontoTest - 2018.04.12 at 17h 13m 46s.xml">
       <configuration name="CalculadoraDescontoTest" configurationId="JUnit" />
     </history-entry>
@@ -389,38 +394,52 @@
     <history-entry file="CalculadoraDescontoTest_testaDescontoEmVeiculo - 2018.04.12 at 17h 24m 02s.xml">
       <configuration name="CalculadoraDescontoTest.testaDescontoEmVeiculo" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CalculadoraDescontoTest - 2018.04.12 at 18h 43m 57s.xml">
+      <configuration name="CalculadoraDescontoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculadoraDescontoTest - 2018.04.12 at 18h 46m 23s.xml">
+      <configuration name="CalculadoraDescontoTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="298000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36565977" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302115" />
+      <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990461" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -431,21 +450,52 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/calculadora.fxml">
+    <entry file="file://$PROJECT_DIR$/src/calculadora/CalculadoraDesconto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="105">
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/CalculadoraDescontoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/produtos/Produto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding>
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/produtos/Veiculo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/ArtigoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -473,9 +523,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/calculadora/CalculadoraDesconto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/produtos/Produto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="300">
           <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
           <folding>
             <element signature="e#519#520#0" expanded="true" />
@@ -487,17 +544,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/calculadora/CalculadoraDesconto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/CalculadoraDescontoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="451">
+          <caret line="82" column="44" lean-forward="true" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -506,8 +556,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/produtos/Veiculo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="436">
+          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding>
             <element signature="e#960#961#0" expanded="true" />
             <element signature="e#1006#1007#0" expanded="true" />

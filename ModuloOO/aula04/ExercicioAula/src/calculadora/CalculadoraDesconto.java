@@ -7,7 +7,7 @@ public class CalculadoraDesconto {
         double valorTotal = produto.calcularValorTotal();
         double valorDesconto=0;
         if(porcentagemDesconto!=0){
-            valorDesconto=valorDesconto*(porcentagemDesconto/100);
+            valorDesconto=valorTotal*(porcentagemDesconto/100);
         }
         return (valorTotal-valorDesconto);
     }
