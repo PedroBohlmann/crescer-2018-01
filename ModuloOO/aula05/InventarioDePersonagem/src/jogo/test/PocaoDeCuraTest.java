@@ -1,5 +1,6 @@
-package jogo;
+package jogo.test;
 
+import jogo.InventarioDeItens;
 import jogo.pocoes.PocaoDeCura;
 import org.junit.jupiter.api.Test;
 

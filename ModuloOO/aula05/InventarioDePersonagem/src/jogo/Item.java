@@ -30,4 +30,8 @@ public class Item {
     public double getPeso() {
         return peso;
     }
+
+    public double getValor() {
+        return valor;
+    }
 }

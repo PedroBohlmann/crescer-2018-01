@@ -1,5 +1,6 @@
-package jogo;
+package jogo.test;
 
+import jogo.InventarioDeItens;
 import jogo.equipamentos.Espada;
 import org.junit.jupiter.api.Test;
 

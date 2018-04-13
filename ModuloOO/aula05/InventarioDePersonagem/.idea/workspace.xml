@@ -11,38 +11,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="InventarioDeItens.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jogo/InventarioDeItens.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="EstrategiaDeOrdenacao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#161#162#0" expanded="true" />
-                <element signature="e#182#183#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EstrategiaDeOrdenacaoPeso.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacaoPeso.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="135">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,15 +24,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jogo/Item.java">
+      <file leaf-file-name="EstrategiaDeOrdenacaoNome.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacaoNome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="105">
+              <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
               <folding>
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#796#797#0" expanded="true" />
+                <element signature="e#176#177#0" expanded="true" />
+                <element signature="e#258#259#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EstrategiaDeOrdenacaoTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/jogo/test/EstrategiaDeOrdenacaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="59" column="67" selection-start-line="59" selection-start-column="67" selection-end-line="59" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,13 +72,23 @@
         <option value="$PROJECT_DIR$/src/jogo/EspadaTest.java" />
         <option value="$PROJECT_DIR$/src/jogo/equipamentos/Espada.java" />
         <option value="$PROJECT_DIR$/src/jogo/InventarioDeItens.java" />
-        <option value="$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacao.java" />
-        <option value="$PROJECT_DIR$/src/jogo/Item.java" />
         <option value="$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacaoPeso.java" />
+        <option value="$PROJECT_DIR$/src/jogo/Item.java" />
+        <option value="$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacaoValor.java" />
+        <option value="$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacao.java" />
+        <option value="$PROJECT_DIR$/src/jogo/test/EstrategiaDeOrdenacaoNome.java" />
+        <option value="$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacaoNome.java" />
+        <option value="$PROJECT_DIR$/src/jogo/test/EstrategiaDeOrdenacaoTest.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="38" />
     <option name="y" value="-22" />
     <option name="width" value="1366" />
@@ -106,7 +101,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,17 +140,28 @@
               <item name="jogo" type="462c0819:PsiDirectoryNode" />
               <item name="pocoes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="InventarioDePersonagem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InventarioDePersonagem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jogo" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -178,7 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EspadaTest.espadaUsada12Vezes">
+  <component name="RunManager" selected="JUnit.EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoONome">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -186,14 +191,14 @@
       <module name="InventarioDePersonagem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jogo.*" />
+          <option name="PATTERN" value="jogo.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jogo" />
-      <option name="MAIN_CLASS_NAME" value="jogo.EspadaTest" />
+      <option name="PACKAGE_NAME" value="jogo.test" />
+      <option name="MAIN_CLASS_NAME" value="jogo.test.EspadaTest" />
       <option name="METHOD_NAME" value="espadaUsada12Vezes" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -205,19 +210,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="InventarioDeItensTest.filtrarEquipamentosRetornaSomenteArmadura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EstrategiaDeOrdenacaoTest.testaEstrategiaComQuatroItensConsiderandoOValor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventarioDePersonagem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jogo.*" />
+          <option name="PATTERN" value="jogo.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jogo" />
-      <option name="MAIN_CLASS_NAME" value="jogo.InventarioDeItensTest" />
-      <option name="METHOD_NAME" value="filtrarEquipamentosRetornaSomenteArmadura" />
+      <option name="PACKAGE_NAME" value="jogo.test" />
+      <option name="MAIN_CLASS_NAME" value="jogo.test.EstrategiaDeOrdenacaoTest" />
+      <option name="METHOD_NAME" value="testaEstrategiaComQuatroItensConsiderandoOValor" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -228,19 +233,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="InventarioDeItensTest.inventarioDeveTerEspadaDeppoisDeAdicionar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoONome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventarioDePersonagem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jogo.*" />
+          <option name="PATTERN" value="jogo.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jogo" />
-      <option name="MAIN_CLASS_NAME" value="jogo.InventarioDeItensTest" />
-      <option name="METHOD_NAME" value="inventarioDeveTerEspadaDeppoisDeAdicionar" />
+      <option name="PACKAGE_NAME" value="jogo.test" />
+      <option name="MAIN_CLASS_NAME" value="jogo.test.EstrategiaDeOrdenacaoTest" />
+      <option name="METHOD_NAME" value="testaEstrategiaComTresItensConsiderandoONome" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -251,19 +256,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="InventarioDeItensTest.itemAdicionadoAoInventarioEstaVinculado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoOPeso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventarioDePersonagem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jogo.*" />
+          <option name="PATTERN" value="jogo.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jogo" />
-      <option name="MAIN_CLASS_NAME" value="jogo.InventarioDeItensTest" />
-      <option name="METHOD_NAME" value="itemAdicionadoAoInventarioEstaVinculado" />
+      <option name="PACKAGE_NAME" value="jogo.test" />
+      <option name="MAIN_CLASS_NAME" value="jogo.test.EstrategiaDeOrdenacaoTest" />
+      <option name="METHOD_NAME" value="testaEstrategiaComTresItensConsiderandoOPeso" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -278,14 +283,14 @@
       <module name="InventarioDePersonagem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jogo.*" />
+          <option name="PATTERN" value="jogo.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jogo" />
-      <option name="MAIN_CLASS_NAME" value="jogo.PocaoDeCuraTest" />
+      <option name="PACKAGE_NAME" value="jogo.test" />
+      <option name="MAIN_CLASS_NAME" value="jogo.test.PocaoDeCuraTest" />
       <option name="METHOD_NAME" value="pocaoCom1DoseSaiDoInventarioQuandoUsada" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -336,19 +341,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.InventarioDeItensTest.inventarioDeveTerEspadaDeppoisDeAdicionar" />
-      <item itemvalue="JUnit.InventarioDeItensTest.filtrarEquipamentosRetornaSomenteArmadura" />
-      <item itemvalue="JUnit.InventarioDeItensTest.itemAdicionadoAoInventarioEstaVinculado" />
       <item itemvalue="JUnit.PocaoDeCuraTest.pocaoCom1DoseSaiDoInventarioQuandoUsada" />
       <item itemvalue="JUnit.EspadaTest.espadaUsada12Vezes" />
+      <item itemvalue="JUnit.EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoOPeso" />
+      <item itemvalue="JUnit.EstrategiaDeOrdenacaoTest.testaEstrategiaComQuatroItensConsiderandoOValor" />
+      <item itemvalue="JUnit.EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoONome" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoONome" />
+        <item itemvalue="JUnit.EstrategiaDeOrdenacaoTest.testaEstrategiaComQuatroItensConsiderandoOValor" />
+        <item itemvalue="JUnit.EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoOPeso" />
         <item itemvalue="JUnit.EspadaTest.espadaUsada12Vezes" />
         <item itemvalue="JUnit.PocaoDeCuraTest.pocaoCom1DoseSaiDoInventarioQuandoUsada" />
-        <item itemvalue="JUnit.InventarioDeItensTest.itemAdicionadoAoInventarioEstaVinculado" />
-        <item itemvalue="JUnit.InventarioDeItensTest.filtrarEquipamentosRetornaSomenteArmadura" />
-        <item itemvalue="JUnit.InventarioDeItensTest.inventarioDeveTerEspadaDeppoisDeAdicionar" />
       </list>
     </recent_temporary>
   </component>
@@ -362,86 +367,140 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523641325778</updated>
+      <workItem from="1523654555478" duration="3752000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InventarioDeItensTest_inventarioDeveTerEspadaDeppoisDeAdicionar - 2018.04.13 at 15h 15m 45s.xml">
-      <configuration name="InventarioDeItensTest.inventarioDeveTerEspadaDeppoisDeAdicionar" configurationId="JUnit" />
+    <history-entry file="EstrategiaDeOrdenacaoNome_testaEstrategiaComTresItensConsiderandoOPeso - 2018.04.13 at 19h 52m 41s.xml">
+      <configuration name="EstrategiaDeOrdenacaoNome.testaEstrategiaComTresItensConsiderandoOPeso" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventarioDeItensTest_filtrarEquipamentosRetornaSomenteArmadura - 2018.04.13 at 15h 31m 17s.xml">
-      <configuration name="InventarioDeItensTest.filtrarEquipamentosRetornaSomenteArmadura" configurationId="JUnit" />
+    <history-entry file="EstrategiaDeOrdenacaoNome_testaEstrategiaComTresItensConsiderandoOPeso - 2018.04.13 at 19h 55m 28s.xml">
+      <configuration name="EstrategiaDeOrdenacaoNome.testaEstrategiaComTresItensConsiderandoOPeso" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventarioDeItensTest_itemAdicionadoAoInventarioEstaVinculado - 2018.04.13 at 16h 02m 21s.xml">
-      <configuration name="InventarioDeItensTest.itemAdicionadoAoInventarioEstaVinculado" configurationId="JUnit" />
+    <history-entry file="EstrategiaDeOrdenacaoNome_testaEstrategiaComQuatroItensConsiderandoOValor - 2018.04.13 at 20h 02m 02s.xml">
+      <configuration name="EstrategiaDeOrdenacaoNome.testaEstrategiaComQuatroItensConsiderandoOValor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventarioDeItensTest_itemAdicionadoAoInventarioEstaVinculado - 2018.04.13 at 16h 04m 06s.xml">
-      <configuration name="InventarioDeItensTest.itemAdicionadoAoInventarioEstaVinculado" configurationId="JUnit" />
+    <history-entry file="EstrategiaDeOrdenacaoNome_testaEstrategiaComQuatroItensConsiderandoOValor - 2018.04.13 at 20h 04m 26s.xml">
+      <configuration name="EstrategiaDeOrdenacaoNome.testaEstrategiaComQuatroItensConsiderandoOValor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PocaoDeCuraTest_pocaoCom1DoseSaiDoInventarioQuandoUsada - 2018.04.13 at 16h 12m 10s.xml">
-      <configuration name="PocaoDeCuraTest.pocaoCom1DoseSaiDoInventarioQuandoUsada" configurationId="JUnit" />
+    <history-entry file="EstrategiaDeOrdenacaoTest_testaEstrategiaComTresItensConsiderandoONome - 2018.04.13 at 20h 10m 49s.xml">
+      <configuration name="EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoONome" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EspadaTest_espadaUsada12Vezes - 2018.04.13 at 16h 24m 45s.xml">
-      <configuration name="EspadaTest.espadaUsada12Vezes" configurationId="JUnit" />
+    <history-entry file="EstrategiaDeOrdenacaoTest_testaEstrategiaComTresItensConsiderandoONome - 2018.04.13 at 20h 11m 16s.xml">
+      <configuration name="EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoONome" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EspadaTest_espadaUsada12Vezes - 2018.04.13 at 16h 26m 57s.xml">
-      <configuration name="EspadaTest.espadaUsada12Vezes" configurationId="JUnit" />
+    <history-entry file="EstrategiaDeOrdenacaoTest_testaEstrategiaComTresItensConsiderandoONome - 2018.04.13 at 20h 11m 33s.xml">
+      <configuration name="EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoONome" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EstrategiaDeOrdenacaoTest_testaEstrategiaComTresItensConsiderandoONome - 2018.04.13 at 20h 12m 26s.xml">
+      <configuration name="EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoONome" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EstrategiaDeOrdenacaoTest_testaEstrategiaComTresItensConsiderandoONome - 2018.04.13 at 20h 13m 12s.xml">
+      <configuration name="EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoONome" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EstrategiaDeOrdenacaoTest_testaEstrategiaComTresItensConsiderandoONome - 2018.04.13 at 20h 13m 26s.xml">
+      <configuration name="EstrategiaDeOrdenacaoTest.testaEstrategiaComTresItensConsiderandoONome" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3752000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.3290938" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50073206" side_tool="true" weight="0.3290938" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.3290938" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24670571" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32756132" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" weight="0.3290938" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.32756132" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/jogo/Equipamento.java">
+    <entry file="file://$PROJECT_DIR$/src/jogo/InventarioDeItens.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/pocoes/PocaoDeCura.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        <state relative-caret-position="435">
+          <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
           <folding>
-            <element signature="e#97#98#0" expanded="true" />
-            <element signature="e#155#156#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacaoPeso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/Equipamento.java" />
     <entry file="file://$PROJECT_DIR$/src/jogo/pocoes/PocaoDeMana.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -463,109 +522,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/PocaoDeCuraTest.java">
+    <entry file="file://$PROJECT_DIR$/src/jogo/test/PocaoDeCuraTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/equipamentos/Equipamento.java">
+    <entry file="file://$PROJECT_DIR$/src/jogo/test/InventarioDeItensTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-          <folding>
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/equipamentos/Armadura.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/InventarioDeItensTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="45" column="48" lean-forward="true" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/EspadaTest.java">
+    <entry file="file://$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacaoValor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="105">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/equipamentos/Espada.java">
+    <entry file="file://$PROJECT_DIR$/src/jogo/test/EspadaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding>
-            <element signature="e#89#90#0" expanded="true" />
-            <element signature="e#134#135#0" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/InventarioDeItens.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="210">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding>
             <element signature="e#686#687#0" expanded="true" />
             <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
             <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/equipamentos/Equipamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/equipamentos/Armadura.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/equipamentos/Espada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding>
+            <element signature="e#89#90#0" expanded="true" />
+            <element signature="e#133#134#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/pocoes/PocaoDeCura.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="51" lean-forward="true" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding>
+            <element signature="e#97#98#0" expanded="true" />
+            <element signature="e#155#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/InventarioDeItens.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacaoPeso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacaoNome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+          <folding>
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/ordenacoes/EstrategiaDeOrdenacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jogo/test/EstrategiaDeOrdenacaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="59" column="67" selection-start-line="59" selection-start-column="67" selection-end-line="59" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

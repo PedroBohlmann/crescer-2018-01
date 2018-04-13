@@ -1,5 +1,6 @@
-package jogo;
+package jogo.test;
 
+import jogo.InventarioDeItens;
 import jogo.equipamentos.Armadura;
 import jogo.equipamentos.Equipamento;
 import jogo.equipamentos.Espada;
