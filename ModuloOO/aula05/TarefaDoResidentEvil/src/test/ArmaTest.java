@@ -108,7 +108,7 @@ public class ArmaTest {
 
     @Test
     public void testaRecarregarTresOitaoComMunicaoCalibre12(){
-        Arma arma=new Arma(3,2,2,"TresOitao",8,1,"MunicaoTresOitao");
+        Arma arma=new Arma(3,7,2,"TresOitao",8,1,"MunicaoTresOitao");
         Municao municao=new Municao(1,1,22,"MunicaoCalibre12",8);
         arma.recarrega(municao);
         int balasNaArmaEsperado=0;
