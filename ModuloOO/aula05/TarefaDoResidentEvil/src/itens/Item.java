@@ -13,4 +13,21 @@ public class Item {
         this.peso = peso;
         this.nome = nome;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getTilesOcupadosEmX() {
+        return tilesOcupadosEmX;
+    }
+
+    public int getTilesOcupadosEmY() {
+        return tilesOcupadosEmY;
+    }
+    public void virar(){
+        int auxiliar=tilesOcupadosEmX;
+        tilesOcupadosEmX=tilesOcupadosEmY;
+        tilesOcupadosEmY=auxiliar;
+    }
 }

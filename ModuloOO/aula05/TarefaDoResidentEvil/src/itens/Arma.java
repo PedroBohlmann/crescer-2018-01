@@ -5,16 +5,21 @@ public class Arma extends Item {
     private int capacidade;
     private int balasNaArma;
     private int balasUtilizadasEmDisparo;
+    private String tipoDeMunicaoUtilizada;
 
-    public Arma(int tilesOcupadosEmX, int tilesOcupadosEmY, double peso, String nome, int capacidade, int balasUtilizadasEmDisparo) {
+    public Arma(int tilesOcupadosEmX, int tilesOcupadosEmY, double peso, String nome, int capacidade, int balasUtilizadasEmDisparo,String tipoDeMunicaoUtilizada) {
         super(tilesOcupadosEmX, tilesOcupadosEmY, peso, nome);
         this.capacidade = capacidade;
         this.balasUtilizadasEmDisparo = balasUtilizadasEmDisparo;
+        this.tipoDeMunicaoUtilizada=tipoDeMunicaoUtilizada;
         balasNaArma = 0;
+
     }
 
     public void recarrega(Municao municao){
-        this.balasNaArma=municao.retiraBalasParaRecarregar(capacidade-balasNaArma);
+        if(tipoDeMunicaoUtilizada.equalsIgnoreCase(municao.getNome())) {
+            this.balasNaArma = municao.retiraBalasParaRecarregar(capacidade - balasNaArma);
+        }
     }
 
     public void dispara(){
@@ -26,4 +31,5 @@ public class Arma extends Item {
     public int getBalasNaArma() {
         return balasNaArma;
     }
+
 }

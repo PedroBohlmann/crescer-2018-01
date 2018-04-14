@@ -25,6 +25,8 @@ public class Municao extends Item {
             this.balas-=quantidadeASerRetirado;
             return quantidadeASerRetirado;
         }
+    }//retirar do inventario
+    public int getBalas(){
+        return balas;
     }
-    //retirar do inventario
 }
