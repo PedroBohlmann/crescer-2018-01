@@ -181,4 +181,16 @@ public class InventarioTest {
 
     }
 
+    @Test
+    public void testaColocandoArmaVirada() {
+        Inventario inventario = new Inventario(7, 3);
+        Arma calibre12 = new Arma(3, 7, 2, "Calibre12", 2, 2, "MunicaoCalibre12");
+
+        inventario.adicionarItem(calibre12);
+
+        Item esperado = calibre12;
+        Item obtido = inventario.pegaItemNaPosicao(6, 2);
+
+        assertEquals(esperado, obtido);
+    }
 }

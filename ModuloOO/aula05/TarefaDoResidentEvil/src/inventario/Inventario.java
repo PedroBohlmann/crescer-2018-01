@@ -69,13 +69,28 @@ public class Inventario {
         if (this.verificaSeItemCabe(item) && !verificaSeItemJaEstaNoInventario(item)) {
             int posicaoValidaEmX = 0;
             int posicaoValidaEmY = 0;
+            boolean precisoVirar = true;
             forDeFora:
             for (int i = 0; i < matrizInventario.length; i++) {
                 for (int j = 0; j < matrizInventario[i].length; j++) {
                     if (verificaSeItemCabeNaPosicao(i, j, item)) {
                         posicaoValidaEmX = i;
                         posicaoValidaEmY = j;
+                        precisoVirar = false;
                         break forDeFora;
+                    }
+                }
+            }
+            if (precisoVirar) {
+                item.virar();
+                forDeFora:
+                for (int i = 0; i < matrizInventario.length; i++) {
+                    for (int j = 0; j < matrizInventario[i].length; j++) {
+                        if (verificaSeItemCabeNaPosicao(i, j, item)) {
+                            posicaoValidaEmX = i;
+                            posicaoValidaEmY = j;
+                            break forDeFora;
+                        }
                     }
                 }
             }
@@ -105,7 +120,10 @@ public class Inventario {
     }
 
     public Item pegaItemNaPosicao(int x, int y) {
-        return matrizInventario[x][y];
+        if(x<matrizInventario.length||y<matrizInventario[x].length) {
+            return matrizInventario[x][y];
+        }
+        return null;
     }
 
 
@@ -147,7 +165,7 @@ public class Inventario {
                 Item itemAtual = listaDeItens.get(i).getItemArmazenado();
                 int[][] posicoesOcupadas = listaDeItens.get(i).getPosicoesQueOItemOcupa();
                 listaDeItens.remove(itemAtual);
-                for (int j = 0; i <=posicoesOcupadas.length; i++) {
+                for (int j = 0; i <= posicoesOcupadas.length; i++) {
                     int x = posicoesOcupadas[j][0];
                     int y = posicoesOcupadas[j][1];
 
@@ -157,12 +175,12 @@ public class Inventario {
         }
     }
 
-    public Item maiorItem(){
-        if(!listaDeItens.isEmpty()){
-            Item maiorItem=listaDeItens.get(0).getItemArmazenado();
-            for(int i=0;i<listaDeItens.size();i++){
-                if(maiorItem.tamanhoEmTiles()<listaDeItens.get(i).getItemArmazenado().tamanhoEmTiles()){
-                    maiorItem=listaDeItens.get(i).getItemArmazenado();
+    public Item maiorItem() {
+        if (!listaDeItens.isEmpty()) {
+            Item maiorItem = listaDeItens.get(0).getItemArmazenado();
+            for (int i = 0; i < listaDeItens.size(); i++) {
+                if (maiorItem.tamanhoEmTiles() < listaDeItens.get(i).getItemArmazenado().tamanhoEmTiles()) {
+                    maiorItem = listaDeItens.get(i).getItemArmazenado();
                 }
             }
             return maiorItem;
@@ -170,10 +188,10 @@ public class Inventario {
         return null;
     }
 
-    public int pesoTotal(){
-        int pesoTotal=0;
-        for(int i=0;i<listaDeItens.size();i++){
-            pesoTotal+=listaDeItens.get(i).getItemArmazenado().getPeso();
+    public int pesoTotal() {
+        int pesoTotal = 0;
+        for (int i = 0; i < listaDeItens.size(); i++) {
+            pesoTotal += listaDeItens.get(i).getItemArmazenado().getPeso();
         }
         return pesoTotal;
     }
