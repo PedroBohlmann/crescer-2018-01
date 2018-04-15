@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Inventario.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Inventario.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/inventario/Inventario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
+            <state relative-caret-position="44">
+              <caret line="162" column="51" lean-forward="true" selection-start-line="162" selection-start-column="51" selection-end-line="162" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#percorreAMatrizParaVerificarSeCabe#0;class#Inventario#0" />
@@ -29,8 +29,20 @@
       <file leaf-file-name="InventarioTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/InventarioTest.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="160" column="21" selection-start-line="160" selection-start-column="21" selection-end-line="160" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ErvaTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/ErvaTest.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="155" selection-start-line="155" selection-end-line="155" />
+              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,23 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArmaTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/ArmaTest.java">
+      <file leaf-file-name="Erva.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/itens/ervas/Erva.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Arma.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/itens/armamento/Arma.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            <state relative-caret-position="300">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -76,11 +76,12 @@
         <option value="$PROJECT_DIR$/src/inventario/ItemNoInventario.java" />
         <option value="$PROJECT_DIR$/src/itens/Item.java" />
         <option value="$PROJECT_DIR$/src/itens/Municao.java" />
-        <option value="$PROJECT_DIR$/src/test/InventarioTest.java" />
         <option value="$PROJECT_DIR$/src/inventario/Inventario.java" />
         <option value="$PROJECT_DIR$/src/test/MunicaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/ArmaTest.java" />
         <option value="$PROJECT_DIR$/src/itens/ervas/Erva.java" />
+        <option value="$PROJECT_DIR$/src/test/InventarioTest.java" />
+        <option value="$PROJECT_DIR$/src/test/ErvaTest.java" />
       </list>
     </option>
   </component>
@@ -99,6 +100,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -128,13 +130,19 @@
               <item name="TarefaDoResidentEvil" type="b2602c69:ProjectViewProjectNode" />
               <item name="TarefaDoResidentEvil" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="itens" type="462c0819:PsiDirectoryNode" />
+              <item name="ervas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TarefaDoResidentEvil" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TarefaDoResidentEvil" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -187,7 +195,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="InventarioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ErvaTest.testaErvaSemMistura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TarefaDoResidentEvil" />
       <extension name="coverage">
         <pattern>
@@ -198,31 +206,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.InventarioTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="InventarioTest.testaMunicaoSaindoDoInventario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TarefaDoResidentEvil" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.InventarioTest" />
-      <option name="METHOD_NAME" value="testaMunicaoSaindoDoInventario" />
+      <option name="MAIN_CLASS_NAME" value="test.ErvaTest" />
+      <option name="METHOD_NAME" value="testaErvaSemMistura" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -233,7 +218,53 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="InventarioTest.testaPesoTotalDoInventario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ErvaTest.testaErvaTentandoSerMisturadaComSiMesma" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TarefaDoResidentEvil" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ErvaTest" />
+      <option name="METHOD_NAME" value="testaErvaTentandoSerMisturadaComSiMesma" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ErvaTest.testaMisturaErvaVerdeComErvaVermelho" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TarefaDoResidentEvil" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ErvaTest" />
+      <option name="METHOD_NAME" value="testaMisturaErvaVerdeComErvaVermelho" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="InventarioTest.testaErvaSendoMisturadaETiradaDoInventario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TarefaDoResidentEvil" />
       <extension name="coverage">
         <pattern>
@@ -245,30 +276,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.InventarioTest" />
-      <option name="METHOD_NAME" value="testaPesoTotalDoInventario" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="MunicaoTest.testaQuantidadeDeBalasTentandoUtilizarMaisBalasQueTemNaMunicao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TarefaDoResidentEvil" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.MunicaoTest" />
-      <option name="METHOD_NAME" value="testaQuantidadeDeBalasTentandoUtilizarMaisBalasQueTemNaMunicao" />
+      <option name="METHOD_NAME" value="testaErvaSendoMisturadaETiradaDoInventario" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -337,19 +345,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TestaTudo" />
-      <item itemvalue="JUnit.InventarioTest.testaPesoTotalDoInventario" />
-      <item itemvalue="JUnit.InventarioTest.testaMunicaoSaindoDoInventario" />
-      <item itemvalue="JUnit.InventarioTest" />
-      <item itemvalue="JUnit.MunicaoTest.testaQuantidadeDeBalasTentandoUtilizarMaisBalasQueTemNaMunicao" />
       <item itemvalue="JUnit.ArmaTest.testaTresSendoRecarregadaComMenosBalasQueCapacidadeTotal" />
+      <item itemvalue="JUnit.ErvaTest.testaMisturaErvaVerdeComErvaVermelho" />
+      <item itemvalue="JUnit.ErvaTest.testaErvaSemMistura" />
+      <item itemvalue="JUnit.InventarioTest.testaErvaSendoMisturadaETiradaDoInventario" />
+      <item itemvalue="JUnit.ErvaTest.testaErvaTentandoSerMisturadaComSiMesma" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ErvaTest.testaErvaTentandoSerMisturadaComSiMesma" />
+        <item itemvalue="JUnit.InventarioTest.testaErvaSendoMisturadaETiradaDoInventario" />
+        <item itemvalue="JUnit.ErvaTest.testaErvaSemMistura" />
+        <item itemvalue="JUnit.ErvaTest.testaMisturaErvaVerdeComErvaVermelho" />
         <item itemvalue="JUnit.ArmaTest.testaTresSendoRecarregadaComMenosBalasQueCapacidadeTotal" />
-        <item itemvalue="JUnit.MunicaoTest.testaQuantidadeDeBalasTentandoUtilizarMaisBalasQueTemNaMunicao" />
-        <item itemvalue="JUnit.InventarioTest" />
-        <item itemvalue="JUnit.InventarioTest.testaMunicaoSaindoDoInventario" />
-        <item itemvalue="JUnit.InventarioTest.testaPesoTotalDoInventario" />
       </list>
     </recent_temporary>
   </component>
@@ -365,46 +373,48 @@
       <updated>1523661883215</updated>
       <workItem from="1523661892215" duration="3836000" />
       <workItem from="1523723626172" duration="25199000" />
+      <workItem from="1523801649403" duration="2318000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InventarioTest_testaMunicaoSaindoDoInventario - 2018.04.14 at 23h 50m 10s.xml">
-      <configuration name="InventarioTest.testaMunicaoSaindoDoInventario" configurationId="JUnit" />
+    <history-entry file="ErvaTest_testaMisturaErvaVerdeComErvaVermelho - 2018.04.15 at 11h 40m 42s.xml">
+      <configuration name="ErvaTest.testaMisturaErvaVerdeComErvaVermelho" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventarioTest_testaMunicaoSaindoDoInventario - 2018.04.14 at 23h 51m 37s.xml">
-      <configuration name="InventarioTest.testaMunicaoSaindoDoInventario" configurationId="JUnit" />
+    <history-entry file="ErvaTest_testaMisturaErvaVerdeComErvaVermelho - 2018.04.15 at 11h 40m 55s.xml">
+      <configuration name="ErvaTest.testaMisturaErvaVerdeComErvaVermelho" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InventarioTest - 2018.04.14 at 23h 51m 53s.xml">
-      <configuration name="InventarioTest" configurationId="JUnit" />
+    <history-entry file="ErvaTest_testaMisturaErvaVerdeComErvaVermelho - 2018.04.15 at 11h 41m 22s.xml">
+      <configuration name="ErvaTest.testaMisturaErvaVerdeComErvaVermelho" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestaTudo - 2018.04.14 at 23h 57m 53s.xml">
+    <history-entry file="ErvaTest_testaErvaSemMistura - 2018.04.15 at 11h 45m 05s.xml">
+      <configuration name="ErvaTest.testaErvaSemMistura" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventarioTest_testaErvaSendoMisturadaETiradaDoInventario - 2018.04.15 at 11h 50m 02s.xml">
+      <configuration name="InventarioTest.testaErvaSendoMisturadaETiradaDoInventario" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InventarioTest_testaErvaSendoMisturadaETiradaDoInventario - 2018.04.15 at 11h 50m 16s.xml">
+      <configuration name="InventarioTest.testaErvaSendoMisturadaETiradaDoInventario" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestaTudo - 2018.04.15 at 11h 50m 43s.xml">
       <configuration name="TestaTudo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MunicaoTest_testaQuantidadeDeBalasTentandoUtilizarMaisBalasQueTemNaMunicao - 2018.04.14 at 23h 59m 24s.xml">
-      <configuration name="MunicaoTest.testaQuantidadeDeBalasTentandoUtilizarMaisBalasQueTemNaMunicao" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MunicaoTest_testaQuantidadeDeBalasTentandoUtilizarMaisBalasQueTemNaMunicao - 2018.04.15 at 00h 02m 05s.xml">
-      <configuration name="MunicaoTest.testaQuantidadeDeBalasTentandoUtilizarMaisBalasQueTemNaMunicao" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestaTudo - 2018.04.15 at 00h 02m 20s.xml">
+    <history-entry file="TestaTudo - 2018.04.15 at 11h 50m 48s.xml">
       <configuration name="TestaTudo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArmaTest_testaTresSendoRecarregadaComMenosBalasQueCapacidadeTotal - 2018.04.15 at 00h 03m 12s.xml">
-      <configuration name="ArmaTest.testaTresSendoRecarregadaComMenosBalasQueCapacidadeTotal" configurationId="JUnit" />
+    <history-entry file="ErvaTest_testaErvaTentandoSerMisturadaComSiMesma - 2018.04.15 at 11h 54m 24s.xml">
+      <configuration name="ErvaTest.testaErvaTentandoSerMisturadaComSiMesma" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestaTudo - 2018.04.15 at 00h 03m 49s.xml">
-      <configuration name="TestaTudo" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestaTudo - 2018.04.15 at 00h 04m 25s.xml">
+    <history-entry file="TestaTudo - 2018.04.15 at 11h 55m 38s.xml">
       <configuration name="TestaTudo" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29035000" />
+    <option name="totallyTimeSpent" value="31353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -416,11 +426,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32756132" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32756132" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17598188" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17824773" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -444,10 +454,46 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="20" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/inventario/Inventario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#percorreAMatrizParaVerificarSeCabe#0;class#Inventario#0" />
+            <element signature="method#verificaSeItemJaEstaNoInventario#0;class#Inventario#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/InventarioTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2325">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itens/armamento/Arma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ArmaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/inventario/Inventario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -501,9 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -517,28 +560,6 @@
             <element signature="e#469#470#0" expanded="true" />
             <element signature="e#833#834#0" expanded="true" />
             <element signature="e#870#871#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/inventario/Inventario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#percorreAMatrizParaVerificarSeCabe#0;class#Inventario#0" />
-            <element signature="method#verificaSeItemJaEstaNoInventario#0;class#Inventario#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/InventarioTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="155" selection-start-line="155" selection-end-line="155" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -590,26 +611,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/itens/ervas/Erva.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/itens/armamento/Arma.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="240">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/ArmaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        <state relative-caret-position="60">
+          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ErvaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/itens/ervas/Erva.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/InventarioTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="160" column="21" selection-start-line="160" selection-start-column="21" selection-end-line="160" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/inventario/Inventario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="162" column="51" lean-forward="true" selection-start-line="162" selection-start-column="51" selection-end-line="162" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#percorreAMatrizParaVerificarSeCabe#0;class#Inventario#0" />
+            <element signature="method#verificaSeItemJaEstaNoInventario#0;class#Inventario#0" />
           </folding>
         </state>
       </provider>
