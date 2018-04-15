@@ -193,4 +193,52 @@ public class InventarioTest {
 
         assertEquals(esperado, obtido);
     }
+
+    @Test
+    public void testaProcuraMunicaoParaArma(){
+        Inventario inventario = new Inventario(5, 5);
+        Arma arma = new Arma(3, 2, 2, "TresOitao", 8, 1, "MunicaoTresOitao");
+        Municao municao = new Municao(1, 1, 22, "MunicaoTresOitao", 20);
+        inventario.adicionarItem(arma);
+        inventario.adicionarItem(municao);
+
+        arma.recarrega();
+
+        int balasEsperado=8;
+        int balasObtido=arma.getBalasNaArma();
+
+        assertEquals(balasEsperado,balasObtido);
+    }
+
+    @Test
+    public void testaProcuraMunicaoParaArmaSendoQueNaoTemMunicao(){
+        Inventario inventario = new Inventario(5, 5);
+        Arma arma = new Arma(3, 2, 2, "TresOitao", 8, 1, "MunicaoTresOitao");
+        inventario.adicionarItem(arma);
+
+        arma.recarrega();
+
+        int balasEsperado=0;
+        int balasObtido=arma.getBalasNaArma();
+
+        assertEquals(balasEsperado,balasObtido);
+    }
+
+    @Test
+    public void testaProcuraMunicaoParaArmaSendoQueSoTemMunicaoErrada(){
+        Inventario inventario = new Inventario(5, 5);
+        Arma arma = new Arma(3, 2, 2, "TresOitao", 8, 1, "MunicaoTresOitao");
+        Municao municao = new Municao(1, 1, 22, "MunicaoCalibre12", 8);
+
+        inventario.adicionarItem(municao);
+        inventario.adicionarItem(arma);
+
+        arma.recarrega();
+
+        int balasEsperado=0;
+        int balasObtido=arma.getBalasNaArma();
+
+        assertEquals(balasEsperado,balasObtido);
+    }
+
 }

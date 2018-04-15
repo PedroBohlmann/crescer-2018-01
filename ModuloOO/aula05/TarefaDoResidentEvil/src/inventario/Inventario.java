@@ -1,6 +1,7 @@
 package inventario;
 
 import itens.Item;
+import itens.armamento.Municao;
 
 import java.util.ArrayList;
 
@@ -194,6 +195,17 @@ public class Inventario {
             pesoTotal += listaDeItens.get(i).getItemArmazenado().getPeso();
         }
         return pesoTotal;
+    }
+
+    public Municao procuraMunicaoPorNome(String tipoDaMunicao){
+        for(int i=0;i<listaDeItens.size();i++){
+            if(listaDeItens.get(i).getItemArmazenado() instanceof Municao){
+                if(listaDeItens.get(i).getItemArmazenado().getNome().equalsIgnoreCase(tipoDaMunicao)){
+                    return (Municao) listaDeItens.get(i).getItemArmazenado();
+                }
+            }
+        }
+        return null;
     }
 
 }

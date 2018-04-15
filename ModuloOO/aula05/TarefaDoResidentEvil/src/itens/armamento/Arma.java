@@ -35,4 +35,10 @@ public class Arma extends Item {
         return balasNaArma;
     }
 
+    public void recarrega(){
+        Municao municao= getInventarioAQuePertence().procuraMunicaoPorNome(tipoDeMunicaoUtilizada);
+        if(municao!=null){
+            this.balasNaArma = municao.retiraBalasParaRecarregar(capacidade - balasNaArma);
+        }
+    }
 }
