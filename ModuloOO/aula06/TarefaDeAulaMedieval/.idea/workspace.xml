@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="55496200-9c76-47ce-bec6-cebcb0f022c3" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Elfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/personagem/racas/Elfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#360#361#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Orc.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/personagem/racas/Orc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#389#390#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grupo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grupo/Grupo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#189#190#0" expanded="true" />
+                <element signature="e#240#241#0" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GrupoTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/GrupoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="167" column="9" lean-forward="true" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#testaInsercaoDeUmHumano#0;class#GrupoTest#0" />
+                <element signature="method#testaInsercaoDeUmHumano#1;class#GrupoTest#0" />
+                <element signature="method#testaGrupoAtacandoAlvoDeFormaSimples#0;class#GrupoTest#0" />
+                <element signature="method#testaGrupoAtacandoAlvoDeFormaOrdenada#0;class#GrupoTest#0" />
+                <element signature="method#testaGrupoAtacandoAlvoComOsHumanos#0;class#GrupoTest#0" />
+                <element signature="method#testaOrdenaPersonagens#0;class#GrupoTest#0" />
+                <element signature="method#testaCalculoTotalDoPoderDoGrupo#0;class#GrupoTest#0" />
+                <element signature="method#testaGrupoAtacandoRaidBoss#0;class#GrupoTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Humano.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/personagem/racas/Humano.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Alvo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/alvos/Alvo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+              <folding>
+                <element signature="e#101#102#0" expanded="true" />
+                <element signature="e#149#150#0" expanded="true" />
+                <element signature="e#414#415#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Personagem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/personagem/Personagem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#320#321#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#518#519#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/personagem/Humano.java" />
+        <option value="$PROJECT_DIR$/src/personagem/Elfo.java" />
+        <option value="$PROJECT_DIR$/src/personagem/Orc.java" />
+        <option value="$PROJECT_DIR$/src/alvos/RaidBoss.java" />
+        <option value="$PROJECT_DIR$/src/grupo/grupo.java" />
+        <option value="$PROJECT_DIR$/../../../../orientacao-a-objetos/Aula5/InventarioDePersonagem/src/Jogo/Ordenacao/EstrategiaDeOrdenacaoPorNome.java" />
+        <option value="$PROJECT_DIR$/src/personagem/racas/Elfo.java" />
+        <option value="$PROJECT_DIR$/src/personagem/Personagem.java" />
+        <option value="$PROJECT_DIR$/src/personagem/racas/Orc.java" />
+        <option value="$PROJECT_DIR$/src/personagem/racas/Humano.java" />
+        <option value="$PROJECT_DIR$/src/test/PersonagemTest.java" />
+        <option value="$PROJECT_DIR$/src/alvos/Alvo.java" />
+        <option value="$PROJECT_DIR$/src/grupo/Grupo.java" />
+        <option value="$PROJECT_DIR$/src/test/GrupoTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TarefaDeAulaMedieval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TarefaDeAulaMedieval" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TarefaDeAulaMedieval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TarefaDeAulaMedieval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TarefaDeAulaMedieval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TarefaDeAulaMedieval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="alvos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TarefaDeAulaMedieval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TarefaDeAulaMedieval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="grupo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TarefaDeAulaMedieval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TarefaDeAulaMedieval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="personagem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TarefaDeAulaMedieval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TarefaDeAulaMedieval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="personagem" type="462c0819:PsiDirectoryNode" />
+              <item name="racas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TarefaDeAulaMedieval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TarefaDeAulaMedieval" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.GrupoTest.testaGrupoAtacandoRaidBoss">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="GrupoTest.testaCalculoTotalDoPoderDoGrupo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TarefaDeAulaMedieval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.GrupoTest" />
+      <option name="METHOD_NAME" value="testaCalculoTotalDoPoderDoGrupo" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GrupoTest.testaGrupoAtacandoAlvoComOsHumanos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TarefaDeAulaMedieval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.GrupoTest" />
+      <option name="METHOD_NAME" value="testaGrupoAtacandoAlvoComOsHumanos" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GrupoTest.testaGrupoAtacandoAlvoDeFormaOrdenada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TarefaDeAulaMedieval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.GrupoTest" />
+      <option name="METHOD_NAME" value="testaGrupoAtacandoAlvoDeFormaOrdenada" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GrupoTest.testaGrupoAtacandoRaidBoss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TarefaDeAulaMedieval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.GrupoTest" />
+      <option name="METHOD_NAME" value="testaGrupoAtacandoRaidBoss" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GrupoTest.testaOrdenaPersonagens" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TarefaDeAulaMedieval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.GrupoTest" />
+      <option name="METHOD_NAME" value="testaOrdenaPersonagens" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.GrupoTest.testaGrupoAtacandoAlvoDeFormaOrdenada" />
+      <item itemvalue="JUnit.GrupoTest.testaGrupoAtacandoAlvoComOsHumanos" />
+      <item itemvalue="JUnit.GrupoTest.testaOrdenaPersonagens" />
+      <item itemvalue="JUnit.GrupoTest.testaCalculoTotalDoPoderDoGrupo" />
+      <item itemvalue="JUnit.GrupoTest.testaGrupoAtacandoRaidBoss" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GrupoTest.testaGrupoAtacandoRaidBoss" />
+        <item itemvalue="JUnit.GrupoTest.testaCalculoTotalDoPoderDoGrupo" />
+        <item itemvalue="JUnit.GrupoTest.testaOrdenaPersonagens" />
+        <item itemvalue="JUnit.GrupoTest.testaGrupoAtacandoAlvoComOsHumanos" />
+        <item itemvalue="JUnit.GrupoTest.testaGrupoAtacandoAlvoDeFormaOrdenada" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55496200-9c76-47ce-bec6-cebcb0f022c3" name="Default" comment="" />
+      <created>1523901041023</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523901041023</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="GrupoTest_testaGrupoAtacandoAlvoComOsHumanos - 2018.04.16 at 16h 18m 32s.xml">
+      <configuration name="GrupoTest.testaGrupoAtacandoAlvoComOsHumanos" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GrupoTest_testaGrupoAtacandoAlvoComOsHumanos - 2018.04.16 at 16h 19m 52s.xml">
+      <configuration name="GrupoTest.testaGrupoAtacandoAlvoComOsHumanos" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GrupoTest_testaGrupoAtacandoAlvoComOsHumanos - 2018.04.16 at 16h 22m 06s.xml">
+      <configuration name="GrupoTest.testaGrupoAtacandoAlvoComOsHumanos" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GrupoTest_testaGrupoAtacandoAlvoComOsHumanos - 2018.04.16 at 16h 22m 28s.xml">
+      <configuration name="GrupoTest.testaGrupoAtacandoAlvoComOsHumanos" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GrupoTest_testaOrdenaPersonagens - 2018.04.16 at 16h 25m 50s.xml">
+      <configuration name="GrupoTest.testaOrdenaPersonagens" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GrupoTest_testaOrdenaPersonagens - 2018.04.16 at 16h 26m 32s.xml">
+      <configuration name="GrupoTest.testaOrdenaPersonagens" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GrupoTest_testaCalculoTotalDoPoderDoGrupo - 2018.04.16 at 16h 29m 18s.xml">
+      <configuration name="GrupoTest.testaCalculoTotalDoPoderDoGrupo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GrupoTest_testaCalculoTotalDoPoderDoGrupo - 2018.04.16 at 16h 29m 43s.xml">
+      <configuration name="GrupoTest.testaCalculoTotalDoPoderDoGrupo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GrupoTest_testaCalculoTotalDoPoderDoGrupo - 2018.04.16 at 16h 29m 53s.xml">
+      <configuration name="GrupoTest.testaCalculoTotalDoPoderDoGrupo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GrupoTest_testaGrupoAtacandoRaidBoss - 2018.04.16 at 16h 32m 36s.xml">
+      <configuration name="GrupoTest.testaGrupoAtacandoRaidBoss" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" weight="0.3290938" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info id="Image Layers" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.3290938" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3290938" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info id="Capture Tool" />
+      <window_info id="Designer" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24670571" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39109698" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/alvos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alvos/RaidBoss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../aula05/InventarioDePersonagem/src/jogo/ordenacoes/EstrategiaDeOrdenacaoNome.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../aula05/InventarioDePersonagem/src/jogo/ordenacoes/EstrategiaDeOrdenacao.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../orientacao-a-objetos/Aula5/InventarioDePersonagem/src/Jogo/Ordenacao/EstrategiaDeOrdenacaoPorNome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../orientacao-a-objetos/Aula5/InventarioDePersonagem/src/Jogo/Ordenacao/EstrategiaDeOrdenacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/personagem/racas/Elfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/personagem/racas/Orc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PersonagemTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alvos/Alvo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding>
+            <element signature="e#101#102#0" expanded="true" />
+            <element signature="e#149#150#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/personagem/Personagem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/personagem/racas/Humano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grupo/Grupo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/GrupoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="167" column="9" lean-forward="true" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testaInsercaoDeUmHumano#0;class#GrupoTest#0" />
+            <element signature="method#testaInsercaoDeUmHumano#1;class#GrupoTest#0" />
+            <element signature="method#testaGrupoAtacandoAlvoDeFormaSimples#0;class#GrupoTest#0" />
+            <element signature="method#testaGrupoAtacandoAlvoDeFormaOrdenada#0;class#GrupoTest#0" />
+            <element signature="method#testaGrupoAtacandoAlvoComOsHumanos#0;class#GrupoTest#0" />
+            <element signature="method#testaOrdenaPersonagens#0;class#GrupoTest#0" />
+            <element signature="method#testaCalculoTotalDoPoderDoGrupo#0;class#GrupoTest#0" />
+            <element signature="method#testaGrupoAtacandoRaidBoss#0;class#GrupoTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
