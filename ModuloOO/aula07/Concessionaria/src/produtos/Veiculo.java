@@ -20,11 +20,11 @@ public class Veiculo extends Produto{
 
     @Override
     public double calcularValorTotalImpostos(){
-        return (double) Math.round(calcularTotalPorcentagemImpostos() * valorBase);
+        return (double) Math.round(calcularTotalPorcentagemImpostos() * this.getValorBase());
     }
 
     private double calcularTotalPorcentagemImpostos(){
-        return super.ICMS + ipi + PIS + COFINS;
+        return this.getICMS() + ipi + PIS + COFINS;
     }
 
 }

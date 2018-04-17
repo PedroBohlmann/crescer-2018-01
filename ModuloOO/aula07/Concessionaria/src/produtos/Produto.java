@@ -1,9 +1,9 @@
 package produtos;
 
 public abstract class Produto {
-    protected double valorBase;
-    protected int percentualLucro;
-    protected final double ICMS = 0.13;
+    private double valorBase;
+    private int percentualLucro;
+    private final double ICMS = 0.13;
 
     public Produto(double valorBase, int percentualLucro){
         this.valorBase = valorBase;
@@ -17,7 +17,17 @@ public abstract class Produto {
     public double calcularLucroTotal(){
         return (valorBase + calcularValorTotalImpostos()) * ((double) percentualLucro / 100);
     }
-    public double calcularValorTotalImpostos(){
-        return valorBase * ICMS;
+    public abstract double calcularValorTotalImpostos();
+
+    public double getValorBase() {
+        return valorBase;
+    }
+
+    public double getICMS() {
+        return ICMS;
+    }
+
+    public int getPercentualLucro() {
+        return percentualLucro;
     }
 }

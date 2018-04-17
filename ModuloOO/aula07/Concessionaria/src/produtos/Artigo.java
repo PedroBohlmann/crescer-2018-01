@@ -9,4 +9,14 @@ public class Artigo extends Produto {
         this.nome = nome;
         this.descricao = descricao;
     }
+
+    @Override
+    public double calcularValorTotal(){
+        return calcularLucroTotal() + calcularValorTotalImpostos() + this.getValorBase();
+    }
+
+    @Override
+    public double calcularValorTotalImpostos(){
+        return this.getValorBase() * this.getICMS();
+    }
 }
