@@ -2,7 +2,7 @@ package contratos;
 
 public interface Servico {
 
-    double calcularValorBaseServico();
+    double calcularValorBaseDeMaoDeObra();
 
     double calcularValorTotalServico();
 

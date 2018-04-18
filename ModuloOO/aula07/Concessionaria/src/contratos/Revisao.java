@@ -10,7 +10,7 @@ public class Revisao implements Servico {
     }
 
     @Override
-    public double calcularValorBaseServico() {
+    public double calcularValorBaseDeMaoDeObra() {
         return valor;
     }
 

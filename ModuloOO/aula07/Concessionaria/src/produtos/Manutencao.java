@@ -13,22 +13,22 @@ public class Manutencao extends Produto implements Servico {
     }
 
     @Override
-    public double calcularValorBaseServico() {
+    public double calcularValorBaseDeMaoDeObra() {
         return (quantidadeDeHoras * quantidadeDePessoas) * this.getValorBase();
     }
 
     @Override
     public double calcularValorTotalImpostos() {
-        return calcularValorBaseServico() * this.getICMS();
+        return calcularValorBaseDeMaoDeObra() * this.getICMS();
     }
 
     @Override
     public double calcularLucroTotal() {
-        return (calcularValorBaseServico() + calcularValorTotalImpostos()) * this.getPercentualLucro();
+        return (calcularValorBaseDeMaoDeObra() + calcularValorTotalImpostos()) * this.getPercentualLucro()/100;
     }
 
     @Override
     public double calcularValorTotalServico() {
-        return calcularValorTotalServico() + calcularLucroTotal() + calcularValorTotalImpostos();
+        return calcularValorBaseDeMaoDeObra() + calcularLucroTotal() + calcularValorTotalImpostos();
     }
 }

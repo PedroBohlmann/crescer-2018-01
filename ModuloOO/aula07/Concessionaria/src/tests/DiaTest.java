@@ -1,5 +1,6 @@
 package tests;
 
+import contratos.Servico;
 import dia.Dia;
 import org.junit.jupiter.api.Test;
 import produtos.Manutencao;
@@ -79,13 +80,14 @@ public class DiaTest {
     public void testaCalculoDeEntradaTotal(){
         Produto veiculoUno = new Veiculo(10000, 50, 1.0, "Fiat", "Uno", "branco");//18645
         Produto veiculoJetta = new Veiculo(10000, 40, 2.0, "VW", "Jetta", "branco");//18242
-        //TODO:colocar Servicos
+        Servico manutencao=new Manutencao(10,10,5,2);//124.3
         Dia dia=new Dia();
 
         dia.vendeProduto(veiculoJetta);
         dia.vendeProduto(veiculoUno);
+        dia.realizaServico(manutencao);
 
-        double valorEsperado = 36887;
+        double valorEsperado = 36887+124.3;
         double valorObtido=dia.calcularValorTotalDeEntrada();
 
         assertEquals(valorEsperado,valorObtido);
@@ -93,13 +95,16 @@ public class DiaTest {
 
     @Test
     public void testaCalculoDeLucroTotal(){
-        Produto veiculo = new Veiculo(10000, 10, 2.0, "VW", "Jetta", "branco");//1303
-        //TODO:colocar mais veiculos
+        Produto veiculoJetta = new Veiculo(10000, 10, 2.0, "VW", "Jetta", "branco");//1303
+        Produto veiculoUno = new Veiculo(10000, 50, 1.0, "Fiat", "Uno", "branco");//
+        Servico manutencao=new Manutencao(10,10,5,2);//11.3
         Dia dia=new Dia();
 
-        dia.vendeProduto(veiculo);
+        dia.vendeProduto(veiculoUno);
+        dia.vendeProduto(veiculoJetta);
+        dia.realizaServico(manutencao);
 
-        double lucroEsperado=1303;
+        double lucroEsperado=1303+11.3+6215;
         double lucroObtido=dia.calcularValorTotalDeLucro();
 
         assertEquals(lucroEsperado,lucroObtido);

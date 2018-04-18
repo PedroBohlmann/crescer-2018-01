@@ -12,35 +12,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Servico.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contratos/Servico.java">
+      <file leaf-file-name="Produto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/produtos/Produto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dia.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dia/Dia.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret column="11" selection-start-column="11" selection-end-column="11" />
               <folding>
-                <element signature="e#3014#3015#0" expanded="true" />
-                <element signature="e#3069#3070#0" expanded="true" />
-                <element signature="e#3122#3123#0" expanded="true" />
-                <element signature="e#3170#3171#0" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#693#694#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#751#752#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+                <element signature="e#828#829#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VeiculoTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/VeiculoTest.java">
+      <file leaf-file-name="Veiculo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/produtos/Veiculo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+            <state relative-caret-position="330">
+              <caret line="22" column="91" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Manutencao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/produtos/Manutencao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="100" selection-start-line="31" selection-start-column="100" selection-end-line="31" selection-end-column="100" />
+              <folding>
+                <element signature="e#670#671#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrocaDePneuTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tests/TrocaDePneuTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,13 +65,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiaTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tests/DiaTest.java">
+      <file leaf-file-name="TrocaDePneu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/contratos/TrocaDePneu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="316">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#355#356#0" expanded="true" />
+                <element signature="e#289#290#0" expanded="true" />
+                <element signature="e#313#314#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pneu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/produtos/Pneu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+              <folding>
+                <element signature="e#110#111#0" expanded="true" />
+                <element signature="e#159#160#0" expanded="true" />
+                <element signature="e#223#224#0" expanded="true" />
+                <element signature="e#270#271#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,23 +129,33 @@
         <option value="$PROJECT_DIR$/src/produtos/Produto.java" />
         <option value="$PROJECT_DIR$/src/contratos/Servico.java" />
         <option value="$PROJECT_DIR$/../../../../orientacao-a-objetos/Aula6/src/party/Grupo.java" />
-        <option value="$PROJECT_DIR$/src/dia/Dia.java" />
-        <option value="$PROJECT_DIR$/src/produtos/Manutencao.java" />
         <option value="$PROJECT_DIR$/src/contratos/Revisao.java" />
+        <option value="$PROJECT_DIR$/src/dia/Dia.java" />
         <option value="$PROJECT_DIR$/src/tests/DiaTest.java" />
+        <option value="$PROJECT_DIR$/src/produtos/Manutencao.java" />
+        <option value="$PROJECT_DIR$/src/produtos/Pneu.java" />
+        <option value="$PROJECT_DIR$/src/tests/TrocaDePneu.java" />
+        <option value="$PROJECT_DIR$/src/contratos/TrocaDePneu.java" />
+        <option value="$PROJECT_DIR$/src/tests/TrocaDePneuTest.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="525" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,13 +204,14 @@
       </pane>
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -181,32 +230,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DiaTest.testaInserindoListaNoDia">
+  <component name="RunManager" selected="JUnit.TrocaDePneuTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="DiaTest.testaCalculoDeEntradaTotal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Concessionaria" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DiaTest" />
-      <option name="METHOD_NAME" value="testaCalculoDeEntradaTotal" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
     </configuration>
     <configuration name="DiaTest.testaCalculoDeLucroTotal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Concessionaria" />
@@ -231,7 +257,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="DiaTest.testaDiaInserindoProdutos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TrocaDePneuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Concessionaria" />
       <extension name="coverage">
         <pattern>
@@ -242,8 +268,31 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DiaTest" />
-      <option name="METHOD_NAME" value="testaDiaInserindoProdutos" />
+      <option name="MAIN_CLASS_NAME" value="tests.TrocaDePneuTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TrocaDePneuTest.testaTrocaDeDoisPneus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Concessionaria" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TrocaDePneuTest" />
+      <option name="METHOD_NAME" value="testaTrocaDeDoisPneus" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -254,7 +303,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="DiaTest.testaDiaInserindoProdutosEOrdenandoDeCrescente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TrocaDePneuTest.testaValorBaseDaTrocaDeQuatroPneusIguais" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Concessionaria" />
       <extension name="coverage">
         <pattern>
@@ -265,8 +314,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DiaTest" />
-      <option name="METHOD_NAME" value="testaDiaInserindoProdutosEOrdenandoDeCrescente" />
+      <option name="MAIN_CLASS_NAME" value="tests.TrocaDePneuTest" />
+      <option name="METHOD_NAME" value="testaValorBaseDaTrocaDeQuatroPneusIguais" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -277,7 +326,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="DiaTest.testaInserindoListaNoDia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TrocaDePneuTest.testaValorLucroDeQuatroPneusIguais" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Concessionaria" />
       <extension name="coverage">
         <pattern>
@@ -288,12 +337,29 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DiaTest" />
-      <option name="METHOD_NAME" value="testaInserindoListaNoDia" />
+      <option name="MAIN_CLASS_NAME" value="tests.TrocaDePneuTest" />
+      <option name="METHOD_NAME" value="testaValorLucroDeQuatroPneusIguais" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="Unnamed" type="JUnit" factoryName="JUnit">
+      <module name="Concessionaria" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
@@ -339,19 +405,20 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.DiaTest.testaDiaInserindoProdutos" />
-      <item itemvalue="JUnit.DiaTest.testaDiaInserindoProdutosEOrdenandoDeCrescente" />
-      <item itemvalue="JUnit.DiaTest.testaCalculoDeEntradaTotal" />
+      <item itemvalue="JUnit.Unnamed" />
       <item itemvalue="JUnit.DiaTest.testaCalculoDeLucroTotal" />
-      <item itemvalue="JUnit.DiaTest.testaInserindoListaNoDia" />
+      <item itemvalue="JUnit.TrocaDePneuTest.testaTrocaDeDoisPneus" />
+      <item itemvalue="JUnit.TrocaDePneuTest" />
+      <item itemvalue="JUnit.TrocaDePneuTest.testaValorBaseDaTrocaDeQuatroPneusIguais" />
+      <item itemvalue="JUnit.TrocaDePneuTest.testaValorLucroDeQuatroPneusIguais" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DiaTest.testaInserindoListaNoDia" />
+        <item itemvalue="JUnit.TrocaDePneuTest" />
+        <item itemvalue="JUnit.TrocaDePneuTest.testaValorLucroDeQuatroPneusIguais" />
+        <item itemvalue="JUnit.TrocaDePneuTest.testaValorBaseDaTrocaDeQuatroPneusIguais" />
+        <item itemvalue="JUnit.TrocaDePneuTest.testaTrocaDeDoisPneus" />
         <item itemvalue="JUnit.DiaTest.testaCalculoDeLucroTotal" />
-        <item itemvalue="JUnit.DiaTest.testaCalculoDeEntradaTotal" />
-        <item itemvalue="JUnit.DiaTest.testaDiaInserindoProdutosEOrdenandoDeCrescente" />
-        <item itemvalue="JUnit.DiaTest.testaDiaInserindoProdutos" />
       </list>
     </recent_temporary>
   </component>
@@ -365,43 +432,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523276436584</updated>
+      <workItem from="1524006424655" duration="6714000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CalculadoraDescontoTest_testarCalcularDescontoProduto - 2018.04.13 at 13h 48m 05s.xml">
-      <configuration name="CalculadoraDescontoTest.testarCalcularDescontoProduto" configurationId="JUnit" />
+    <history-entry file="TrocaDePneuTest_testaTrocaDeDoisPneus - 2018.04.17 at 21h 55m 04s.xml">
+      <configuration name="TrocaDePneuTest.testaTrocaDeDoisPneus" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculadoraDescontoTest_testarCalcularDescontoVeiculoComDescontoAplicado - 2018.04.13 at 13h 51m 08s.xml">
-      <configuration name="CalculadoraDescontoTest.testarCalcularDescontoVeiculoComDescontoAplicado" configurationId="JUnit" />
+    <history-entry file="TrocaDePneuTest - 2018.04.17 at 21h 55m 32s.xml">
+      <configuration name="TrocaDePneuTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiaTest_testaDiaInserindoProdutos - 2018.04.17 at 16h 56m 38s.xml">
-      <configuration name="DiaTest.testaDiaInserindoProdutos" configurationId="JUnit" />
+    <history-entry file="TrocaDePneuTest - 2018.04.17 at 22h 02m 27s.xml">
+      <configuration name="TrocaDePneuTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiaTest_testaDiaInserindoProdutos - 2018.04.17 at 16h 58m 40s.xml">
-      <configuration name="DiaTest.testaDiaInserindoProdutos" configurationId="JUnit" />
+    <history-entry file="TrocaDePneuTest - 2018.04.17 at 22h 05m 17s.xml">
+      <configuration name="TrocaDePneuTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiaTest_testaDiaInserindoProdutos - 2018.04.17 at 16h 59m 02s.xml">
-      <configuration name="DiaTest.testaDiaInserindoProdutos" configurationId="JUnit" />
+    <history-entry file="TrocaDePneuTest - 2018.04.17 at 22h 05m 20s.xml">
+      <configuration name="TrocaDePneuTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiaTest_testaDiaInserindoProdutos - 2018.04.17 at 17h 00m 09s.xml">
-      <configuration name="DiaTest.testaDiaInserindoProdutos" configurationId="JUnit" />
+    <history-entry file="TrocaDePneuTest - 2018.04.17 at 22h 07m 10s.xml">
+      <configuration name="TrocaDePneuTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiaTest_testaDiaInserindoProdutosEOrdenandoDeCrescente - 2018.04.17 at 17h 01m 11s.xml">
-      <configuration name="DiaTest.testaDiaInserindoProdutosEOrdenandoDeCrescente" configurationId="JUnit" />
+    <history-entry file="TrocaDePneuTest - 2018.04.17 at 22h 07m 50s.xml">
+      <configuration name="TrocaDePneuTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiaTest_testaCalculoDeEntradaTotal - 2018.04.17 at 17h 17m 19s.xml">
-      <configuration name="DiaTest.testaCalculoDeEntradaTotal" configurationId="JUnit" />
+    <history-entry file="TrocaDePneuTest - 2018.04.17 at 22h 08m 47s.xml">
+      <configuration name="TrocaDePneuTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiaTest_testaCalculoDeLucroTotal - 2018.04.17 at 17h 23m 57s.xml">
-      <configuration name="DiaTest.testaCalculoDeLucroTotal" configurationId="JUnit" />
+    <history-entry file="TrocaDePneuTest_testaValorBaseDaTrocaDeQuatroPneusIguais - 2018.04.17 at 22h 18m 41s.xml">
+      <configuration name="TrocaDePneuTest.testaValorBaseDaTrocaDeQuatroPneusIguais" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiaTest_testaCalculoDeLucroTotal - 2018.04.17 at 17h 24m 51s.xml">
-      <configuration name="DiaTest.testaCalculoDeLucroTotal" configurationId="JUnit" />
+    <history-entry file="TrocaDePneuTest_testaValorBaseDaTrocaDeQuatroPneusIguais - 2018.04.17 at 22h 19m 42s.xml">
+      <configuration name="TrocaDePneuTest.testaValorBaseDaTrocaDeQuatroPneusIguais" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6714000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -412,18 +483,20 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.3290938" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32611832" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.16837482" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1971299" />
+      <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.53895074" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.31890333" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
@@ -432,42 +505,18 @@
       <window_info anchor="bottom" id="Find" order="5" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="27" />
+      <option name="time" value="34" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tests/ArtigoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utilitario/CalculadoraDesconto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/produtos/Produto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -483,16 +532,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/ProdutoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/ProdutoTest.java" />
     <entry file="file://$PROJECT_DIR$/src/tests/VeiculoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
@@ -527,16 +567,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java" />
     <entry file="file://$PROJECT_DIR$/src/produtos/Veiculo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -563,16 +594,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/ProdutoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/ProdutoTest.java" />
     <entry file="file://$PROJECT_DIR$/src/produtos/Veiculo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -611,16 +633,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java" />
     <entry file="file://$PROJECT_DIR$/src/utilitario/CalculadoraDesconto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -643,16 +656,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/ProdutoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="62" column="40" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/ProdutoTest.java" />
     <entry file="file://$PROJECT_DIR$/src/produtos/Veiculo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -698,16 +702,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java" />
     <entry file="file://$PROJECT_DIR$/src/produtos/Produto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -723,16 +718,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/ProdutoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="40" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/ProdutoTest.java" />
     <entry file="file://$PROJECT_DIR$/src/produtos/Veiculo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -778,16 +764,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="67" column="45" lean-forward="true" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Math.java" />
     <entry file="file://$PROJECT_DIR$/src/tests/ArtigoTest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -806,35 +783,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/ProdutoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/ProdutoTest.java" />
     <entry file="file://$PROJECT_DIR$/../../aula06/TarefaDeAulaMedieval/src/grupo/Grupo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/produtos/Produto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding>
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -845,17 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/produtos/Artigo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-          <folding>
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#554#555#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../orientacao-a-objetos/Aula6/src/party/Grupo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
@@ -863,82 +805,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/produtos/Veiculo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="91" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
-          <folding>
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contratos/Revisao.java">
+    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/tests/VeiculoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="e#118#119#0" expanded="true" />
-            <element signature="e#142#143#0" expanded="true" />
-            <element signature="e#205#206#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/CalculadoraDescontoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/produtos/Manutencao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="113" selection-start-line="8" selection-start-column="113" selection-end-line="8" selection-end-column="113" />
-          <folding>
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dia/Dia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#3014#3015#0" expanded="true" />
-            <element signature="e#3069#3070#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
-            <element signature="e#3170#3171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/VeiculoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+        <state relative-caret-position="1043">
+          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3014#3015#0" expanded="true" />
+            <element signature="e#3069#3070#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/DiaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="451">
+          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contratos/Revisao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/produtos/Artigo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/produtos/Veiculo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="91" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/produtos/Produto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/produtos/Pneu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+          <folding>
+            <element signature="e#110#111#0" expanded="true" />
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/produtos/Manutencao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="100" selection-start-line="31" selection-start-column="100" selection-end-line="31" selection-end-column="100" />
+          <folding>
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contratos/TrocaDePneu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/TrocaDePneuTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -42,7 +42,7 @@ public class Dia {
     }
 
     public double calcularValorTotalDeEntradaDeServicos(){
-        int valorTotal=0;
+        double valorTotal=0;
         for(Servico servicoAtual: listaDeServicoRealizados){
             valorTotal+=servicoAtual.calcularValorTotalServico();
         }
@@ -50,7 +50,7 @@ public class Dia {
     }
 
     public double calcularValorTotalDeEntradaDeProdutos(){
-        int valorTotal=0;
+        double valorTotal=0;
         for(Produto produtoAtual:listaDeProdutosVendidos){
             valorTotal+=produtoAtual.calcularValorTotal();
         }
@@ -58,7 +58,7 @@ public class Dia {
     }
 
     public double calcularValorTotalDeLucroDeServicos(){
-        int valorTotal=0;
+        double valorTotal=0;
         for(Servico servicoAtual: listaDeServicoRealizados){
             valorTotal+=servicoAtual.calcularLucroTotal();
         }
@@ -66,7 +66,7 @@ public class Dia {
     }
 
     public double calcularValorTotalDeLucroDeProdutos(){
-        int valorTotal=0;
+        double valorTotal=0;
         for(Produto produtoAtual:listaDeProdutosVendidos){
             valorTotal+=produtoAtual.calcularLucroTotal();
         }
