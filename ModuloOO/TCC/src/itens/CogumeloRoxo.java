@@ -12,7 +12,12 @@ public class CogumeloRoxo implements ItemDeRecuperacao {
     }
 
     @Override
-    public void usar(Corredor corredor) {
+    public void curar(Corredor corredor) {
         corredor.recebeCura(this.cura);
+    }
+
+    @Override
+    public void consumir(Corredor corredor) {
+        curar(corredor);
     }
 }

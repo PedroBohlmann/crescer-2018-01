@@ -13,7 +13,12 @@ public class Cogumelo implements ItemDeBonus {
     }
 
     @Override
-    public void usar(Corredor corredor) {
+    public void darBonus(Corredor corredor) {
         corredor.recebeBonus(this.bonus);
+    }
+
+    @Override
+    public void consumir(Corredor corredor) {
+        darBonus(corredor);
     }
 }

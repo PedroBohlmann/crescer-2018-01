@@ -5,6 +5,7 @@ import exceptions.ItemInvalidoException;
 import pistas.Casa;
 import pistas.Pista;
 import tipos_de_itens.Item;
+import tipos_de_itens.ataque.ItemDeAtaque;
 import tipos_de_itens.uso.ItemDeBonus;
 import tipos_de_itens.uso.ItemDeUso;
 
@@ -28,7 +29,7 @@ public abstract class Corredor {
         int quantidadeDeCasas = casaASerPercorrido();
         if (pista != null) {
             int numeroDaCasaAtual = casa.getNumeroDaCasa();
-            if (numeroDaCasaAtual + quantidadeDeCasas >= pista.getTamanhoDaPista()) {
+            if (numeroDaCasaAtual + quantidadeDeCasas > pista.getTamanhoDaPista()) {
                 setCasaAtual(new Casa(pista.getTamanhoDaPista()));
                 pista.adicionarAoPodium(this);
             } else {
@@ -64,27 +65,28 @@ public abstract class Corredor {
         return vida;
     }
 
-    public void recebeDano(int dano) {
-        this.vida -= dano;
-        if (this.vida <= 0) {
-            pistaQuePertence = null;
-            casaAtual = null;
-        }
-    }
-
     public void equiparItem(Item item) {
         this.itemArmazenado = item;
     }
 
-    public void usarItem(Item item, Corredor alvo) throws ItemInvalidoException, AlvoInvalidoException {
+    public void usarItem(ItemDeAtaque item, Corredor alvo) throws ItemInvalidoException, AlvoInvalidoException {
         if (itemArmazenado != item) {
             throw new ItemInvalidoException();
         }
         if (alvo == this) {
             throw new AlvoInvalidoException();
         }
-        this.itemArmazenado.usar(alvo);
+        item.usarAlvo(alvo);
         this.itemArmazenado = null;
+    }
+
+    public void usarItem(ItemDeUso item) throws ItemInvalidoException {
+        if (this.itemArmazenado != item) {
+            throw new ItemInvalidoException();
+        }
+        item.consumir(this);
+        this.itemArmazenado = null;
+
     }
 
     public void recebeBonus(int bonusDeCasas) {
@@ -102,16 +104,17 @@ public abstract class Corredor {
         }
     }
 
-    public void usarItem(ItemDeUso item) throws ItemInvalidoException {
-        if (this.itemArmazenado != item) {
-            throw new ItemInvalidoException();
+    public void recebeCura(int cura) {
+        this.vida += cura;
+    }
+
+
+    public void recebeDano(int dano) {
+        this.vida -= dano;
+        if (this.vida <= 0) {
+            pistaQuePertence = null;
+            casaAtual = null;
         }
-        this.itemArmazenado.usar(this);
-        this.itemArmazenado = null;
-
     }
 
-    public void recebeCura(int cura){
-        this.vida+=cura;
-    }
 }

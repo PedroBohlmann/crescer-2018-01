@@ -19,7 +19,7 @@ public class PodiumTest {
         donutPlains.adicionarCorredor(mario);
         donutPlains.adicionarCorredor(luigi);
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 6; i++) {
             mario.andar();
         }
 
