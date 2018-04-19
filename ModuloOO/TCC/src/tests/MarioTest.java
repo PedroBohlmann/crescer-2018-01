@@ -1,11 +1,9 @@
 package tests;
 
-import corredores.Corredor;
 import corredores.Mario;
 import org.junit.jupiter.api.Test;
-import pistas.Casa;
+import pistas.casas.Casa;
 import pistas.DonutPlains;
-import pistas.Podium;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -4,7 +4,7 @@ import corredores.Luigi;
 import exceptions.ItemInvalidoException;
 import itens.Cogumelo;
 import org.junit.jupiter.api.Test;
-import pistas.Casa;
+import pistas.casas.Casa;
 import pistas.DonutPlains;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -6,7 +6,8 @@ import exceptions.AlvoInvalidoException;
 import exceptions.ItemInvalidoException;
 import itens.Baletao;
 import org.junit.jupiter.api.Test;
-import pistas.Casa;
+import pistas.Podium;
+import pistas.casas.Casa;
 import pistas.DonutPlains;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,5 +45,23 @@ public class BaletaoTest {
 
         assertEquals(0, luigi.getVida());
 
+    }
+
+    @Test
+    public void usaOBaletaoParaGanharCorrida() throws ItemInvalidoException {
+        Mario mario=new Mario();
+        Baletao baletao= new Baletao();
+
+        DonutPlains donutPlains=new DonutPlains();
+        donutPlains.adicionarCorredor(mario);
+
+        for(int i=0;i<4;i++){
+            mario.andar();
+        }
+
+        mario.equiparItem(baletao);
+        mario.usarItem(baletao);
+
+        assertEquals(mario, donutPlains.getCorredorNaPosicao(Podium.PRIMEIRO_LUGAR));
     }
 }

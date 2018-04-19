@@ -1,6 +1,7 @@
 package pistas;
 
 import corredores.Corredor;
+import pistas.casas.Casa;
 
 import java.util.HashMap;
 import java.util.Map;

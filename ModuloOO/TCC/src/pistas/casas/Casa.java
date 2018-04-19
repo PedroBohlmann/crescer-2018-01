@@ -1,4 +1,4 @@
-package pistas;
+package pistas.casas;
 
 public class Casa {
 

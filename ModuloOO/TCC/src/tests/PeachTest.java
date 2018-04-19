@@ -2,7 +2,7 @@ package tests;
 
 import corredores.Peach;
 import org.junit.jupiter.api.Test;
-import pistas.Casa;
+import pistas.casas.Casa;
 import pistas.DonutPlains;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

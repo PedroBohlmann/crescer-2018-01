@@ -6,7 +6,7 @@ import exceptions.AlvoInvalidoException;
 import exceptions.ItemInvalidoException;
 import itens.CascoVerde;
 import org.junit.jupiter.api.Test;
-import pistas.Casa;
+import pistas.casas.Casa;
 import pistas.DonutPlains;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -2,11 +2,10 @@ package corredores;
 
 import exceptions.AlvoInvalidoException;
 import exceptions.ItemInvalidoException;
-import pistas.Casa;
+import pistas.casas.Casa;
 import pistas.Pista;
 import tipos_de_itens.Item;
 import tipos_de_itens.ataque.ItemDeAtaque;
-import tipos_de_itens.uso.ItemDeBonus;
 import tipos_de_itens.uso.ItemDeUso;
 
 public abstract class Corredor {
@@ -108,7 +107,6 @@ public abstract class Corredor {
         this.vida += cura;
     }
 
-
     public void recebeDano(int dano) {
         this.vida -= dano;
         if (this.vida <= 0) {
@@ -116,5 +114,4 @@ public abstract class Corredor {
             casaAtual = null;
         }
     }
-
 }
