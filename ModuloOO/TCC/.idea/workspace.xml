@@ -35,11 +35,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CascoVerde.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Corredor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/corredores/Corredor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1">
+              <caret line="92" column="45" lean-forward="true" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3222#3223#0" expanded="true" />
+                <element signature="e#3241#3242#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CascoVerde.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/itens/CascoVerde.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#162#163#0" expanded="true" />
@@ -54,14 +68,42 @@
       <file leaf-file-name="Cogumelo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/itens/Cogumelo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+            <state relative-caret-position="272">
+              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#164#165#0" expanded="true" />
                 <element signature="e#198#199#0" expanded="true" />
                 <element signature="e#266#267#0" expanded="true" />
                 <element signature="e#289#290#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CogumeloRoxo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/itens/CogumeloRoxo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#169#170#0" expanded="true" />
+                <element signature="e#198#199#0" expanded="true" />
+                <element signature="e#283#284#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CogumeloRoxoTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/CogumeloRoxoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,10 +148,12 @@
         <option value="$PROJECT_DIR$/src/tipos_de_itens/ItemDeBonus.java" />
         <option value="$PROJECT_DIR$/src/tipos_de_itens/Item.java" />
         <option value="$PROJECT_DIR$/src/itens/CascoVerde.java" />
-        <option value="$PROJECT_DIR$/src/itens/Cogumelo.java" />
         <option value="$PROJECT_DIR$/src/tests/CorredorTest.java" />
         <option value="$PROJECT_DIR$/src/tests/CogumeloTest.java" />
         <option value="$PROJECT_DIR$/src/corredores/Corredor.java" />
+        <option value="$PROJECT_DIR$/src/tests/CogumeloRoxoTest.java" />
+        <option value="$PROJECT_DIR$/src/itens/Cogumelo.java" />
+        <option value="$PROJECT_DIR$/src/itens/CogumeloRoxo.java" />
       </list>
     </option>
   </component>
@@ -180,6 +224,19 @@
               <item name="TCC" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TCC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tipos_de_itens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TCC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tipos_de_itens" type="462c0819:PsiDirectoryNode" />
+              <item name="uso" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -414,17 +471,11 @@
       <option name="presentableId" value="Default" />
       <updated>1524080220089</updated>
       <workItem from="1524086973438" duration="9637000" />
-      <workItem from="1524141650555" duration="2933000" />
+      <workItem from="1524141650555" duration="3449000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BowserTest_anda2CasasAMaisDepoisDaSegundaVez - 2018.04.18 at 23h 46m 45s.xml">
-      <configuration name="BowserTest.anda2CasasAMaisDepoisDaSegundaVez" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BowserTest_anda2CasasAMaisDepoisDaSegundaVez - 2018.04.18 at 23h 47m 05s.xml">
-      <configuration name="BowserTest.anda2CasasAMaisDepoisDaSegundaVez" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BowserTest_anda2CasasAMaisDepoisDaSegundaVez - 2018.04.18 at 23h 47m 18s.xml">
       <configuration name="BowserTest.anda2CasasAMaisDepoisDaSegundaVez" configurationId="JUnit" />
     </history-entry>
@@ -449,9 +500,15 @@
     <history-entry file="Testa_Tudo - 2018.04.19 at 11h 10m 32s.xml">
       <configuration name="Testa Tudo" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Testa_Tudo - 2018.04.19 at 11h 24m 37s.xml">
+      <configuration name="Testa Tudo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Testa_Tudo - 2018.04.19 at 11h 25m 07s.xml">
+      <configuration name="Testa Tudo" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12570000" />
+    <option name="totallyTimeSpent" value="13086000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -466,7 +523,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32930514" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32756132" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32756132" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -751,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tipos_de_itens/uso/ItemDeRecuperacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tipos_de_itens/uso/ItemDeBonus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -799,28 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/corredores/Corredor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="94" column="26" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1155#1156#0" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1248#1249#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
-            <element signature="e#1553#1554#0" expanded="true" />
-            <element signature="e#1590#1591#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
-            <element signature="e#1488#1489#0" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-            <element signature="e#1828#1829#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tipos_de_itens/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -828,10 +856,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/itens/CascoVerde.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#162#163#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tipos_de_itens/uso/ItemDeRecuperacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="54" lean-forward="true" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/corredores/Corredor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="92" column="45" lean-forward="true" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3222#3223#0" expanded="true" />
+            <element signature="e#3241#3242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/CogumeloRoxoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/itens/Cogumelo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        <state relative-caret-position="272">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#164#165#0" expanded="true" />
@@ -842,16 +913,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/itens/CascoVerde.java">
+    <entry file="file://$PROJECT_DIR$/src/itens/CogumeloRoxo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="255">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#162#163#0" expanded="true" />
-            <element signature="e#191#192#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
           </folding>
         </state>
       </provider>

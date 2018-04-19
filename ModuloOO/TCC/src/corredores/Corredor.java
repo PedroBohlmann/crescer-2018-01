@@ -6,6 +6,7 @@ import pistas.Casa;
 import pistas.Pista;
 import tipos_de_itens.Item;
 import tipos_de_itens.uso.ItemDeBonus;
+import tipos_de_itens.uso.ItemDeUso;
 
 public abstract class Corredor {
 
@@ -101,12 +102,16 @@ public abstract class Corredor {
         }
     }
 
-    public void usarItem(ItemDeBonus item) throws ItemInvalidoException {
+    public void usarItem(ItemDeUso item) throws ItemInvalidoException {
         if (this.itemArmazenado != item) {
             throw new ItemInvalidoException();
         }
         this.itemArmazenado.usar(this);
         this.itemArmazenado = null;
 
+    }
+
+    public void recebeCura(int cura){
+        this.vida+=cura;
     }
 }
