@@ -24,9 +24,8 @@ public class MarioTest {
         Mario mario=new Mario();
 
         donutPlains.adicionarCorredor(mario);
-        for(int i=0;i<6;i++) {
-            mario.andar();
-        }
+
+        mario.andar();
 
         Casa casa= donutPlains.getCasaOndeCorredorEsta(mario);
         assertEquals(4,casa.getNumeroDaCasa());

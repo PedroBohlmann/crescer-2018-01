@@ -16,10 +16,22 @@ public abstract class Corredor {
         this.quantidadeDeCasasQuePercorre = 3;
     }
 
-    public abstract void andar();/* {
+    public void andar(){
+        Pista pista = this.getPistaQuePertence();
+        Casa casa = this.getCasaAtual();
+        int quantidadeDeCasas = casaASerPercorrido();
+        if (pista != null) {
+            int numeroDaCasaAtual = casa.getNumeroDaCasa();
+            if(numeroDaCasaAtual+quantidadeDeCasas>=pista.getTamanhoDaPista()){
+                setCasaAtual(new Casa(pista.getTamanhoDaPista()));
+                pista.adicionarAoPodium(this);
+            }else{
+                setCasaAtual(new Casa(numeroDaCasaAtual+quantidadeDeCasas));
+            }
+        }
+    }
 
-    }*/
-
+    protected abstract int casaASerPercorrido();
 
     public void associarAUmaPista(Pista pista) {
         this.pistaQuePertence = pista;
@@ -45,4 +57,6 @@ public abstract class Corredor {
     public int getVida() {
         return vida;
     }
+
+    
 }
