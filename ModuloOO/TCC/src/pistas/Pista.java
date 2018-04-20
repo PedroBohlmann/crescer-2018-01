@@ -3,7 +3,9 @@ package pistas;
 import corredores.Corredor;
 import pistas.casas.Casa;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Pista {
@@ -12,6 +14,7 @@ public class Pista {
     private Map<Podium, Corredor> podiumCorredor;
     private int quantosChegaramNoPodium;
     private Casa[] casasDaPista;
+    private List<Corredor> listaDeCorredores;
 
     public Pista(int tamanhoDaPista) {
         this.podiumCorredor = new HashMap<>();
@@ -22,10 +25,12 @@ public class Pista {
         for (int i = 0; i < tamanhoDaPista; i++) {
             this.casasDaPista[i] = new Casa(i);
         }
+        this.listaDeCorredores = new ArrayList<>();
     }
 
     public void adicionarCorredor(Corredor novoCorredor) {
         novoCorredor.associarAUmaPista(this, casasDaPista[0]);
+        this.listaDeCorredores.add(novoCorredor);
     }
 
     public int getTamanhoDaPista() {
@@ -67,5 +72,13 @@ public class Pista {
 
     public Casa getCasaPelaPosicao(int posicao) {
         return casasDaPista[posicao];
+    }
+
+    public void corredorSaiDaCorrida(Corredor corredor) {
+        listaDeCorredores.remove(corredor);
+    }
+
+    public List<Corredor> getListaDeCorredores() {
+        return listaDeCorredores;
     }
 }

@@ -70,7 +70,7 @@ public abstract class Corredor {
         if (alvo == this) {
             throw new AlvoInvalidoException();
         }
-        item.usarAlvo(alvo);
+        item.usarAlvo(this, alvo);
         this.itemArmazenado = null;
     }
 
@@ -112,6 +112,7 @@ public abstract class Corredor {
     public void recebeDano(int dano) {
         this.vida -= dano;
         if (this.vida <= 0) {
+            pistaQuePertence.corredorSaiDaCorrida(this);
             pistaQuePertence = null;
             casaAtual = null;
         }

@@ -12,8 +12,8 @@ public class CascoVerde implements ItemDeAtaque {
     }
 
     @Override
-    public void usarAlvo(Corredor corredor) {
-        corredor.recebeDano(this.dano);
+    public void usarAlvo(Corredor corredorQueLancouOItem,Corredor alvo) {
+        alvo.recebeDano(this.dano);
     }
 
 }
