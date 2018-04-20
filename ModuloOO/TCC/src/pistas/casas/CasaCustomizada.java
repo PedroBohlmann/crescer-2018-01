@@ -9,4 +9,10 @@ public abstract class CasaCustomizada extends Casa {
     }
 
     public abstract void aplicaEfeitoNoCorredor(Corredor corredor);
+
+    @Override
+    public void adicionarCorredor(Corredor corredor) {
+        super.adicionarCorredor(corredor);
+        aplicaEfeitoNoCorredor(corredor);
+    }
 }

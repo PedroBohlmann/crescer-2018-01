@@ -24,8 +24,8 @@ public class LuigiTest {
         luigi.andar();
         luigi.andar();
 
-        Casa casa=donutPlains.getCasaOndeCorredorEsta(luigi);
+        Casa casa = donutPlains.getCasaOndeCorredorEsta(luigi);
 
-        assertEquals(6,casa.getNumeroDaCasa());
+        assertEquals(6, casa.getNumeroDaCasa());
     }
 }

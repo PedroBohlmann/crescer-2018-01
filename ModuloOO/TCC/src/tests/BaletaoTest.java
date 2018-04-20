@@ -1,5 +1,6 @@
 package tests;
 
+import corredores.Bowser;
 import corredores.Luigi;
 import corredores.Mario;
 import exceptions.AlvoInvalidoException;
@@ -49,13 +50,13 @@ public class BaletaoTest {
 
     @Test
     public void usaOBaletaoParaGanharCorrida() throws ItemInvalidoException {
-        Mario mario=new Mario();
-        Baletao baletao= new Baletao();
+        Mario mario = new Mario();
+        Baletao baletao = new Baletao();
 
-        DonutPlains donutPlains=new DonutPlains();
+        DonutPlains donutPlains = new DonutPlains();
         donutPlains.adicionarCorredor(mario);
 
-        for(int i=0;i<4;i++){
+        for (int i = 0; i < 4; i++) {
             mario.andar();
         }
 
@@ -63,5 +64,24 @@ public class BaletaoTest {
         mario.usarItem(baletao);
 
         assertEquals(mario, donutPlains.getCorredorNaPosicao(Podium.PRIMEIRO_LUGAR));
+    }
+
+    @Test
+    public void usaOBaletaoEMataOCorredorOTirandoDaCorrida() throws AlvoInvalidoException, ItemInvalidoException {
+        DonutPlains donutPlains = new DonutPlains();
+        Bowser bowser = new Bowser();
+        Luigi luigi = new Luigi();
+
+        donutPlains.adicionarCorredor(bowser);
+        donutPlains.adicionarCorredor(luigi);
+
+        Baletao baletao = new Baletao();
+
+        bowser.equiparItem(baletao);
+
+        bowser.usarItem(baletao, luigi);
+
+        assertEquals(null, donutPlains.getCasaOndeCorredorEsta(luigi));
+
     }
 }

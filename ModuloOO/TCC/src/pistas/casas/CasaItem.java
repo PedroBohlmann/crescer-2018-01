@@ -1,7 +1,7 @@
 package pistas.casas;
 
 import corredores.Corredor;
-import tipos_de_itens.Item;
+import itens.tipos_de_itens.Item;
 
 public class CasaItem extends CasaCustomizada {
 
@@ -15,5 +15,6 @@ public class CasaItem extends CasaCustomizada {
     @Override
     public void aplicaEfeitoNoCorredor(Corredor corredor) {
         corredor.equiparItem(itemArmazenado);
+        itemArmazenado = null;
     }
 }

@@ -35,14 +35,14 @@ public class CascoVerdeTest {
     }
 
     @Test
-    public void naoPodeLancarCascoVerdeEmSiMesmo(){
+    public void naoPodeLancarCascoVerdeEmSiMesmo() {
         Luigi luigi = new Luigi();
-        CascoVerde cascoVerde=new CascoVerde();
+        CascoVerde cascoVerde = new CascoVerde();
 
         luigi.equiparItem(cascoVerde);
 
-        assertThrows(AlvoInvalidoException.class,()->{
-            luigi.usarItem(cascoVerde,luigi);
+        assertThrows(AlvoInvalidoException.class, () -> {
+            luigi.usarItem(cascoVerde, luigi);
         });
     }
 }

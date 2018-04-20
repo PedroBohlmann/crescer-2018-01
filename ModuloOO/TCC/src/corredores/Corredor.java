@@ -4,9 +4,10 @@ import exceptions.AlvoInvalidoException;
 import exceptions.ItemInvalidoException;
 import pistas.casas.Casa;
 import pistas.Pista;
-import tipos_de_itens.Item;
-import tipos_de_itens.ataque.ItemDeAtaque;
-import tipos_de_itens.uso.ItemDeUso;
+import pistas.casas.CasaCustomizada;
+import itens.tipos_de_itens.Item;
+import itens.tipos_de_itens.ataque.ItemDeAtaque;
+import itens.tipos_de_itens.uso.ItemDeUso;
 
 public abstract class Corredor {
 
@@ -23,25 +24,15 @@ public abstract class Corredor {
     }
 
     public void andar() {
-        Pista pista = this.getPistaQuePertence();
-        Casa casa = this.getCasaAtual();
-        int quantidadeDeCasas = casaASerPercorrido();
-        if (pista != null) {
-            int numeroDaCasaAtual = casa.getNumeroDaCasa();
-            if (numeroDaCasaAtual + quantidadeDeCasas > pista.getTamanhoDaPista()) {
-                setCasaAtual(new Casa(pista.getTamanhoDaPista()));
-                pista.adicionarAoPodium(this);
-            } else {
-                setCasaAtual(new Casa(numeroDaCasaAtual + quantidadeDeCasas));
-            }
-        }
+        int quantidadeDeCasasASerPercorrido = casaASerPercorrido();
+        this.andaUmNumeroEspecificoDeCasas(quantidadeDeCasasASerPercorrido);
     }
 
     protected abstract int casaASerPercorrido();
 
-    public void associarAUmaPista(Pista pista) {
+    public void associarAUmaPista(Pista pista, Casa casa) {
         this.pistaQuePertence = pista;
-        this.casaAtual = new Casa(0);
+        this.casaAtual = casa;
     }
 
     public int getQuantidadeDeCasasQuePercorre() {
@@ -56,7 +47,7 @@ public abstract class Corredor {
         return casaAtual;
     }
 
-    protected void setCasaAtual(Casa casa) {
+    public void avancaParaACasa(Casa casa) {
         this.casaAtual = casa;
     }
 
@@ -66,6 +57,10 @@ public abstract class Corredor {
 
     public void equiparItem(Item item) {
         this.itemArmazenado = item;
+    }
+
+    public Item getItemArmazenado() {
+        return itemArmazenado;
     }
 
     public void usarItem(ItemDeAtaque item, Corredor alvo) throws ItemInvalidoException, AlvoInvalidoException {
@@ -88,17 +83,24 @@ public abstract class Corredor {
 
     }
 
-    public void recebeBonus(int bonusDeCasas) {
-        Pista pista = this.getPistaQuePertence();
-        Casa casa = this.getCasaAtual();
-        int quantidadeDeCasas = bonusDeCasas;
-        if (pista != null) {
-            int numeroDaCasaAtual = casa.getNumeroDaCasa();
-            if (numeroDaCasaAtual + quantidadeDeCasas >= pista.getTamanhoDaPista()) {
-                setCasaAtual(new Casa(pista.getTamanhoDaPista()));
-                pista.adicionarAoPodium(this);
-            } else {
-                setCasaAtual(new Casa(numeroDaCasaAtual + quantidadeDeCasas));
+    public void andaUmNumeroEspecificoDeCasas(int bonusDeCasas) {
+        int quantidadeDeCasasASerPercorrido = bonusDeCasas;
+
+        if (pistaQuePertence != null) {
+            if (casaAtual != null) {
+                int numeroDaCasaAtual = casaAtual.getNumeroDaCasa();
+                int numeroDaProximaCasa = numeroDaCasaAtual + quantidadeDeCasasASerPercorrido;
+
+                if (numeroDaProximaCasa >= pistaQuePertence.getTamanhoDaPista()) {//Ganhou
+                    avancaParaACasa(null);
+                    pistaQuePertence.adicionarAoPodium(this);
+                } else {//Nao ganhou ainda
+                    Casa proximaCasa = pistaQuePertence.getCasaPelaPosicao(numeroDaProximaCasa);
+                    avancaParaACasa(proximaCasa);
+                    if (proximaCasa instanceof CasaCustomizada) {
+                        ((CasaCustomizada) proximaCasa).aplicaEfeitoNoCorredor(this);
+                    }
+                }
             }
         }
     }

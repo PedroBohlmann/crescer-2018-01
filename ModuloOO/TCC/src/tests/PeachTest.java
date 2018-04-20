@@ -10,26 +10,55 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PeachTest {
 
     @Test
-    public void peachGanharBonusDe2CasasQuandoAndaPelaTerceiraVez(){
-        DonutPlains donutPlains=new DonutPlains();
-        Peach peach=new Peach();
+    public void peachGanharBonusDe2CasasQuandoAndaPelaTerceiraVez() {
+        DonutPlains donutPlains = new DonutPlains();
+        Peach peach = new Peach();
 
         donutPlains.adicionarCorredor(peach);
 
-        Casa casaOndeEsta=null;
+        Casa casaOndeEsta = null;
 
         peach.andar();
-        casaOndeEsta=donutPlains.getCasaOndeCorredorEsta(peach);
-        assertEquals(3,casaOndeEsta.getNumeroDaCasa());
-
-
-        peach.andar();
-        casaOndeEsta=donutPlains.getCasaOndeCorredorEsta(peach);
-        assertEquals(6,casaOndeEsta.getNumeroDaCasa());
+        casaOndeEsta = donutPlains.getCasaOndeCorredorEsta(peach);
+        assertEquals(3, casaOndeEsta.getNumeroDaCasa());
 
 
         peach.andar();
-        casaOndeEsta=donutPlains.getCasaOndeCorredorEsta(peach);
-        assertEquals(11,casaOndeEsta.getNumeroDaCasa());
+        casaOndeEsta = donutPlains.getCasaOndeCorredorEsta(peach);
+        assertEquals(6, casaOndeEsta.getNumeroDaCasa());
+
+
+        peach.andar();
+        casaOndeEsta = donutPlains.getCasaOndeCorredorEsta(peach);
+        assertEquals(11, casaOndeEsta.getNumeroDaCasa());
+    }
+
+    @Test
+    public void peachGanharBonusDe2CasasQuandoAndaPelaTerceiraVezEVoltaAAndarNormal() {
+        DonutPlains donutPlains = new DonutPlains();
+        Peach peach = new Peach();
+
+        donutPlains.adicionarCorredor(peach);
+
+        Casa casaOndeEsta = null;
+
+        peach.andar();
+        casaOndeEsta = donutPlains.getCasaOndeCorredorEsta(peach);
+        assertEquals(3, casaOndeEsta.getNumeroDaCasa());
+
+
+        peach.andar();
+        casaOndeEsta = donutPlains.getCasaOndeCorredorEsta(peach);
+        assertEquals(6, casaOndeEsta.getNumeroDaCasa());
+
+
+        peach.andar();
+        casaOndeEsta = donutPlains.getCasaOndeCorredorEsta(peach);
+        assertEquals(11, casaOndeEsta.getNumeroDaCasa());
+
+
+        peach.andar();
+        casaOndeEsta = donutPlains.getCasaOndeCorredorEsta(peach);
+        assertEquals(14, casaOndeEsta.getNumeroDaCasa());
     }
 }

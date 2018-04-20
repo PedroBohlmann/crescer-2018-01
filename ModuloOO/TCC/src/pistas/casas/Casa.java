@@ -1,5 +1,7 @@
 package pistas.casas;
 
+import corredores.Corredor;
+
 public class Casa {
 
     private int numeroDaCasa;
@@ -10,5 +12,9 @@ public class Casa {
 
     public int getNumeroDaCasa() {
         return numeroDaCasa;
+    }
+
+    public void adicionarCorredor(Corredor corredor) {
+        corredor.avancaParaACasa(this);
     }
 }

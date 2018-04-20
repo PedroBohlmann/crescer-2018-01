@@ -10,7 +10,7 @@ public class CasaBuraco extends CasaCustomizada {
 
     @Override
     public void aplicaEfeitoNoCorredor(Corredor corredor) {
-        int danoASerTomado = (int) Math.ceil(getNumeroDaCasa() / 2);
+        int danoASerTomado = (int) Math.ceil(super.getNumeroDaCasa() / 2d);
         corredor.recebeDano(danoASerTomado);
     }
 }

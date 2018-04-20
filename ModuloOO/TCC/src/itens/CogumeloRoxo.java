@@ -1,7 +1,7 @@
 package itens;
 
 import corredores.Corredor;
-import tipos_de_itens.uso.ItemDeRecuperacao;
+import itens.tipos_de_itens.uso.ItemDeRecuperacao;
 
 public class CogumeloRoxo implements ItemDeRecuperacao {
 

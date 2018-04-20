@@ -6,15 +6,15 @@ public class Peach extends Corredor {
 
     public Peach() {
         super(6);
-        this.quantidadeDeVezesAndadoSeguido=0;
+        this.quantidadeDeVezesAndadoSeguido = 0;
     }
 
     @Override
     protected int casaASerPercorrido() {
         quantidadeDeVezesAndadoSeguido++;
-        if(quantidadeDeVezesAndadoSeguido==3){
-            this.quantidadeDeVezesAndadoSeguido=0;
-            return super.getQuantidadeDeCasasQuePercorre()+2;
+        if (quantidadeDeVezesAndadoSeguido == 3) {
+            this.quantidadeDeVezesAndadoSeguido = 0;
+            return super.getQuantidadeDeCasasQuePercorre() + 2;
         }
         return super.getQuantidadeDeCasasQuePercorre();
     }

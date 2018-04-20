@@ -10,22 +10,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MarioTest {
 
     @Test
-    public void marioComecaCom7DeVida(){
+    public void marioComecaCom7DeVida() {
         Mario mario = new Mario();
 
-        assertEquals(7,mario.getVida());
+        assertEquals(7, mario.getVida());
     }
 
     @Test
-    public void marioAnda4Casas(){
-        DonutPlains donutPlains=new DonutPlains();
-        Mario mario=new Mario();
+    public void marioAnda4Casas() {
+        DonutPlains donutPlains = new DonutPlains();
+        Mario mario = new Mario();
 
         donutPlains.adicionarCorredor(mario);
 
         mario.andar();
 
-        Casa casa= donutPlains.getCasaOndeCorredorEsta(mario);
-        assertEquals(4,casa.getNumeroDaCasa());
+        Casa casa = donutPlains.getCasaOndeCorredorEsta(mario);
+        assertEquals(4, casa.getNumeroDaCasa());
     }
 }

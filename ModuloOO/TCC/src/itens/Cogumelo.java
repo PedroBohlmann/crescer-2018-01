@@ -2,7 +2,7 @@ package itens;
 
 
 import corredores.Corredor;
-import tipos_de_itens.uso.ItemDeBonus;
+import itens.tipos_de_itens.uso.ItemDeBonus;
 
 public class Cogumelo implements ItemDeBonus {
 
@@ -14,7 +14,7 @@ public class Cogumelo implements ItemDeBonus {
 
     @Override
     public void darBonus(Corredor corredor) {
-        corredor.recebeBonus(this.bonus);
+        corredor.andaUmNumeroEspecificoDeCasas(this.bonus);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package itens;
 
 import corredores.Corredor;
-import tipos_de_itens.ataque.ItemDeAtaque;
+import itens.tipos_de_itens.ataque.ItemDeAtaque;
 
 public class CascoVerde implements ItemDeAtaque {
 

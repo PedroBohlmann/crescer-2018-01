@@ -8,6 +8,6 @@ public class Mario extends Corredor {
 
     @Override
     protected int casaASerPercorrido() {
-        return getQuantidadeDeCasasQuePercorre()+1;
+        return getQuantidadeDeCasasQuePercorre() + 1;
     }
 }

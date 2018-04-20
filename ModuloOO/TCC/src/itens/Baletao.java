@@ -1,8 +1,8 @@
 package itens;
 
 import corredores.Corredor;
-import tipos_de_itens.ataque.ItemDeAtaque;
-import tipos_de_itens.uso.ItemDeBonus;
+import itens.tipos_de_itens.ataque.ItemDeAtaque;
+import itens.tipos_de_itens.uso.ItemDeBonus;
 
 
 public class Baletao implements ItemDeBonus, ItemDeAtaque {
@@ -22,7 +22,7 @@ public class Baletao implements ItemDeBonus, ItemDeAtaque {
 
     @Override
     public void darBonus(Corredor corredor) {
-        corredor.recebeBonus(this.bonus);
+        corredor.andaUmNumeroEspecificoDeCasas(this.bonus);
     }
 
     @Override

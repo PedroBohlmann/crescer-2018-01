@@ -12,4 +12,6 @@ public class CasaTurbo extends CasaCustomizada {
     public void aplicaEfeitoNoCorredor(Corredor corredor) {
         corredor.andar();
     }
+
+
 }
