@@ -13,3 +13,10 @@ values ('Caixa','Guarda coisas',convert(datetime, '1997/06/22', 111),1,80,45);
 
 Insert into Produto(Nome,NomeDescritivo,DataCriacao,IdEstoque,Quantidade,Preco) 
 values ('Carro','Anda',convert(datetime, '1997/08/05', 111),1,5,45000);
+-- Exercicio 5
+Update Associado
+Set CPF=12345,Endereco='Rua da morte', Bairro = 'Centro',Complemento = 'Apto. 40', 
+IDCidade=(Select IdCidade from Cidade Where (Nome='Sao Leopoldo' AND UF='RS'))
+where IDAssociado=1;
+-- Exercicio 6
+Delete from Cidade Where (Nome='Campinas' AND UF='SP') OR (Nome='Taquara' AND UF='RS');
