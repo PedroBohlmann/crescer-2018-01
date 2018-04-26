@@ -3,7 +3,7 @@ Select Empregado, Count(1) from Projeto group by Empregado;
 -- Exercicio 2
 Select Distinct ValorFaturado from Projeto where ValorFaturado>ValorRealizado;
 -- Exercicio 3
-Select Distinct((ValorRealizado-ValorPrevisto)/ValorPrevisto)*100 
+Select Distinct((ValorRealizado-ValorPrevisto)/ValorPrevisto)*100, Projeto
 from Projeto where ValorRealizado>ValorPrevisto
 -- Exercicio 4
 Select Distinct Empregado, 
