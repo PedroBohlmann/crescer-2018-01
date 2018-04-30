@@ -22,7 +22,7 @@ Select l.Projeto,(DATEDIFF(month,l.Data_Inicio_Prev,l.Data_Fim_Prev)) as MesesPr
 from Licitacao l
 where l.Data_Inicio_Prev<>l.Data_Inicio_Real
 order by  l.Projeto
--- Exercicio 5 ARRUMAR
+-- Exercicio 5
 Select Distinct l.Empresa_Licitante, round(sum(l.Valor_Realizado),2) as Faturamento, 
 round(sum(l.Valor_Realizado)/sum(l.Profissionais),2) as MediaPorProfissional,
 sum(l.Profissionais) as TotalProfissionais,
@@ -36,11 +36,12 @@ Select l.Projeto, l.Data_Inicio_Real, DATENAME(dw,l.Data_Inicio_Prev)
 from Licitacao l 
 where DATEPART(dw,l.Data_Inicio_Prev)= 7 or DATEPART(dw,l.Data_Inicio_Prev)= 6;
 -- Exercicio 7
-Select Distinct l.Empresa_Licitante, l.Faturamento_1Ano_Anterior,
-(l.Faturamento_1Ano_Anterior+(Select SUM(lin.Valor_Previsto) from Licitacao lin where lin.Empresa_Licitante=l.Empresa_Licitante))
+Select  l.Empresa_Licitante, l.Faturamento_1Ano_Anterior,
+(SUM(l.Valor_Previsto))
 from Licitacao l
 where 
 (Select SUM(lin.Valor_Previsto) from Licitacao lin where lin.Empresa_Licitante=l.Empresa_Licitante) >= (l.Faturamento_1Ano_Anterior*1.5)
+group by l.Empresa_Licitante,l.Faturamento_1Ano_Anterior
 -- Exercicio 8
 Select l.Projeto,l.Situacao,l.Valor_Previsto,l.Valor_Realizado
 from Licitacao l 
