@@ -23,8 +23,12 @@ from Licitacao l
 where l.Data_Inicio_Prev<>l.Data_Inicio_Real
 order by  l.Projeto
 -- Exercicio 5 ARRUMAR
-Select l.Empresa_Licitante, sum(CASE WHEN l.Situacao='Normal' then l.Valor_Realizado-l.Valor_Previsto else 0 END) as Faturamento
+Select Distinct l.Empresa_Licitante, round(sum(l.Valor_Realizado),2) as Faturamento, 
+round(sum(l.Valor_Realizado)/sum(l.Profissionais),2) as MediaPorProfissional,
+sum(l.Profissionais) as TotalProfissionais,
+count(1) as TotalProjetos
 from Licitacao l
+where l.Situacao='Normal'
 group by l.Empresa_Licitante
 order by Faturamento desc
 -- Exercicio 6
