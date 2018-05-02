@@ -1,0 +1,54 @@
+*{
+    background-color: dimgrey;
+}
+h1{
+    text-align: center;
+    color: blue;
+}
+
+.texto-justificado{
+    text-align: justify;
+    color:khaki;
+}
+
+.rodape{
+    text-align: right;
+}
+.rodape>small{
+    color: crimson
+}
+
+.cabecaPraBaixo:hover{
+    font-size: 10px;
+    display: inline-block;
+    transform: rotateX(180deg);
+}
+
+@keyframes piscando{
+    0% {opacity: 100;}
+    25% {opacity: 75;}
+    50% {opacity: 50;}
+    75% {opacity: 25;}
+    100% {opacity: 0;}
+}
+.texto-justificado>strong{
+    animation: piscando 1s infinite;
+}
+
+.bloco{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: relative;
+    background: lime;
+    animation: movendo 5s infinite;
+    animation-direction: normal;
+}
+
+@keyframes movendo{
+    0% {left:0px;top:0px;}
+    25% {left:200px;top:0px;}
+    50% {left:200px;top:200px;}
+    75% {left:0px;top:200px;}
+    100% {left:0px;top:0px;}
+}
