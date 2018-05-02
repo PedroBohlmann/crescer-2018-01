@@ -1,0 +1,9 @@
+p{
+    text-indent: 20px;
+}
+
+.bigStrong{
+    float: left;
+    font-size: 45px;
+    font-weight: bold;
+}
