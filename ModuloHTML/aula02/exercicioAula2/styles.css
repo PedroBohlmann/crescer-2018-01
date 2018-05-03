@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    margin:0;
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    background: green;
+}
+
+.container:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.linha{
+    height: 25%;
+}
+
+.bloco{
+    float: left;
+    border: 2px solid green;
+    height: 100%;
+}
+
+.primeira-linha{
+    background: red;
+    width: 25%;
+}
+
+.segunda-linha{
+    background: rgb(4, 74, 226);
+    width: 50%;
+}
+
+.terceira-linha{
+    background: rgb(87, 3, 126);
+    width: 100%;
+}
+
+.quarta-linha{
+    background:yellow;
+    width: 10%;
+}
+

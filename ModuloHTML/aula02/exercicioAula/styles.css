@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    margin:0;
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+.linha{
+    font-size: 0;
+    height: 25%;
+}
+
+.bloco{
+    display: inline-block;
+    font-size: initial;
+    border: 3px solid green;
+    height: 100%;
+}
+
+.primeira-linha{
+    background: red;
+    width: 25%;
+}
+
+.segunda-linha{
+    background: rgb(4, 74, 226);
+    width: 50%;
+}
+
+.terceira-linha{
+    background: rgb(87, 3, 126);
+    width: 100%;
+}
+
+.quarta-linha{
+    background:yellow;
+    width: 10%;
+}
+
