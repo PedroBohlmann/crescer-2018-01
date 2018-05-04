@@ -7,6 +7,7 @@ body{
     background-image: url("https://cdn.discordapp.com/attachments/361913998851178507/441806675242909696/vector-old-grunge-paper-texture-background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Dancing Script', cursive;
 }
 
 .container{
@@ -24,7 +25,12 @@ header img{
     height: 110px;
     width: 130px;
     /* top, right, bottom, left*/
-    margin: 10px 5px 20px 0px;
+    margin: 10px 10px 20px 0px;
+}
+
+.bloco-de-anuncio h1{
+    font-size: 25px;
+    margin: 0px;
 }
 
 .bloco-de-anuncio-premium{
@@ -32,9 +38,10 @@ header img{
     color: white;
     height: 110px;
     width: 200px;
-    font-size: 22px;
+    font-size: 18px;
     padding-top: 5px;
     padding-left: 10px;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 .anuncios{
@@ -45,14 +52,32 @@ header img{
     border: 1px solid black;
     float: left;
     width: 100%;
+    border-radius: 5%;
+    margin-bottom: 10%;
 }
 
 .manchete{
     font-size: 100px;
     margin: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    /* top, right, bottom, left*/
+    margin: 10px 5px 0px 0px;
+}
+
+.sub-titulo-manchete{
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .manchete-secundaria{
-    font-size: 80px;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 50px;
+    margin-left: 20px;
 }
 
 .imagem-manchete{
@@ -84,7 +109,7 @@ header img{
     /* background: blue; */
 }
 
-p:nth-of-type(3), p:nth-of-type(4) {
+.bloco-noticia p:nth-of-type(3), p:nth-of-type(4) {
     margin-top: -60px;
 }
 
