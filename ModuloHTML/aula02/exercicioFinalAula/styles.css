@@ -48,7 +48,7 @@ header{
 .bloco-de-texto{
     line-height: 1.6;
 }
-/* arrumar*/
+
 .bloco-de-texto p:first-of-type:first-letter{
     content: "";
     font-size: 45px;
