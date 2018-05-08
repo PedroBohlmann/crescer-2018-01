@@ -29,7 +29,6 @@ body{
 .duck{
     width: 68px;
     height: 65px;
-    margin-bottom: 10px;
     position: absolute;
 }
 
@@ -120,12 +119,15 @@ label{
 .second-duck{
     right: -80px;
     top: 50px;
-    animation: second-duck-moving 6s linear forwards;
+    animation: second-duck-moving 5s linear forwards;
     animation-delay: 6s;
 }
 
 .third-duck{
-    /* TODO:FAZ O PATO */
+    bottom: 0;
+    left: -80px;
+    animation: third-duck-moving 5s linear forwards;
+    /* animation-delay: 12s; */
 }
 
 @keyframes first-duck-moving{
@@ -142,4 +144,11 @@ label{
     50%{transform:translateX(-200px) translateY(125px);}
     75%{transform:translateX(-200px) translateY(-50px);}
     100%{transform:translateX(-1000px) translateY(0px);}    
+}
+
+@keyframes third-duck-moving{
+    0%,25%{transform: translate(200px,-200px);}
+    50%{transform: translate(300px,-300px);}
+    75%{transform: translate(430px,-10px);}
+    100%{transform: translate(1000px,-10px)}
 }
