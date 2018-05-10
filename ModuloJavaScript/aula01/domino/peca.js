@@ -1,13 +1,11 @@
 class Peca{
-    constructor(leste,oeste){
-        this.VALOR_MAXIMO = 6
-        this.VALOR_MINIMO = 0
+    constructor(oeste,leste){
 
-        if(leste>this.VALOR_MAXIMO || oeste>this.VALOR_MAXIMO){
-            throw new PecaError(`O número máximo do valor para o lado da peça é ${this.VALOR_MAXIMO}`)
+        if(leste>Peca.VALOR_MAXIMO || oeste>Peca.VALOR_MAXIMO){
+            throw new PecaError(`O número máximo do valor para o lado da peça é ${Peca.VALOR_MAXIMO}`)
         }
-        if(leste<this.VALOR_MINIMO || oeste<this.VALOR_MINIMO){
-            throw new PecaError(`O número minimo do valor para o lado da peça é ${this.VALOR_MINIMO}`)
+        if(leste<Peca.VALOR_MINIMO || oeste<Peca.VALOR_MINIMO){
+            throw new PecaError(`O número minimo do valor para o lado da peça é ${Peca.VALOR_MINIMO}`)
         }
 
         this.leste=leste
@@ -16,9 +14,20 @@ class Peca{
 
     podeEncaixar(peca){
         if(peca instanceof Peca){
-            if(this===peca){
+            if(!(this===peca)){
                 return (this.leste==peca.leste || this.leste==peca.oeste) || (this.oeste==peca.leste || this.oeste==peca.oeste)
             }
         }
+        else{
+            throw new PecaError('Peca invalida')
+        }
+    }
+
+    static get VALOR_MAXIMO(){
+        return 6
+    }
+
+    static get VALOR_MINIMO(){
+        return 0
     }
 }
