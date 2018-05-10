@@ -94,3 +94,14 @@ test('tabuleiro: mesma peca não pode ser adicionada',assert=>{
         tabuleiro.adicionarPecaOeste(peca)
     })
 })
+
+test('tabuleiro: mesma peca não pode ser adicionada mesmo sendo virada',assert =>{
+    assert.throws(JogadaInvalidaError,()=>{
+        const tabuleiro = new Tabuleiro()
+        const pecaInicial = new Peca(1,2)
+        const pecaInvalida = new Peca(2,1)
+
+        tabuleiro.adicionarPecaOeste(pecaInicial)
+        tabuleiro.adicionarPecaOeste(pecaInvalida)
+    })
+})

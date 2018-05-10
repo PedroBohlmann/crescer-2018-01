@@ -30,4 +30,8 @@ class Peca{
     static get VALOR_MINIMO(){
         return 0
     }
+
+    verificaSeEIgual(peca){
+        return ((this.leste==peca.leste && this.oeste==peca.oeste) || (this.leste==peca.oeste && this.oeste==peca.leste))
+    }
 }

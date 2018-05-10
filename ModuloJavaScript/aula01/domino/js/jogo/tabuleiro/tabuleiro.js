@@ -3,10 +3,11 @@ class Tabuleiro{
         this.pecasNoTabuleiro = Array()
         this.valorLeste=null
         this.valorOeste=null
+        this.quantidadeMaximaDePecas = 28
     }
 
     adicionarPecaOeste(peca){
-        if(peca instanceof Peca){
+        if(peca instanceof Peca && this.pecasNoTabuleiro.length<=this.quantidadeMaximaDePecas){
             if(this.pecasNoTabuleiro.length==0){
                 this.valorLeste=peca.leste
                 this.valorOeste=peca.oeste
@@ -34,7 +35,7 @@ class Tabuleiro{
     }
 
     adicionarPecaLeste(peca){
-        if(peca instanceof Peca){
+        if(peca instanceof Peca && this.pecasNoTabuleiro.length<=this.quantidadeMaximaDePecas){
             if(this.pecasNoTabuleiro.length==0){
                 this.valorLeste=peca.leste
                 this.valorOeste=peca.oeste
@@ -64,7 +65,7 @@ class Tabuleiro{
     verificaSePecaJaFoiColocada(peca){
         for(let i=0;i<this.pecasNoTabuleiro.length;i++){
             const item = this.pecasNoTabuleiro[i]
-            if(item===peca){
+            if((item.leste==peca.leste && item.oeste==peca.oeste) || (item.leste==peca.oeste && item.oeste==peca.leste)){
                 return true
             }
         }
