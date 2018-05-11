@@ -1,0 +1,69 @@
+body {
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: lightgray;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+*:focus {
+    outline: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    display: flex;
+    flex: 1;
+}
+
+.invisivel {
+    display: none;
+}
+
+.conteudo {
+    background-color: white;
+    width: 400px;
+    flex-direction: column;
+}
+
+.formulario {
+    justify-content: stretch;
+    background-color: red;
+    flex-direction: column;
+}
+
+.formulario input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    height: 40px;
+    margin: 4px;
+    font-size: 16px;
+}
+
+.formulario input::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+#ulNotasCriadas {
+    list-style: none;
+}
+
+#ulNotasCriadas input[type='checkbox'] {
+    margin-right: 5px;
+}
+
+.alerta {
+    color: firebrick;
+    background-color: whitesmoke;
+}
+
+.alerta .texto-alerta {
+    margin: 5px;
+    font-size: 12px;
+}
