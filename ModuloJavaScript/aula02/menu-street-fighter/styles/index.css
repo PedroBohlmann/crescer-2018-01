@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: url("../images/flags/jp.png");
+    background-position: center;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 75%;
+    height: 100vh;
+    /* background: red; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    width: 25%;
+    margin-top: 25px;
+}
+
+.character-data{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+    padding-left: 30%;
+    padding-top: 30px;
+}
+
+.character-main-image{
+    width: 350px;
+    height: 75%;
+}
+
+.character-info{
+    width: 100%;
+    padding-top: 150px;
+}
+
+.character-name{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 60px;
+    color:white;
+    text-shadow: 7px 1px 0px rgba(0,0,0,0.75);
+}
+
+.character-info-label{
+    display: inline-block;
+    background: #ffde00;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.character-table{
+    background: #959494;
+    border: 2px solid #AAA9A9;
+    height: 160px;
+    width: 25%;
+}
