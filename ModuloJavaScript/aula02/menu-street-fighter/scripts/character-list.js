@@ -32,8 +32,8 @@ class CharacterList{
         const allCharacters = [
             {
               name: 'Ryu',
-              smallImg: 'images/characters/ryu_headshot.jpg',
-              largeImg: 'images/characters/ryu.png',
+              smallImg: 'assets/images/characters/ryu_headshot.jpg',
+              largeImg: 'assets/images/characters/ryu.png',
               height: '5"9',
               fighting: 'Ansatsuken',
               skills: 'Sleeping anywhere',
@@ -42,8 +42,8 @@ class CharacterList{
             },
             {
               name: 'Ken',
-              smallImg: 'images/characters/ken_headshot.jpg',
-              largeImg: 'images/characters/ken.png',
+              smallImg: 'assets/images/characters/ken_headshot.jpg',
+              largeImg: 'assets/images/characters/ken.png',
               height: '5"9',
               fighting: 'Ansatsuken',
               skills: 'Cooking pasta',
@@ -51,8 +51,8 @@ class CharacterList{
             },
             {
               name: 'Chun-Li',
-              smallImg: 'images/characters/chun_li_headshot.jpg',
-              largeImg: 'images/characters/chun_li.png',
+              smallImg: 'assets/images/characters/chun_li_headshot.jpg',
+              largeImg: 'assets/images/characters/chun_li.png',
               height: '5"6',
               fighting: 'Chinese martial arts',
               skills: 'Shooting',
@@ -60,8 +60,8 @@ class CharacterList{
             },
             {
               name: 'Dee Jay',
-              smallImg: 'images/characters/dj_headshot.jpg',
-              largeImg: 'images/characters/dj.png',
+              smallImg: 'assets/images/characters/dj_headshot.jpg',
+              largeImg: 'assets/images/characters/dj.png',
               height: '6"1',
               fighting: 'Kickboxing',
               skills: 'Bamboo dancing',
@@ -69,8 +69,8 @@ class CharacterList{
             },
             {
               name: 'Cammy',
-              smallImg: 'images/characters/cammy_headshot.jpg',
-              largeImg: 'images/characters/cammy.png',
+              smallImg: 'assets/images/characters/cammy_headshot.jpg',
+              largeImg: 'assets/images/characters/cammy.png',
               height: '5"5',
               fighting: 'Shadaloo/Special Forces Training',
               skills: 'Knife throwing',
@@ -78,8 +78,8 @@ class CharacterList{
             },
             {
               name: 'Sagat',
-              smallImg: 'images/characters/sagat_headshot.jpg',
-              largeImg: 'images/characters/sagat.png',
+              smallImg: 'assets/images/characters/sagat_headshot.jpg',
+              largeImg: 'assets/images/characters/sagat.png',
               height: '7"5',
               fighting: 'Muay Thai',
               skills: 'Breathing underwater',
@@ -87,8 +87,8 @@ class CharacterList{
             },
             {
               name: 'Zangief',
-              smallImg: 'images/characters/zangief_headshot.jpg',
-              largeImg: 'images/characters/zangief.png',
+              smallImg: 'assets/images/characters/zangief_headshot.jpg',
+              largeImg: 'assets/images/characters/zangief.png',
               height: '7"0',
               fighting: 'Russian/American Pro Wrestling',
               skills: 'Resistance to cold',
@@ -96,8 +96,8 @@ class CharacterList{
             },
             {
               name: 'Akuma',
-              smallImg: 'images/characters/akuma_headshot.jpg',
-              largeImg: 'images/characters/akuma.png',
+              smallImg: 'assets/images/characters/akuma_headshot.jpg',
+              largeImg: 'assets/images/characters/akuma.png',
               height: '5"10',
               fighting: 'Satsui no Hado/Ansatsuken',
               skills: 'Martial Arts',
@@ -105,8 +105,8 @@ class CharacterList{
             },
             {
               name: 'Blanka',
-              smallImg: 'images/characters/blanka_headshot.jpg',
-              largeImg: 'images/characters/blanka.png',
+              smallImg: 'assets/images/characters/blanka_headshot.jpg',
+              largeImg: 'assets/images/characters/blanka.png',
               height: '6"4',
               fighting: 'Feral movement, electric attacks',
               skills: 'Hunting',
@@ -114,8 +114,8 @@ class CharacterList{
             },
             {
               name: 'Silvio',
-              smallImg: 'images/characters/silvio_headshot.png',
-              largeImg: 'images/characters/silvio.png',
+              smallImg: 'assets/images/characters/silvio_headshot.png',
+              largeImg: 'assets/images/characters/silvio.png',
               height: '6"0',
               fighting: 'Strategist',
               skills: 'Money planes throwing',
@@ -150,6 +150,7 @@ class CharacterList{
         const ryu = this.characterList[0]
 
         const img = document.createElement('img')
+        img.className='head-shot-image'
         img.src = ryu.smallImg;
 
         characterTable.appendChild(img)
