@@ -18,14 +18,48 @@ body{
     display: flex;
     width: 75%;
     height: 100vh;
-    /* background: red; */
     flex-direction: column;
     align-items: center;
+}
+
+@keyframes content-entry{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: content-entry 0.8s linear forwards;
+    animation-delay: 1s;
+}
+
+.container-logo{
+    width: 100%;
+    text-align: center;
+    animation: logo-rotation-entry 1s linear forwards
+}
+
+@keyframes logo-rotation-entry{
+    0%{transform: rotate(360deg) scale(0);}
+}
+
+@keyframes image-blink{
+    0%{filter: brightness(4);}
+    50%{filter: brightness(1);}
+    100%{filter: brightness(2);}
 }
 
 .logo{
     width: 25%;
     margin-top: 25px;
+    animation: image-blink 1s linear;
+    animation-delay: 1s;
 }
 
 .character-data{
@@ -35,16 +69,22 @@ body{
     height: 60%;
     padding-left: 30%;
     padding-top: 30px;
+    margin-bottom: 10px;
 }
 
 .character-main-image{
-    width: 350px;
+    width: 250px;/* para ficar show to note alterar pra 250px*/
     height: 75%;
 }
 
 .character-info{
     width: 100%;
-    padding-top: 150px;
+    padding-top: 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.character-info span{
+    color:white;
 }
 
 .character-name{
@@ -61,11 +101,14 @@ body{
     padding: 5px 8px;
     border-radius: 5px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .character-table{
     background: #959494;
     border: 2px solid #AAA9A9;
     height: 160px;
-    width: 25%;
+    width: 300px;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
