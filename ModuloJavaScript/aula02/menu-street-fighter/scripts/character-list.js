@@ -3,9 +3,10 @@ class CharacterList{
     constructor(){
         this.characterList = Array()
         this.flags = {}
+        this._loadFlag()
         this._configureCharacters()
-        this.loadCharacters()
-        this.loadInfoFromActiveCharacter()
+        this._loadCharacters()
+        this._loadInfoFromActiveCharacter()
         this._configureButtons()
     }
 
@@ -153,17 +154,21 @@ class CharacterList{
         for(let i=0;i<this.characterList.length;i++){
             const img = document.getElementById(this.characterList[i].id)
             img.addEventListener('click',event=>{
-                this.removeActiveCharacter()
+                if(this.characterList[i].secret==false){
+                    this._removeActiveCharacter()
 
-                this.characterList[i].letActive()
-                img.classList.add('active-character')
-                
-                this.loadInfoFromActiveCharacter()
+                    this.characterList[i].letActive()
+                    img.classList.add('active-character')
+                    img.classList.add('image-blinking')
+                    
+                    this._loadInfoFromActiveCharacter()
+                    this._changeBackground(this.characterList[i].birth)
+                }
             })
         }
     }
 
-    loadCharacters(){
+    _loadCharacters(){
         for(let i=0;i<this.characterList.length;i++){
             const img = document.createElement('img')
             img.classList.add('head-shot-image')
@@ -182,7 +187,7 @@ class CharacterList{
         }
     }
 
-    loadInfoFromActiveCharacter(){
+    _loadInfoFromActiveCharacter(){
         for(let i=0;i<this.characterList.length;i++){
             if(this.characterList[i].active){
                 characterName.innerHTML= this.characterList[i].name
@@ -190,37 +195,54 @@ class CharacterList{
                 characterFighting.innerHTML = this.characterList[i].fighting
                 characterSkills.innerHTML=this.characterList[i].skills
                 characterMainImage.src=this.characterList[i].largeImg
+                this._changeBackground(this.characterList[i].birth)
+                
+                document.getElementById(characterMainImage).classList.remove('character-main-image-animation')
+                setTimeout(function(){ document.getElementById(characterMainImage).classList.add('character-main-image-animation') })
             }
         }
     }
 
-    removeActiveCharacter(){
+    _removeActiveCharacter(){
         for(let i=0;i<this.characterList.length;i++){
             if(!!this.characterList[i].active==true){
                 const activeCharacter = this.characterList[i]
                 activeCharacter.letInactive()
                 const img = document.getElementById(activeCharacter.id)
                 img.classList.remove('active-character')
+                img.classList.remove('image-blinking')
             }
         }
         return null
     }
 
-    loadFlag(){
+    _loadFlag(){
         this.flags = {
-            br:'assets/flags/br.png',
-            cn:'assets/flags/cn.png',
-            gb:'assets/flags/gb.png',
-            jm:'assets/flags/jm.png',
-            jp:'assets/flags/jp.png',
-            ru:'assets/flags/ru.png',
-            th:'assets/flags/th.png',
-            us:'assets/flags/us.png'
+            br:"assets/images/flags/br.png",
+            brGrad:'linear-gradient(rgba(102, 101, 101,0.75),rgba(0, 153, 59,0.75))',
+            cn:"assets/images/flags/cn.png",
+            cnGrad:'linear-gradient(rgba(102, 101, 101,0.75),rgba(75,0,0,0.75))',
+            gb:"assets/images/flags/gb.png",
+            gbGrad:'linear-gradient(rgba(102, 101, 101,0.75),rgba(0, 118, 198,0.75))',
+            jm:"assets/images/flags/jm.png",
+            jmGrad:'linear-gradient(rgba(102, 101, 101,0.75),rgba(106, 156, 48,0.75))',
+            jp:"assets/images/flags/jp.png",
+            jpGrad:'linear-gradient(rgba(102, 101, 101,0.75),rgba(75,0,0,0.75))',
+            ru:"assets/images/flags/ru.png",
+            ruGrad:'linear-gradient(rgba(102, 101, 101,0.75),rgba(42, 0, 230,0.75))',
+            th:"assets/images/flags/th.png",
+            thGrad:'linear-gradient(rgba(102, 101, 101,0.75),rgba(4, 16, 130,0.75))',
+            us:"assets/images/flags/us.png",
+            usGrad:'linear-gradient(rgba(102, 101, 101,0.75),rgba(0, 32, 108,0.75))'
         }
     }
 
-    changeBackground(flag){
-        
+    _changeBackground(flag){
+        const backgroundURL=this.flags[flag]
+        const backgroundGrad=this.flags[flag+'Grad']
+        document.body.style.background = backgroundGrad+",url('"+backgroundURL+"')"
+        document.body.style.backgroundRepeat='no-repeat, no-repeat'
+        document.body.style.backgroundSize='100% 100%, 100% 100%'
     }
 }
 

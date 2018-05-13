@@ -9,8 +9,6 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    background: url("../assets/images/flags/jp.png");
-    background-position: center;
     margin: 0;
 }
 
@@ -42,7 +40,11 @@ body{
 .container-logo{
     width: 100%;
     text-align: center;
-    animation: logo-rotation-entry 1s linear forwards
+    animation: logo-rotation-entry 1s linear forwards;
+}
+
+.image-blinking{
+    animation: image-blink 1s linear;
 }
 
 @keyframes logo-rotation-entry{
@@ -50,7 +52,7 @@ body{
 }
 
 @keyframes image-blink{
-    0%{filter: brightness(4);}
+    0%{filter: brightness(3);}
     50%{filter: brightness(1);}
     100%{filter: brightness(2);}
 }
@@ -58,7 +60,6 @@ body{
 .logo{
     width: 25%;
     margin-top: 25px;
-    animation: image-blink 1s linear;
     animation-delay: 1s;
 }
 
@@ -67,19 +68,45 @@ body{
     flex-direction: row;
     width: 100%;
     height: 60%;
-    padding-left: 30%;
     padding-top: 30px;
     margin-bottom: 10px;
 }
 
+@keyframes character-main-image-entry{
+    25%{
+        opacity: 0.5;
+        transform: translateX(10px);
+        filter: drop-shadow(15px 1px 0px rgba(255, 255, 255));
+    }
+    50%{
+        opacity: 0.8; 
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1; 
+        transform: translateX(10px);
+        filter: drop-shadow(8px 1px 0px rgba(0,0,0,0.75));
+    }
+
+}
+
+.character-main-image-animation{
+    animation: character-main-image-entry 1s linear forwards;
+}
+
 .character-main-image{
-    width: 250px;/* para ficar show to note alterar pra 250px*/
+    width: 250px;
     height: 75%;
+    filter: drop-shadow(8px 1px 0px rgba(0,0,0,0.75));
+    opacity: 0;
+    margin-left: 25%;
+    margin-right: 2%;
+    transform: translateX(-20px);
 }
 
 .character-info{
     width: 100%;
-    padding-top: 10%;
+    padding-top: 5%;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -107,7 +134,6 @@ body{
 .character-table{
     background: #959494;
     border: 2px solid #AAA9A9;
-    /* height: 160px; */
     width: 373px;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -118,7 +144,6 @@ body{
 
 .head-shot-image{
     height: 80px;
-    widows: 70px;
     border: 1px solid #AAA9A9;
     margin: 0px;
     cursor: pointer;
