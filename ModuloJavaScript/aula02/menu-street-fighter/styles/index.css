@@ -9,7 +9,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    background: url("assets/images/flags/jp.png");
+    background: url("../assets/images/flags/jp.png");
     background-position: center;
     margin: 0;
 }
@@ -108,7 +108,7 @@ body{
     background: #959494;
     border: 2px solid #AAA9A9;
     /* height: 160px; */
-    width: 300px;
+    width: 373px;
     margin-left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -121,8 +121,14 @@ body{
     widows: 70px;
     border: 1px solid #AAA9A9;
     margin: 0px;
+    cursor: pointer;
 }
 
 .active-character{
     border: 1px solid #ffde00;
+}
+
+.secret-character{
+    filter: brightness(0);
+    cursor: default;
 }

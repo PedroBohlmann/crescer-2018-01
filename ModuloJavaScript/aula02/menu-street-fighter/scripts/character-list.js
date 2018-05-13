@@ -2,8 +2,11 @@ import Character from './character'
 class CharacterList{
     constructor(){
         this.characterList = Array()
+        this.flags = {}
         this._configureCharacters()
         this.loadCharacters()
+        this.loadInfoFromActiveCharacter()
+        this._configureButtons()
     }
 
     _generateId() {
@@ -120,7 +123,7 @@ class CharacterList{
               fighting: 'Strategist',
               skills: 'Money planes throwing',
               birth: 'br',
-              secret: true
+              secret: true,
             },
           ]
         
@@ -141,19 +144,83 @@ class CharacterList{
                 secret=allCharacters[i].secret
             }
 
-            const newCharacter = new Character(name,smallImg,largeImg,height,fighting,skills,birth, active, secret)
+            const newCharacter = new Character(name,smallImg,largeImg,height,fighting,skills,birth, active, secret,this._generateId())
             this.characterList.push(newCharacter)
         }
     }
 
+    _configureButtons(){
+        for(let i=0;i<this.characterList.length;i++){
+            const img = document.getElementById(this.characterList[i].id)
+            img.addEventListener('click',event=>{
+                this.removeActiveCharacter()
+
+                this.characterList[i].letActive()
+                img.classList.add('active-character')
+                
+                this.loadInfoFromActiveCharacter()
+            })
+        }
+    }
+
     loadCharacters(){
-        const ryu = this.characterList[0]
+        for(let i=0;i<this.characterList.length;i++){
+            const img = document.createElement('img')
+            img.classList.add('head-shot-image')
+            img.src = this.characterList[i].smallImg;
+            img.id = this.characterList[i].id
 
-        const img = document.createElement('img')
-        img.className='head-shot-image'
-        img.src = ryu.smallImg;
+            if(this.characterList[i].active===true){
+                img.classList.add('active-character')
+            }
 
-        characterTable.appendChild(img)
+            if(this.characterList[i].secret===true){
+                img.classList.add('secret-character')
+            }
+
+            characterTable.appendChild(img)
+        }
+    }
+
+    loadInfoFromActiveCharacter(){
+        for(let i=0;i<this.characterList.length;i++){
+            if(this.characterList[i].active){
+                characterName.innerHTML= this.characterList[i].name
+                characterHeight.innerHTML=this.characterList[i].height
+                characterFighting.innerHTML = this.characterList[i].fighting
+                characterSkills.innerHTML=this.characterList[i].skills
+                characterMainImage.src=this.characterList[i].largeImg
+            }
+        }
+    }
+
+    removeActiveCharacter(){
+        for(let i=0;i<this.characterList.length;i++){
+            if(!!this.characterList[i].active==true){
+                const activeCharacter = this.characterList[i]
+                activeCharacter.letInactive()
+                const img = document.getElementById(activeCharacter.id)
+                img.classList.remove('active-character')
+            }
+        }
+        return null
+    }
+
+    loadFlag(){
+        this.flags = {
+            br:'assets/flags/br.png',
+            cn:'assets/flags/cn.png',
+            gb:'assets/flags/gb.png',
+            jm:'assets/flags/jm.png',
+            jp:'assets/flags/jp.png',
+            ru:'assets/flags/ru.png',
+            th:'assets/flags/th.png',
+            us:'assets/flags/us.png'
+        }
+    }
+
+    changeBackground(flag){
+        
     }
 }
 
