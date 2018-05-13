@@ -1,5 +1,5 @@
-class Character{
-    constructor(name,smallImg,largeImg,height,fighting,skills,birth,active,secret,id){
+class Character {
+    constructor(name, smallImg, largeImg, height, fighting, skills, birth, active, secret, id) {
         this.name = name
         this.smallImg = smallImg
         this.largeImg = largeImg
@@ -9,15 +9,19 @@ class Character{
         this.birth = birth
         this.active = active
         this.secret = secret
-        this.id=id
+        this.id = id
     }
 
-    letActive(){
+    letActive() {
         this.active = true
     }
 
-    letInactive(){
+    letInactive() {
         this.active = false
+    }
+
+    unlock() {
+        this.secret = false
     }
 }
 

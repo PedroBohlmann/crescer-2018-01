@@ -1,13 +1,17 @@
 import Character from './character'
+const KONAMI_CODE_VALID_KEYS=[38,40,37,39,66,65,13]
+const KONAMI_CODE_VALID_SEQUENCE=[38,38,40,40,37,39,37,39,66,65,13]
 class CharacterList{
     constructor(){
         this.characterList = Array()
         this.flags = {}
+        this.inputSequence = Array()
         this._loadFlag()
         this._configureCharacters()
         this._loadCharacters()
         this._loadInfoFromActiveCharacter()
         this._configureButtons()
+        this._configureKonamiCodeListener()
     }
 
     _generateId() {
@@ -141,7 +145,7 @@ class CharacterList{
             if(allCharacters[i].hasOwnProperty('active')){
                 active=allCharacters[i].active
             }
-            if(allCharacters[i].hasOwnProperty('secret')){
+            if(allCharacters[i].hasOwnProperty('secret') && localStorage.silvioUnlocked==undefined){
                 secret=allCharacters[i].secret
             }
 
@@ -152,15 +156,21 @@ class CharacterList{
 
     _configureButtons(){
         for(let i=0;i<this.characterList.length;i++){
-            const img = document.getElementById(this.characterList[i].id)
-            img.addEventListener('click',event=>{
+            const div = document.getElementById(this.characterList[i].id)
+            div.addEventListener('click',event=>{
                 if(this.characterList[i].secret==false){
                     this._removeActiveCharacter()
 
                     this.characterList[i].letActive()
-                    img.classList.add('active-character')
-                    img.classList.add('image-blinking')
+                    div.classList.add('active-character')
+                    div.classList.add('image-blinking')
+
+                    const divName = document.createElement('div')
+                    divName.innerHTML = this.characterList[i].name
+
+                    divName.classList.add('head-shot-name')
                     
+                    div.appendChild(divName)
                     this._loadInfoFromActiveCharacter()
                     this._changeBackground(this.characterList[i].birth)
                 }
@@ -168,22 +178,89 @@ class CharacterList{
         }
     }
 
+    _configureKonamiCodeListener(){
+        body.addEventListener('keydown', event => {
+			if(this._validateKonamiCodeInput(event.keyCode)){
+                this.inputSequence.push(event.keyCode)
+                console.log(event.keyCode)
+                if(this.inputSequence.length===11){
+                    if(this._validateKonamiCodeSequence()){
+                        const secretCharacter = this.searchSecretCharacter()
+                        secretCharacter.unlock()
+                        document.getElementById(secretCharacter.id).classList.remove('secret-character')
+                        localStorage.silvioUnlocked = true
+
+                        const message = document.createElement('span')
+                        message.classList.add('secret-message')
+                        
+                        message.innerHTML = "Unlocked"
+
+                        body.appendChild(message)
+
+                    }
+                    else{
+                        this.inputSequence=[]
+                    }
+                }
+            }
+            else{
+                this.inputSequence = []
+            }
+		})
+    }
+
+    _validateKonamiCodeInput(input){
+        let cont=0
+        for(let i=0;i<KONAMI_CODE_VALID_KEYS.length;i++){
+            if(input===KONAMI_CODE_VALID_KEYS[i]){
+                cont++
+            }
+        }
+        return cont>0
+    }
+
+    _validateKonamiCodeSequence(){
+        let cont = 0
+        for(let i=0;i<this.inputSequence.length;i++){
+            if(this.inputSequence[i]===KONAMI_CODE_VALID_SEQUENCE[i]){
+                cont++
+            }
+        }
+        return cont===11
+
+    }
+
+    searchSecretCharacter(){
+        for(let i=0;i<this.characterList.length;i++){
+            if(this.characterList[i].secret===true){
+                return this.characterList[i]
+            }
+        }
+    }
+
     _loadCharacters(){
         for(let i=0;i<this.characterList.length;i++){
+            const div = document.createElement('div')
             const img = document.createElement('img')
-            img.classList.add('head-shot-image')
-            img.src = this.characterList[i].smallImg;
-            img.id = this.characterList[i].id
+            div.classList.add('head-shot-image')
+            div.style.background = "url('"+this.characterList[i].smallImg+"')";
+            div.style.backgroundSize ='contain'
+            div.id = this.characterList[i].id
 
             if(this.characterList[i].active===true){
-                img.classList.add('active-character')
+                div.classList.add('active-character')
+
+                const divName = document.createElement('div')
+                divName.innerHTML = this.characterList[i].name
+                divName.classList.add('head-shot-name')
+                div.appendChild(divName)
             }
 
             if(this.characterList[i].secret===true){
-                img.classList.add('secret-character')
+                div.classList.add('secret-character')
             }
-
-            characterTable.appendChild(img)
+            // div.appendChild(img)
+            characterTable.appendChild(div)
         }
     }
 
@@ -197,8 +274,8 @@ class CharacterList{
                 characterMainImage.src=this.characterList[i].largeImg
                 this._changeBackground(this.characterList[i].birth)
                 
-                document.getElementById(characterMainImage).classList.remove('character-main-image-animation')
-                setTimeout(function(){ document.getElementById(characterMainImage).classList.add('character-main-image-animation') })
+                characterMainImage.classList.remove('character-main-image-animation')
+                setTimeout(function(){ characterMainImage.classList.add('character-main-image-animation') })
             }
         }
     }
@@ -208,9 +285,10 @@ class CharacterList{
             if(!!this.characterList[i].active==true){
                 const activeCharacter = this.characterList[i]
                 activeCharacter.letInactive()
-                const img = document.getElementById(activeCharacter.id)
-                img.classList.remove('active-character')
-                img.classList.remove('image-blinking')
+                const div = document.getElementById(activeCharacter.id)
+                div.classList.remove('active-character')
+                div.classList.remove('image-blinking')
+                div.getElementsByClassName('head-shot-name')[0].remove()
             }
         }
         return null
@@ -244,6 +322,7 @@ class CharacterList{
         document.body.style.backgroundRepeat='no-repeat, no-repeat'
         document.body.style.backgroundSize='100% 100%, 100% 100%'
     }
+
 }
 
 export default CharacterList
