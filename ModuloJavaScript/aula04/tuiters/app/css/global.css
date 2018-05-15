@@ -1,0 +1,21 @@
+body {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    overflow-x: hidden;
+}
+
+.title {
+    color: white;
+    font-size: 28px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+label.error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 0;
+}

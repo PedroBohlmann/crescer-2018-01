@@ -1,0 +1,14 @@
+.header {
+    height: 30vh;
+    padding-top: 5vh;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 1vh;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: -100px;
+}

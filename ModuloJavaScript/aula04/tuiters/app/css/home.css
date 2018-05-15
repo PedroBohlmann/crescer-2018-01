@@ -1,0 +1,30 @@
+.header {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding-top: 10px;
+}
+
+.card-list {
+    padding: 20px;
+    overflow-y: scroll;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.row {
+    margin: 0;
+}
+
+.btn-create-thought {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: 44px;
+    width: 44px;
+    border-radius: 22px;
+    box-shadow: 2px 2px rgba(0,0,0,0.2);
+}
