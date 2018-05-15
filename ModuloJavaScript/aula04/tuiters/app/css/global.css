@@ -19,3 +19,21 @@ label.error {
     font-size: 12px;
     margin-bottom: 0;
 }
+
+.new-post{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: blue;
+    padding-right: 50px;
+}
+
+#title{
+    width: 100%;
+}
+
+#text{
+    width: 100%;
+    height: 100%;
+}
