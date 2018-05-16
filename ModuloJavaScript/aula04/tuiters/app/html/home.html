@@ -19,41 +19,17 @@
             <span class="title">TUITERS</span>
         </div>
         <div class="row">
-            <div class="col card-list">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <div class="text-right">
-                            <a href="#" class="btn btn-primary">+1</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <div class="text-right">
-                            <a href="#" class="btn btn-primary">+1</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <div class="text-right">
-                            <a href="#" class="btn btn-primary">+1</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="col card-list" id="allPosts">
+                
             </div>
         </div>
-        <div class="new-post">
-            <input type="text" id="title">
-            <textarea id="text" cols="30" rows="10"></textarea>
-        </div>
-        <button class="btn btn-primary btn-create-thought">
+        <form id="homeForm">
+            <div id="newPostBlock" class="new-post invisible">
+                <input type="text" id="title" placeholder="Title" name="title"><button type="submit" class="btn btn-primary">Send</button>
+                <textarea id="text" cols="30" rows="10" placeholder="Text here" name="text"></textarea>
+            </div>
+        </form>
+        <button id="newPostButton" class="btn btn-primary btn-create-thought">
             <i class="fas fa-pencil-alt"></i>
         </button>
     </div>

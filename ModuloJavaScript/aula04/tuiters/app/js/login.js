@@ -2,11 +2,11 @@ import $ from 'jquery'
 import _ from 'jquery-validation'
 
 import LoginService from './services/login-service'
-import ApiService from './services/api-service';
-
+import HomeService from './services/home-service'
 
 class LoginForm {
     configure() {
+        this._isLogged()
         $('#frmLogin').validate({
             rules: {
                 txtEmail: {
@@ -30,7 +30,17 @@ class LoginForm {
         LoginService.login(email,password)
             .then(result =>{
                 localStorage.accessToken=result.data.accessToken
-                window.location = "http://localhost:3000/html/home.html"
+                window.location = "./home.html"
+            })
+            .catch(error=>{
+                console.log(error)
+            })
+    }
+
+    _isLogged(){
+        LoginService.hasAValidToken()
+            .then(result=>{
+                window.location='./home.html'
             })
             .catch(error=>{
                 console.log(error)

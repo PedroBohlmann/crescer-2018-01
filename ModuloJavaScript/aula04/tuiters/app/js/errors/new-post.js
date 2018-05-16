@@ -1,0 +1,3 @@
+class NewPostError extends Error{
+    
+}
