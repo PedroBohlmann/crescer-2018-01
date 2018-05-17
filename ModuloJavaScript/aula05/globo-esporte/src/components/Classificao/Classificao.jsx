@@ -5,11 +5,12 @@ import ClassificacaoCabecalhoSecundario from '../ClassificacaoCabecalhoSecundari
 import ClassificacaoTabela from '../ClassificacaoTabela/ClassificacaoTabela'
 
 export default class Classificao extends React.Component{
+
     render(){
         return <div className="classificacao">
             <ClassificacaoCabecalho/>
             <ClassificacaoCabecalhoSecundario/>
-            <ClassificacaoTabela/>
+            <ClassificacaoTabela times={this.props.times}/>
         </div>
     }
 }

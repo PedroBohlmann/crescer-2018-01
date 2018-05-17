@@ -62,7 +62,7 @@ class App extends Component {
         </header>
         <div className="App">
           <Noticias noticias={this.noticias()} />
-          <Classificao/>
+          <Classificao times={this.classificacao()}/>
         </div>
 
       </div>

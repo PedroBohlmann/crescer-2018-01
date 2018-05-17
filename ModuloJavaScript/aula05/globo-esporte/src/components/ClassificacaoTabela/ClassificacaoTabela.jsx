@@ -3,6 +3,13 @@ import React from 'react'
 import ClassificacaoLinhaTabela from '../ClassificacaoLinhaTabela/ClassificacaoLinhaTabela'
 
 export default class ClassificacaoTabela extends React.Component{
+
+    renderTodosTimes(){
+        return this.props.times.map((timeAtual)=>{
+            return <ClassificacaoLinhaTabela time={timeAtual}/>
+        })
+    }
+
     render(){
         return <table className="classificacao-table">
             <thead>
@@ -12,7 +19,7 @@ export default class ClassificacaoTabela extends React.Component{
                 </tr>
             </thead>
             <tbody>
-                <ClassificacaoLinhaTabela/>
+                {this.renderTodosTimes()}
             </tbody>
         </table>
     }
