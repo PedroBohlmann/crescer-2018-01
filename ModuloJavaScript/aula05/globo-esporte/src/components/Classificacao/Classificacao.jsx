@@ -4,7 +4,9 @@ import ClassificacaoCabecalho from '../ClassificacaoCabecalho/ClassificacaoCabec
 import ClassificacaoCabecalhoSecundario from '../ClassificacaoCabecalhoSecundario/ClassificacaoCabecalhoSecundario'
 import ClassificacaoTabela from '../ClassificacaoTabela/ClassificacaoTabela'
 
-export default class Classificao extends React.Component{
+import './Classificacao.css'
+
+export default class Classificacao extends React.Component{
 
     render(){
         return <div className="classificacao">

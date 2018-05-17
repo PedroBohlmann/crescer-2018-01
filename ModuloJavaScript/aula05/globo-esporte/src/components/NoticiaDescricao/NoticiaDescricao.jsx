@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './NoticiaDescricao.css'
+
 export default class NoticiaDescricao extends React.Component{
     
     render(){

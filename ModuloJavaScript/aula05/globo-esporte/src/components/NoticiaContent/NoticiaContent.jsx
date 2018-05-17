@@ -5,6 +5,8 @@ import NoticiaTitulo from '../NoticiaTitulo/NoticiaTitulo'
 import NoticiaDescricao from '../NoticiaDescricao/NoticiaDescricao'
 import NoticiaHorario from '../NoticiaHorario/NoticiaHorario'
 
+import './NoticiaContent.css'
+
 export default class NoticiaContent extends React.Component{
 
     render(){

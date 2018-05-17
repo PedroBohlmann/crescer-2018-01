@@ -1,0 +1,11 @@
+.classificacao-table{
+    width: 100%;
+    text-align: left;
+}
+.classificacao-table--th{
+    color: #c8c8c8;
+}
+.classificacao--table__tr{
+    border-top: 1px solid #e8e8e8;
+    height: 35px;
+}

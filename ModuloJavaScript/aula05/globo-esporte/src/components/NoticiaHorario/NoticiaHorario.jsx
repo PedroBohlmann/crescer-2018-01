@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './NoticiaHorario.css'
+
 export default class NoticiaHorario extends React.Component{
 
     render(){

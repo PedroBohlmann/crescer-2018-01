@@ -1,0 +1,16 @@
+.noticia--item{
+    display: flex;
+    height: 250px;
+    position: relative;
+    justify-content: flex-start;
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .noticia--imagem{
+    margin: 0 16px 0 0;
+  }
+  .noticia--imagem__img {
+    max-height: 250px;
+  }

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import NoticiaContent from '../NoticiaContent/NoticiaContent'
+import './NoticiaItem.css'
 
 export default class NoticiaItem extends React.Component{
     render(){

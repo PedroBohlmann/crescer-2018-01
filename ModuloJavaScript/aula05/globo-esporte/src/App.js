@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Noticias from './components/Noticias/Noticias'
-import Classificao from './components/Classificao/Classificao'
+import Classificacao from './components/Classificacao/Classificacao'
 
 class App extends Component {
 
@@ -62,7 +62,7 @@ class App extends Component {
         </header>
         <div className="App">
           <Noticias noticias={this.noticias()} />
-          <Classificao times={this.classificacao()}/>
+          <Classificacao times={this.classificacao()}/>
         </div>
 
       </div>
