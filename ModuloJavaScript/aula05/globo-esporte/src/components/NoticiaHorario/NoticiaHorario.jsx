@@ -4,7 +4,7 @@ export default class NoticiaHorario extends React.Component{
 
     render(){
         return <div className="noticia--content__horario">
-        HÁ 1 HORA - VASCO
+        HÁ {this.props.tempo} - {this.props.categoria}
         </div>
     }
 }

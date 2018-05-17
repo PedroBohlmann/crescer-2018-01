@@ -9,10 +9,10 @@ export default class NoticiaContent extends React.Component{
 
     render(){
         return <div className="noticia--content">
-            <NoticiaCategoria/>
-            <NoticiaTitulo/>
-            <NoticiaDescricao/>
-            <NoticiaHorario/>
+            <NoticiaCategoria categoria={this.props.noticia.categoria}/>
+            <NoticiaTitulo titulo={this.props.noticia.titulo}/>
+            <NoticiaDescricao descricao={this.props.noticia.descricao}/>
+            <NoticiaHorario tempo={this.props.noticia.tempo} categoria={this.props.noticia.categoria}/>
         </div>
     }
 }

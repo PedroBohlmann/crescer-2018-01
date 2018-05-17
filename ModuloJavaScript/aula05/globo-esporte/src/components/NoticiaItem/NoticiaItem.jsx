@@ -7,10 +7,10 @@ export default class NoticiaItem extends React.Component{
         return  (
             <div className="noticia--item">
                 <div className="noticia--imagem">
-                        <img className="noticia--imagem__img" src={this.props.src}
+                        <img className="noticia--imagem__img" src={this.props.noticia.imagem}
                         />
                 </div>
-                <NoticiaContent/>
+                <NoticiaContent noticia={this.props.noticia}/>
             </div>
         )
     }
