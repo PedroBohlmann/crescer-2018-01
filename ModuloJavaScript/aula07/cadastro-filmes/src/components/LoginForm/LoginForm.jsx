@@ -3,20 +3,19 @@ import React from 'react'
 import Button from '../generic/Button/Button'
 import Input from '../generic/Input/Input'
 
-export default class RegisterForm extends React.Component{
-    
+export default class LoginForm extends React.Component{
+
     render(){
-        return (
+        return(
             <div className="d-flex justify-content-center">
                 <form>
-                    <h1 className="display-4">Cadastro</h1>
+                    <h1 className="display-4">Login</h1>
                     <Input type="email" placeholder="Email aqui!" name="email" id="email" label="Email"/>
-                    <Input type="text" placeholder="Nome aqui!" name="name" id="name" label="Nome"/>
                     <Input type="password" placeholder="Senha aqui!" name="password" id="password" label="Senha"/>
-                    <Button type="button" typeButton="btn-primary" text="Registrar-se"/>
-                    <Button type="button" onClick={this.props.onClick} id="LOGIN" typeButton="btn-primary" text="Voltar para login"/>
+                    <Button type="button" id="" typeButton="btn-primary" text="Logar"/>
+                    <Button type="button" onClick={this.props.onClick} id="REGISTERSCREEN" typeButton="btn-primary" text="Registrar-se aqui"/>
                 </form>
             </div>
         )
     }
-}
+} 
