@@ -5,22 +5,76 @@ import Input from '../generic/Input/Input'
 import Select from '../generic/Select/Select'
 
 export default class HeroForm extends React.Component{
-    
-    optionsTest(){
+
+    constructor(){
+        super()
+        this.handdleChange = this.handdleChange.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
+        this.state = this.getInitialState()
+    }
+
+    onSubmit(e){
+        e.preventDefault()
+        this.props.onSubmitForm(this.state)
+        this.clearForm()
+    }
+
+    handdleChange(e){
+        const target = e.target
+        const name = target.name
+        const value = target.value
+
+        this.setState({
+            [name]:value
+        })
+    }
+
+    optionsTeams(){
         return [
             {
-            value:'1',
-            text:'valor 1'
+            value:'Avengers',
+            text:'Avengers'
+            },
+            {
+            value:'Justice League',
+            text:'Justice League'
+            },
+            {
+            value:'X-Men',
+            text:'X-Men'
+            },
+            {
+            value:'Fantastic Four',
+            text:'Fantastic Four'
             },
         ]
     }
 
+    getInitialState(){
+        return{
+            name:'',
+            alterEgo:'',
+            team: this.optionsTeams()[0].value // arrumar reset
+        }
+    }
+
+    clearForm(){
+        this.setState(this.getInitialState())
+    }
+
+
     render(){
         return (
             <div className="container col-6">
-                <Input id="name" type="text" name="name" placeholder="name here" label="Name"/>
-                <Input id="alterEgo" type="text" name="alterEgo" placeholder="alter-ego here" label="Alter-Ego"/>
-                <Button type="button" text="insert" typeButton="btn-primary"/>
+                <form onSubmit={this.onSubmit}> 
+                    <Input id="name" type="text" name="name" placeholder="name here" label="Name" handdleChange={this.handdleChange} value={this.state.name}/>
+                    <Input id="alterEgo" type="text" name="alterEgo" placeholder="alter-ego here" label="Alter-Ego" handdleChange={this.handdleChange} value={this.state.alterEgo}/>
+                    <Select id="team" name="team" label="Time" options={this.optionsTeams()} handdleChange={this.handdleChange} value={this.state.team}/>
+                    <div className="btn-group float-right">
+                        <Button type="button" text="clear" typeButton="btn-success" onClick={this.clearForm}/>
+                        <Button type="submit" text="insert" typeButton="btn-primary" onClick={this.onSubmit}/>
+                    </div>
+                </form>
             </div>
         )
     }

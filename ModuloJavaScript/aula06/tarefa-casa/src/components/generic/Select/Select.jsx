@@ -13,7 +13,8 @@ export default class Select extends React.Component{
         return(
             <div className="form-group">
             <label htmlFor={this.props.id}>{this.props.label}</label>
-                <select name={this.props.name} id={this.props.id} className="form-control">
+                <select name={this.props.name} id={this.props.id} className="form-control" onChange={this.props.handdleChange}>
+                    <option value="default" disabled selected>Select your team</option>
                     {this.renderOptions()}
                 </select>
             </div>
