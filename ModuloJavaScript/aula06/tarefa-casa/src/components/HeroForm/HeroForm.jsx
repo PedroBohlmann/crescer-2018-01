@@ -11,6 +11,7 @@ export default class HeroForm extends React.Component{
         this.handdleChange = this.handdleChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
         this.state = this.getInitialState()
+        this.clearForm = this.clearForm.bind(this)
     }
 
     onSubmit(e){
@@ -67,12 +68,12 @@ export default class HeroForm extends React.Component{
         return (
             <div className="container col-6">
                 <form onSubmit={this.onSubmit}> 
-                    <Input id="name" type="text" name="name" placeholder="name here" label="Name" handdleChange={this.handdleChange} value={this.state.name}/>
-                    <Input id="alterEgo" type="text" name="alterEgo" placeholder="alter-ego here" label="Alter-Ego" handdleChange={this.handdleChange} value={this.state.alterEgo}/>
-                    <Select id="team" name="team" label="Time" options={this.optionsTeams()} handdleChange={this.handdleChange} value={this.state.team}/>
+                    <Input id="name" type="text" name="name" placeholder="name aqui!" label="Nome" handdleChange={this.handdleChange} value={this.state.name}/>
+                    <Input id="alterEgo" type="text" name="alterEgo" placeholder="alter-ego aqui!" label="Alter-Ego" handdleChange={this.handdleChange} value={this.state.alterEgo}/>
+                    <Select id="team" name="team" label="Time" options={this.optionsTeams()} handdleChange={this.handdleChange} value={this.state.team} text="Selecione seu time"/>
                     <div className="btn-group float-right">
-                        <Button type="button" text="clear" typeButton="btn-success" onClick={this.clearForm}/>
-                        <Button type="submit" text="insert" typeButton="btn-primary" onClick={this.onSubmit}/>
+                        <Button type="button" text="Limpar" typeButton="btn-success" onClick={this.clearForm}/>
+                        <Button type="submit" text="Inserir" typeButton="btn-primary" onClick={this.onSubmit}/>
                     </div>
                 </form>
             </div>
