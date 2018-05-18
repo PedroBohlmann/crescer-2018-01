@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import HeroForm from '../src/components/HeroForm/HeroForm';
 import HeroSearchForm from '../src/components/HeroSearchForm/HeroSearchForm'
+import Loader from '../src/components/generic/Loader/Loader'
 
 class App extends Component {
 
@@ -10,8 +11,10 @@ class App extends Component {
     this.onSubmitForm = this.onSubmitForm.bind(this)
     this.onRemove = this.onRemove.bind(this)
     this.state = {
-      heroes: []
+      heroes: [],
+      loader: true
     }
+    this.toggleLoader()
   }
 
   onSubmitForm(hero) {
@@ -22,10 +25,10 @@ class App extends Component {
     })
     console.log(hero)
   }
-  
-  onRemove(heroToBeRemoved){
-    let heroes = this.state.heroes.filter(hero=>{
-      if(hero.name !== heroToBeRemoved.name && hero.alterEgo !== heroToBeRemoved.alterEgo && hero.team !== heroToBeRemoved.team){
+
+  onRemove(heroToBeRemoved) {
+    let heroes = this.state.heroes.filter(hero => {
+      if (hero.name !== heroToBeRemoved.name && hero.alterEgo !== heroToBeRemoved.alterEgo && hero.team !== heroToBeRemoved.team) {
         return hero
       }
     })
@@ -34,14 +37,26 @@ class App extends Component {
     })
   }
 
+  getShowLoader() {
+    return this.state.loader
+  }
+
+  toggleLoader() {
+    setTimeout(function () {
+      this.setState({
+        loader: false
+      })
+    }.bind(this), 5000);
+  }
+
   render() {
     return (
       <div className="App">
-        <div className="row">
-          <HeroForm onSubmitForm={this.onSubmitForm} />
-          <HeroSearchForm heroes={this.state.heroes} onRemove={this.onRemove}/>
-          <div className="loader"></div>
-        </div>
+        {this.getShowLoader() ? <Loader /> :
+          <div className="row">
+            <HeroForm onSubmitForm={this.onSubmitForm} />
+            <HeroSearchForm heroes={this.state.heroes} onRemove={this.onRemove} />
+          </div>}
       </div>
     );
   }

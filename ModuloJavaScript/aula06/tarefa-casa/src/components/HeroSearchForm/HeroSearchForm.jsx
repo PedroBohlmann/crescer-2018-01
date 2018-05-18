@@ -3,8 +3,13 @@ import React from 'react'
 import Input from '../generic/Input/Input'
 
 import HeroSearchTable from '../HeroSearchTable/HeroSearchTable'
+import HeroSearchTableWithNoHeroes from '../HeroSearchTableWithNoHeroes/HeroSearchTableWithNoHeroes'
 
 export default class HeroSearchForm extends React.Component{
+
+    toggleView(){
+        return this.props.heroes.length>0
+    }
 
     render(){
         return(
@@ -12,7 +17,10 @@ export default class HeroSearchForm extends React.Component{
                 <form>
                     <Input id="name" type="text" name="name" placeholder="Digite para pesquisar" label="Pesquisar"/>
                 </form>
-                <HeroSearchTable heroes={this.props.heroes} onRemove={this.props.onRemove}/>
+                {this.toggleView()?
+                <HeroSearchTable heroes={this.props.heroes} onRemove={this.props.onRemove}/>:
+                <HeroSearchTableWithNoHeroes/>
+                }
             </div>
         )
     }
