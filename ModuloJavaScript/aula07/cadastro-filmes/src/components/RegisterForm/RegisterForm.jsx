@@ -31,7 +31,7 @@ export default class RegisterForm extends React.Component{
     }
 
     onSubmit(e){
-        let account = this.state
+        const account = this.state
         RegisterService.register(this.state.email,this.state.name,this.state.password)
         .then((result)=>{
             console.log(result)

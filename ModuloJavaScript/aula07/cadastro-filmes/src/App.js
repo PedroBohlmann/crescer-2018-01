@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import RegisterForm from '../src/components/RegisterForm/RegisterForm'
@@ -7,7 +6,8 @@ import LoginForm from '../src/components/LoginForm/LoginForm'
 
 const SELECTED_COMPONENTS={
   LOGIN:'LOGIN',
-  REGISTER_SCREEN: 'REGISTERSCREEN'
+  REGISTERSCREEN: 'REGISTERSCREEN'
+  
 }
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   onClickScreenChange(event) {
-    let target = event.target
+    const target = event.target
     this.redirectTo(target.id)
   }
 
@@ -36,7 +36,7 @@ class App extends Component {
     if(this.state.selectedComponent===SELECTED_COMPONENTS.LOGIN){
       return <LoginForm onClick={this.onClickScreenChange}/>
     }
-    else if(this.state.selectedComponent===SELECTED_COMPONENTS.REGISTER_SCREEN){
+    else if(this.state.selectedComponent===SELECTED_COMPONENTS.REGISTERSCREEN){
       return <RegisterForm onClick={this.onClickScreenChange} redirect={this.redirectTo}/>
     }
   }

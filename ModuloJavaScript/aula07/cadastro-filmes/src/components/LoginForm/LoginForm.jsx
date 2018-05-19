@@ -31,10 +31,11 @@ export default class LoginForm extends React.Component{
     }
 
     onSubmit(e){
-        let account = this.state
+        const account = this.state
         LoginService.login(this.state.email,this.state.password)
         .then((result)=>{
-            console.log(result)
+            // localStorage.accessToken=result.data.accessToken
+
         }).catch((error)=>{
             console.log(error)
         })
