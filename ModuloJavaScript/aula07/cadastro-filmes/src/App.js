@@ -18,14 +18,15 @@ class App extends Component {
       selectedComponent: SELECTED_COMPONENTS.LOGIN
     }
     this.onClick=this.onClick.bind(this)
+    this.redirectTo=this.redirectTo.bind(this)
   }
 
   onClick(event) {
     let target = event.target
-    this.setSelectedComponent(target.id)
+    this.redirectTo(target.id)
   }
 
-  setSelectedComponent(id){
+  redirectTo(id){
     this.setState({
       selectedComponent:id
     })
@@ -36,7 +37,7 @@ class App extends Component {
       return <LoginForm onClick={this.onClick}/>
     }
     else if(this.state.selectedComponent===SELECTED_COMPONENTS.REGISTER_SCREEN){
-      return <RegisterForm onClick={this.onClick}/>
+      return <RegisterForm onClick={this.onClick} redirect={this.redirectTo}/>
     }
   }
 
