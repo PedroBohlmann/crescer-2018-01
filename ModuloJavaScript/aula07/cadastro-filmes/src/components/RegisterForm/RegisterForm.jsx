@@ -31,11 +31,10 @@ export default class RegisterForm extends React.Component{
     }
 
     onSubmit(e){
-        const account = this.state
         RegisterService.register(this.state.email,this.state.name,this.state.password)
         .then((result)=>{
             console.log(result)
-            this.props.redirect('LOGIN')
+            this.props.redirectTo('LOGIN')
         }).catch((error)=>{
             console.log(error)
         })

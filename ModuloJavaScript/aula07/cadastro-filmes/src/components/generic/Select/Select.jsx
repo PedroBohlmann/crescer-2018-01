@@ -5,10 +5,6 @@ export default class Select extends React.Component{
     renderOptions(){
         let first =true
         return this.props.options.map((option,key)=>{
-            if(first){
-                first=false
-                return <option defaultValue="default" disabled selected>{this.props.text}</option>
-            }
             return <option key={key} value={option.value}>{option.text}</option>
         
         })
