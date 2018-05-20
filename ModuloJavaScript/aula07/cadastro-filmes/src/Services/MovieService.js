@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default class MovieService{
     static getMovies(token){
-        return axios.get(`${CONFIG.API_URL_BASE}/`,{
+        return axios.get(`${CONFIG.API_URL_BASE}/movies`,{
             headers:{
                 'Content-Type': 'application/json',
                 authorization: token

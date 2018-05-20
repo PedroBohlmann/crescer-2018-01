@@ -41,7 +41,7 @@ class App extends Component {
       return <RegisterForm onClick={this.onClickScreenChange} redirectTo={this.redirectTo}/>
     }
     else if(this.state.selectedComponent===SELECTED_COMPONENTS.MOVIESTAB){
-      return <MovieTab/>
+      return <MovieTab redirectTo={this.redirectTo}/>
     }
   }
 

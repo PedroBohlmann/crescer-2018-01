@@ -53,6 +53,8 @@ export default class RegisterMovieForm extends React.Component{
         MovieService.createMovie(movie.title,movie.description,movie.category,movie.urlImage,localStorage.accessToken)
             .then((result)=>{
                 console.log(result)
+                this.props.reload()
+                this.props.onChangeScreen()
             }).catch((error)=>{
                 console.log(error)
             })

@@ -3,6 +3,7 @@ import React from 'react'
 import Button from '../generic/Button/Button'
 import MovieList from '../MovieList/MovieList'
 import RegisterMovieForm from '../RegisterMovieForm/RegisterMovieForm'
+import MovieService from '../../Services/MovieService'
 
 import './MoviesTab.css'
 
@@ -15,10 +16,20 @@ export default class MovieTab extends React.Component{
             movies:[]
         }
         this.onClickSwitchScreen=this.onClickSwitchScreen.bind(this)
+        this.loadMoviesFromAPI=this.loadMoviesFromAPI.bind(this)
+        this.loadMoviesFromAPI()
     } 
 
     loadMoviesFromAPI(){
-
+        MovieService.getMovies(localStorage.accessToken)
+            .then((result)=>{
+                const movies = result.data.movies
+                this.setState({
+                    movies
+                })
+            }).catch((error)=>{
+                console.log(error)
+            })
     }
 
     movieList(){
@@ -46,11 +57,11 @@ export default class MovieTab extends React.Component{
                 <div className="movietab-body container-fluid mt-3">
                 {this.getCreateMovieVisibility()?
                    <div>
-                        <MovieList movies={this.movieList()}/>
+                        <MovieList movies={this.state.movies}/>
                         <Button typeButton="btn-success new-movie" id="new-movie" onClick={this.onClickSwitchScreen} text="Cadastrar novo filme"/>
                     </div>
                     :
-                    <RegisterMovieForm onChangeScreen={this.onClickSwitchScreen}/>
+                <RegisterMovieForm reload={this.loadMoviesFromAPI} onChangeScreen={this.onClickSwitchScreen}/>
                 }</div>
             </div>
         )
