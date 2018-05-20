@@ -3,6 +3,7 @@ import React from 'react'
 import Button from '../generic/Button/Button'
 import Select from '../generic/Select/Select'
 import Input from '../generic/Input/Input'
+import Error from '../generic/Error/Error'
 
 import MovieService from '../../Services/MovieService'
 
@@ -23,7 +24,9 @@ export default class RegisterMovieForm extends React.Component{
             description:'',
             category:'',
             urlImage:'',
-            categories: []
+            categories: [],
+            errorVisibility:false,
+            error:''
         }
     }
 
@@ -36,7 +39,7 @@ export default class RegisterMovieForm extends React.Component{
                 categories
             })
         }).catch((error)=>{
-            console.log(error)
+            this.handleError(error)
         })
     }
 
@@ -49,6 +52,13 @@ export default class RegisterMovieForm extends React.Component{
         })
     }
 
+    handleError(error){
+        this.setState({
+            error: error.response.data.error,
+            errorVisibility:true
+        })
+    }
+
     onSubmit(e){
         const movie=this.state
         MovieService.createMovie(movie.title,movie.description,movie.category,movie.urlImage,localStorage.accessToken)
@@ -57,7 +67,7 @@ export default class RegisterMovieForm extends React.Component{
                 this.props.reload()
                 this.props.onChangeScreen()
             }).catch((error)=>{
-                console.log(error)
+                this.handleError(error)
             })
     }
 
@@ -70,6 +80,7 @@ export default class RegisterMovieForm extends React.Component{
                     <Input type="text" onChange={this.handdleChange} placeholder="Descrição do filme" name="description" id="description" label="Descrição"/>
                     <Input type="text" onChange={this.handdleChange} placeholder="URL para a imagem" name="urlImage" id="urlImage" label="URL para a imagem"/>
                     <Select label="Categoria" options={this.state.categories} handdleChange={this.handdleChange} name="category" id="category"/>
+                    {this.state.errorVisibility? <Error error={this.state.error}/>:undefined}
                     <Button type="button" onClick={this.onSubmit} typeButton="btn-primary" text="Cadastrar"/>
                     <Button type="button" onClick={this.props.onChangeScreen} typeButton="btn-primary" text="Esconder"/>
                 </form>
