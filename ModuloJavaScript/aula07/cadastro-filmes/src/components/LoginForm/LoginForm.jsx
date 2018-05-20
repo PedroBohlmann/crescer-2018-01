@@ -34,16 +34,18 @@ export default class LoginForm extends React.Component{
     }
 
     onSubmit(e){
-        this.props.redirectTo('LOADING')
+        this.props.toggleLoading()
         LoginService.login(this.state.email,this.state.password)
         .then((result)=>{
             localStorage.accessToken=result.data.accessToken
             this.props.redirectTo('MOVIESTAB')
+            this.props.toggleLoading()
         }).catch((err)=>{
             this.setState({
                 error: err.response.data.error,
                 errorVisibility:true
             })
+            this.props.toggleLoading()
         })
     }
 
