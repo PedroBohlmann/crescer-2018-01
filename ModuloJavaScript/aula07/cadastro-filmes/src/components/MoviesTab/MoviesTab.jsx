@@ -23,18 +23,23 @@ export default class MovieTab extends React.Component{
         this.loadMoviesFromAPI=this.loadMoviesFromAPI.bind(this)
         this.onDelete=this.onDelete.bind(this)
         this.onLogout=this.onLogout.bind(this)
-        this.loadMoviesFromAPI()
     } 
 
+    componentDidMount(){
+        this.loadMoviesFromAPI()
+    }
+
     loadMoviesFromAPI(){
+        this.props.toggleLoading()
         MovieService.getMovies(localStorage.accessToken)
             .then((result)=>{
                 const movies = result.data.movies
                 this.setState({
                     movies
                 })
+                this.props.toggleLoading()
             }).catch((error)=>{
-                console.log(error)
+                this.handleError(error)
             })
     }
 
@@ -54,18 +59,22 @@ export default class MovieTab extends React.Component{
     }
 
     onDelete(e){
+        this.props.toggleLoading()
         const target = e.target
         MovieService.deleteMovie(target.id,localStorage.accessToken)
             .then((result)=>{
                 this.loadMoviesFromAPI()
+                this.props.toggleLoading()
             }).catch((error)=>{
                 this.handleError(error)
             })
     }
 
     onLogout(e){
+        this.props.toggleLoading()
         LoginService.logout(localStorage.accessToken)
             .then((result)=>{
+                this.props.toggleLoading()
                 localStorage.accessToken=""
                 this.props.redirectTo('LOGIN')
             }).catch((error)=>{
@@ -74,6 +83,7 @@ export default class MovieTab extends React.Component{
     }
 
     handleError(error){
+        this.props.toggleLoading()
         this.setState({
             error: error.response.data.error,
             errorVisibility:true
@@ -95,7 +105,7 @@ export default class MovieTab extends React.Component{
                         {this.state.errorVisibility? <Error error={this.state.error}/>:undefined}
                     </div>
                     :
-                <RegisterMovieForm reload={this.loadMoviesFromAPI} onChangeScreen={this.onClickSwitchScreen}/>
+                <RegisterMovieForm toggleLoading={this.props.toggleLoading} reload={this.loadMoviesFromAPI} onChangeScreen={this.onClickSwitchScreen}/>
                 }</div>
             </div>
         )

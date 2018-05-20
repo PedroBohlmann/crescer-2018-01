@@ -34,6 +34,7 @@ export default class LoginForm extends React.Component{
     }
 
     onSubmit(e){
+        this.props.redirectTo('LOADING')
         LoginService.login(this.state.email,this.state.password)
         .then((result)=>{
             localStorage.accessToken=result.data.accessToken

@@ -34,11 +34,14 @@ export default class RegisterForm extends React.Component{
     }
 
     onSubmit(e){
+        this.props.toggleLoading()
         RegisterService.register(this.state.email,this.state.name,this.state.password)
         .then((result)=>{
             console.log(result)
+            this.props.toggleLoading()
             this.props.redirectTo('LOGIN')
         }).catch((error)=>{
+            this.props.toggleLoading()
             this.setState({
                 error: error.response.data.error,
                 errorVisibility:true

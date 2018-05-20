@@ -15,6 +15,9 @@ export default class RegisterMovieForm extends React.Component{
         this.handdleChange=this.handdleChange.bind(this)
         this.onSubmit=this.onSubmit.bind(this)
         this.state = this.getInitialState()
+    }
+
+    componentDidMount(){
         this.loadCategoryFromAPI()
     }
 
@@ -31,6 +34,7 @@ export default class RegisterMovieForm extends React.Component{
     }
 
     loadCategoryFromAPI(){
+        this.props.toggleLoading()
         MovieService.getCategories()
         .then((result)=>{
             let categories=result.data
@@ -38,6 +42,7 @@ export default class RegisterMovieForm extends React.Component{
                 category:categories[0].value,
                 categories
             })
+            this.props.toggleLoading()
         }).catch((error)=>{
             this.handleError(error)
         })
@@ -57,13 +62,15 @@ export default class RegisterMovieForm extends React.Component{
             error: error.response.data.error,
             errorVisibility:true
         })
+        this.props.toggleLoading()
     }
 
     onSubmit(e){
+        this.props.toggleLoading()
         const movie=this.state
         MovieService.createMovie(movie.title,movie.description,movie.category,movie.urlImage,localStorage.accessToken)
             .then((result)=>{
-                console.log(result)
+                this.props.toggleLoading()
                 this.props.reload()
                 this.props.onChangeScreen()
             }).catch((error)=>{
