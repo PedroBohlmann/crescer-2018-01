@@ -33,7 +33,7 @@ export default class LoginForm extends React.Component{
     onSubmit(e){
         LoginService.login(this.state.email,this.state.password)
         .then((result)=>{
-            // localStorage.accessToken=result.data.accessToken
+            localStorage.accessToken=result.data.accessToken
             this.props.redirectTo('MOVIESTAB')
         }).catch((error)=>{
             console.log(error)

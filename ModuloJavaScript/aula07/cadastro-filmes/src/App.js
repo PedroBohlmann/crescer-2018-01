@@ -16,7 +16,7 @@ class App extends Component {
   constructor(){
     super()
     this.state={
-      selectedComponent: SELECTED_COMPONENTS.MOVIESTAB
+      selectedComponent: SELECTED_COMPONENTS.LOGIN
     }
     this.onClickScreenChange=this.onClickScreenChange.bind(this)
     this.redirectTo=this.redirectTo.bind(this)

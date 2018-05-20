@@ -9,6 +9,7 @@
     height: 10%;
     background: #FF555C;
     z-index: 2;
+    margin-top: 0;
 }
 
 .title{
@@ -21,8 +22,16 @@
     text-align: center;
 }
 
-.btn{
+.logout{
     position: absolute;
     right: 10px;
     top: 10px;
+}
+
+.new-movie{
+    position: fixed;
+    bottom: 0;
+    top:auto;
+    left: 10px;
+    height: 50px;
 }
