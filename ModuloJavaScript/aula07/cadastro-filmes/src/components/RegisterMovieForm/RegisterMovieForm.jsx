@@ -32,6 +32,7 @@ export default class RegisterMovieForm extends React.Component{
         .then((result)=>{
             let categories=result.data
             this.setState({
+                category:categories[0].value,
                 categories
             })
         }).catch((error)=>{

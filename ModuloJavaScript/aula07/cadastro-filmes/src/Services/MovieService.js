@@ -28,4 +28,15 @@ export default class MovieService{
             authorization: token
         }})
     }
+
+    static deleteMovie(id,token){
+        return axios.post(`${CONFIG.API_URL_BASE}/deleteMovie`,{
+            id
+        },
+        {
+        headers:{
+            'Content-Type': 'application/json',
+            authorization: token
+        }})
+    }
 }

@@ -8,4 +8,13 @@ export default class LoginServices{
             password
         })
     }
+
+    static logout(token){
+        return axios.post(`${CONFIG.API_URL_BASE}/logout`,{},
+        {
+        headers:{
+            'Content-Type': 'application/json',
+            authorization: token
+        }})
+    }
 }
