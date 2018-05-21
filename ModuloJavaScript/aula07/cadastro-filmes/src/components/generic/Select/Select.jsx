@@ -3,7 +3,6 @@ import React from 'react'
 export default class Select extends React.Component{
 
     renderOptions(){
-        let first =true
         return this.props.options.map((option,key)=>{
             return <option key={key} value={option.value}>{option.text}</option>
         

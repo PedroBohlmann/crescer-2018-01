@@ -17,7 +17,8 @@ export default class MovieTab extends React.Component{
             createMovieVisibility:true,
             movies:[],
             errorVisibility:false,
-            error:''
+            error:'',
+            categories:[]
         }
         this.onClickSwitchScreen=this.onClickSwitchScreen.bind(this)
         this.loadMoviesFromAPI=this.loadMoviesFromAPI.bind(this)
@@ -26,6 +27,7 @@ export default class MovieTab extends React.Component{
     } 
 
     componentDidMount(){
+        this.loadCategoryFromAPI()
         this.loadMoviesFromAPI()
     }
 
@@ -90,6 +92,20 @@ export default class MovieTab extends React.Component{
         })
     }
 
+    loadCategoryFromAPI(){
+        this.props.toggleLoading()
+        MovieService.getCategories()
+        .then((result)=>{
+            let categories=result.data
+            this.setState({
+                categories
+            })
+            this.props.toggleLoading()
+        }).catch((error)=>{
+            this.handleError(error)
+        })
+    }
+
     render(){
         return(
             <div className="div-body">
@@ -100,7 +116,7 @@ export default class MovieTab extends React.Component{
                 <div className="movietab-body">
                 {this.getCreateMovieVisibility()?
                    <div>
-                        <MovieList movies={this.state.movies} onClick={this.onDelete.bind(this)}/>
+                        <MovieList categories={this.state.categories} movies={this.state.movies} onClick={this.onDelete.bind(this)}/>
                         <Button typeButton="btn-success new-movie" id="new-movie" onClick={this.onClickSwitchScreen} text="Cadastrar novo filme"/>
                         {this.state.errorVisibility? <Error error={this.state.error}/>:undefined}
                     </div>

@@ -39,7 +39,7 @@ export default class LoginForm extends React.Component{
         .then((result)=>{
             localStorage.accessToken=result.data.accessToken
             this.props.redirectTo('MOVIESTAB')
-            this.props.toggleLoading()
+            // this.props.toggleLoading()
         }).catch((err)=>{
             this.setState({
                 error: err.response.data.error,

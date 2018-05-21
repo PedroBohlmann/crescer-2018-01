@@ -6,7 +6,7 @@ export default class MovieList extends React.Component{
     
     renderMovies(){
         return this.props.movies.map((movie,index)=>{
-            return  <MovieItem key={index} movie={movie} onClick={this.props.onClick}/> 
+            return  <MovieItem key={index} categories={this.props.categories} movie={movie} onClick={this.props.onClick}/> 
         })
     }
 
