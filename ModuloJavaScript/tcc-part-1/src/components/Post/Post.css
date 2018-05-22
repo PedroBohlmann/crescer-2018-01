@@ -1,0 +1,11 @@
+.post-link{
+    display: inline-block;
+    margin: 20px;
+}
+
+.post-sub-image{
+    margin-left: 50%;
+    transform:translateX(-50%);
+    height: 200px;
+    width: 100%;
+}

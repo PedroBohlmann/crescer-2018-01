@@ -4,6 +4,8 @@ import { Card, CardText, CardBody, CardTitle, Button } from 'reactstrap';
 
 import {Link} from 'react-router-dom'
 
+import './Post.css'
+
 export default class Post extends React.Component{
     render(){
         return (
@@ -12,12 +14,12 @@ export default class Post extends React.Component{
                 <CardBody>
                     <CardTitle>{this.props.post.title}</CardTitle>
                 </CardBody>
-                <img width="200px" height="200px" src={this.props.post.image} alt="Card image cap" />
+                <img className="post-sub-image" src={this.props.post.image} alt="Card image cap" />
                 <CardBody>
                     <CardText>{this.props.post.description}</CardText>
-                    <Button color="danger" id={this.props.post.id} onClick={this.props.onDelete}>Deletar</Button>
-                    <Link className="nav-link" to={"/post/"+this.props.post.id}>Details</Link> 
-                    <Link className="nav-link" to={"/edit-post/"+this.props.post.id}>Edit</Link>                   
+                    <Link className="post-link" to={"/post/"+this.props.post.id}>Read more here!</Link> 
+                    <Link className="post-link" to={"/edit-post/"+this.props.post.id}>Edit</Link>
+                    <Button color="danger" id={this.props.post.id} onClick={this.props.onDelete}>Deletar</Button>            
                 </CardBody>
             </Card>
           </div>
