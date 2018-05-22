@@ -48,6 +48,7 @@ export default class Login extends React.Component{
             <div className="login-container">
                 {this.state.goHome?<Redirect to="/home"/>:undefined}
                 <div className="login-form">
+                    <div className="display-2 align-at-center">Login</div>
                     <Label for="email">Email</Label>
                     <Input type="email" id="email" placeholder="email@here" onChange={this.handleChange} name="email"/>
 

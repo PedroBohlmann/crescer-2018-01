@@ -1,0 +1,30 @@
+.page-post-container{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.post-container{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid silver;
+    padding: 20px;
+}
+
+.post-image{
+    width: 30%;
+    /* height: 30%; */
+    margin-bottom: 20px;
+}
+
+.post-title{
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.post-text{
+    text-align: justify;
+}

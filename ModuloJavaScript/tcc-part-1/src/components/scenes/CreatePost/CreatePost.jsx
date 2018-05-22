@@ -56,7 +56,7 @@ export default class CreatePost extends React.Component{
             <div>
                 <CustomNavbar/>
                 <div className="form-container">
-                    {this.state.redirectMyPost?<Redirect to="/posts"/>:undefined}
+                    {this.state.redirectMyPost?<Redirect to="/home"/>:undefined}
                     <div className="createpost-form">
                         <Label for="title">Title</Label>
                         <Input type="text" id="title" placeholder="title here" name="title" onChange={this.handleChange}/>

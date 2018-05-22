@@ -2,6 +2,10 @@ import React from 'react'
 
 import PostService from '../../../service/PostService'
 
+import CustomNavbar from '../../CustomNavbar/CustomNavbar'
+
+import "./PostDetail.css"
+
 export default class PostDetail extends React.Component{
     
     constructor(){
@@ -18,9 +22,13 @@ export default class PostDetail extends React.Component{
     }
 
     loadPostFromAPI(){
-        PostService.getPostById(localStorage.accessToken,localStorage.userName,this.props.match.params.id)
+        PostService.getPostById(localStorage.accessToken,this.props.match.params.id,localStorage.userName)
             .then((result)=>{
-                console.log(result)
+                this.setState({
+                    image:result.data.image,
+                    title:result.data.title,
+                    text:result.data.text
+                })
             }).then((error)=>{
                 console.log(error)
             })
@@ -28,8 +36,14 @@ export default class PostDetail extends React.Component{
     
     render(){
         return(
-        <div>
-            post details
+        <div><CustomNavbar/>
+            <div className="page-post-container">
+                <div className="post-container">
+                    <div className="post-title">{this.state.title}</div>
+                    <img className="post-image" src={this.state.image} alt=""/>
+                    <div className="post-text">{this.state.text}</div>
+                </div>
+            </div>
         </div>
         )   
     }

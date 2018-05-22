@@ -8,6 +8,7 @@ import CreatePost from './components/scenes/CreatePost/CreatePost'
 import Home from './components/scenes/Home/Home'
 import Logout from './components/scenes/Logout/Logout'
 import PostDetail from './components/scenes/PostDetail/PostDetail'
+import EditPost from './components/scenes/EditPost/EditPost'
 
 import { Switch, Route, Redirect} from 'react-router-dom'
 
@@ -21,6 +22,7 @@ class App extends Component {
           <Route path="/create-new-post" exact component={CreatePost}/>
           <Route path="/post/:id?" component={PostDetail}/>
           <Route path="/logout" exact component={Logout}/>
+          <Route path="/edit-post/:id?" exact component={EditPost}/>          
           <Redirect to="/"/>
         </Switch>
         </div>

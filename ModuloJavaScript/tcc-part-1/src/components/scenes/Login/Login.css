@@ -10,3 +10,11 @@
     flex-direction: column;
     width: 40%;
 }
+
+.align-at-center{
+    text-align: center;
+}
+
+.login-form > *{
+    margin-top: 20px;
+}

@@ -47,4 +47,20 @@ export default class PostService{
             }
         })
     }
+
+    static editPost(id,title,description,image,text,token){
+        return axios.put(`${CONFIG.API_URL_BASE}/post/${id}`,
+            {
+                title,
+                description,
+                image,
+                text
+            },
+            {
+            headers:{
+                'Content-Type': 'application/json',
+                authorization: token  
+            }
+        })
+    }
 }
