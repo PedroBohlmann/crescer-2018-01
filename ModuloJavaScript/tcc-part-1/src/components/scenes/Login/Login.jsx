@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { InputGroup, InputGroupAddon, InputGroupText, Input, Label, Button } from 'reactstrap';
+import {Input, Label, Button } from 'reactstrap';
 import LoginService from '../../../service/LoginService'
 
-import { Switch, Route, Redirect, Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 
 import './Login.css'
@@ -24,6 +24,9 @@ export default class Login extends React.Component{
     onSubmit(e){
         LoginService.login(this.state.email,this.state.password)
             .then((result)=>{
+                localStorage.accessToken=result.data.accessToken
+                localStorage.userEmail = this.state.email
+                localStorage.id = result.data.id
                 console.log(result)
                 this.setState({
                     goPostList:true

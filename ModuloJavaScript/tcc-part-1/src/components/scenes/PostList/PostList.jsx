@@ -1,14 +1,45 @@
 import React from 'react'
 
+import PostService from '../../../service/PostService'
+
 import Post from '../../Post/Post'
 
 export default class PostList extends React.Component{
 
-    getPosts(){
-        return {title:'titulo',img:'/Users/pedrobohlmann/Public/foto-show.jpeg',text:'alou alou'}
+    constructor(){
+        super()
+        this.state={
+            posts:[]
+        }
+    }
+
+    componentDidMount(){
+        this.loadPostsFromAPI()
+    }
+
+    loadPosts(){
+        return this.state.posts.map((post,index)=>{
+            return <Post post={post} key={index}/>
+        })
+    }
+
+
+    loadPostsFromAPI(){
+        PostService.getPosts(localStorage.accessToken,localStorage.userEmail)
+            .then((result)=>{
+                this.setState({
+                    posts: result.data.posts
+                })
+            }).catch((error)=>{
+                console.log(error)
+            })
     }
 
     render(){
-        return <Post post={this.getPosts()}/>
+        return (
+            <div>
+                {this.loadPosts()}
+            </div>
+        )
     }
 }

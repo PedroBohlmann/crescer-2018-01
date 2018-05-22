@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Switch, Route, Redirect, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import {
     Navbar,
@@ -8,7 +8,6 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
   } from 'reactstrap';
 
 export default class CustomNavbar extends React.Component{
@@ -20,19 +19,13 @@ export default class CustomNavbar extends React.Component{
             <NavbarToggler />
             <Nav className="ml-auto" navbar>
             <NavItem>
-                <NavLink>
-                    <Link className="" to='/'>Home</Link>
-                </NavLink>
+                    <Link className="nav-link" to='/'>Home</Link>
             </NavItem>
             <NavItem>
-                <NavLink>
-                    <Link className="" to='/posts'>My Posts</Link>
-                </NavLink>
+                    <Link className="nav-link" to='/posts'>My Posts</Link>
             </NavItem>
             <NavItem>
-                <NavLink>
-                    <Link className="" to='/create-new-post'>New Post</Link>
-                </NavLink>
+                    <Link className="nav-link" to='/create-new-post'>New Post</Link>
             </NavItem>
         </Nav>
       </Navbar>
