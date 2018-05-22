@@ -38,4 +38,13 @@ export default class PostService{
             }
         })
     }
+
+    static getPostById(token, postId,userName){
+        return axios.get(`${CONFIG.API_URL_BASE}/post/${userName}/${postId}`,{
+            headers:{
+                'Content-Type': 'application/json',
+                authorization: token  
+            }
+        })
+    }
 }

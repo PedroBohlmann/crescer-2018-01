@@ -4,12 +4,14 @@ import PostService from '../../../service/PostService'
 
 import Post from '../../Post/Post'
 
+import './PostList.css'
+
 export default class PostList extends React.Component{
 
     constructor(){
         super()
         this.state={
-            posts:[]
+            posts:[],
         }
         this.onDelete=this.onDelete.bind(this)
     }
@@ -20,7 +22,7 @@ export default class PostList extends React.Component{
 
     loadPosts(){
         return this.state.posts.map((post,index)=>{
-            return <Post post={post} key={index} onClick={this.onDelete}/>
+            return <Post post={post} key={index} onDelete={this.onDelete}/>
         })
     }
 
@@ -35,7 +37,7 @@ export default class PostList extends React.Component{
     }
 
     loadPostsFromAPI(){
-        PostService.getPosts(localStorage.accessToken,localStorage.userEmail)
+        PostService.getPosts(localStorage.accessToken,localStorage.userName)
             .then((result)=>{
                 this.setState({
                     posts: result.data.posts
@@ -47,7 +49,7 @@ export default class PostList extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className="posts-container">
                 {this.loadPosts()}
             </div>
         )

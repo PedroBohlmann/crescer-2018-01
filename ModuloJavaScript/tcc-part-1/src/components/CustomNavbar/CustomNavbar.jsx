@@ -12,6 +12,8 @@ import {
 
 export default class CustomNavbar extends React.Component{
     
+
+
     render(){
         return (
         <Navbar color="light" light expand="md">
@@ -19,13 +21,13 @@ export default class CustomNavbar extends React.Component{
             <NavbarToggler />
             <Nav className="ml-auto" navbar>
             <NavItem>
-                    <Link className="nav-link" to='/'>Home</Link>
-            </NavItem>
-            <NavItem>
-                    <Link className="nav-link" to='/posts'>My Posts</Link>
+                    <Link className="nav-link" to='/home'>Home</Link>
             </NavItem>
             <NavItem>
                     <Link className="nav-link" to='/create-new-post'>New Post</Link>
+            </NavItem>
+            <NavItem>
+                    <Link className="nav-link" to='/logout'>Logout</Link>
             </NavItem>
         </Nav>
       </Navbar>

@@ -5,7 +5,6 @@ import LoginService from '../../../service/LoginService'
 
 import { Redirect } from 'react-router-dom'
 
-
 import './Login.css'
 
 export default class Login extends React.Component{
@@ -15,7 +14,7 @@ export default class Login extends React.Component{
         this.state = {
             email:'',
             password:'',
-            goPostList:false
+            goHome:false
         }
         this.handleChange=this.handleChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
@@ -25,11 +24,10 @@ export default class Login extends React.Component{
         LoginService.login(this.state.email,this.state.password)
             .then((result)=>{
                 localStorage.accessToken=result.data.accessToken
-                localStorage.userEmail = this.state.email
-                localStorage.id = result.data.id
+                localStorage.userName = this.state.email.split("@")[0]
                 console.log(result)
                 this.setState({
-                    goPostList:true
+                    goHome:true
                 })
             }).catch((error)=>{
                 console.log(error)
@@ -48,7 +46,7 @@ export default class Login extends React.Component{
     render(){
         return (
             <div className="login-container">
-                {this.state.goPostList?<Redirect to="/posts"/>:undefined}
+                {this.state.goHome?<Redirect to="/home"/>:undefined}
                 <div className="login-form">
                     <Label for="email">Email</Label>
                     <Input type="email" id="email" placeholder="email@here" onChange={this.handleChange} name="email"/>
