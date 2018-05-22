@@ -29,4 +29,13 @@ export default class PostService{
         }
         )
     }
+
+    static deletePost(id,token){
+        return axios.delete(`${CONFIG.API_URL_BASE}/post/${id}`,{
+            headers:{
+                'Content-Type': 'application/json',
+                authorization: token  
+            }
+        })
+    }
 }

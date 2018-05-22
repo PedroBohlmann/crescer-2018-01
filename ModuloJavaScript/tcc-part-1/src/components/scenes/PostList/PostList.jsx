@@ -11,6 +11,7 @@ export default class PostList extends React.Component{
         this.state={
             posts:[]
         }
+        this.onDelete=this.onDelete.bind(this)
     }
 
     componentDidMount(){
@@ -19,10 +20,19 @@ export default class PostList extends React.Component{
 
     loadPosts(){
         return this.state.posts.map((post,index)=>{
-            return <Post post={post} key={index}/>
+            return <Post post={post} key={index} onClick={this.onDelete}/>
         })
     }
 
+    onDelete(e){
+        const id = e.target.id
+        PostService.deletePost(id,localStorage.accessToken)
+            .then((result)=>{
+                this.loadPostsFromAPI()
+            }).catch((error)=>{
+                console.log(error)
+            })
+    }
 
     loadPostsFromAPI(){
         PostService.getPosts(localStorage.accessToken,localStorage.userEmail)
