@@ -24,6 +24,16 @@ export default class CustomNavbar extends React.Component{
                     <Link className="" to='/'>Home</Link>
                 </NavLink>
             </NavItem>
+            <NavItem>
+                <NavLink>
+                    <Link className="" to='/posts'>My Posts</Link>
+                </NavLink>
+            </NavItem>
+            <NavItem>
+                <NavLink>
+                    <Link className="" to='/create-new-post'>New Post</Link>
+                </NavLink>
+            </NavItem>
         </Nav>
       </Navbar>
         )
