@@ -32,6 +32,21 @@ export default class PostEditor extends React.Component{
             this.setState({
                 editPost:true
             })
+        }else{
+            debugger
+            this.setState(this.getInitialState())
+        }
+    }
+
+
+    getInitialState(){
+        return {
+            title:'',
+            description:'',
+            image:'',
+            text:'',
+            redirectMyPost:false,
+            editPost:false
         }
     }
 
@@ -104,7 +119,7 @@ export default class PostEditor extends React.Component{
                         <Label for="text">Text</Label>
                         <Input type="textarea" id="text" value={this.state.text} placeholder="your text need to be over here bro!" onChange={this.handleChange} name="text"/>
 
-                        <Button color="primary" onClick={this.onSubmit}>{this.state.editPost?'Edit Post':'Create a new'} post!</Button>
+                        <Button color="primary" onClick={this.onSubmit}>{this.state.editPost?'Edit':'Create a new'} post!</Button>
                     </div>
                 </div>
             </div>

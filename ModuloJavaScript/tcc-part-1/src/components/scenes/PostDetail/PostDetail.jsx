@@ -4,6 +4,8 @@ import PostService from '../../../service/PostService'
 
 import CustomNavbar from '../../CustomNavbar/CustomNavbar'
 
+import Markdown from 'react-markdown'
+
 import "./PostDetail.css"
 
 export default class PostDetail extends React.Component{
@@ -41,7 +43,7 @@ export default class PostDetail extends React.Component{
                 <div className="post-container">
                     <div className="post-title">{this.state.title}</div>
                     <img className="post-image" src={this.state.image} alt=""/>
-                    <div className="post-text">{this.state.text}</div>
+                    <div className="post-text"><Markdown source={this.state.text}/></div>
                 </div>
             </div>
         </div>

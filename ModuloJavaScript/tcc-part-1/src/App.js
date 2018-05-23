@@ -59,7 +59,6 @@ class App extends Component {
         })
         localStorage.accessToken=''
         localStorage.userName=''
-        self.toogleLoader()
       }
       self.setState({
         error:error.message,
@@ -70,6 +69,7 @@ class App extends Component {
           showError:false
         })
       }, 5000);
+      self.toogleLoader()
       return error
     })
   }
