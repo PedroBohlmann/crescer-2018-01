@@ -24,7 +24,7 @@ export default class PostDetail extends React.Component{
     }
 
     loadPostFromAPI(){
-        PostService.getPostById(localStorage.accessToken,this.props.match.params.id,localStorage.userName)
+        PostService.getPostById(localStorage.accessToken,this.props.match.params.id,this.props.match.params.username)
             .then((result)=>{
                 this.setState({
                     image:result.data.image,

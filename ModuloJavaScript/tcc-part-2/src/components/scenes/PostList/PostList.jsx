@@ -38,7 +38,7 @@ export default class PostList extends React.Component{
 
     loadPosts(){
         return this.state.posts.map((post,index)=>{
-            return <Post post={post} key={index} onDelete={this.toggle}/>
+            return <Post post={post} key={index} onDelete={this.toggle} username={this.state.username}/>
         })
     }
 

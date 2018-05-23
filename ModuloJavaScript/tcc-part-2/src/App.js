@@ -95,7 +95,7 @@ class App extends Component {
           <Route path="/" exact component={Login}/>
           <Route path="/home/:username?" exact component={Home}/>
           <Route path="/post-editor/:id?" exact component={PostEditor}/>
-          <Route path="/post/:id?" component={PostDetail}/>
+          <Route path="/post/:username?/:id?" component={PostDetail}/>
           <Route path="/logout" exact component={Logout}/>       
           <Redirect to="/"/>
         </Switch>
