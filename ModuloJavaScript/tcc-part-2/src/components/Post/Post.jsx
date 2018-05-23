@@ -18,10 +18,10 @@ export default class Post extends React.Component{
                 <CardBody>
                     <CardText>{this.props.post.description}</CardText>
                     <Link className="post-link" to={"/post/"+this.props.username+"/"+this.props.post.id}>Read more here!</Link> 
-                    {this.props.isVisitor?undefined:<div>
+                    {this.props.username===localStorage.userName?<div>
                         <Link className="post-link" to={"/post-editor/"+this.props.post.id}>Edit</Link>
                         <Button color="danger" id={this.props.post.id} onClick={this.props.onDelete}>Deletar</Button>
-                    </div>}        
+                    </div>:undefined}        
                 </CardBody>
             </Card>
           </div>
