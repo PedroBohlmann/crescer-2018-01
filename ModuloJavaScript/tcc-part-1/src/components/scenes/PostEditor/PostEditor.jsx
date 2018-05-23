@@ -8,9 +8,9 @@ import PostService from '../../../service/PostService'
 
 import { Redirect } from 'react-router-dom'
 
-import './CreatePost.css'
+import './PostEditor.css'
 
-export default class CreatePost extends React.Component{
+export default class PostEditor extends React.Component{
 
     constructor(){
         super()
