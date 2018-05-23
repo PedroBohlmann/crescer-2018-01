@@ -16,8 +16,18 @@ export default class Login extends React.Component{
             password:'',
             goHome:false
         }
+
         this.handleChange=this.handleChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
+    }
+
+    componentDidMount(){
+        if(((localStorage.getItem("accessToken")!== '')&&(localStorage.getItem("userName")!== null))&&
+        ((localStorage.getItem("userName")!== '')&&(localStorage.getItem("userName")!== null))){
+            this.setState({
+                goHome:true
+            })
+        }
     }
 
     onSubmit(e){
