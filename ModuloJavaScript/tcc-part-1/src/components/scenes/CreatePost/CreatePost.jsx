@@ -17,23 +17,57 @@ export default class CreatePost extends React.Component{
         this.state = {
             title:'',
             description:'',
-            img:'',
+            image:'',
             text:'',
-            redirectMyPost:false
+            redirectMyPost:false,
+            editPost:false
         }
         this.onSubmit=this.onSubmit.bind(this)
         this.handleChange=this.handleChange.bind(this)
     }
 
+    componentDidMount(){
+        if(this.props.match.params.id!==undefined){
+            this.loadPostFromAPI()
+            this.setState({
+                editPost:true
+            })
+        }
+    }
+
+    loadPostFromAPI(){
+        PostService.getPostById(localStorage.accessToken,this.props.match.params.id,localStorage.userName)
+            .then((result)=>{
+                this.setState({
+                    image:result.data.image,
+                    title:result.data.title,
+                    text:result.data.text,
+                    description:result.data.description
+                })
+            }).then((error)=>{
+                console.log(error)
+            })
+    }
+
     onSubmit(){
-        PostService.createPost(this.state.title,this.state.description,this.state.img,this.state.text,localStorage.accessToken)
+        if(this.state.editPost==false){
+            PostService.createPost(this.state.title,this.state.description,this.state.image,this.state.text,localStorage.accessToken)
+                .then((result)=>{
+                    console.log(result)
+                    this.goMyPosts()
+                })
+                .catch((error)=>{
+                    console.log(error)
+                })
+        }else{
+            PostService.editPost(this.props.match.params.id,this.state.title,this.state.description,this.state.image,this.state.text,localStorage.accessToken)
             .then((result)=>{
                 console.log(result)
                 this.goMyPosts()
-            })
-            .catch((error)=>{
+            }).catch((error)=>{
                 console.log(error)
             })
+        }
     }
 
     goMyPosts(){
@@ -59,18 +93,18 @@ export default class CreatePost extends React.Component{
                     {this.state.redirectMyPost?<Redirect to="/home"/>:undefined}
                     <div className="createpost-form">
                         <Label for="title">Title</Label>
-                        <Input type="text" id="title" placeholder="title here" name="title" onChange={this.handleChange}/>
+                        <Input type="text" id="title" value={this.state.title} placeholder="title here" name="title" onChange={this.handleChange}/>
 
                         <Label for="description">Description</Label>
-                        <Input type="text" id="description" placeholder="description here" name="description" onChange={this.handleChange}/>
+                        <Input type="text" id="description" value={this.state.description} placeholder="description here" name="description" onChange={this.handleChange}/>
 
                         <Label for="img">Image</Label>
-                        <Input type="text" id="img" placeholder="img url here" name="img" onChange={this.handleChange}/>
+                        <Input type="text" id="image" value={this.state.image} placeholder="img url here" name="image" onChange={this.handleChange}/>
 
                         <Label for="text">Text</Label>
-                        <Input type="textarea" id="text" placeholder="your text need to be over here bro!" onChange={this.handleChange} name="text"/>
+                        <Input type="textarea" id="text" value={this.state.text} placeholder="your text need to be over here bro!" onChange={this.handleChange} name="text"/>
 
-                        <Button color="primary" onClick={this.onSubmit}>Create a new post!</Button>
+                        <Button color="primary" onClick={this.onSubmit}>{this.state.editPost?'Edit Post':'Create a new'} post!</Button>
                     </div>
                 </div>
             </div>

@@ -19,10 +19,9 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={Login}/>
           <Route path="/home" exact component={Home}/>
-          <Route path="/create-new-post" exact component={CreatePost}/>
+          <Route path="/post-editor/:id?" exact component={CreatePost}/>
           <Route path="/post/:id?" component={PostDetail}/>
-          <Route path="/logout" exact component={Logout}/>
-          <Route path="/edit-post/:id?" exact component={EditPost}/>          
+          <Route path="/logout" exact component={Logout}/>       
           <Redirect to="/"/>
         </Switch>
         </div>
