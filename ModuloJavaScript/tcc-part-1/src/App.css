@@ -5,3 +5,9 @@ body{
 .App{
   margin: 0;
 }
+
+.messages{
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+}

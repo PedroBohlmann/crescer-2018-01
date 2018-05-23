@@ -25,7 +25,6 @@ export default class Login extends React.Component{
             .then((result)=>{
                 localStorage.accessToken=result.data.accessToken
                 localStorage.userName = this.state.email.split("@")[0]
-                console.log(result)
                 this.setState({
                     goHome:true
                 })

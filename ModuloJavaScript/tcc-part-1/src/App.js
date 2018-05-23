@@ -8,7 +8,7 @@ import PostEditor from './components/scenes/PostEditor/PostEditor'
 import Home from './components/scenes/Home/Home'
 import Logout from './components/scenes/Logout/Logout'
 import PostDetail from './components/scenes/PostDetail/PostDetail'
-import EditPost from './components/scenes/EditPost/EditPost'
+import Success from './components/Success/Success'
 
 import Loader from './components/Loader/Loader'
 import Error from './components/Error/Error'
@@ -26,7 +26,9 @@ class App extends Component {
       redirectToLogin:false,
       loader:false,
       error:'',
-      showError:false
+      showError:false,
+      success:'',
+      showSuccess:false
     }
   }
 
@@ -40,6 +42,15 @@ class App extends Component {
 
     axios.interceptors.response.use((response)=>{
       self.toogleLoader()
+      self.setState({
+        success:response.message,
+        showSuccess:true
+      })
+      setTimeout(() => {
+        self.setState({
+          showSuccess:false
+        })
+      }, 3000);
       return response
     },(error)=>{
       if(error.response.status === 401){
@@ -73,7 +84,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.showError?<Error text={this.state.error}/>:undefined}
+        <div className="messages">
+          {this.state.showError?<Error text={this.state.error}/>:undefined}
+          {this.state.showSuccess?<Success text={this.state.success}/>:undefined} 
+        </div>       
         {this.state.loader?<Loader/>:undefined}
         <Switch>
           {this.state.redirectToLogin?<Redirect to="/"/>:undefined}
