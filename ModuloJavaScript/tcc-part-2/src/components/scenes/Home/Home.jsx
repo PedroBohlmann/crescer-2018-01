@@ -13,20 +13,10 @@ export default class Home extends React.Component{
         }
     }
 
-
-    componentDidMount(){
-        const usernameByURL= this.props.match.params.username
-        if(usernameByURL!==undefined&& usernameByURL!=this.state.username){
-            this.setState({
-                username:usernameByURL
-            })
-        }
-    }
-
     render(){
         return <div>
             <CustomNavbar/>
-            <PostList username={this.state.username}/>
+            <PostList username={this.props.match.params.username}/>
         </div>
     }
 }

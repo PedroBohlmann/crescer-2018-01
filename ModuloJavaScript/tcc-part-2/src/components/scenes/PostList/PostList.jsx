@@ -24,12 +24,16 @@ export default class PostList extends React.Component{
     }
 
     componentDidMount(){
-        if(this.props.username!==undefined){
+        let username = this.props.username
+        if(username!==undefined&& username!=this.state.username){
             this.setState({
-                username:this.props.username
+                username
             })
+        }else{
+            username = localStorage.userName
         }
-        this.loadPostsFromAPI()
+        const thisState=this.state
+        this.loadPostsFromAPI(username)
     }
 
     loadPosts(){
@@ -51,8 +55,8 @@ export default class PostList extends React.Component{
         })
     }
 
-    loadPostsFromAPI(){
-        PostService.getPosts(localStorage.accessToken,this.state.username)
+    loadPostsFromAPI(username){
+        PostService.getPosts(localStorage.accessToken,username)
             .then((result)=>{
                 this.setState({
                     posts: result.data.posts
