@@ -17,12 +17,18 @@ export default class PostList extends React.Component{
             posts:[],
             modal:false,
             idPostToBeDeleted:'',
+            username:localStorage.userName
         }
         this.onDelete=this.onDelete.bind(this)
         this.toggle = this.toggle.bind(this)
     }
 
     componentDidMount(){
+        if(this.props.username!==undefined){
+            this.setState({
+                username:this.props.username
+            })
+        }
         this.loadPostsFromAPI()
     }
 
@@ -46,7 +52,7 @@ export default class PostList extends React.Component{
     }
 
     loadPostsFromAPI(){
-        PostService.getPosts(localStorage.accessToken,localStorage.userName)
+        PostService.getPosts(localStorage.accessToken,this.state.username)
             .then((result)=>{
                 this.setState({
                     posts: result.data.posts

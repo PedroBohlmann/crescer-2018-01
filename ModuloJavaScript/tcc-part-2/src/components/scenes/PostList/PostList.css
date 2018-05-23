@@ -1,0 +1,7 @@
+.posts-container{
+    display: flex;
+}
+
+.posts-container > *{
+    margin: 10px;
+}
