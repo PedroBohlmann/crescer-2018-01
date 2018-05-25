@@ -27,7 +27,6 @@ namespace Crescer.PetStore.Api.Controllers
         public ActionResult Post([FromBody]Usuario newUser)
         {
             var procuraUser = listaDeUsuarios.FirstOrDefault(user=>user.Login==newUser.Login);
-
             if(procuraUser==null){
                 newUser.Id=id++;
                 listaDeUsuarios.Add(newUser);
@@ -37,5 +36,42 @@ namespace Crescer.PetStore.Api.Controllers
             return BadRequest("Login em uso");
         }
 
+        [HttpGet("{login}")]
+
+        public ActionResult GetUsarioPeloId(string login)
+        {
+            var procuraUser = listaDeUsuarios.FirstOrDefault(user=>user.Login==login);
+            if(procuraUser==null){
+                return NotFound("Usuario não encontrado");
+            }
+
+            return Ok(procuraUser);
+        }
+
+        [HttpPut("{login}")]
+
+        public ActionResult PutAtualizaUsuario(string login, [FromBody]string nomeCompleto){
+            var procuraUser = listaDeUsuarios.FirstOrDefault(user=>user.Login==login);
+            if(procuraUser==null){
+                return NotFound("Usuario não encontrado");
+            }
+
+            procuraUser.PrimeiroNome=nomeCompleto.Split(" ")[0];
+            procuraUser.UltimoNome=nomeCompleto.Split(" ")[1];
+
+            return Ok(procuraUser);
+        }
+
+        [HttpDelete("{login}")]
+        public ActionResult DeleteUsarioPeloLogin(string login){
+            var procuraUser = listaDeUsuarios.FirstOrDefault(user=>user.Login==login);
+            if(procuraUser==null){
+                return NotFound("Usuario não encontrado");
+            }
+
+            listaDeUsuarios.Remove(procuraUser);
+
+            return Ok("Usuario removido");
+        }
     }
 }

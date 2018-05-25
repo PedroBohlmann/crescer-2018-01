@@ -14,8 +14,11 @@ namespace Crescer.PetStore.Api.Model
 
         public string Email{get;set;}
         
-        public string Senha{get;set;}
-        
+        public string Senha{private get;set;}
+
+        public string PegaSenha(){
+            return this.Senha;
+        }        
         public string Telefone{get;set;}
 
         public StatusUsuario StatusUsuario{get;set;}
