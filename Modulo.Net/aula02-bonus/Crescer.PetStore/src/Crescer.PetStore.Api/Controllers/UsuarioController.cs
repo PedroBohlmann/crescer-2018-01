@@ -56,11 +56,29 @@ namespace Crescer.PetStore.Api.Controllers
             System.IO.File.WriteAllText(databasePath, JsonConvert.SerializeObject(database));
         }
 
+        private UsuarioPorGet montaUsuarioSemSenha(Usuario usuario){
+            var usuarioSemSenha=new UsuarioPorGet();
+            usuarioSemSenha.Id=usuario.Id;
+            usuarioSemSenha.Login=usuario.Login;
+            usuarioSemSenha.PrimeiroNome=usuario.PrimeiroNome;
+            usuarioSemSenha.UltimoNome=usuario.UltimoNome;
+            usuarioSemSenha.Email=usuario.Email;
+            usuarioSemSenha.Telefone=usuario.Telefone;
+            usuarioSemSenha.StatusUsuario=usuario.StatusUsuario;
+            return usuarioSemSenha;
+        }
+
         // GET usuario/values
         [HttpGet]
-        public List<Usuario> Get()
+        public List<UsuarioPorGet> Get()
         {
-            return listaDeUsuarios;
+            List<UsuarioPorGet> listaDeUsuariosSemSenha=new List<UsuarioPorGet>();
+            foreach(Usuario usuario in listaDeUsuarios){
+                var usuarioSemSenha=montaUsuarioSemSenha(usuario);
+                listaDeUsuariosSemSenha.Add(usuarioSemSenha);
+            }
+
+            return listaDeUsuariosSemSenha;
         }
 
         [HttpPost]
@@ -86,7 +104,7 @@ namespace Crescer.PetStore.Api.Controllers
                 return NotFound("Usuario não encontrado");
             }
 
-            return Ok(procuraUser);
+            return Ok(montaUsuarioSemSenha(procuraUser));
         }
 
         [HttpPut("{login}")]
