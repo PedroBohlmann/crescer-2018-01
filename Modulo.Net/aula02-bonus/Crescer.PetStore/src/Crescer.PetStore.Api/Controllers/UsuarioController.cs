@@ -100,6 +100,8 @@ namespace Crescer.PetStore.Api.Controllers
             procuraUser.PrimeiroNome=nomeCompleto.Split(" ")[0];
             procuraUser.UltimoNome=nomeCompleto.Split(" ")[1];
 
+            escreveDatabase();
+
             return Ok(procuraUser);
         }
 
@@ -111,6 +113,8 @@ namespace Crescer.PetStore.Api.Controllers
             }
 
             listaDeUsuarios.Remove(procuraUser);
+
+            escreveDatabase();
 
             return Ok("Usuario removido");
         }

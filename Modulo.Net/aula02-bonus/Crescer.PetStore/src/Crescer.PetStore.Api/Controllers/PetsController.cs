@@ -114,6 +114,8 @@ namespace Crescer.PetStore.Api.Controllers
 
             listaDePets.Remove(petEncontrado);
 
+            escreveDatabase();
+
             return Ok("Pet removido");
         }
 
