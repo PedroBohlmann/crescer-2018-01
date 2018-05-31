@@ -60,7 +60,19 @@ namespace SpotifyCrescer.Api.Controllers
                 return NotFound("Não existe album com esse id");
             }
 
-            return Ok("não fiz ainda");
+            var albumAtualizado = new Album(albumDTO.Nome);
+            
+            albumAtualizado.Id = album.Id;
+
+            List<Musica> musicasDoAlbum = album.Musicas;
+
+            foreach(Musica musica in musicasDoAlbum){
+                albumAtualizado.AdicionarMusica(musica);
+            }
+
+            database.AtualizaAlbum(albumAtualizado);
+
+            return Ok("Album atualizado");
         }
 
         [HttpDelete("{id}")]

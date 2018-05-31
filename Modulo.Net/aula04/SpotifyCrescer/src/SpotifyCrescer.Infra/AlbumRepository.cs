@@ -14,6 +14,19 @@ namespace SpotifyCrescer.Infra
 
         private static int idMusica = 1;
 
+        public void AtualizaAlbum(Album album)
+        {
+            RemoveAlbumPorId(album.Id);
+            albums.Add(album);
+        }
+
+        public void AtualizaMusica(Musica musica, int idAlbum)
+        {
+            var album = BuscaAlbumPorId(idAlbum);
+            RemoveMusicaPorId(idAlbum, musica.Id);
+            album.Musicas.Add(musica);
+        }
+
         public Album BuscaAlbumPorId(int id)
         {
             return albums.FirstOrDefault(produto => produto.Id == id);
@@ -22,14 +35,14 @@ namespace SpotifyCrescer.Infra
         public Musica BuscaMusicaPorId(int idAlbum, int idMusica)
         {
             var album = albums.FirstOrDefault(produto => produto.Id == idAlbum);
-            var musica = album.Musicas.FirstOrDefault(musicaI=>musicaI.Id==idMusica);
+            var musica = album.Musicas.FirstOrDefault(musicaI => musicaI.Id == idMusica);
             return musica;
         }
 
         public void InsereMusicaEmAlbum(int id, Musica musica)
         {
             var album = albums.FirstOrDefault(produto => produto.Id == id);
-            musica.Id=idMusica++;
+            musica.Id = idMusica++;
             album.Musicas.Add(musica);
         }
 
@@ -48,7 +61,7 @@ namespace SpotifyCrescer.Infra
         public void RemoveMusicaPorId(int idAlbum, int idMusica)
         {
             var album = albums.FirstOrDefault(produto => produto.Id == idAlbum);
-            var musica = album.Musicas.FirstOrDefault(musicaI=>musicaI.Id==idMusica);
+            var musica = album.Musicas.FirstOrDefault(musicaI => musicaI.Id == idMusica);
             album.Musicas.Remove(musica);
         }
 
@@ -56,5 +69,7 @@ namespace SpotifyCrescer.Infra
         {
             return albums;
         }
+
+
     }
 }

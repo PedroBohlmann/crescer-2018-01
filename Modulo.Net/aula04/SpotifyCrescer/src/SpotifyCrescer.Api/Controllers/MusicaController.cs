@@ -84,5 +84,29 @@ namespace SpotifyCrescer.Api.Controllers
 
             return Ok("Musica Removida");
         }
+
+        [HttpPut("{albumId}/musica/{id}")]
+        public ActionResult AtualizaMusicaPeloId(int albumId, int id,[FromBody]MusicaRequestDTO musicaDTO)
+        {
+            var album = database.BuscaAlbumPorId(albumId);
+            if (album == null)
+            {
+                return NotFound("Não existe album com esse id");
+            }
+
+            var musica = database.BuscaMusicaPorId(albumId, id);
+            if (musica == null)
+            {
+                return NotFound("Não existe musica com esse id");
+            }
+
+            var musicaAtualizada = new Musica(musicaDTO.Nome,musicaDTO.Duracao);
+
+            musicaAtualizada.Id=musica.Id;
+
+            database.AtualizaMusica(musicaAtualizada,albumId);
+
+            return Ok("Musica atualizada");
+        }
     }
 }

@@ -13,10 +13,14 @@ namespace SpotifyCrescer.Dominio.Contratos
 
         void RemoveAlbumPorId(int id);
 
+        void AtualizaAlbum(Album album);
+
         void InsereMusicaEmAlbum(int id,Musica musica);
 
         Musica BuscaMusicaPorId(int idAlbum,int idMusica);
 
         void RemoveMusicaPorId(int idAlbum,int idMusica);
+
+        void AtualizaMusica(Musica musica,int idAlbum);
     }
 }
