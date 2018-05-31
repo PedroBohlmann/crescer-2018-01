@@ -12,9 +12,9 @@ namespace SpotifyCrescer.Dominio.Model
         }
         public int Id { get; set;}
 
-        public string Nome { get; set; }
+        public string Nome { get; private set; }
 
-        public double Duracao { get; set; }
+        public double Duracao { get; private set; }
 
     }
 }

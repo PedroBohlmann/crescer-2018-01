@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using SpotifyCrescer.Dominio.Model;
+using SpotifyCrescer.Infra;
+using SpotifyCrescer.Api.Models;
+using SpotifyCrescer.Dominio.Service;
+
+namespace SpotifyCrescer.Api.Controllers
+{
+    [Route("api/[controller]")]
+    public class AlbumController : Controller
+    {
+        private AlbumRepository database = new AlbumRepository();
+
+        private AlbumService albumService = new AlbumService();
+
+        [HttpPost]
+        public ActionResult PostDeNovoAlbum([FromBody]AlbumRequestDTO albumDTO)
+        {
+            var album = new Album(albumDTO.Nome);
+
+            var inconsistencias = albumService.VerificarInconsistencia(album);
+
+            if (inconsistencias.Any()) return BadRequest(inconsistencias);
+
+            database.InsereNovoAlbum(album);
+
+            return CreatedAtRoute("GetAlbumPeloId", new { id = album.Id }, album);
+        }
+
+        [HttpGet("{id}", Name = "GetAlbumPeloId")]
+        public ActionResult GetAlbumPeloId(int id)
+        {
+            var album = database.BuscaAlbumPorId(id);
+
+            if (album == null)
+            {
+                return NotFound("Não existe album com esse id");
+            }
+
+            return Ok(album);
+        }
+
+        [HttpGet]
+        public ActionResult GetTodosOsAlbums()
+        {
+            return Ok(database.TodosOsAlbums());
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult PutAtualizaAlbum(int id,[FromBody]AlbumRequestDTO albumDTO)
+        {
+            var album = database.BuscaAlbumPorId(id);
+
+            if (album == null)
+            {
+                return NotFound("Não existe album com esse id");
+            }
+
+            return Ok("não fiz ainda");
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult DeleteAlbumPeloId(int id)
+        {
+            var album = database.BuscaAlbumPorId(id);
+
+            if (album == null)
+            {
+                return NotFound("Não existe album com esse id");
+            }
+
+            database.RemoveAlbumPorId(id);
+
+            return Ok("Album removido");
+        }
+    }
+}
