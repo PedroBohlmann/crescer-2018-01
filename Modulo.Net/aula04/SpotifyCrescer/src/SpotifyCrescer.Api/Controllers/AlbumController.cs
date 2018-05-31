@@ -7,15 +7,22 @@ using SpotifyCrescer.Dominio.Model;
 using SpotifyCrescer.Infra;
 using SpotifyCrescer.Api.Models;
 using SpotifyCrescer.Dominio.Service;
+using SpotifyCrescer.Dominio.Contratos;
 
 namespace SpotifyCrescer.Api.Controllers
 {
     [Route("api/[controller]")]
     public class AlbumController : Controller
     {
-        private AlbumRepository database = new AlbumRepository();
+        private IAlbumRepository database;
 
-        private AlbumService albumService = new AlbumService();
+        private AlbumService albumService;
+
+        public AlbumController(IAlbumRepository albumRepository,AlbumService albumService)
+        {
+            database=albumRepository;
+            this.albumService=albumService;
+        }
 
         [HttpPost]
         public ActionResult PostDeNovoAlbum([FromBody]AlbumRequestDTO albumDTO)

@@ -7,14 +7,21 @@ using SpotifyCrescer.Dominio.Model;
 using SpotifyCrescer.Infra;
 using SpotifyCrescer.Api.Models;
 using SpotifyCrescer.Dominio.Service;
+using SpotifyCrescer.Dominio.Contratos;
+
 namespace SpotifyCrescer.Api.Controllers
 {
     [Route("api/[controller]")]
     public class MusicaController : Controller
     {
-        private AlbumRepository database = new AlbumRepository();
+        private IAlbumRepository database;
 
-        private MusicaService musicaService = new MusicaService();
+        private MusicaService musicaService;
+
+        public MusicaController(IAlbumRepository albumRepository,MusicaService musicaService){
+            database=albumRepository;
+            this.musicaService = musicaService;
+        }
 
         [HttpPost("{albumId}/musica")]
         public ActionResult PostNovoMusica(int albumId, [FromBody]MusicaRequestDTO musicaDTO)

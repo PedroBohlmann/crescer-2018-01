@@ -8,7 +8,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-
+using SpotifyCrescer.Dominio.Contratos;
+using SpotifyCrescer.Dominio.Service;
+using SpotifyCrescer.Infra;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace SpotifyCrescer.Api
@@ -26,6 +28,12 @@ namespace SpotifyCrescer.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddTransient<AlbumService>();
+            services.AddTransient<IAlbumRepository,AlbumRepository>();
+
+            services.AddTransient<MusicaService>();
+            services.AddTransient<IAlbumRepository,AlbumRepository>();
 
             services.AddSwaggerGen(c =>
             {
