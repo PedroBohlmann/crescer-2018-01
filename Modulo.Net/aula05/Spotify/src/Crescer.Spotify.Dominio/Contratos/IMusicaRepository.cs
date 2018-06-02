@@ -9,6 +9,6 @@ namespace Crescer.Spotify.Dominio.Contratos
         void AtualizarMusica(int idAlbum, int id, Musica musica);
         void DeletarMusica(int idAlbum, int id);
         List<Musica> ListarMusicas(int idAlbum);             
-        Musica Obter(int idAlbum, int id);
+        Musica Obter(int id);
     }
 }

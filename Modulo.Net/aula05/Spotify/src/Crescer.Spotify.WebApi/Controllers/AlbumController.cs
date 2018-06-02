@@ -13,25 +13,24 @@ namespace Crescer.Spotify.WebApi.Controllers
     public class AlbumController : Controller
     {
         private IAlbumRepository albumRepository;
-        private IMusicaRepository musicaRepository;
         private AlbumService albumService;
 
         private Database database;
-        public AlbumController(IAlbumRepository albumRepository, IMusicaRepository musicaRepository, AlbumService albumService, Database database)
+        public AlbumController(IAlbumRepository albumRepository, AlbumService albumService, Database database)
         {
             this.albumRepository = albumRepository;
-            this.musicaRepository = musicaRepository;
             this.albumService = albumService;
             this.database = database;
         }
 
+        //GET api/Album
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(albumRepository.ListarAlbum());
         }
 
-        // GET api/values/5
+        // GET api/Album/{id}
         [HttpGet("{id}", Name = "GetAlbum")]
         public IActionResult Get(int id)
         {
@@ -42,7 +41,7 @@ namespace Crescer.Spotify.WebApi.Controllers
             return Ok(album);
         }
 
-        // POST api/values
+        // POST api/Album
         [HttpPost]
         public IActionResult Post([FromBody]Models.Request.AlbumDto albumRequest)//alterando
         {
@@ -58,7 +57,7 @@ namespace Crescer.Spotify.WebApi.Controllers
             return CreatedAtRoute("GetAlbum", new { id = album.Id }, album);
         }
 
-        // PUT api/values/5
+        // PUT api/Album/{id}
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody]Models.Request.AlbumDto albumRequest)
         {
@@ -72,7 +71,7 @@ namespace Crescer.Spotify.WebApi.Controllers
             return Ok();
         }
 
-        // DELETE api/values/5
+        // DELETE api/Album/{id}
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

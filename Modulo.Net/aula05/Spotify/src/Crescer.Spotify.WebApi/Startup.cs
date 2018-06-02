@@ -43,6 +43,8 @@ namespace Crescer.Spotify.WebApi
             services.AddScoped<AlbumService, AlbumService>();
             services.AddScoped<IMusicaRepository, MusicaRepository>();
             services.AddScoped<IAlbumRepository, AlbumRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<UsuarioService, UsuarioService>();
             services.AddScoped<Database>(d => new Database(connectionString));
 
         }

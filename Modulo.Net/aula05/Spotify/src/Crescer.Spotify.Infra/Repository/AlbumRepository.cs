@@ -12,7 +12,8 @@ namespace Crescer.Spotify.Infra.Repository
 
         private Database database;
 
-        public AlbumRepository(Database database){
+        public AlbumRepository(Database database)
+        {
             this.database = database;
         }
         public void AtualizarAlbum(int id, Album album)
@@ -21,7 +22,7 @@ namespace Crescer.Spotify.Infra.Repository
                 UPDATE [dbo].[Album]
                 SET [Nome]=@Nome
                 WHERE [AlbumId]=@Id
-            ",new {id,album.Nome},database.Transaction);           
+            ", new { id, album.Nome }, database.Transaction);
         }
 
         public void DeletarAlbum(int id)
@@ -29,7 +30,7 @@ namespace Crescer.Spotify.Infra.Repository
             database.Connection.Execute(@"
                 DELETE [dbo].[Album]
                 WHERE [AlbumId] = @Id
-            ",new{ id },database.Transaction);
+            ", new { id }, database.Transaction);
         }
 
         public List<Album> ListarAlbum()
@@ -39,7 +40,7 @@ namespace Crescer.Spotify.Infra.Repository
                      [AlbumId] As Id,
                      [Nome]
                 FROM [dbo].[Album]
-                ",null,database.Transaction).ToList();
+                ", null, database.Transaction).ToList();
         }
 
         public Album Obter(int id)
@@ -50,12 +51,12 @@ namespace Crescer.Spotify.Infra.Repository
                      [Nome]
                 FROM [dbo].[Album]
                 WHERE [AlbumId]=@Id
-                ",new { id },database.Transaction).FirstOrDefault();
-            
+                ", new { id }, database.Transaction).FirstOrDefault();
+
             var musicaRepository = new MusicaRepository(database);
             var listaDeMusicas = musicaRepository.ListarMusicas(album.Id);
 
-            album.Musicas=listaDeMusicas;
+            album.Musicas = listaDeMusicas;
 
             return album;
         }
@@ -69,7 +70,7 @@ namespace Crescer.Spotify.Infra.Repository
                     (
                       @Nome);
                 SELECT CAST(SCOPE_IDENTITY() as int)", new { album.Nome }, database.Transaction).Single();
-            album.Id=id;
-        }     
+            album.Id = id;
+        }
     }
 }

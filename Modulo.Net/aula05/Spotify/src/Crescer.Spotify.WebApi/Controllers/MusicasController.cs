@@ -27,9 +27,10 @@ namespace Crescer.Spotify.WebApi.Controllers
             this.albumRepository = albumRepository;
             this.database=database;
         }
-        // GET api/values
-        [HttpGet("{idAlbum}/musica")]
-        public IActionResult Get(int idAlbum)
+        
+        // GET api/{idAlbum}/Musica/lista
+        [HttpGet("{idAlbum}/musica/lista")]
+        public IActionResult GetTodasMusicas(int idAlbum)
         {
             if (albumRepository.Obter(idAlbum) == null) return NotFound();
 
@@ -39,19 +40,19 @@ namespace Crescer.Spotify.WebApi.Controllers
             return Ok(musicaRepository.ListarMusicas(idAlbum));
         }
 
-        // GET api/values/5
-        [HttpGet("{idAlbum}/musica/{id}", Name = "GetMusica")]
-        public IActionResult Get(int idAlbum, int id)
+        // GET api/album/musica/{id}
+        [HttpGet("album/musica/{id}", Name = "GetMusica")]
+        public IActionResult Get(int id)
         {
-            var musica = musicaRepository.Obter(idAlbum, id);
+            var musica = musicaRepository.Obter(id);
 
             if (musica == null) return NotFound();
 
             return Ok(musica);
         }
 
-        // POST api/values
-        [HttpPost("{idAlbum}/musica")]
+        // POST api/album/{idAlbum}/musica
+        [HttpPost("album/{idAlbum}/musica")]
         public IActionResult Post(int idAlbum, [FromBody]Models.Request.MusicaDto musicaRequest)
         {
             if (albumRepository.Obter(idAlbum) == null) return NotFound();
@@ -63,11 +64,11 @@ namespace Crescer.Spotify.WebApi.Controllers
 
             musicaRepository.SalvarMusica(idAlbum, musica);
             database.Commit();
-            return CreatedAtRoute("GetMusica", new { idAlbum = idAlbum, id = musica.Id }, musica);
+            return CreatedAtRoute("GetMusica", new { id = musica.Id }, musica);
         }
 
-        // PUT api/values/5
-        [HttpPut("{idAlbum}/musica/{id}")]
+        // PUT api/album/{idAlbum}/musica/{id}
+        [HttpPut("album/{idAlbum}/musica/{id}")]
         public IActionResult Put(int idAlbum, int id, [FromBody]Models.Request.MusicaDto musicaRequest)
         {
             if (albumRepository.Obter(idAlbum) == null) return NotFound();
@@ -84,7 +85,7 @@ namespace Crescer.Spotify.WebApi.Controllers
         }
 
         // DELETE api/values/5
-        [HttpDelete("{idAlbum}/musica/{id}")]
+        [HttpDelete("album/{idAlbum}/musica/{id}")]
         public IActionResult Delete(int idAlbum, int id)
         {
             if (albumRepository.Obter(idAlbum) == null) return NotFound();

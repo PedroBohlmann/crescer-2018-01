@@ -8,7 +8,7 @@ using LojinhaDoCrescer.Infra;
 
 namespace Crescer.Spotify.Infra.Repository
 {
-    public class MusicaRepository : IMusicaRepository
+    public class MusicaRepository : IMusicaRepository//ARRUMAR ROTAS
     {
 
         private Database database;
@@ -46,7 +46,7 @@ namespace Crescer.Spotify.Infra.Repository
                 ",new { idAlbum },database.Transaction).ToList();
         }
 
-        public Musica Obter(int idAlbum, int id)
+        public Musica Obter(int id)
         {
             return database.Connection.Query<Musica>(@"
                 SELECT   
@@ -54,8 +54,8 @@ namespace Crescer.Spotify.Infra.Repository
                      [Nome],
                      [Duracao]
                 FROM [dbo].[Musica]
-                WHERE [MusicaId]=@Id and [AlbumId]=@idAlbum
-                ",new { id,idAlbum },database.Transaction).FirstOrDefault();
+                WHERE [MusicaId]=@Id
+                ",new { id },database.Transaction).FirstOrDefault();
            
         }
 
