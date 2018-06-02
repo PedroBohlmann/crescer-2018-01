@@ -6,6 +6,7 @@ using Crescer.Spotify.Dominio.Contratos;
 using Crescer.Spotify.Dominio.Entidades;
 using Crescer.Spotify.Dominio.Servicos;
 using Crescer.Spotify.Infra;
+using LojinhaDoCrescer.Infra;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Crescer.Spotify.WebApi.Controllers
@@ -17,11 +18,14 @@ namespace Crescer.Spotify.WebApi.Controllers
         private IAlbumRepository albumRepository;
         private MusicaService musicaService;
 
-        public MusicasController(IMusicaRepository musicaRepository, MusicaService musicaService, IAlbumRepository albumRepository)
+        private Database database;
+
+        public MusicasController(IMusicaRepository musicaRepository, MusicaService musicaService, IAlbumRepository albumRepository,Database database)
         {
             this.musicaRepository = musicaRepository;
             this.musicaService = musicaService;
             this.albumRepository = albumRepository;
+            this.database=database;
         }
         // GET api/values
         [HttpGet("{idAlbum}/musica")]
@@ -58,6 +62,7 @@ namespace Crescer.Spotify.WebApi.Controllers
                 return BadRequest(mensagens);
 
             musicaRepository.SalvarMusica(idAlbum, musica);
+            database.Commit();
             return CreatedAtRoute("GetMusica", new { idAlbum = idAlbum, id = musica.Id }, musica);
         }
 
@@ -73,6 +78,8 @@ namespace Crescer.Spotify.WebApi.Controllers
                 return BadRequest(mensagens);
 
             musicaRepository.AtualizarMusica(idAlbum, id, musica);
+
+            database.Commit();
             return Ok();
         }
 
@@ -83,6 +90,8 @@ namespace Crescer.Spotify.WebApi.Controllers
             if (albumRepository.Obter(idAlbum) == null) return NotFound();
 
             musicaRepository.DeletarMusica(idAlbum, id);
+
+            database.Commit();
             return Ok();
         }
 

@@ -20,7 +20,7 @@ namespace Crescer.Spotify.Dominio.Entidades
 
         public int Id { get; set; }
 
-        public List<Musica> Musicas { get; private set; }
+        public List<Musica> Musicas { get; set; }
 
         public string Nome { get; private set; }
 

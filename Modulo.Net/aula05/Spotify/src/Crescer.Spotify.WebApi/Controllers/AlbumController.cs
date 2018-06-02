@@ -68,6 +68,7 @@ namespace Crescer.Spotify.WebApi.Controllers
                 return BadRequest(mensagens);
 
             albumRepository.AtualizarAlbum(id, album);
+            database.Commit();
             return Ok();
         }
 
@@ -76,6 +77,7 @@ namespace Crescer.Spotify.WebApi.Controllers
         public IActionResult Delete(int id)
         {
             albumRepository.DeletarAlbum(id);
+            database.Commit();
             return Ok();
         }
 

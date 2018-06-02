@@ -17,28 +17,47 @@ namespace Crescer.Spotify.Infra.Repository
         }
         public void AtualizarAlbum(int id, Album album)
         {
-            var albumObtido = Obter(id);
-            albumObtido?.Atualizar(album);            
+            database.Connection.Execute(@"
+                UPDATE [dbo].[Album]
+                SET [Nome]=@Nome
+                WHERE [AlbumId]=@Id
+            ",new {id,album.Nome},database.Transaction);           
         }
 
         public void DeletarAlbum(int id)
         {
-            var album = this.Obter(id);
-            Repositorio.albuns.Remove(album);
+            database.Connection.Execute(@"
+                DELETE [dbo].[Album]
+                WHERE [AlbumId] = @Id
+            ",new{ id },database.Transaction);
         }
 
         public List<Album> ListarAlbum()
         {
             return database.Connection.Query<Album>(@"
                 SELECT   
-                     *
+                     [AlbumId] As Id,
+                     [Nome]
                 FROM [dbo].[Album]
                 ",null,database.Transaction).ToList();
         }
 
         public Album Obter(int id)
         {
-            return Repositorio.albuns.Where(x => x.Id == id).FirstOrDefault();
+            var album = database.Connection.Query<Album>(@"
+                SELECT   
+                     [AlbumId] As Id,
+                     [Nome]
+                FROM [dbo].[Album]
+                WHERE [AlbumId]=@Id
+                ",new { id },database.Transaction).FirstOrDefault();
+            
+            var musicaRepository = new MusicaRepository(database);
+            var listaDeMusicas = musicaRepository.ListarMusicas(album.Id);
+
+            album.Musicas=listaDeMusicas;
+
+            return album;
         }
 
         public void SalvarAlbum(Album album)
