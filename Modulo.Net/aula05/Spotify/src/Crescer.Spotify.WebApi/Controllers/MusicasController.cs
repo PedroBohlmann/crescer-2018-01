@@ -6,6 +6,7 @@ using Crescer.Spotify.Dominio.Contratos;
 using Crescer.Spotify.Dominio.Entidades;
 using Crescer.Spotify.Dominio.Servicos;
 using Crescer.Spotify.Infra;
+using Crescer.Spotify.WebApi.Models.Request;
 using LojinhaDoCrescer.Infra;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,18 +17,23 @@ namespace Crescer.Spotify.WebApi.Controllers
     {
         private IMusicaRepository musicaRepository;
         private IAlbumRepository albumRepository;
+
+        private IAvaliacaoRepository avaliacaoRepository;
+
         private MusicaService musicaService;
 
         private Database database;
 
-        public MusicasController(IMusicaRepository musicaRepository, MusicaService musicaService, IAlbumRepository albumRepository,Database database)
+        public MusicasController(IMusicaRepository musicaRepository, MusicaService musicaService,
+                                IAlbumRepository albumRepository, Database database, IAvaliacaoRepository avaliacaoRepository)
         {
             this.musicaRepository = musicaRepository;
             this.musicaService = musicaService;
             this.albumRepository = albumRepository;
-            this.database=database;
+            this.database = database;
+            this.avaliacaoRepository = avaliacaoRepository;
         }
-        
+
         // GET api/{idAlbum}/Musica/lista
         [HttpGet("{idAlbum}/musica/lista")]
         public IActionResult GetTodasMusicas(int idAlbum)
@@ -99,6 +105,14 @@ namespace Crescer.Spotify.WebApi.Controllers
         private Musica MapearDtoParaDominio(Models.Request.MusicaDto musica)
         {
             return new Musica(musica.Nome, musica.Duracao);
+        }
+
+        [HttpGet("/album/musica/{id}/avaliacao")]
+        public IActionResult GetAvaliacao(int id)
+        {
+            var media = avaliacaoRepository.MediaAvaliacoes(id);
+
+            return Ok(media);
         }
     }
 }

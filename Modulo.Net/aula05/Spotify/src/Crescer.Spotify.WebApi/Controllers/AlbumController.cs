@@ -15,12 +15,15 @@ namespace Crescer.Spotify.WebApi.Controllers
         private IAlbumRepository albumRepository;
         private AlbumService albumService;
 
+        private IAvaliacaoRepository avaliacaoRepository;
+
         private Database database;
-        public AlbumController(IAlbumRepository albumRepository, AlbumService albumService, Database database)
+        public AlbumController(IAlbumRepository albumRepository, AlbumService albumService, Database database, IAvaliacaoRepository avaliacaoRepository)
         {
             this.albumRepository = albumRepository;
             this.albumService = albumService;
             this.database = database;
+            this.avaliacaoRepository = avaliacaoRepository;
         }
 
         //GET api/Album
@@ -83,6 +86,12 @@ namespace Crescer.Spotify.WebApi.Controllers
         private Album MapearDtoParaDominio(Models.Request.AlbumDto album)
         {
             return new Album(album.Nome);
+        }
+
+        [HttpGet("{id}/avaliacao")]
+        public IActionResult GetAvaliacao(int id)
+        {
+            return Ok(avaliacaoRepository.AvaliacaoAlbum(id));
         }
     }
 }

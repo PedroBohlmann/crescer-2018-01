@@ -18,11 +18,19 @@ namespace Crescer.Spotify.WebApi.Controllers
 
         private Database database;
 
-        public UsuarioController(IUsuarioRepository usuarioRepository, UsuarioService usuarioService, Database database)
+        private IAvaliacaoRepository avaliacaoRepository;
+
+        private AvaliacaoService avaliacaoService;
+
+        public UsuarioController(IUsuarioRepository usuarioRepository, 
+                                UsuarioService usuarioService, Database database, 
+                                IAvaliacaoRepository avaliacaoRepository, AvaliacaoService avaliacaoService)
         {
             this.usuarioRepository = usuarioRepository;
             this.usuarioService = usuarioService;
             this.database = database;
+            this.avaliacaoRepository = avaliacaoRepository;
+            this.avaliacaoService=avaliacaoService;
         }
 
         [HttpPost]
@@ -81,6 +89,23 @@ namespace Crescer.Spotify.WebApi.Controllers
             database.Commit();
 
             return Ok("Dados atualizados");
+        }
+
+        [HttpPost("/usuario/avaliacao")]
+        public IActionResult Post([FromBody]AvaliacaoDto avaliacaoDto)
+        {
+            var avaliacao = new Avaliacao(avaliacaoDto.IdMusica,avaliacaoDto.IdUsuario,avaliacaoDto.Nota);
+            var mensagens = avaliacaoService.Validar(avaliacao);
+            if (mensagens.Count > 0)
+            {
+                return BadRequest(mensagens);
+            }
+
+            avaliacaoRepository.SalvarAvaliacao(avaliacao);
+
+            database.Commit();
+
+            return Ok("Nova avaliacao");
         }
     }
 }

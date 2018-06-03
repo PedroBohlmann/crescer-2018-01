@@ -27,3 +27,17 @@ CREATE TABLE Usuario (
 )
 
 ALTER TABLE dbo.Usuario ADD constraint PK_Usuario PRIMARY KEY (UsuarioId)
+
+-- Avaliacao 
+CREATE TABLE Avaliacao (
+    AvaliacaoId INT IDENTITY(1,1) NOT NULL,
+    Nota int NOT NULL,
+	UsuarioId int NOT NULL,
+	MusicaId int NOT NULL
+)
+
+ALTER TABLE dbo.Avaliacao ADD constraint PK_Avaliacao PRIMARY KEY (AvaliacaoId)
+
+ALTER TABLE Avaliacao ADD FOREIGN KEY (UsuarioId) REFERENCES Usuario(UsuarioID);
+
+ALTER TABLE Avaliacao ADD FOREIGN KEY (MusicaId) REFERENCES Musica(MusicaId);

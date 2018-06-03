@@ -17,7 +17,7 @@ namespace Crescer.Spotify.Dominio.Servicos
              {
                 mensagens.Add($"{nameof(avaliacao.IdUsuario)} é um campo obrigatorio");
              }
-             if(avaliacao.Nota<0 || avaliacao.Nota>5)
+             if(avaliacao.Nota<=0 || avaliacao.Nota>5)
              {
                 mensagens.Add($"{nameof(avaliacao.Nota)} que precisa estar entre 0 e 5");
              }
