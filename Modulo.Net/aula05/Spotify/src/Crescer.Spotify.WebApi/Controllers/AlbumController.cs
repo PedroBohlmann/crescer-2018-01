@@ -39,7 +39,7 @@ namespace Crescer.Spotify.WebApi.Controllers
         {
             var album = albumRepository.Obter(id);
 
-            if (album == null) return NotFound();
+            if (album == null) return NotFound("Não existe album com esse id");
 
             return Ok(album);
         }
@@ -64,6 +64,10 @@ namespace Crescer.Spotify.WebApi.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody]Models.Request.AlbumDto albumRequest)
         {
+            var albumTest = albumRepository.Obter(id);
+
+            if (albumTest == null) return NotFound("Não existe album com esse id");
+
             var album = MapearDtoParaDominio(albumRequest);
             var mensagens = albumService.Validar(album);
             if (mensagens.Count > 0)
@@ -78,6 +82,10 @@ namespace Crescer.Spotify.WebApi.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
+            var albumTest = albumRepository.Obter(id);
+
+            if (albumTest == null) return NotFound("Não existe album com esse id");
+
             albumRepository.DeletarAlbum(id);
             database.Commit();
             return Ok();
@@ -91,7 +99,11 @@ namespace Crescer.Spotify.WebApi.Controllers
         [HttpGet("{id}/avaliacao")]
         public IActionResult GetAvaliacao(int id)
         {
-            return Ok(avaliacaoRepository.AvaliacaoAlbum(id));
+            var media = avaliacaoRepository.AvaliacaoAlbum(id);
+
+            if(media==null) return NotFound("Não existe media para esse album");
+
+            return Ok(media);
         }
     }
 }

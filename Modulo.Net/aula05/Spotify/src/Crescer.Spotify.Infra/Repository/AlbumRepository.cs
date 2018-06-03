@@ -52,6 +52,8 @@ namespace Crescer.Spotify.Infra.Repository
                 FROM [dbo].[Album]
                 WHERE [AlbumId]=@Id
                 ", new { id }, database.Transaction).FirstOrDefault();
+            
+            if(album==null) return null;
 
             var musicaRepository = new MusicaRepository(database);
             var listaDeMusicas = musicaRepository.ListarMusicas(album.Id);

@@ -18,7 +18,7 @@ ALTER TABLE dbo.Musica ADD constraint PK_Musica PRIMARY KEY (MusicaId)
 
 ALTER TABLE Musica
     ADD CONSTRAINT FK_Album FOREIGN KEY ( AlbumId )
-        REFERENCES Album ( AlbumId )
+        REFERENCES Album ( AlbumId ) ON DELETE CASCADE
 
 -- Usuario 
 CREATE TABLE Usuario (
@@ -38,6 +38,6 @@ CREATE TABLE Avaliacao (
 
 ALTER TABLE dbo.Avaliacao ADD constraint PK_Avaliacao PRIMARY KEY (AvaliacaoId)
 
-ALTER TABLE Avaliacao ADD FOREIGN KEY (UsuarioId) REFERENCES Usuario(UsuarioID);
+ALTER TABLE Avaliacao ADD FOREIGN KEY (UsuarioId) REFERENCES Usuario(UsuarioID) ON DELETE CASCADE;
 
-ALTER TABLE Avaliacao ADD FOREIGN KEY (MusicaId) REFERENCES Musica(MusicaId);
+ALTER TABLE Avaliacao ADD FOREIGN KEY (MusicaId) REFERENCES Musica(MusicaId) ON DELETE CASCADE;

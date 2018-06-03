@@ -22,15 +22,19 @@ namespace Crescer.Spotify.WebApi.Controllers
 
         private AvaliacaoService avaliacaoService;
 
+        private IMusicaRepository musicaRepository;
+
         public UsuarioController(IUsuarioRepository usuarioRepository, 
                                 UsuarioService usuarioService, Database database, 
-                                IAvaliacaoRepository avaliacaoRepository, AvaliacaoService avaliacaoService)
+                                IAvaliacaoRepository avaliacaoRepository, AvaliacaoService avaliacaoService,
+                                IMusicaRepository musicaRepository)
         {
             this.usuarioRepository = usuarioRepository;
             this.usuarioService = usuarioService;
             this.database = database;
             this.avaliacaoRepository = avaliacaoRepository;
             this.avaliacaoService=avaliacaoService;
+            this.musicaRepository=musicaRepository;
         }
 
         [HttpPost]
@@ -69,6 +73,8 @@ namespace Crescer.Spotify.WebApi.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
+            if (usuarioRepository.Obter(id) == null) { return NotFound("Não existe usuario com esse id"); }
+
             usuarioRepository.DeletarUsuario(id);
             database.Commit();
             return Ok("Deletado com sucesso");
@@ -77,6 +83,8 @@ namespace Crescer.Spotify.WebApi.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(int id,[FromBody]UsuarioDto usuarioDto)
         {
+            if (usuarioRepository.Obter(id) == null) { return NotFound("Não existe usuario com esse id"); }
+
             var usuario = new Usuario(usuarioDto.Nome);
             var mensagens = usuarioService.Validar(usuario);
             if (mensagens.Count > 0)
@@ -100,6 +108,10 @@ namespace Crescer.Spotify.WebApi.Controllers
             {
                 return BadRequest(mensagens);
             }
+
+            if (usuarioRepository.Obter(avaliacao.IdUsuario) == null) { return NotFound("Não existe usuario com esse id"); }
+            
+            if (musicaRepository.Obter(avaliacao.IdMusica) == null) return NotFound("Não existe musica com esse id");
 
             avaliacaoRepository.SalvarAvaliacao(avaliacao);
 

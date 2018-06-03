@@ -7,9 +7,9 @@ namespace Crescer.Spotify.Dominio.Contratos
     {
         bool VerificaSeExisteAlgumaAvaliacao(Avaliacao avaliacao);
         void AtualizarAvaliacao(Avaliacao avaliacao);
-        double MediaAvaliacoes(int idMusica);
+        double? MediaAvaliacoes(int idMusica);
         void SalvarAvaliacao(Avaliacao avaliacao);
 
-        double AvaliacaoAlbum(int idAlbum);
+        double? AvaliacaoAlbum(int idAlbum);
     }
 }

@@ -79,6 +79,8 @@ namespace Crescer.Spotify.WebApi.Controllers
         {
             if (albumRepository.Obter(idAlbum) == null) return NotFound();
 
+            if (musicaRepository.Obter(id) == null) return NotFound();
+
             var musica = MapearDtoParaDominio(musicaRequest);
             var mensagens = musicaService.Validar(musica);
             if (mensagens.Count > 0)
@@ -96,6 +98,8 @@ namespace Crescer.Spotify.WebApi.Controllers
         {
             if (albumRepository.Obter(idAlbum) == null) return NotFound();
 
+            if (musicaRepository.Obter(id) == null) return NotFound();
+
             musicaRepository.DeletarMusica(idAlbum, id);
 
             database.Commit();
@@ -111,6 +115,8 @@ namespace Crescer.Spotify.WebApi.Controllers
         public IActionResult GetAvaliacao(int id)
         {
             var media = avaliacaoRepository.MediaAvaliacoes(id);
+
+            if (media == null) return NotFound("Não existe musica com esse id");
 
             return Ok(media);
         }

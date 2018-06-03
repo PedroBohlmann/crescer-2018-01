@@ -24,9 +24,9 @@ namespace Crescer.Spotify.Infra.Repository
             ", new { avaliacao.Nota, avaliacao.IdMusica, avaliacao.IdUsuario }, database.Transaction);
         }
 
-        public double AvaliacaoAlbum(int idAlbum)
+        public double? AvaliacaoAlbum(int idAlbum)
         {
-            var media = database.Connection.Query<double>(@"
+            var media = database.Connection.Query<double?>(@"
                 Select AVG(t.Media) 
                 from(
                     Select m.MusicaId, AVG(A.Nota) as Media
@@ -39,9 +39,9 @@ namespace Crescer.Spotify.Infra.Repository
             return media;
         }
 
-        public double MediaAvaliacoes(int idMusica)
+        public double? MediaAvaliacoes(int idMusica)
         {
-            var media = database.Connection.Query<double>(@"
+            double? media = database.Connection.Query<double?>(@"
                 SELECT AVG(Nota) 
                 FROM [dbo].[Avaliacao]
                 WHERE [MusicaId]=@IdMusica
