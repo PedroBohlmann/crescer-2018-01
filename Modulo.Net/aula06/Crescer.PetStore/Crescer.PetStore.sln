@@ -1,0 +1,69 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9BA19091-C9F2-4DAF-B1DC-EB6E32AEEC0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.Api", "src\PetStore.Api\PetStore.Api.csproj", "{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.Dominio", "src\PetStore.Dominio\PetStore.Dominio.csproj", "{719E9FE4-FA95-4207-A674-025FA4E99C3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.Infra", "src\PetStore.Infra\PetStore.Infra.csproj", "{3603A66C-CB48-4707-99F5-F732E1A2F65B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Debug|x64.ActiveCfg = Debug|x64
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Debug|x64.Build.0 = Debug|x64
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Debug|x86.ActiveCfg = Debug|x86
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Debug|x86.Build.0 = Debug|x86
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Release|x64.ActiveCfg = Release|x64
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Release|x64.Build.0 = Release|x64
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Release|x86.ActiveCfg = Release|x86
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52}.Release|x86.Build.0 = Release|x86
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Debug|x64.ActiveCfg = Debug|x64
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Debug|x64.Build.0 = Debug|x64
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Debug|x86.ActiveCfg = Debug|x86
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Debug|x86.Build.0 = Debug|x86
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Release|x64.ActiveCfg = Release|x64
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Release|x64.Build.0 = Release|x64
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Release|x86.ActiveCfg = Release|x86
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D}.Release|x86.Build.0 = Release|x86
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Debug|x64.ActiveCfg = Debug|x64
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Debug|x64.Build.0 = Debug|x64
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Debug|x86.ActiveCfg = Debug|x86
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Debug|x86.Build.0 = Debug|x86
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Release|x64.ActiveCfg = Release|x64
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Release|x64.Build.0 = Release|x64
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Release|x86.ActiveCfg = Release|x86
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CB7E88A-8C37-493A-8B00-7AD0AD5EDD52} = {9BA19091-C9F2-4DAF-B1DC-EB6E32AEEC0E}
+		{719E9FE4-FA95-4207-A674-025FA4E99C3D} = {9BA19091-C9F2-4DAF-B1DC-EB6E32AEEC0E}
+		{3603A66C-CB48-4707-99F5-F732E1A2F65B} = {9BA19091-C9F2-4DAF-B1DC-EB6E32AEEC0E}
+	EndGlobalSection
+EndGlobal
