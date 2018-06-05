@@ -16,6 +16,7 @@ using Crescer.Spotify.Dominio.Servicos;
 using Crescer.Spotify.Infra;
 using Crescer.Spotify.Dominio.Entidades;
 using LojinhaDoCrescer.Infra;
+using Microsoft.EntityFrameworkCore;
 
 namespace Crescer.Spotify.WebApi
 {
@@ -38,6 +39,8 @@ namespace Crescer.Spotify.WebApi
             });
 
             var connectionString = Configuration.GetConnectionString("Spotify");
+
+            services.AddDbContext<SpotifyContext>(options=> options.UseSqlServer(connectionString));
 
             services.AddScoped<MusicaService, MusicaService>();
             services.AddScoped<AlbumService, AlbumService>();

@@ -4,75 +4,48 @@ using Crescer.Spotify.Dominio.Contratos;
 using Crescer.Spotify.Dominio.Entidades;
 using Dapper;
 using LojinhaDoCrescer.Infra;
+using Microsoft.EntityFrameworkCore;
 
 namespace Crescer.Spotify.Infra.Repository
 {
     public class AlbumRepository : IAlbumRepository
     {
 
-        private Database database;
+        private SpotifyContext contexto;
 
-        public AlbumRepository(Database database)
+        public AlbumRepository(SpotifyContext spotifyContext)
         {
-            this.database = database;
+            this.contexto = spotifyContext;
         }
         public void AtualizarAlbum(int id, Album album)
         {
-            database.Connection.Execute(@"
-                UPDATE [dbo].[Album]
-                SET [Nome]=@Nome
-                WHERE [AlbumId]=@Id
-            ", new { id, album.Nome }, database.Transaction);
+            var albumCadastrado = contexto.Albuns.FirstOrDefault(p => p.Id == id);
+            albumCadastrado.Atualizar(album);
         }
 
         public void DeletarAlbum(int id)
         {
-            database.Connection.Execute(@"
-                DELETE [dbo].[Album]
-                WHERE [AlbumId] = @Id
-            ", new { id }, database.Transaction);
+            var albumCadastrado = contexto.Albuns.Include(p => p.Musicas).FirstOrDefault(p => p.Id == id);
+            contexto.Albuns.Remove(albumCadastrado);
         }
 
         public List<Album> ListarAlbum()
         {
-            return database.Connection.Query<Album>(@"
-                SELECT   
-                     [AlbumId] As Id,
-                     [Nome]
-                FROM [dbo].[Album]
-                ", null, database.Transaction).ToList();
+            return contexto.Albuns.AsNoTracking().Include(p => p.Musicas).ToList();
         }
 
         public Album Obter(int id)
         {
-            var album = database.Connection.Query<Album>(@"
-                SELECT   
-                     [AlbumId] As Id,
-                     [Nome]
-                FROM [dbo].[Album]
-                WHERE [AlbumId]=@Id
-                ", new { id }, database.Transaction).FirstOrDefault();
-            
-            if(album==null) return null;
-
-            var musicaRepository = new MusicaRepository(database);
-            var listaDeMusicas = musicaRepository.ListarMusicas(album.Id);
-
-            album.Musicas = listaDeMusicas;
-
-            return album;
+            return contexto.Albuns
+                            .Include(p => p.Musicas)
+                            .AsNoTracking()
+                            .FirstOrDefault(p => p.Id == id);
         }
 
-        public void SalvarAlbum(Album album)
+        public Album SalvarAlbum(Album album)
         {
-            int id = database.Connection.Query<int>(@"
-                INSERT INTO [dbo].[Album]
-                    ([Nome])
-                VALUES
-                    (
-                      @Nome);
-                SELECT CAST(SCOPE_IDENTITY() as int)", new { album.Nome }, database.Transaction).Single();
-            album.Id = id;
+            contexto.Albuns.Add(album);
+            return album;
         }
     }
 }

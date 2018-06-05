@@ -3,6 +3,7 @@ using System.Linq;
 using Crescer.Spotify.Dominio.Contratos;
 using Crescer.Spotify.Dominio.Entidades;
 using Crescer.Spotify.Dominio.Servicos;
+using Crescer.Spotify.Infra;
 using Crescer.Spotify.WebApi.Models.Request;
 using LojinhaDoCrescer.Infra;
 using Microsoft.AspNetCore.Mvc;
@@ -17,12 +18,12 @@ namespace Crescer.Spotify.WebApi.Controllers
 
         private IAvaliacaoRepository avaliacaoRepository;
 
-        private Database database;
-        public AlbumController(IAlbumRepository albumRepository, AlbumService albumService, Database database, IAvaliacaoRepository avaliacaoRepository)
+        private SpotifyContext contexto;
+        public AlbumController(IAlbumRepository albumRepository, AlbumService albumService, SpotifyContext contexto, IAvaliacaoRepository avaliacaoRepository)
         {
             this.albumRepository = albumRepository;
             this.albumService = albumService;
-            this.database = database;
+            this.contexto = contexto;
             this.avaliacaoRepository = avaliacaoRepository;
         }
 
@@ -55,7 +56,7 @@ namespace Crescer.Spotify.WebApi.Controllers
 
             albumRepository.SalvarAlbum(album);
 
-            database.Commit();
+            contexto.SaveChanges();
 
             return CreatedAtRoute("GetAlbum", new { id = album.Id }, album);
         }
@@ -74,7 +75,9 @@ namespace Crescer.Spotify.WebApi.Controllers
                 return BadRequest(mensagens);
 
             albumRepository.AtualizarAlbum(id, album);
-            database.Commit();
+
+            contexto.SaveChanges();
+            
             return Ok();
         }
 
@@ -87,7 +90,9 @@ namespace Crescer.Spotify.WebApi.Controllers
             if (albumTest == null) return NotFound("Não existe album com esse id");
 
             albumRepository.DeletarAlbum(id);
-            database.Commit();
+
+            contexto.SaveChanges();
+
             return Ok();
         }
 
@@ -101,7 +106,7 @@ namespace Crescer.Spotify.WebApi.Controllers
         {
             var media = avaliacaoRepository.AvaliacaoAlbum(id);
 
-            if(media==null) return NotFound("Não existe media para esse album");
+            if (media == null) return NotFound("Não existe media para esse album");
 
             return Ok(media);
         }

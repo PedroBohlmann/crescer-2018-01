@@ -5,7 +5,7 @@ namespace Crescer.Spotify.Dominio.Entidades
     public class Album
     {
 
-        public Album(){ }
+        public Album() { }
         public Album(string nome)
         {
             Musicas = new List<Musica>();
@@ -20,14 +20,18 @@ namespace Crescer.Spotify.Dominio.Entidades
 
         public int Id { get; set; }
 
-        public List<Musica> Musicas { get; set; }
+        public List<Musica> Musicas { get; private set; }
 
         public string Nome { get; private set; }
 
         public void Atualizar(Album album)
         {
-            Musicas = album.Musicas;
             Nome = album.Nome;
-        }        
+        }
+
+        public void AdicionarMusica(Musica musica)
+        {
+            Musicas.Add(musica);
+        }
     }
 }
