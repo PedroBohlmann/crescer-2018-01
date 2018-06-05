@@ -4,67 +4,43 @@ using Crescer.Spotify.Dominio.Contratos;
 using Crescer.Spotify.Dominio.Entidades;
 using Dapper;
 using LojinhaDoCrescer.Infra;
+using Microsoft.EntityFrameworkCore;
 
 namespace Crescer.Spotify.Infra.Repository
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private Database database;
+        private SpotifyContext contexto;
 
-        public UsuarioRepository(Database database)
+        public UsuarioRepository(SpotifyContext contexto)
         {
-            this.database = database;
+            this.contexto = contexto;
         }
         public void AtualizarUsuario(int id, Usuario usuario)
         {
-            database.Connection.Execute(@"
-                UPDATE [dbo].[Usuario]
-                SET [Nome]=@Nome
-                WHERE [UsuarioId]=@Id
-            ",new {usuario.Nome,id},database.Transaction);
+            var usuarioCadastrado = contexto.Usuarios.FirstOrDefault(p => p.Id == id);
+            usuarioCadastrado.AtualizarUsuario(usuario);
         }
 
         public void DeletarUsuario(int id)
         {
-            database.Connection.Execute(@"
-                DELETE [dbo].[Usuario]
-                WHERE [UsuarioId]=@Id
-            ",new { id },database.Transaction);
+            var usuarioCadastrado = contexto.Usuarios.FirstOrDefault(p => p.Id == id);
+            contexto.Remove(usuarioCadastrado);
         }
 
         public List<Usuario> ListarUsuarios()
         {
-            return database.Connection.Query<Usuario>(@"
-                SELECT 
-                    [UsuarioId] As Id,
-                    [Nome]
-                FROM [dbo].[Usuario]
-            ", null, database.Transaction).ToList();
+            return contexto.Usuarios.ToList();
         }
 
         public Usuario Obter(int id)
         {
-            var usuario = database.Connection.Query<Usuario>(@"
-                SELECT 
-                    [UsuarioId] As Id,
-                    [Nome]
-                FROM [dbo].[Usuario]
-                WHERE [UsuarioId]=@Id
-            ", new { id }, database.Transaction).FirstOrDefault();
-
-            return usuario;
+            return contexto.Usuarios.FirstOrDefault(p => p.Id == id);
         }
 
         public void SalvarUsuario(Usuario usuario)
         {
-            int id = database.Connection.Query<int>(@"
-                INSERT INTO [dbo].[Usuario]
-                    ([Nome])
-                VALUES(@Nome);
-                SELECT CAST(SCOPE_IDENTITY() as int);
-            ", new { usuario.Nome }, database.Transaction).Single();
-
-            usuario.Id = id;
+            contexto.Usuarios.Add(usuario);
         }
     }
 }

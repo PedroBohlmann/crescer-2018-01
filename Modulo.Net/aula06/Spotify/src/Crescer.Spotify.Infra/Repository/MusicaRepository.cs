@@ -44,7 +44,7 @@ namespace Crescer.Spotify.Infra.Repository
 
         public Musica Obter(int id)
         {
-            return contexto.Musicas.AsNoTracking().FirstOrDefault(p => p.Id == id);
+            return contexto.Musicas.FirstOrDefault(p => p.Id == id);
         }
 
         public void SalvarMusica(int idAlbum, Musica musica)

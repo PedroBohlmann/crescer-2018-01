@@ -22,15 +22,15 @@ namespace Crescer.Spotify.WebApi.Controllers
 
         private MusicaService musicaService;
 
-        private Database database;
+        private SpotifyContext contexto;
 
         public MusicasController(IMusicaRepository musicaRepository, MusicaService musicaService,
-                                IAlbumRepository albumRepository, Database database, IAvaliacaoRepository avaliacaoRepository)
+                                IAlbumRepository albumRepository, SpotifyContext contexto, IAvaliacaoRepository avaliacaoRepository)
         {
             this.musicaRepository = musicaRepository;
             this.musicaService = musicaService;
             this.albumRepository = albumRepository;
-            this.database = database;
+            this.contexto = contexto;
             this.avaliacaoRepository = avaliacaoRepository;
         }
 
@@ -69,7 +69,7 @@ namespace Crescer.Spotify.WebApi.Controllers
                 return BadRequest(mensagens);
 
             musicaRepository.SalvarMusica(idAlbum, musica);
-            database.Commit();
+            contexto.SaveChanges();
             return CreatedAtRoute("GetMusica", new { id = musica.Id }, musica);
         }
 
@@ -88,7 +88,8 @@ namespace Crescer.Spotify.WebApi.Controllers
 
             musicaRepository.AtualizarMusica(idAlbum, id, musica);
 
-            database.Commit();
+            contexto.SaveChanges();
+
             return Ok();
         }
 
@@ -102,7 +103,8 @@ namespace Crescer.Spotify.WebApi.Controllers
 
             musicaRepository.DeletarMusica(idAlbum, id);
 
-            database.Commit();
+            contexto.SaveChanges();
+            
             return Ok();
         }
 

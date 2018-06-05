@@ -77,7 +77,7 @@ namespace Crescer.Spotify.WebApi.Controllers
             albumRepository.AtualizarAlbum(id, album);
 
             contexto.SaveChanges();
-            
+
             return Ok();
         }
 

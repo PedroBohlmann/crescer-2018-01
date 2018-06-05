@@ -3,6 +3,7 @@ using System.Linq;
 using Crescer.Spotify.Dominio.Contratos;
 using Crescer.Spotify.Dominio.Entidades;
 using Crescer.Spotify.Dominio.Servicos;
+using Crescer.Spotify.Infra;
 using Crescer.Spotify.WebApi.Models.Request;
 using LojinhaDoCrescer.Infra;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +17,7 @@ namespace Crescer.Spotify.WebApi.Controllers
 
         private UsuarioService usuarioService;
 
-        private Database database;
+        private SpotifyContext contexto;
 
         private IAvaliacaoRepository avaliacaoRepository;
 
@@ -24,17 +25,17 @@ namespace Crescer.Spotify.WebApi.Controllers
 
         private IMusicaRepository musicaRepository;
 
-        public UsuarioController(IUsuarioRepository usuarioRepository, 
-                                UsuarioService usuarioService, Database database, 
+        public UsuarioController(IUsuarioRepository usuarioRepository,
+                                UsuarioService usuarioService, SpotifyContext contexto,
                                 IAvaliacaoRepository avaliacaoRepository, AvaliacaoService avaliacaoService,
                                 IMusicaRepository musicaRepository)
         {
             this.usuarioRepository = usuarioRepository;
             this.usuarioService = usuarioService;
-            this.database = database;
+            this.contexto = contexto;
             this.avaliacaoRepository = avaliacaoRepository;
-            this.avaliacaoService=avaliacaoService;
-            this.musicaRepository=musicaRepository;
+            this.avaliacaoService = avaliacaoService;
+            this.musicaRepository = musicaRepository;
         }
 
         [HttpPost]
@@ -49,7 +50,7 @@ namespace Crescer.Spotify.WebApi.Controllers
 
             usuarioRepository.SalvarUsuario(usuario);
 
-            database.Commit();
+            contexto.SaveChanges();
 
             return CreatedAtRoute("GetUsuario", new { id = usuario.Id }, usuario);
         }
@@ -76,12 +77,12 @@ namespace Crescer.Spotify.WebApi.Controllers
             if (usuarioRepository.Obter(id) == null) { return NotFound("Não existe usuario com esse id"); }
 
             usuarioRepository.DeletarUsuario(id);
-            database.Commit();
+            contexto.SaveChanges();
             return Ok("Deletado com sucesso");
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id,[FromBody]UsuarioDto usuarioDto)
+        public IActionResult Put(int id, [FromBody]UsuarioDto usuarioDto)
         {
             if (usuarioRepository.Obter(id) == null) { return NotFound("Não existe usuario com esse id"); }
 
@@ -92,9 +93,9 @@ namespace Crescer.Spotify.WebApi.Controllers
                 return BadRequest(mensagens);
             }
 
-            usuarioRepository.AtualizarUsuario(id,usuario);
-        
-            database.Commit();
+            usuarioRepository.AtualizarUsuario(id, usuario);
+
+            contexto.SaveChanges();
 
             return Ok("Dados atualizados");
         }
@@ -102,20 +103,25 @@ namespace Crescer.Spotify.WebApi.Controllers
         [HttpPost("/usuario/avaliacao")]
         public IActionResult Post([FromBody]AvaliacaoDto avaliacaoDto)
         {
-            Avaliacao avaliacao = null;//new Avaliacao(avaliacaoDto.IdMusica,avaliacaoDto.IdUsuario,avaliacaoDto.Nota);
+            var usuario= usuarioRepository.Obter(avaliacaoDto.IdUsuario);
+
+            var musica = musicaRepository.Obter(avaliacaoDto.IdMusica);
+
+            if (usuario == null) { return NotFound("Não existe usuario com esse id"); }
+
+            if (musica == null) return NotFound("Não existe musica com esse id");
+
+            Avaliacao avaliacao = new Avaliacao(musica,usuario,avaliacaoDto.Nota);
+            
             var mensagens = avaliacaoService.Validar(avaliacao);
             if (mensagens.Count > 0)
             {
                 return BadRequest(mensagens);
             }
 
-            if (usuarioRepository.Obter(avaliacao.Usuario.Id) == null) { return NotFound("Não existe usuario com esse id"); }
-            
-            if (musicaRepository.Obter(avaliacao.Musica.Id) == null) return NotFound("Não existe musica com esse id");
-
             avaliacaoRepository.SalvarAvaliacao(avaliacao);
 
-            database.Commit();
+            contexto.SaveChanges();
 
             return Ok("Nova avaliacao");
         }

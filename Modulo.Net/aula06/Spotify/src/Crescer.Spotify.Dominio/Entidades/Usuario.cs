@@ -11,5 +11,9 @@ namespace Crescer.Spotify.Dominio.Entidades
         public string Nome{get; private set;}
 
         public int Id{get;set;}
+
+        public void AtualizarUsuario(Usuario usuario){
+            this.Nome=usuario.Nome;
+        }
     }
 }

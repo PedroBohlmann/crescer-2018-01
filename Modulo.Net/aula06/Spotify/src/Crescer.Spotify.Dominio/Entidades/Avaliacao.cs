@@ -4,7 +4,7 @@ namespace Crescer.Spotify.Dominio.Entidades
     {
         public Avaliacao() { }
 
-        public Avaliacao(Musica idMusica, Usuario Usuario, int nota)
+        public Avaliacao(Musica Musica, Usuario Usuario, int nota)
         {
             this.Musica = Musica;
             this.Usuario = Usuario;
@@ -19,5 +19,9 @@ namespace Crescer.Spotify.Dominio.Entidades
 
         public int Nota { get; private set; }
 
+        public void AtualizarAvaliacao(Avaliacao avaliacao)
+        {
+            this.Nota=avaliacao.Nota;
+        }
     }
 }
