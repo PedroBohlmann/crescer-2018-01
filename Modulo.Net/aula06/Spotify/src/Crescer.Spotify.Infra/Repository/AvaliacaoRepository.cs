@@ -3,7 +3,6 @@ using System.Linq;
 using Crescer.Spotify.Dominio.Contratos;
 using Crescer.Spotify.Dominio.Entidades;
 using Dapper;
-using LojinhaDoCrescer.Infra;
 using Microsoft.EntityFrameworkCore;
 
 namespace Crescer.Spotify.Infra.Repository
@@ -11,9 +10,12 @@ namespace Crescer.Spotify.Infra.Repository
     public class AvaliacaoRepository : IAvaliacaoRepository
     {
         private SpotifyContext contexto;
-        public AvaliacaoRepository(SpotifyContext contexto)
+
+        private IAlbumRepository albumRepository;
+        public AvaliacaoRepository(SpotifyContext contexto,IAlbumRepository albumRepository)
         {
             this.contexto = contexto;
+            this.albumRepository=albumRepository;
         }
 
         public void AtualizarAvaliacao(Avaliacao avaliacao)
@@ -24,7 +26,21 @@ namespace Crescer.Spotify.Infra.Repository
 
         public double? AvaliacaoAlbum(int idAlbum)
         {
-            return null;
+            var album = albumRepository.Obter(idAlbum);
+
+            if(album==null) return null;
+
+            double somatorio = 0;
+            int numeroDeMedias=0;
+            foreach(Musica musica in album.Musicas)
+            {
+                double? media=MediaAvaliacoes(musica.Id);
+                if(media!=null){
+                    somatorio+=(double)media;
+                }
+                numeroDeMedias++;
+            }
+            return somatorio/numeroDeMedias;
         }
 
         public double? MediaAvaliacoes(int idMusica)

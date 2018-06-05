@@ -7,7 +7,6 @@ using Crescer.Spotify.Dominio.Entidades;
 using Crescer.Spotify.Dominio.Servicos;
 using Crescer.Spotify.Infra;
 using Crescer.Spotify.WebApi.Models.Request;
-using LojinhaDoCrescer.Infra;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Crescer.Spotify.WebApi.Controllers

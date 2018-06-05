@@ -9,13 +9,13 @@ namespace Crescer.Spotify.Dominio.Servicos
         {
              List<string> mensagens = new List<string>();
 
-             if(avaliacao.Musica.Id<=0)
+             if(avaliacao.Musica==null)
              {
-                mensagens.Add($"{nameof(avaliacao.Musica.Id)} é um campo obrigatorio");
+                mensagens.Add($"IdMusica é um campo obrigatorio");
              }
-             if(avaliacao.Usuario.Id<=0)
+             if(avaliacao.Usuario==null)
              {
-                mensagens.Add($"{nameof(avaliacao.Usuario.Id)} é um campo obrigatorio");
+                mensagens.Add($"IdUsuario é um campo obrigatorio");
              }
              if(avaliacao.Nota<=0 || avaliacao.Nota>5)
              {

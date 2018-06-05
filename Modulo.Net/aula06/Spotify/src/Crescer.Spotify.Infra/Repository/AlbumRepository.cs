@@ -3,7 +3,6 @@ using System.Linq;
 using Crescer.Spotify.Dominio.Contratos;
 using Crescer.Spotify.Dominio.Entidades;
 using Dapper;
-using LojinhaDoCrescer.Infra;
 using Microsoft.EntityFrameworkCore;
 
 namespace Crescer.Spotify.Infra.Repository
@@ -38,7 +37,6 @@ namespace Crescer.Spotify.Infra.Repository
         {
             return contexto.Albuns
                             .Include(p => p.Musicas)
-                            .AsNoTracking()
                             .FirstOrDefault(p => p.Id == id);
         }
 

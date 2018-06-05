@@ -15,7 +15,6 @@ using Crescer.Spotify.Infra.Repository;
 using Crescer.Spotify.Dominio.Servicos;
 using Crescer.Spotify.Infra;
 using Crescer.Spotify.Dominio.Entidades;
-using LojinhaDoCrescer.Infra;
 using Microsoft.EntityFrameworkCore;
 
 namespace Crescer.Spotify.WebApi
@@ -50,7 +49,6 @@ namespace Crescer.Spotify.WebApi
             services.AddScoped<UsuarioService, UsuarioService>();
             services.AddScoped<IAvaliacaoRepository, AvaliacaoRepository>();
             services.AddScoped<AvaliacaoService, AvaliacaoService>();
-            services.AddScoped<Database>(d => new Database(connectionString));
 
         }
 

@@ -4,7 +4,6 @@ using System.Linq;
 using Crescer.Spotify.Dominio.Contratos;
 using Crescer.Spotify.Dominio.Entidades;
 using Dapper;
-using LojinhaDoCrescer.Infra;
 using Microsoft.EntityFrameworkCore;
 
 namespace Crescer.Spotify.Infra.Repository

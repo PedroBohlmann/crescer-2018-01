@@ -13,7 +13,9 @@ namespace Crescer.Spotify.Dominio.Tests
         {
             var avalicaoService = new AvaliacaoService();
 
-            Avaliacao avaliacao = null;//new Avaliacao(1,0,3);
+            var musica = new Musica("nome",20);
+
+            Avaliacao avaliacao = new Avaliacao(musica,null,3);
 
             var erros = avalicaoService.Validar(avaliacao);
 
@@ -25,7 +27,9 @@ namespace Crescer.Spotify.Dominio.Tests
         {
             var avalicaoService = new AvaliacaoService();
 
-            Avaliacao avaliacao = null;//new Avaliacao(0,2,3);
+            var usuario = new Usuario("usuario show");
+
+            Avaliacao avaliacao = new Avaliacao(null,usuario,3);
 
             var erros = avalicaoService.Validar(avaliacao);
 
@@ -33,11 +37,15 @@ namespace Crescer.Spotify.Dominio.Tests
         }
 
         [TestMethod]
-        public void TestaAvaliacaoSemIdAlbum()
+        public void TestaAvaliacaoSemNota()
         {
             var avalicaoService = new AvaliacaoService();
 
-            Avaliacao avaliacao = null;//new Avaliacao(2,2,55);
+            var musica = new Musica("nome",20);
+
+            var usuario = new Usuario("usuario show");
+
+            Avaliacao avaliacao = new Avaliacao(musica,usuario,55);
 
             var erros = avalicaoService.Validar(avaliacao);
 
