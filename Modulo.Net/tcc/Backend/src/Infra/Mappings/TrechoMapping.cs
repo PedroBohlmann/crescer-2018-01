@@ -14,9 +14,9 @@ namespace Infra.Mappings
 
             builder.Property(p=>p.DistanciaTotal);
 
-            builder.HasOne(p=>p.Origem).WithOne();
+            builder.HasOne(p=>p.Origem).WithMany();
 
-            builder.HasOne(p=>p.Destino).WithOne();
+            builder.HasOne(p=>p.Destino).WithMany();
         }
     }
 }

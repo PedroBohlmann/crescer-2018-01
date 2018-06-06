@@ -3,9 +3,9 @@ using Dominio.Entidades;
 
 namespace Dominio.Servicos
 {
-    public class ClassesDeVooService
+    public class ClasseDeVooService
     {
-        public List<string> Validar(ClassesDeVoo voo)
+        public List<string> Validar(ClasseDeVoo voo)
         {
             List<string> mensagens = new List<string>();
 

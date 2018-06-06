@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dominio.Contratos;
+using Infra;
+using Infra.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -32,6 +36,14 @@ namespace Api
             {
                 c.SwaggerDoc("v1", new Info { Title = "Aerolito lines", Version = "v1" });
             });
+
+            var connectionString = Configuration.GetConnectionString("TccDB");
+
+            services.AddDbContext<VooContext>(options => options.UseSqlServer(connectionString));
+
+            services.AddScoped<VooContext,VooContext>();
+            services.AddScoped<IReservaRepository,ReservaRepository>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

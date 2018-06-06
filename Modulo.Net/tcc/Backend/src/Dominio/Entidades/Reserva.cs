@@ -6,18 +6,18 @@ namespace Dominio.Entidades
     {
         public Reserva() { }
 
-        public Reserva(ClassesDeVoo classeDeVoo, Trecho trecho)
+        public Reserva(ClasseDeVoo classeDeVoo, Trecho trecho)
         {
             this.ClasseDeVoo = classeDeVoo;
             this.Trecho = trecho;
-            this.Opcionais = new List<Opcional>();
+            this.Opcionais = new List<OpcionalReserva>();
 
             CalcularValorTotal();
         }
 
-        public List<Opcional> Opcionais { get; private set; }
+        public List<OpcionalReserva> Opcionais { get; private set; }
 
-        public ClassesDeVoo ClasseDeVoo { get; private set; }
+        public ClasseDeVoo ClasseDeVoo { get; private set; }
 
         public Trecho Trecho { get; private set; }
 
@@ -32,9 +32,9 @@ namespace Dominio.Entidades
             var valorBase = ClasseDeVoo.ValorFixo + (Trecho.DistanciaTotal * ClasseDeVoo.ValorMilha);
             var valorOpcional = 0.0;
 
-            foreach (Opcional opcional in Opcionais)
+            foreach (OpcionalReserva opcional in Opcionais)
             {
-                valorOpcional += opcional.ValorPorcentagem * valorBase;
+                valorOpcional += opcional.Opcional.ValorPorcentagem * valorBase;
             }
 
             ValorTotal = valorBase + valorOpcional;
@@ -42,7 +42,8 @@ namespace Dominio.Entidades
 
         public void AdicionarOpcional(Opcional opcional)
         {
-            Opcionais.Add(opcional);
+            var opcionalReserva = new OpcionalReserva(opcional,this);
+            Opcionais.Add(opcionalReserva);
             CalcularValorTotal();
         }
 

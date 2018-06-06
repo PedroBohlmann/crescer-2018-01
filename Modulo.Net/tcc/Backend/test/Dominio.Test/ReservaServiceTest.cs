@@ -12,7 +12,7 @@ namespace Dominio.Test
         [TestMethod]
         public void TestaServiceSemTrecho()
         {
-            var classeVoo = new ClassesDeVoo("top", 500, 25);
+            var classeVoo = new ClasseDeVoo("top", 500, 25);
 
             var origem = new Local("New York", "Ta no meio de Manhattan", 40.76, -73.984);
             var destino = new Local("Roma", "Ta no coliseu de Roma", 41.89, 12.492);
@@ -56,9 +56,7 @@ namespace Dominio.Test
         [TestMethod]
         public void TestaServiceCalculoValorTotal()
         {
-            var classeVoo = new ClassesDeVoo("top", 500, 25);
-
-            var optional = new Opcional("","Open bar de chá gelado",0.6);
+            var classeVoo = new ClasseDeVoo("top", 500, 25);
 
             var origem = new Local("New York", "Ta no meio de Manhattan", 40.76, -73.984);
             var destino = new Local("Roma", "Ta no coliseu de Roma", 41.89, 12.492);//4279
@@ -67,7 +65,7 @@ namespace Dominio.Test
 
             var reserva = new Reserva(classeVoo, trecho);
 
-            reserva.AdicionarOpcional(optional);
+            //TODO: tirar 60 porcento do valor esperado
 
             var valorTotalResultado = reserva.ValorTotal;
 

@@ -1,10 +1,10 @@
 namespace Dominio.Entidades
 {
-    public class ClassesDeVoo
+    public class ClasseDeVoo
     {
-        public ClassesDeVoo() { }
+        public ClasseDeVoo() { }
 
-        public ClassesDeVoo(string descricao, double valorFixo, double valorMilha)
+        public ClasseDeVoo(string descricao, double valorFixo, double valorMilha)
         {
             this.Descricao = descricao;
             this.ValorFixo = valorFixo;
