@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Api.Model.Request
 {
-    public class ReservaDto
+    public class ReservaRequestDto
     {
         public int IdClasseDeVoo { get; set; }
 

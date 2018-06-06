@@ -1,6 +1,6 @@
 namespace Api.Model.Request
 {
-    public class LocalDto
+    public class LocalResquestDto
     {
         public string Cidade { get; set; }
 

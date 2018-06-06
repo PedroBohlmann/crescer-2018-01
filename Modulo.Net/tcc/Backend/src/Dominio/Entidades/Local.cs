@@ -21,5 +21,13 @@ namespace Dominio.Entidades
         public double Latitude { get; private set; }
 
         public double Longitude { get; private set; }
+
+        public void AtualizarLocal(Local novo)
+        {
+            this.Cidade = novo.Cidade;
+            this.Aeroporto = novo.Aeroporto;
+            this.Latitude = novo.Latitude;
+            this.Longitude = novo.Longitude;
+        }
     }
 }

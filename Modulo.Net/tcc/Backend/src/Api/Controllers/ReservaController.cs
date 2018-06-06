@@ -24,7 +24,7 @@ namespace Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]ReservaDto reservaDto)
+        public IActionResult Post([FromBody]ReservaRequestDto reservaDto)
         {
             var reserva = MapearReservaDtoParaReserva(reservaDto);
 
@@ -35,7 +35,7 @@ namespace Api.Controllers
             return Ok(reserva.ValorTotal);
         }
 
-        private Reserva MapearReservaDtoParaReserva(ReservaDto reserva)
+        private Reserva MapearReservaDtoParaReserva(ReservaRequestDto reserva)
         {
             var trecho = contexto.Trechos.FirstOrDefault(p => p.Id == reserva.IdTrecho);
             var classeDeVoo = contexto.ClassesDeVoo.FirstOrDefault(p => p.Id == reserva.IdClasseDeVoo);
