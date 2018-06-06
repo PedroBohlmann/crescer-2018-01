@@ -9,21 +9,13 @@ namespace Dominio.Servicos
         {
             List<string> mensagens = new List<string>();
 
-            if (trecho.LatitudeDestino <= 0)
+            if (trecho.Origem == null)
             {
-                mensagens.Add("LatitudeDestino é um campo obrigatorio");
+                mensagens.Add("Campo Origem é obrigatorio");
             }
-            if (trecho.LongitudeDestino <= 0)
+            if (trecho.Destino == null)
             {
-                mensagens.Add("LongitudeDestino é um campo obrigatorio");
-            }
-            if (trecho.LatitudeOrigem <= 0)
-            {
-                mensagens.Add("LatitudeOrigem é um campo obrigatorio");
-            }
-            if (trecho.LongitudeOrigem <= 0)
-            {
-                mensagens.Add("LongitudeOrigem é um campo obrigatorio");
+                mensagens.Add("Campo Destino é obrigatorio");
             }
 
             return mensagens;

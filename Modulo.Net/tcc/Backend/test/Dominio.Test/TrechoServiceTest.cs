@@ -7,12 +7,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Dominio.Test
 {
     [TestClass]
-    public class TrechoTest
+    public class TrechoServiceTest
     {
         [TestMethod]
         public void TestandoCalculoDeDistancia()
         {
-            var trecho = new Trecho(40.76, -73.984, 41.89, 12.492);
+            var origem = new Local("New York","Ta no meio de Manhattan",40.76, -73.984);
+            var destino = new Local("Roma","Ta no coliseu de Roma",41.89, 12.492);
+            var trecho = new Trecho(origem, destino);
 
             double esperado = Math.Floor(4279.9454);
             double resultado = trecho.DistanciaTotal;
@@ -24,10 +26,11 @@ namespace Dominio.Test
         public void TestandoDadosDeOrigemFaltando()
         {
             var erros = new List<string>();
-            erros.Add("LatitudeOrigem é um campo obrigatorio");
-            erros.Add("LongitudeOrigem é um campo obrigatorio");
+            erros.Add("Campo Origem é obrigatorio");
 
-            var trecho = new Trecho(0,0,41.89, 12.492);
+            var destino = new Local("Roma","Ta no coliseu de Roma",41.89, 12.492);
+
+            var trecho = new Trecho(null,destino);
 
             var trechoService = new TrechoService();
 
@@ -40,10 +43,11 @@ namespace Dominio.Test
         public void TestandoDadosDeDestinoFaltando()
         {
             var erros = new List<string>();
-            erros.Add("LatitudeDestino é um campo obrigatorio");
-            erros.Add("LongitudeDestino é um campo obrigatorio");
+            erros.Add("Campo Destino é obrigatorio");
 
-            var trecho = new Trecho(41.89, 12.492,0,0);
+            var origem = new Local("New York","Ta no meio de Manhattan",40.76, -73.984);
+
+            var trecho = new Trecho(origem,null);
 
             var trechoService = new TrechoService();
 

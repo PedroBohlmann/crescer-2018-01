@@ -7,40 +7,37 @@ namespace Dominio.Entidades
     {
         public Trecho() { }
 
-        public Trecho(double latitudeOrigem, double longitudeOrigem, double latitudeDestino, double longitudeDestino)
-        {
-            this.LatitudeOrigem = latitudeOrigem;
-            this.LongitudeOrigem = longitudeOrigem;
-            this.LatitudeDestino = latitudeDestino;
-            this.LongitudeDestino = longitudeDestino;
 
-            this.CalcularDistancia();
+        public Trecho(Local origem, Local destino)
+        {
+            this.Origem = origem;
+            this.Destino = destino;
+
+            CalcularDistancia();
         }
         public int Id { get; set; }
 
-        public double LatitudeOrigem { get; private set; }
+        public Local Origem { get; private set; }
 
-        public double LongitudeOrigem { get; private set; }
-
-        public double LatitudeDestino { get; private set; }
-
-        public double LongitudeDestino { get; private set; }
+        public Local Destino { get; private set; }
 
         public double DistanciaTotal { get; private set; }
 
         public void CalcularDistancia()
         {
+            if(Origem==null||Destino==null) return;
+            
             var origem = new Coordinate()
             {
-                Latitude = LatitudeOrigem,
-                Longitude = LongitudeOrigem
+                Latitude = Origem.Latitude,
+                Longitude = Origem.Longitude
             };
             var destino = new Coordinate()
             {
-                Latitude = LatitudeDestino,
-                Longitude = LongitudeDestino
+                Latitude = Destino.Latitude,
+                Longitude = Destino.Longitude
             };
-            this.DistanciaTotal = GeoCalculator.GetDistance(origem,destino,1);
+            this.DistanciaTotal = GeoCalculator.GetDistance(origem, destino, 1);
         }
     }
 }

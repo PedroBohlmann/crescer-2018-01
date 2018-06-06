@@ -7,18 +7,18 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Dominio.Test
 {
     [TestClass]
-    public class VooServiceTest
+    public class ClassesDeVooServiceTest
     {
         [TestMethod]
         public void TestaVooSemNome()
         {
-            var voo = new Voo("", 50, 250);
+            var voo = new ClassesDeVoo("", 50, 250);
 
             var erros = new List<string>();
 
             erros.Add("Descricao é um campo obrigatorio");
 
-            var vooService = new VooService();
+            var vooService = new ClassesDeVooService();
 
             var resultado = vooService.Validar(voo);
 
@@ -28,13 +28,13 @@ namespace Dominio.Test
         [TestMethod]
         public void TestaVooSemValorFixo()
         {
-            var voo = new Voo("dsa", 0, 250);
+            var voo = new ClassesDeVoo("dsa", 0, 250);
 
             var erros = new List<string>();
 
             erros.Add("Valor fixo é um campo obrigatorio");
 
-            var vooService = new VooService();
+            var vooService = new ClassesDeVooService();
 
             var resultado = vooService.Validar(voo);
 
@@ -44,13 +44,13 @@ namespace Dominio.Test
         [TestMethod]
         public void TestaVooSemValorMilha()
         {
-            var voo = new Voo("dsa", 50, 0);
+            var voo = new ClassesDeVoo("dsa", 50, 0);
 
             var erros = new List<string>();
 
             erros.Add("Valor milha é um campo obrigatorio");
 
-            var vooService = new VooService();
+            var vooService = new ClassesDeVooService();
 
             var resultado = vooService.Validar(voo);
 
