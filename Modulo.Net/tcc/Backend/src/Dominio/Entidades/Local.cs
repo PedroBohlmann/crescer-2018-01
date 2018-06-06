@@ -12,7 +12,7 @@ namespace Dominio.Entidades
             this.Longitude = longitude;
         }
 
-        public int Id{get;set;}
+        public int Id { get; set; }
 
         public string Cidade { get; private set; }
 

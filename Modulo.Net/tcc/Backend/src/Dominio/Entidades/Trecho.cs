@@ -25,8 +25,8 @@ namespace Dominio.Entidades
 
         public void CalcularDistancia()
         {
-            if(Origem==null||Destino==null) return;
-            
+            if (Origem == null || Destino == null) return;
+
             var origem = new Coordinate()
             {
                 Latitude = Origem.Latitude,
