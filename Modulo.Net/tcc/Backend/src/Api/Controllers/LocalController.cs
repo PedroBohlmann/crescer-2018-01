@@ -42,6 +42,8 @@ namespace Api.Controllers
 
             localRepositorio.SalvarLocal(local);
 
+            contexto.SaveChanges();
+
             var retorno = MapearLocalParaLocalResponse(local);
 
             return Ok(retorno);
@@ -73,6 +75,8 @@ namespace Api.Controllers
         {
             localRepositorio.DeletarLocal(id);
 
+            contexto.SaveChanges();
+
             return Ok("Local removido");
         }
 
@@ -82,6 +86,8 @@ namespace Api.Controllers
             var local = MapearLocalRequestDtoParaLocal(localDto);
 
             localRepositorio.AtualizarLocal(id,local);
+
+            contexto.SaveChanges();
 
             return Ok("Registro alterado");
         }

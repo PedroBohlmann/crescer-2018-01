@@ -39,5 +39,12 @@ namespace Dominio.Entidades
             };
             this.DistanciaTotal = GeoCalculator.GetDistance(origem, destino, 1);
         }
+
+        public void AtualizarTrecho(Trecho trecho)
+        {
+            this.Origem=trecho.Origem;
+            this.Destino=trecho.Destino;
+            CalcularDistancia();
+        }
     }
 }
