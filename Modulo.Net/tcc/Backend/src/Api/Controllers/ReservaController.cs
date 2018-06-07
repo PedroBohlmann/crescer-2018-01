@@ -27,9 +27,12 @@ namespace Api.Controllers
 
         private ReservaService reservaService;
 
+        private IUsuarioRepository usuarioRepository;
+
         public ReservaController(VooContext contexto, IReservaRepository reservaRepository,
                                     ITrechoRepository trechoRepository, IClasseDeVooRepository classeDeVooRepository,
-                                    IOpcionalRepository opcionalRepository, ReservaService reservaService)
+                                    IOpcionalRepository opcionalRepository, ReservaService reservaService,
+                                    IUsuarioRepository usuarioRepository)
         {
             this.contexto = contexto;
             this.reservaRepository = reservaRepository;
@@ -37,6 +40,7 @@ namespace Api.Controllers
             this.classeDeVooRepository = classeDeVooRepository;
             this.opcionalRepository = opcionalRepository;
             this.reservaService = reservaService;
+            this.usuarioRepository=usuarioRepository;
         }
 
         [HttpPost]
@@ -58,12 +62,70 @@ namespace Api.Controllers
             return Ok(MapearReservaParaResponse(reserva));
         }
 
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            var reserva = reservaRepository.ObterReserva(id);
+
+            if (reserva == null)
+            {
+                return NotFound("Não existe reserva com esse id");
+            }
+
+            return Ok(MapearReservaParaResponse(reserva));
+        }
+
+        [HttpGet("/listaReserva")]
+        public IActionResult Get()
+        {
+            var lista = reservaRepository.ListarReservas();
+
+            var listaResponse = new List<ReservaResponseDto>();
+
+            foreach (Reserva reserva in lista)
+            {
+                listaResponse.Add(MapearReservaParaResponse(reserva));
+            }
+
+            return Ok(listaResponse);
+        }
+
+        [HttpDelete("id")]
+        public IActionResult Delete(int id)
+        {
+            reservaRepository.DeletarReserva(id);
+
+            contexto.SaveChanges();
+
+            return Ok("Removido com sucesso");
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(int id,[FromBody]ReservaRequestDto reservaDto)
+        {
+            var reserva = MapearReservaDtoParaReserva(reservaDto);
+
+            var erros = reservaService.Validar(reserva);
+            if(erros.Count>0)
+            {
+                return BadRequest(erros);
+            }
+
+            reservaRepository.AtualizarReserva(id,reserva);
+
+            contexto.SaveChanges();
+
+            return Ok("Dados atualizados");
+        }
+
         private Reserva MapearReservaDtoParaReserva(ReservaRequestDto reserva)
         {
             var trecho = trechoRepository.ObterTrecho(reserva.IdTrecho);
             var classeDeVoo = classeDeVooRepository.ObterClasseDeVoo(reserva.IdClasseDeVoo);
 
-            var reservaAtual = new Reserva(classeDeVoo, trecho);
+            var usuario = usuarioRepository.ObterUsuario(reserva.IdUsuario);
+
+            var reservaAtual = new Reserva(classeDeVoo, trecho,usuario);
 
             foreach (int x in reserva.IdOpcionais)
             {
@@ -79,7 +141,15 @@ namespace Api.Controllers
 
         private ReservaResponseDto MapearReservaParaResponse(Reserva reserva)
         {
-            return new ReservaResponseDto(reserva.Id,reserva.ClasseDeVoo,reserva.Trecho,reserva.Opcionais,reserva.ValorTotal);
+            var response = new ReservaResponseDto(reserva.Id, reserva.ClasseDeVoo, reserva.Trecho, reserva.ValorTotal,reserva.Usuario.Id);
+
+            foreach (OpcionalReserva opcionalReserva in reserva.Opcionais)
+            {
+                response.AdicionarOpcional(opcionalReserva.Opcional);
+
+            }
+
+            return response;
         }
     }
 }

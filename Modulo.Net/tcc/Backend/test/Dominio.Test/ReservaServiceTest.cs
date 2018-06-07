@@ -19,7 +19,7 @@ namespace Dominio.Test
 
             // var trecho = new Trecho(origem,destino);
 
-            var reserva = new Reserva(classeVoo, null);
+            var reserva = new Reserva(classeVoo, null,null);
 
             var reservaService = new ReservaService();
 
@@ -40,7 +40,7 @@ namespace Dominio.Test
 
             var trecho = new Trecho(origem, destino);
 
-            var reserva = new Reserva(null, trecho);
+            var reserva = new Reserva(null, trecho,null);
 
             var reservaService = new ReservaService();
 
@@ -63,7 +63,7 @@ namespace Dominio.Test
 
             var trecho = new Trecho(origem, destino);
 
-            var reserva = new Reserva(classeVoo, trecho);
+            var reserva = new Reserva(classeVoo, trecho,null);
 
             //TODO: tirar 60 porcento do valor esperado
 

@@ -14,11 +14,13 @@ namespace Infra.Mappings
 
             builder.HasOne(p=>p.ClasseDeVoo).WithMany().IsRequired();
 
-            builder.HasOne(p=>p.Trecho).WithMany().IsRequired().OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne(p=>p.Trecho).WithMany().IsRequired();//.OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(p=>p.Opcionais).WithOne().IsRequired();
 
             builder.Property(p=>p.ValorTotal).IsRequired();
+
+            builder.HasOne(p=>p.Usuario).WithMany().IsRequired();
         }
     }
 }

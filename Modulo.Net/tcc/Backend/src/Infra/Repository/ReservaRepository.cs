@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using Dominio.Contratos;
 using Dominio.Entidades;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infra.Repository
 {
@@ -16,22 +18,34 @@ namespace Infra.Repository
 
         public void AtualizarReserva(int id, Reserva reserva)
         {
-            throw new System.NotImplementedException();
+            var reservaSalva = contexto.Reservas.FirstOrDefault(p => p.Id == id);
+            reservaSalva.AtualizarReserva(reserva);
         }
 
         public void DeletarReserva(int id)
         {
-            throw new System.NotImplementedException();
+            var reserva = contexto.Reservas.FirstOrDefault(p => p.Id == id);
+            contexto.Reservas.Remove(reserva);
         }
 
         public List<Reserva> ListarReservas()
         {
-            throw new System.NotImplementedException();
+            return contexto.Reservas.Include(p => p.ClasseDeVoo)
+            .Include(p => p.Trecho.Destino)
+            .Include(p => p.Trecho.Origem)
+            .Include(p => p.Opcionais)            
+            .ThenInclude(p => p.Opcional).ToList();
         }
 
         public Reserva ObterReserva(int id)
         {
-            throw new System.NotImplementedException();
+            return contexto.Reservas
+            .Include(p => p.ClasseDeVoo)
+            .Include(p => p.Trecho.Destino)
+            .Include(p => p.Trecho.Origem)
+            .Include(p => p.Opcionais)
+            .ThenInclude(p => p.Opcional)
+            .FirstOrDefault(p => p.Id == id);
         }
 
         public void SalvarReserva(Reserva reserva)

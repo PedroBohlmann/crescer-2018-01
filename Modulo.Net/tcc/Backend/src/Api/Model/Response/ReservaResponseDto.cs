@@ -5,16 +5,16 @@ namespace Api.Model.Response
 {
     public class ReservaResponseDto
     {
-        public ReservaResponseDto(int id, ClasseDeVoo classeDeVoo, Trecho trecho, List<OpcionalReserva> opcionais, double valorTotal)
+        public ReservaResponseDto(int id, ClasseDeVoo classeDeVoo, Trecho trecho, double valorTotal,int idUsuario)
         {
             this.ClasseDeVoo = classeDeVoo;
             this.Trecho = trecho;
-            this.Opcionais = opcionais;
             this.ValorTotal = valorTotal;
             this.Id=id;
-
+            this.Opcionais=new List<Opcional>();
+            this.IdUsuario = idUsuario;
         }
-        public List<OpcionalReserva> Opcionais { get; set; }
+        public List<Opcional> Opcionais { get; set; }
 
         public ClasseDeVoo ClasseDeVoo { get; set; }
 
@@ -24,5 +24,11 @@ namespace Api.Model.Response
 
         public int Id { get; set; }
 
+        public int IdUsuario{get;set;}
+
+        public void AdicionarOpcional(Opcional opcional)
+        {
+            Opcionais.Add(opcional);
+        }
     }
 }

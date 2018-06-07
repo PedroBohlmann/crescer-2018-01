@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infra.Migrations
@@ -54,6 +55,25 @@ namespace Infra.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Usuario",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    PrimeiroNome = table.Column<string>(nullable: true),
+                    UltimoNome = table.Column<string>(nullable: true),
+                    Cpf = table.Column<string>(nullable: true),
+                    DataNascimento = table.Column<DateTime>(nullable: false),
+                    Email = table.Column<string>(nullable: true),
+                    Senha = table.Column<string>(nullable: true),
+                    Admin = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Usuario", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Trecho",
                 columns: table => new
                 {
@@ -88,7 +108,8 @@ namespace Infra.Migrations
                     TrechoId = table.Column<int>(nullable: false),
                     ValorTotal = table.Column<double>(nullable: false),
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    UsuarioId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -104,7 +125,13 @@ namespace Infra.Migrations
                         column: x => x.TrechoId,
                         principalTable: "Trecho",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Reserva_Usuario_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "Usuario",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -154,6 +181,11 @@ namespace Infra.Migrations
                 column: "TrechoId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Reserva_UsuarioId",
+                table: "Reserva",
+                column: "UsuarioId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Trecho_DestinoId",
                 table: "Trecho",
                 column: "DestinoId");
@@ -180,6 +212,9 @@ namespace Infra.Migrations
 
             migrationBuilder.DropTable(
                 name: "Trecho");
+
+            migrationBuilder.DropTable(
+                name: "Usuario");
 
             migrationBuilder.DropTable(
                 name: "Local");

@@ -114,6 +114,9 @@ namespace Infra.Migrations
                     b.Property<int?>("TrechoId")
                         .IsRequired();
 
+                    b.Property<int?>("UsuarioId")
+                        .IsRequired();
+
                     b.Property<double>("ValorTotal");
 
                     b.HasKey("Id");
@@ -121,6 +124,8 @@ namespace Infra.Migrations
                     b.HasIndex("ClasseDeVooId");
 
                     b.HasIndex("TrechoId");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Reserva");
                 });
@@ -146,6 +151,31 @@ namespace Infra.Migrations
                     b.ToTable("Trecho");
                 });
 
+            modelBuilder.Entity("Dominio.Entidades.Usuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Admin");
+
+                    b.Property<string>("Cpf");
+
+                    b.Property<DateTime>("DataNascimento");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("PrimeiroNome");
+
+                    b.Property<string>("Senha");
+
+                    b.Property<string>("UltimoNome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuario");
+                });
+
             modelBuilder.Entity("Dominio.Entidades.OpcionalReserva", b =>
                 {
                     b.HasOne("Dominio.Entidades.Opcional", "Opcional")
@@ -169,7 +199,12 @@ namespace Infra.Migrations
                     b.HasOne("Dominio.Entidades.Trecho", "Trecho")
                         .WithMany()
                         .HasForeignKey("TrechoId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Dominio.Entidades.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Dominio.Entidades.Trecho", b =>

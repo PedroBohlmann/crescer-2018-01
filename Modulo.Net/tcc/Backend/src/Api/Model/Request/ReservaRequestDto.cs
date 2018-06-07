@@ -6,6 +6,8 @@ namespace Api.Model.Request
     {
         public int IdClasseDeVoo { get; set; }
 
+        public int IdUsuario{get;set;}
+
         public int IdTrecho { get; set; }
 
         public List<int> IdOpcionais { get; set; }
