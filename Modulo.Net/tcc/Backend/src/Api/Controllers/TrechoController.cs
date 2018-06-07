@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
+    [Route("api/[controller]")]
     public class TrechoController : Controller
     {
         private VooContext contexto;
@@ -22,7 +23,7 @@ namespace Api.Controllers
 
         private ILocalRepository localRepository;
 
-        public TrechoController(VooContext contexto, ITrechoRepository trechoRepositorio, TrechoService trechoService,ILocalRepository localRepository)
+        public TrechoController(VooContext contexto, ITrechoRepository trechoRepositorio, TrechoService trechoService, ILocalRepository localRepository)
         {
             this.contexto = contexto;
             this.trechoRepositorio = trechoRepositorio;
@@ -37,7 +38,7 @@ namespace Api.Controllers
 
             var erros = trechoService.Validar(trecho);
 
-            if(erros.Count>0)
+            if (erros.Count > 0)
             {
                 return BadRequest(erros);
             }
@@ -54,7 +55,7 @@ namespace Api.Controllers
         {
             var trecho = trechoRepositorio.ObterTrecho(id);
 
-            if(trecho==null)
+            if (trecho == null)
             {
                 return NotFound("Não existe trecho com esse id");
             }
@@ -81,11 +82,11 @@ namespace Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id,[FromBody]TrechoRequestDto trechoDto)
+        public IActionResult Put(int id, [FromBody]TrechoRequestDto trechoDto)
         {
             var trecho = MapearTrechoDtoParaTrecho(trechoDto);
 
-            trechoRepositorio.AtualizarTrecho(id,trecho);
+            trechoRepositorio.AtualizarTrecho(id, trecho);
 
             contexto.SaveChanges();
 
@@ -94,17 +95,17 @@ namespace Api.Controllers
 
         private Trecho MapearTrechoDtoParaTrecho(TrechoRequestDto trechoDto)
         {
-            var origem=localRepository.ObterLocal(trechoDto.IdOrigem);
+            var origem = localRepository.ObterLocal(trechoDto.IdOrigem);
             var destino = localRepository.ObterLocal(trechoDto.IdDestino);
 
-            var trecho = new Trecho(origem,destino);
+            var trecho = new Trecho(origem, destino);
 
             return trecho;
         }
 
         private TrechoResponseDto MapearTrechoParaTrechoResponse(Trecho trecho)
         {
-            var response = new TrechoResponseDto(trecho.Id,trecho.Origem,trecho.Destino,trecho.DistanciaTotal);
+            var response = new TrechoResponseDto(trecho.Id, trecho.Origem, trecho.Destino, trecho.DistanciaTotal);
 
             return response;
         }

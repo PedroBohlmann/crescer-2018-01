@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Dominio.Contratos;
+using Dominio.Servicos;
 using Infra;
 using Infra.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -43,6 +44,12 @@ namespace Api
 
             services.AddScoped<VooContext,VooContext>();
             services.AddScoped<IReservaRepository,ReservaRepository>();
+            services.AddScoped<ILocalRepository,LocalRepository>();
+            services.AddScoped<ITrechoRepository,TrechoRepository>();
+            services.AddScoped<IOpcionalRepository,OpcionalRepository>();
+            services.AddScoped<OpcionalService,OpcionalService>();
+            services.AddScoped<LocalService,LocalService>();
+            services.AddScoped<TrechoService,TrechoService>();
             
         }
 

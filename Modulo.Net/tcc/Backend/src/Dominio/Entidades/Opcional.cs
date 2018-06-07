@@ -10,13 +10,20 @@ namespace Dominio.Entidades
             this.Descricao = descricao;
             this.ValorPorcentagem = valorPorcentagem;
         }
-        
-        public int Id{get;set;}
+
+        public int Id { get; set; }
 
         public string Nome { get; private set; }
 
         public string Descricao { get; private set; }
 
         public double ValorPorcentagem { get; private set; }
+
+        public void AtualizarOpcional(Opcional opcional)
+        {
+            this.Nome = opcional.Nome;
+            this.Descricao = opcional.Descricao;
+            this.ValorPorcentagem = opcional.ValorPorcentagem;
+        }
     }
 }
