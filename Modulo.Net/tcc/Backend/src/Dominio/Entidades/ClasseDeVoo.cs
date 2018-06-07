@@ -1,3 +1,5 @@
+using System;
+
 namespace Dominio.Entidades
 {
     public class ClasseDeVoo
@@ -18,5 +20,12 @@ namespace Dominio.Entidades
         public double ValorFixo { get; private set; }
 
         public double ValorMilha { get; private set; }
+
+        public void AtualizarClasseDeVoo(ClasseDeVoo classeDeVooSalva)
+        {
+            this.Descricao = classeDeVooSalva.Descricao;
+            this.ValorFixo = classeDeVooSalva.ValorFixo;
+            this.ValorMilha = classeDeVooSalva.ValorMilha;
+        }
     }
 }

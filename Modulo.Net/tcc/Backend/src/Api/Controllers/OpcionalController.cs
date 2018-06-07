@@ -21,11 +21,11 @@ namespace Api.Controllers
 
         private IOpcionalRepository opcionalRepository;
 
-        public OpcionalController(VooContext contexto, OpcionalService opcionalService,IOpcionalRepository opcionalRepository)
+        public OpcionalController(VooContext contexto, OpcionalService opcionalService, IOpcionalRepository opcionalRepository)
         {
-            this.contexto=contexto;
-            this.opcionalService=opcionalService;
-            this.opcionalRepository=opcionalRepository;
+            this.contexto = contexto;
+            this.opcionalService = opcionalService;
+            this.opcionalRepository = opcionalRepository;
         }
 
         [HttpPost]
@@ -39,13 +39,13 @@ namespace Api.Controllers
 
             return Ok(MapearOpcionalParaResponse(opcional));
         }
-        
+
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             var opcional = opcionalRepository.ObterOpcional(id);
 
-            if(opcional==null)
+            if (opcional == null)
             {
                 return NotFound("Não existe opcional com esse id");
             }
@@ -72,11 +72,11 @@ namespace Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id,[FromBody]OpcionalRequestDto opcionalDto)
+        public IActionResult Put(int id, [FromBody]OpcionalRequestDto opcionalDto)
         {
             var opcional = MapearOpcionalDtoParaOpcional(opcionalDto);
 
-            opcionalRepository.AtualizarOpcional(id,opcional);
+            opcionalRepository.AtualizarOpcional(id, opcional);
 
             contexto.SaveChanges();
 
@@ -87,12 +87,12 @@ namespace Api.Controllers
 
         private Opcional MapearOpcionalDtoParaOpcional(OpcionalRequestDto opcionalDto)
         {
-            return new Opcional(opcionalDto.Nome,opcionalDto.Descricao,opcionalDto.ValorPorcentagem);
+            return new Opcional(opcionalDto.Nome, opcionalDto.Descricao, opcionalDto.ValorPorcentagem);
         }
 
         private OpcionalResponseDto MapearOpcionalParaResponse(Opcional opcional)
         {
-            return new OpcionalResponseDto(opcional.Id,opcional.Nome,opcional.Descricao,opcional.ValorPorcentagem);
+            return new OpcionalResponseDto(opcional.Id, opcional.Nome, opcional.Descricao, opcional.ValorPorcentagem);
         }
     }
 }
