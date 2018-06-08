@@ -12,7 +12,7 @@ namespace Dominio.Contratos
 
         Reserva ObterReserva(int id);
 
-        List<Reserva> ListarReservas();
+        List<Reserva> ListarReservas(int id);
 
     }
 }

@@ -28,14 +28,15 @@ namespace Infra.Repository
             contexto.Reservas.Remove(reserva);
         }
 
-        public List<Reserva> ListarReservas()
+        public List<Reserva> ListarReservas(int id)
         {
             return contexto.Reservas.Include(p => p.ClasseDeVoo)
             .Include(p => p.Trecho.Destino)
             .Include(p => p.Trecho.Origem)
             .Include(p => p.Opcionais)
             .ThenInclude(p => p.Opcional)
-            .Include(p=>p.Usuario)            
+            .Include(p=>p.Usuario)   
+            .Where(p=>p.Id==id)         
             .ToList();
         }
 

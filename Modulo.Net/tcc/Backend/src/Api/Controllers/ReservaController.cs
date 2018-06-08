@@ -77,9 +77,9 @@ namespace Api.Controllers
         }
 
         [Authorize,HttpGet("/listaReserva")]
-        public IActionResult Get()
+        public IActionResult GetLista(int idUsuario)
         {
-            var lista = reservaRepository.ListarReservas();
+            var lista = reservaRepository.ListarReservas(idUsuario);
 
             var listaResponse = new List<ReservaResponseDto>();
 
