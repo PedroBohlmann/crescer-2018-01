@@ -33,8 +33,10 @@ namespace Infra.Repository
             return contexto.Reservas.Include(p => p.ClasseDeVoo)
             .Include(p => p.Trecho.Destino)
             .Include(p => p.Trecho.Origem)
-            .Include(p => p.Opcionais)            
-            .ThenInclude(p => p.Opcional).ToList();
+            .Include(p => p.Opcionais)
+            .ThenInclude(p => p.Opcional)
+            .Include(p=>p.Usuario)            
+            .ToList();
         }
 
         public Reserva ObterReserva(int id)
@@ -45,6 +47,7 @@ namespace Infra.Repository
             .Include(p => p.Trecho.Origem)
             .Include(p => p.Opcionais)
             .ThenInclude(p => p.Opcional)
+            .Include(p=>p.Usuario)
             .FirstOrDefault(p => p.Id == id);
         }
 
