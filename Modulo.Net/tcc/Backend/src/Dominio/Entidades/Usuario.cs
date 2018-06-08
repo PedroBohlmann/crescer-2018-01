@@ -29,5 +29,10 @@ namespace Dominio.Entidades
         public string Senha { get; set; }
 
         public bool Admin { get; set; }
+
+        public void AtualizarSenha(string senha)
+        {
+            this.Senha = senha;
+        }
     }
 }

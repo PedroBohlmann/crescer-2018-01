@@ -123,7 +123,7 @@ namespace Api.Controllers
             var trecho = trechoRepository.ObterTrecho(reserva.IdTrecho);
             var classeDeVoo = classeDeVooRepository.ObterClasseDeVoo(reserva.IdClasseDeVoo);
 
-            var usuario = usuarioRepository.ObterUsuario(reserva.IdUsuario);
+            var usuario = usuarioRepository.ObterUsuarioPorId(reserva.IdUsuario);
 
             var reservaAtual = new Reserva(classeDeVoo, trecho,usuario);
 

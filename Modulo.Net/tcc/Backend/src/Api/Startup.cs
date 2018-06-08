@@ -31,8 +31,6 @@ namespace Api
         {
             services.AddMvc();
 
-            services.AddMvc();
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Aerolito lines", Version = "v1" });
@@ -48,12 +46,16 @@ namespace Api
             services.AddScoped<ITrechoRepository,TrechoRepository>();
             services.AddScoped<IOpcionalRepository,OpcionalRepository>();
             services.AddScoped<IClasseDeVooRepository,ClasseDeVooRepository>();
+            services.AddScoped<IUsuarioRepository,UsuarioRepository>();
+            
             
             services.AddScoped<OpcionalService,OpcionalService>();
             services.AddScoped<LocalService,LocalService>();
             services.AddScoped<ReservaService,ReservaService>();
             services.AddScoped<ClasseDeVooService,ClasseDeVooService>();
             services.AddScoped<TrechoService,TrechoService>();
+            services.AddScoped<UsuarioService,UsuarioService>();
+            
             
         }
 

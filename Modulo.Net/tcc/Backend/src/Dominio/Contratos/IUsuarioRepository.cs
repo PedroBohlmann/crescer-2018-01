@@ -7,12 +7,8 @@ namespace Dominio.Contratos
     {
         void SalvarUsuario(Usuario trecho);
 
-        void AtualizarUsuario(int id, Usuario trecho);
+        Usuario ObterUsuarioPorEmailESenha(string Email,string senha);
 
-        void DeletarUsuario(int id);
-
-        Usuario ObterUsuario(int id);
-
-        List<Usuario> ListarUsuario(); 
+        Usuario ObterUsuarioPorId(int id);
     }
 }

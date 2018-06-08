@@ -20,6 +20,8 @@ namespace Infra
 
         public DbSet<Reserva> Reservas { get; set; }
 
+        public DbSet<Usuario> Usuarios { get; set; }
+
         public DbSet<OpcionalReserva> OpcionalReservas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -30,6 +32,7 @@ namespace Infra
             modelBuilder.ApplyConfiguration(new OpcionalMapping());
             modelBuilder.ApplyConfiguration(new ReservaMapping());
             modelBuilder.ApplyConfiguration(new OpcionalReservaMapping());
+            modelBuilder.ApplyConfiguration(new UsuarioMapping());
         }
 
     }
