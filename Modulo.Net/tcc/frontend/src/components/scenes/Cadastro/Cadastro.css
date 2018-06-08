@@ -1,0 +1,20 @@
+.cadastro-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.cadastro-form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.align-at-center-cadastro{
+    text-align: center;
+}
+
+.cadastro-form > *{
+    margin-top: 20px;
+}

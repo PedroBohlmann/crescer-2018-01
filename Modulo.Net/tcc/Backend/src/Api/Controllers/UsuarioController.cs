@@ -18,7 +18,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Api.Controllers
 {
-    [Authorize, Route("api/usuario")]
+    [Authorize, Route("api/[controller]")]
     public class UsuarioController : Controller
     {
         private VooContext contexto;
@@ -38,7 +38,7 @@ namespace Api.Controllers
             this.settings = settings;
         }
 
-        [AllowAnonymous,HttpPost("/criarUsuario")]
+        [AllowAnonymous,HttpPost]
         public IActionResult HttpPost([FromBody]UsuarioRequestDto usuarioDto)
         {
             var usuario = MapearUsuarioDtoParaUsuario(usuarioDto);
@@ -56,7 +56,7 @@ namespace Api.Controllers
             return Ok(MapearUsarioParaResponse(usuario));
         }
 
-        [AllowAnonymous,HttpPost("/login")]
+        [AllowAnonymous,HttpPost("login")]
         public IActionResult Login([FromBody]LoginResquest login)
         {
             var usuario = usuarioRepositorio.ObterUsuarioPorEmailESenha(login.Email,login.Senha);
