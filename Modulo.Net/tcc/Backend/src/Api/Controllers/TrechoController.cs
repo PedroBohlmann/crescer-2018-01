@@ -8,6 +8,7 @@ using Dominio.Contratos;
 using Dominio.Entidades;
 using Dominio.Servicos;
 using Infra;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -31,7 +32,7 @@ namespace Api.Controllers
             this.localRepository = localRepository;
         }
 
-        [HttpPost]
+        [Authorize(Roles="Admin"),HttpPost]
         public IActionResult Post([FromBody]TrechoRequestDto trechoDto)
         {
             var trecho = MapearTrechoDtoParaTrecho(trechoDto);
@@ -71,7 +72,7 @@ namespace Api.Controllers
             return Ok(lista);
         }
 
-        [HttpDelete("{id}")]
+        [Authorize(Roles="Admin"),HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             trechoRepositorio.DeletarTrecho(id);
@@ -81,7 +82,7 @@ namespace Api.Controllers
             return Ok("Trecho removido");
         }
 
-        [HttpPut("{id}")]
+        [Authorize(Roles="Admin"),HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody]TrechoRequestDto trechoDto)
         {
             var trecho = MapearTrechoDtoParaTrecho(trechoDto);

@@ -4,6 +4,8 @@ namespace Dominio.Entidades
 {
     public class Usuario
     {
+        public Usuario(){ }
+
         public Usuario(string primeiroNome, string ultimoNome, string cpf, DateTime dataNascimento, string email, string senha)
         {
             this.PrimeiroNome = primeiroNome;

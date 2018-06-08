@@ -8,6 +8,7 @@ using Dominio.Contratos;
 using Dominio.Entidades;
 using Dominio.Servicos;
 using Infra;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -43,7 +44,7 @@ namespace Api.Controllers
             this.usuarioRepository=usuarioRepository;
         }
 
-        [HttpPost]
+        [Authorize,HttpPost]
         public IActionResult Post([FromBody]ReservaRequestDto reservaDto)
         {
             var reserva = MapearReservaDtoParaReserva(reservaDto);
@@ -62,7 +63,7 @@ namespace Api.Controllers
             return Ok(MapearReservaParaResponse(reserva));
         }
 
-        [HttpGet("{id}")]
+        [Authorize,HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             var reserva = reservaRepository.ObterReserva(id);
@@ -75,7 +76,7 @@ namespace Api.Controllers
             return Ok(MapearReservaParaResponse(reserva));
         }
 
-        [HttpGet("/listaReserva")]
+        [Authorize,HttpGet("/listaReserva")]
         public IActionResult Get()
         {
             var lista = reservaRepository.ListarReservas();
@@ -90,7 +91,7 @@ namespace Api.Controllers
             return Ok(listaResponse);
         }
 
-        [HttpDelete("id")]
+        [Authorize,HttpDelete("id")]
         public IActionResult Delete(int id)
         {
             reservaRepository.DeletarReserva(id);
@@ -100,7 +101,7 @@ namespace Api.Controllers
             return Ok("Removido com sucesso");
         }
 
-        [HttpPut("{id}")]
+        [Authorize(Roles="Admin"),HttpPut("{id}")]
         public IActionResult Put(int id,[FromBody]ReservaRequestDto reservaDto)
         {
             var reserva = MapearReservaDtoParaReserva(reservaDto);

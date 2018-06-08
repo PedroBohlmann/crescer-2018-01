@@ -8,6 +8,7 @@ using Dominio.Contratos;
 using Dominio.Entidades;
 using Dominio.Servicos;
 using Infra;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -28,7 +29,7 @@ namespace Api.Controllers
             this.opcionalRepository = opcionalRepository;
         }
 
-        [HttpPost]
+        [Authorize(Roles="Admin"),HttpPost]
         public IActionResult Post([FromBody]OpcionalRequestDto opcionalDto)
         {
             var opcional = MapearOpcionalDtoParaOpcional(opcionalDto);
@@ -61,7 +62,7 @@ namespace Api.Controllers
             return Ok(lista);
         }
 
-        [HttpDelete("{id}")]
+        [Authorize(Roles="Admin"),HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             opcionalRepository.DeletarOpcional(id);
@@ -71,7 +72,7 @@ namespace Api.Controllers
             return Ok("Opcional removido");
         }
 
-        [HttpPut("{id}")]
+        [Authorize(Roles="Admin"),HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody]OpcionalRequestDto opcionalDto)
         {
             var opcional = MapearOpcionalDtoParaOpcional(opcionalDto);

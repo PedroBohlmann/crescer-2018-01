@@ -4,7 +4,7 @@ namespace Api.Model.Response
 {
     public class UsuarioResponseDto
     {
-        public UsuarioResponseDto(int id, string primeiroNome, string ultimoNome, string cpf, DateTime dataNascimento, string email, bool admin)
+        public UsuarioResponseDto(int id, string primeiroNome, string ultimoNome, string cpf, DateTime dataNascimento, string email)
         {
             this.Id = id;
             this.PrimeiroNome = primeiroNome;
@@ -12,7 +12,6 @@ namespace Api.Model.Response
             this.Cpf = cpf;
             this.DataNascimento = dataNascimento;
             this.Email = email;
-            this.Admin = admin;
         }
         
         public int Id { get; set; }
@@ -26,7 +25,5 @@ namespace Api.Model.Response
         public DateTime DataNascimento { get; set; }
 
         public string Email { get; set; }
-
-        public bool Admin { get; set; }
     }
 }

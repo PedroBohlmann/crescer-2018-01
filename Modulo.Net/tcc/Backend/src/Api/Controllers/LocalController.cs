@@ -8,6 +8,7 @@ using Dominio.Contratos;
 using Dominio.Entidades;
 using Dominio.Servicos;
 using Infra;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -28,7 +29,7 @@ namespace Api.Controllers
             this.localService = localService;
         }
 
-        [HttpPost]
+        [Authorize(Roles="Admin"),HttpPost]
         public IActionResult Post([FromBody]LocalResquestDto localDto)
         {
             var local = MapearLocalRequestDtoParaLocal(localDto);
@@ -70,7 +71,7 @@ namespace Api.Controllers
             return Ok(lista);
         }
 
-        [HttpDelete("{id}")]
+        [Authorize(Roles="Admin"),HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             localRepositorio.DeletarLocal(id);
@@ -80,7 +81,7 @@ namespace Api.Controllers
             return Ok("Local removido");
         }
 
-        [HttpPut("{id}")]
+        [Authorize(Roles="Admin"),HttpPut("{id}")]
         public IActionResult Put(int id,[FromBody]LocalResquestDto localDto)
         {
             var local = MapearLocalRequestDtoParaLocal(localDto);
