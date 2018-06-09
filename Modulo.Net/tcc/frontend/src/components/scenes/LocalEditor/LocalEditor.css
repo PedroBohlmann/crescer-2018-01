@@ -1,0 +1,14 @@
+.local-editor-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.local-editor-form-line{
+    display: flex;
+    flex-direction: row;
+}
+
+.local-editor-form-line >*{
+    margin: 10px;
+}
