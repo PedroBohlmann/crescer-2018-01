@@ -63,7 +63,7 @@ namespace Api.Controllers
             return Ok(MapearLocalParaLocalResponse(local));
         }
 
-        [HttpGet("local/lista")]
+        [HttpGet("lista")]
         public IActionResult Get()
         {
             var lista = localRepositorio.ListarLocals();

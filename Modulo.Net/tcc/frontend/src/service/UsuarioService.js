@@ -12,13 +12,13 @@ export default class UsuarioService {
       email: usuario.email,
       senha: usuario.senha
     };
-    return axios.post(`${CONFIG.API_URL_BASE}/api/usuario`,data)
+    return axios.post(`${CONFIG.API_URL_BASE}/usuario`,data)
   }
   static login(login){
       var data={
           email:login.email,
           senha:login.senha
       }
-      return axios.post(`${CONFIG.API_URL_BASE}/api/usuario/login`,data)
+      return axios.post(`${CONFIG.API_URL_BASE}/usuario/login`,data)
   }
 }

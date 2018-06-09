@@ -4,21 +4,25 @@ import CustomNavbar from '../../CustomNavbar/CustomNavbar'
 
 import './LocalEditor.css'
 
-import { Input, Label, Button } from "reactstrap";
+import { Input, Label, Button, Table } from "reactstrap";
 
+import LocalService from '../../../service/LocalService'
+
+import LocalLinhaTabela from '../../LocalLinhaTabela/LocalLinhaTabela'
 
 export default class LocalEditor extends React.Component {
 
     constructor() {
         super()
         this.state = {
-            nomeCidade: "",
+            cidade: "",
             aeroporto: "",
             latitude: 0.0,
-            longitude: 0.0
+            longitude: 0.0,
+            locais:[]
         }
         this.handleChange = this.handleChange.bind(this)
-        this.onSubmit=this.onSubmit.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
     }
 
     handleChange(event) {
@@ -30,15 +34,45 @@ export default class LocalEditor extends React.Component {
         });
     }
 
-    onSubmit(e){
+    onSubmit(e) {
         var latitudeFloat = parseFloat(this.state.latitude)
         var longitudeFloat = parseFloat(this.state.longitude)
-        this.setState({
-            longitude:longitudeFloat,
-            latitude:latitudeFloat
-        })
-        console.log(this.state)
+        var local = {
+            cidade: this.state.cidade,
+            aeroporto: this.state.aeroporto,
+            longitude: longitudeFloat,
+            latitude: latitudeFloat
+        }
+        LocalService.cadastrar(local, localStorage.token)
+            .then((result) => {
+                console.log('cadastrou')
+            })
+            .catch((error) => {
+                console.log(error)
+            })
 
+    }
+
+    renderLocais(){
+        return this.state.locais.map((local,index)=>{
+            return <LocalLinhaTabela key={index} usuario={local}/>
+        })
+    }
+
+    carregaLocaisApi(){
+        LocalService.listar(localStorage.token)
+            .then((result)=>{
+                this.setState({
+                    locais:result.data
+                })
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+    }
+
+    componentDidMount(){
+        this.carregaLocaisApi()
     }
 
     render() {
@@ -50,10 +84,10 @@ export default class LocalEditor extends React.Component {
                         <Label for="nomeCidade">Nome da cidade</Label>
                         <Input
                             type="text"
-                            id="nomeCidade"
+                            id="cidade"
                             placeholder="Nome da cidade aqui!!"
                             onChange={this.handleChange}
-                            name="nomeCidade"
+                            name="cidade"
                         />
                         <Label for="aeroporto">Aeroporto</Label>
                         <Input
@@ -61,7 +95,7 @@ export default class LocalEditor extends React.Component {
                             id="aeroporto"
                             placeholder="nome do aeroporto aqui"
                             onChange={this.handleChange}
-                            name="ultimoNome"
+                            name="aeroporto"
                         />
                     </div>
                     <div className="local-editor-form-line">
@@ -85,6 +119,21 @@ export default class LocalEditor extends React.Component {
                     <Button color="success" onClick={this.onSubmit}>
                         Salvar
                     </Button>
+                    <br />
+                    <Table>
+                        <thead>
+                            <tr>
+                                <th>Cidade</th>
+                                <th>Aeroporto</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.renderLocais()}
+                        </tbody>
+                    </Table>
                 </div>
             </div>
         )
