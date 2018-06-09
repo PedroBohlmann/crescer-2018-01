@@ -1,0 +1,17 @@
+.classe-de-voo-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.classe-de-voo-form>*{
+    margin: 10px;
+}
+
+.classe-de-voo-form-row{
+    display:flex;
+}
+
+.classe-de-voo-form-row>*{
+    margin: 10px;
+}

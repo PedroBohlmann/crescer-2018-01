@@ -33,7 +33,7 @@ export default class CustomNavbar extends React.Component{
                     <Link className="nav-link" to='/localEditor'>Local</Link>
             </NavItem>
             <NavItem>
-                    <Link className="nav-link" to='/'>Classe de Voo</Link>
+                    <Link className="nav-link" to='/classeDeVooEditor'>Classe de Voo</Link>
             </NavItem>
             <NavItem>
                     <Link className="nav-link" to='/logout'>Logout</Link>

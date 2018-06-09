@@ -19,10 +19,15 @@ export default class LocalEditor extends React.Component {
             aeroporto: "",
             latitude: 0.0,
             longitude: 0.0,
-            locais:[]
+            id: 0,
+            locais: [],
+            editarLocal: false
         }
         this.handleChange = this.handleChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
+        this.onDelete = this.onDelete.bind(this)
+        this.limpaState = this.limpaState.bind(this)
+        this.onEdit=this.onEdit.bind(this)
     }
 
     handleChange(event) {
@@ -34,6 +39,17 @@ export default class LocalEditor extends React.Component {
         });
     }
 
+    limpaState() {
+        this.setState({
+            cidade: "",
+            aeroporto: "",
+            latitude: 0.0,
+            longitude: 0.0,
+            id: 0,
+            editarLocal: false
+        })
+    }
+
     onSubmit(e) {
         var latitudeFloat = parseFloat(this.state.latitude)
         var longitudeFloat = parseFloat(this.state.longitude)
@@ -43,35 +59,77 @@ export default class LocalEditor extends React.Component {
             longitude: longitudeFloat,
             latitude: latitudeFloat
         }
-        LocalService.cadastrar(local, localStorage.token)
+        if (this.state.editarLocal) {
+            LocalService.editar(this.state.id,local, localStorage.token)
+                .then((result) => {
+                    console.log('editou')
+                    this.carregaLocaisApi()
+                    this.limpaState()
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        } else {
+            LocalService.cadastrar(local, localStorage.token)
+                .then((result) => {
+                    console.log('cadastrou')
+                    this.carregaLocaisApi()
+                    this.limpaState()
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        }
+    }
+
+    onDelete(e) {
+        LocalService.deletar(localStorage.token, e.target.name)
             .then((result) => {
-                console.log('cadastrou')
+                console.log('deletou')
+                this.carregaLocaisApi()
             })
             .catch((error) => {
                 console.log(error)
             })
-
     }
 
-    renderLocais(){
-        return this.state.locais.map((local,index)=>{
-            return <LocalLinhaTabela key={index} usuario={local}/>
-        })
-    }
-
-    carregaLocaisApi(){
-        LocalService.listar(localStorage.token)
-            .then((result)=>{
+    onEdit(e) {
+        LocalService.obter(localStorage.token, e.target.name)
+            .then((result) => {
+                console.log('obteve')
                 this.setState({
-                    locais:result.data
+                    cidade: result.data.cidade,
+                    aeroporto: result.data.aeroporto,
+                    longitude: result.data.longitude,
+                    latitude: result.data.latitude,
+                    id: result.data.id,
+                    editarLocal:true
                 })
             })
-            .catch((error)=>{
+            .catch((error) => {
                 console.log(error)
             })
     }
 
-    componentDidMount(){
+    renderLocais() {
+        return this.state.locais.map((local, index) => {
+            return <LocalLinhaTabela key={index} usuario={local} onDelete={this.onDelete} onEdit={this.onEdit}/>
+        })
+    }
+
+    carregaLocaisApi() {
+        LocalService.listar(localStorage.token)
+            .then((result) => {
+                this.setState({
+                    locais: result.data
+                })
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }
+
+    componentDidMount() {
         this.carregaLocaisApi()
     }
 
@@ -88,6 +146,7 @@ export default class LocalEditor extends React.Component {
                             placeholder="Nome da cidade aqui!!"
                             onChange={this.handleChange}
                             name="cidade"
+                            value={this.state.cidade||''}
                         />
                         <Label for="aeroporto">Aeroporto</Label>
                         <Input
@@ -96,6 +155,7 @@ export default class LocalEditor extends React.Component {
                             placeholder="nome do aeroporto aqui"
                             onChange={this.handleChange}
                             name="aeroporto"
+                            value={this.state.aeroporto||''}
                         />
                     </div>
                     <div className="local-editor-form-line">
@@ -106,6 +166,7 @@ export default class LocalEditor extends React.Component {
                             placeholder="latitude aqui"
                             onChange={this.handleChange}
                             name="latitude"
+                            value={this.state.latitude||0}
                         />
                         <Label for="longitude">Longitude</Label>
                         <Input
@@ -114,11 +175,17 @@ export default class LocalEditor extends React.Component {
                             placeholder="longitude aqui"
                             onChange={this.handleChange}
                             name="longitude"
+                            value={this.state.longitude||0}
                         />
                     </div>
-                    <Button color="success" onClick={this.onSubmit}>
-                        Salvar
-                    </Button>
+                    <div className="local-editor-form-line">
+                        <Button color="success" onClick={this.onSubmit} name="salvar">
+                            Salvar
+                        </Button>
+                        <Button color="danger" onClick={this.limpaState} name="novo-local">
+                            Reset formulario
+                        </Button>
+                    </div>
                     <br />
                     <Table>
                         <thead>
@@ -127,6 +194,7 @@ export default class LocalEditor extends React.Component {
                                 <th>Aeroporto</th>
                                 <th>Latitude</th>
                                 <th>Longitude</th>
+                                <th></th>
                                 <th></th>
                             </tr>
                         </thead>

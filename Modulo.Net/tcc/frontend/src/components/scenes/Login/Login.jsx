@@ -39,6 +39,9 @@ export default class Login extends React.Component {
     UsuarioService.login(login)
       .then(result => {
         localStorage.token = result.data.token;
+        this.setState({
+          redirecionaHome:true
+        })
       })
       .catch(error => {
         console.log(error);
@@ -56,6 +59,11 @@ export default class Login extends React.Component {
       <div className="login-container">
         {this.state.redirecionaCadastro ? (
           <Redirect to="/cadastro" />
+        ) : (
+          undefined
+        )}
+        {this.state.redirecionaHome ? (
+          <Redirect to="/home" />
         ) : (
           undefined
         )}
