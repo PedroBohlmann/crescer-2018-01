@@ -64,7 +64,7 @@ namespace Api.Controllers
             return Ok(MapearTrechoParaTrechoResponse(trecho));// fazer mapeamento para para o response
         }
 
-        [HttpGet("/lista")]
+        [HttpGet("lista")]
         public IActionResult Get()
         {
             var lista = trechoRepositorio.ListarTrechos();

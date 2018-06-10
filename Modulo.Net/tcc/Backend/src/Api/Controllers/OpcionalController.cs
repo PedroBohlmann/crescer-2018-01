@@ -54,7 +54,7 @@ namespace Api.Controllers
             return Ok(MapearOpcionalParaResponse(opcional));
         }
 
-        [HttpGet("/opcionais/lista")]
+        [HttpGet("lista")]
         public IActionResult Get()
         {
             var lista = opcionalRepository.ListarOpcionais();

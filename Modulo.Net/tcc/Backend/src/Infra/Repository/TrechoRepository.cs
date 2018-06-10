@@ -30,7 +30,7 @@ namespace Infra.Repository
 
         public List<Trecho> ListarTrechos()
         {
-            return contexto.Trechos.ToList();
+            return contexto.Trechos.Include(p => p.Destino).Include(p => p.Origem).ToList();
         }
 
         public Trecho ObterTrecho(int id)

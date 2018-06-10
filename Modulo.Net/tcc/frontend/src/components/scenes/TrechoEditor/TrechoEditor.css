@@ -1,0 +1,21 @@
+.trecho-editor-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trecho-editor-container>*{
+    margin:10px;
+}
+
+.trecho-editor-container-row{
+    display: flex;
+    flex-direction: row;
+}
+.trecho-editor-container-row>*{
+    margin: 10px;
+}
+
+.selects{
+    width: 200px;
+}

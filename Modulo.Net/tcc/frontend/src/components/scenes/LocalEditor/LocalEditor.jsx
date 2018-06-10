@@ -138,6 +138,7 @@ export default class LocalEditor extends React.Component {
             <div>
                 <CustomNavbar />
                 <div className="local-editor-container">
+                <div className="display-4">Local</div>
                     <div className="local-editor-form-line">
                         <Label for="nomeCidade">Nome da cidade</Label>
                         <Input

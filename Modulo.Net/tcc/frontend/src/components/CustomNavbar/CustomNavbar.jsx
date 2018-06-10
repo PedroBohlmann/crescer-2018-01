@@ -27,13 +27,16 @@ export default class CustomNavbar extends React.Component{
                     <Link className="nav-link" to='/'>Reserva - Não funciona</Link>
             </NavItem>
             <NavItem>
-                    <Link className="nav-link" to='/'>Opcional</Link>
+                    <Link className="nav-link" to='/opcionalEditor'>Opcional</Link>
             </NavItem>
             <NavItem>
                     <Link className="nav-link" to='/localEditor'>Local</Link>
             </NavItem>
             <NavItem>
                     <Link className="nav-link" to='/classeDeVooEditor'>Classe de Voo</Link>
+            </NavItem>
+            <NavItem>
+                    <Link className="nav-link" to='/trechoEditor'>Trecho</Link>
             </NavItem>
             <NavItem>
                     <Link className="nav-link" to='/logout'>Logout</Link>
