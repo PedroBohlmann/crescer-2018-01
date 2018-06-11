@@ -36,7 +36,7 @@ namespace Infra.Repository
             .Include(p => p.Opcionais)
             .ThenInclude(p => p.Opcional)
             .Include(p=>p.Usuario)   
-            .Where(p=>p.Id==id)         
+            .Where(p=>p.Usuario.Id==id)         
             .ToList();
         }
 

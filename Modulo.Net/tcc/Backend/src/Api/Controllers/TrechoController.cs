@@ -94,6 +94,14 @@ namespace Api.Controllers
             return Ok("Trecho alterado");
         }
 
+        [HttpPost("distancia")]
+        public IActionResult PostDistancia([FromBody]TrechoRequestDto trechoDto)
+        {
+            var trecho = MapearTrechoDtoParaTrecho(trechoDto);
+
+            return Ok(trecho);
+        }
+
         private Trecho MapearTrechoDtoParaTrecho(TrechoRequestDto trechoDto)
         {
             var origem = localRepository.ObterLocal(trechoDto.IdOrigem);

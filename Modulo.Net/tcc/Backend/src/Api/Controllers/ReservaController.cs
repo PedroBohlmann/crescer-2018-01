@@ -63,6 +63,14 @@ namespace Api.Controllers
             return Ok(MapearReservaParaResponse(reserva));
         }
 
+        [Authorize,HttpPost("valor")]
+        public IActionResult PostValorTotal([FromBody]ReservaRequestDto reservaDto)
+        {
+            var reserva = MapearReservaDtoParaReserva(reservaDto);
+
+            return Ok(MapearReservaParaResponse(reserva));
+        }
+
         [Authorize,HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -76,10 +84,11 @@ namespace Api.Controllers
             return Ok(MapearReservaParaResponse(reserva));
         }
 
-        [Authorize,HttpGet("/listaReserva")]
-        public IActionResult GetLista(int idUsuario)
+
+        [Authorize,HttpGet("lista/{id}")]
+        public IActionResult GetLista(int id)
         {
-            var lista = reservaRepository.ListarReservas(idUsuario);
+            var lista = reservaRepository.ListarReservas(id);
 
             var listaResponse = new List<ReservaResponseDto>();
 
@@ -91,7 +100,7 @@ namespace Api.Controllers
             return Ok(listaResponse);
         }
 
-        [Authorize,HttpDelete("id")]
+        [Authorize(Roles="Admin"),HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             reservaRepository.DeletarReserva(id);
@@ -142,11 +151,11 @@ namespace Api.Controllers
 
         private ReservaResponseDto MapearReservaParaResponse(Reserva reserva)
         {
-            var response = new ReservaResponseDto(reserva.Id, reserva.ClasseDeVoo, reserva.Trecho, reserva.ValorTotal,reserva.Usuario.Id);
+            var response = new ReservaResponseDto((int)reserva?.Id, reserva?.ClasseDeVoo, reserva?.Trecho, (double)reserva?.ValorTotal,(int)reserva?.Usuario?.Id);
 
             foreach (OpcionalReserva opcionalReserva in reserva.Opcionais)
             {
-                response.AdicionarOpcional(opcionalReserva.Opcional);
+                response.AdicionarOpcional(opcionalReserva?.Opcional);
 
             }
 

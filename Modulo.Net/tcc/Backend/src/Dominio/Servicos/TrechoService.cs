@@ -17,6 +17,9 @@ namespace Dominio.Servicos
             {
                 mensagens.Add("Campo Destino é obrigatorio");
             }
+            if(trecho.Origem==trecho.Destino){
+                mensagens.Add("Origem e destino precisam ser diferentes");
+            }
 
             return mensagens;
         }

@@ -71,6 +71,7 @@ namespace Api.Controllers
             var token = new JwtSecurityToken(
                 claims: new[] {
                     new Claim(ClaimTypes.Name, usuario.PrimeiroNome),
+                    new Claim(ClaimTypes.Sid, ""+usuario.Id),
                     new Claim(ClaimTypes.Role, role),
                 },
                 expires: DateTime.Now.AddMinutes(30),

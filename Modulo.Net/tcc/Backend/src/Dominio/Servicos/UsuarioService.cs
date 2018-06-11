@@ -26,6 +26,9 @@ namespace Dominio.Servicos
             {
                 mensagens.Add("Senha é obrigatorio");
             }
+            if(string.IsNullOrEmpty(usuario.Email)&& usuario.Email.Contains("@")){
+                mensagens.Add("Email invalido");
+            }
             if (usuario.DataNascimento==default(DateTime))
             {
                 mensagens.Add("Data nascimento é obrigatorio");

@@ -34,6 +34,13 @@ namespace Api.Controllers
         {
             var opcional = MapearOpcionalDtoParaOpcional(opcionalDto);
 
+            var erros = opcionalService.Validar(opcional);
+
+            if (erros.Count > 0)
+            {
+                return BadRequest(erros);
+            }
+
             opcionalRepository.SalvarOpcional(opcional);
 
             contexto.SaveChanges();
@@ -77,6 +84,13 @@ namespace Api.Controllers
         {
             var opcional = MapearOpcionalDtoParaOpcional(opcionalDto);
 
+            var erros = opcionalService.Validar(opcional);
+
+            if (erros.Count > 0)
+            {
+                return BadRequest(erros);
+            }
+
             opcionalRepository.AtualizarOpcional(id, opcional);
 
             contexto.SaveChanges();
@@ -88,12 +102,12 @@ namespace Api.Controllers
 
         private Opcional MapearOpcionalDtoParaOpcional(OpcionalRequestDto opcionalDto)
         {
-            return new Opcional(opcionalDto.Nome, opcionalDto.Descricao, opcionalDto.ValorPorcentagem);
+            return new Opcional(opcionalDto?.Nome, opcionalDto?.Descricao, (double)opcionalDto?.ValorPorcentagem);
         }
 
         private OpcionalResponseDto MapearOpcionalParaResponse(Opcional opcional)
         {
-            return new OpcionalResponseDto(opcional.Id, opcional.Nome, opcional.Descricao, opcional.ValorPorcentagem);
+            return new OpcionalResponseDto((int)opcional?.Id, opcional?.Nome, opcional?.Descricao,(double) opcional?.ValorPorcentagem);
         }
     }
 }

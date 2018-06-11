@@ -14,12 +14,14 @@ namespace Dominio.Test
         {
             var classeVoo = new ClasseDeVoo("top", 500, 25);
 
+            var usuario = new Usuario("Pedroka","Silva","12345678910",DateTime.Today,"pedroka@gmail.com","opa");
+
             var origem = new Local("New York", "Ta no meio de Manhattan", 40.76, -73.984);
             var destino = new Local("Roma", "Ta no coliseu de Roma", 41.89, 12.492);
 
             // var trecho = new Trecho(origem,destino);
 
-            var reserva = new Reserva(classeVoo, null,null);
+            var reserva = new Reserva(classeVoo, null,usuario);
 
             var reservaService = new ReservaService();
 
@@ -35,12 +37,13 @@ namespace Dominio.Test
         [TestMethod]
         public void TestaServiceSemClasseDeVoo()
         {
+            var usuario = new Usuario("Pedroka","Silva","12345678910",DateTime.Today,"pedroka@gmail.com","opa");
             var origem = new Local("New York", "Ta no meio de Manhattan", 40.76, -73.984);
             var destino = new Local("Roma", "Ta no coliseu de Roma", 41.89, 12.492);
 
             var trecho = new Trecho(origem, destino);
 
-            var reserva = new Reserva(null, trecho,null);
+            var reserva = new Reserva(null, trecho,usuario);
 
             var reservaService = new ReservaService();
 
@@ -56,6 +59,7 @@ namespace Dominio.Test
         [TestMethod]
         public void TestaServiceCalculoValorTotal()
         {
+            var usuario = new Usuario("Pedroka","Silva","12345678910",DateTime.Today,"pedroka@gmail.com","opa");
             var classeVoo = new ClasseDeVoo("top", 500, 25);
 
             var origem = new Local("New York", "Ta no meio de Manhattan", 40.76, -73.984);
@@ -63,13 +67,11 @@ namespace Dominio.Test
 
             var trecho = new Trecho(origem, destino);
 
-            var reserva = new Reserva(classeVoo, trecho,null);
-
-            //TODO: tirar 60 porcento do valor esperado
+            var reserva = new Reserva(classeVoo, trecho,usuario);
 
             var valorTotalResultado = reserva.ValorTotal;
 
-            var valorEsperado = 171960;
+            var valorEsperado = 107475;
 
             Assert.AreEqual(valorEsperado,valorTotalResultado);
         }

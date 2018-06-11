@@ -17,8 +17,8 @@ export default class LocalEditor extends React.Component {
         this.state = {
             cidade: "",
             aeroporto: "",
-            latitude: 0.0,
-            longitude: 0.0,
+            latitude: 0,
+            longitude: 0,
             id: 0,
             locais: [],
             editarLocal: false
@@ -113,7 +113,7 @@ export default class LocalEditor extends React.Component {
 
     renderLocais() {
         return this.state.locais.map((local, index) => {
-            return <LocalLinhaTabela key={index} usuario={local} onDelete={this.onDelete} onEdit={this.onEdit}/>
+            return <LocalLinhaTabela key={index} local={local} onDelete={this.onDelete} onEdit={this.onEdit}/>
         })
     }
 

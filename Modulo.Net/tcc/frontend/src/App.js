@@ -26,7 +26,7 @@ class App extends Component {
       error:'',
       showError:false,
       success:'',
-      showSuccess:false
+      showSuccess:false,
     }
     this.configureInterceptors()
   }
