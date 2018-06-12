@@ -1,0 +1,36 @@
+-- exercicio 1
+Select PR.IDPRODUTO, PR.NOME, PR.SITUACAO
+FROM PRODUTO PR
+WHERE PR.IDPRODUTO 
+NOT IN (
+  SELECT DISTINCT PI.IDPRODUTO
+  FROM PEDIDOITEM PI
+  inner join PEDIDO P ON PI.IDPEDIDO=P.IDPEDIDO 
+  WHERE P.DATAPEDIDO>=add_months(sysdate,-6)
+);
+
+CREATE VIEW ProdutoSemVendaAteSeisMeses AS (
+  Select PR.IDPRODUTO, PR.NOME
+  FROM PRODUTO PR
+  WHERE PR.IDPRODUTO 
+  NOT IN (
+    SELECT DISTINCT PI.IDPRODUTO
+    FROM PEDIDOITEM PI
+    inner join PEDIDO P ON PI.IDPEDIDO=P.IDPEDIDO 
+    WHERE P.DATAPEDIDO>=add_months(sysdate,-6)
+  )
+)
+
+--exercicio 2
+UPDATE PRODUTO
+SET PRODUTO.Situacao = 'I'
+where Produto.IdProduto in(Select P.IDPRODUTO from ProdutoSemVendaAteSeisMeses P);
+commit;
+
+-- exercicio 3
+Select PI.IDPRODUTO, COUNT(*)
+FROM PEDIDOITEM PI
+WHERE PI.IDPRODUTO=:Param
+GROUP BY IDPRODUTO
+
+
