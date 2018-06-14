@@ -1,28 +1,40 @@
 -- Questão 1
-Select C.NOME, C.UF
-FROM CIDADE C
-HAVING (SELECT COUNT(1) FROM CIDADE CI WHERE CI.NOME = C.NOME AND CI.UF = C.UF)>0
-
 DECLARE 
     CURSOR C_CidadeLista IS
-        SELECT C.NOME, C.UF
+        Select DISTINCT C.NOME, C.UF
         FROM CIDADE C
-        HAVING (SELECT COUNT(1) FROM CIDADE CI WHERE CI.NOME = C.NOME AND CI.UF = C.UF)>0
-    CURSOR C_ClienteLista(Nome CIDADE.NOME%TYPE,Uf CIDADE.UF%TYPE) IS
-        -- select que pega usuarios que tem relação a cidade repetidas
+        HAVING COUNT(1)>1
+        GROUP BY C.NOME,C.UF;
+    CURSOR C_ClienteLista(vNome CIDADE.NOME%TYPE,vUf CIDADE.UF%TYPE) IS
+        SELECT CLI.NOME, CLI.RAZAOSOCIAL
+        FROM CLIENTE CLI
+        INNER JOIN CIDADE CI ON CLI.IDCIDADE = CI.IDCIDADE
+        WHERE CI.NOME =vNome AND CI.UF=Uf;
 BEGIN
-    FOR cidade INT C_CidadeLista LOOP
+    FOR cidade IN C_CidadeLista LOOP
         DBMS_OUTPUT.PUT_LINE('Cidade '|| cidade.NOME || ' está duplicada');
-    END FOR;
+    END LOOP;
 
-    FOR cidade INT C_CidadeLista LOOP
+    FOR cidade IN C_CidadeLista LOOP
         FOR cliente IN C_ClienteLista(cidade.NOME,cidade.UF) LOOP
-            IF(cliente.Nome!=null) THEN
-                DBMS_OUTPUT.PUT_LINE('Este cliente em relação com uma cidade duplicada'||)
-            END IF;
+            DBMS_OUTPUT.PUT_LINE('Este cliente em relação com uma cidade duplicada '|| cliente.Nome);
         END LOOP;
-    END FOR;
-
-
+    END LOOP;
 END;
 
+-- Questão 2
+DECLARE 
+    CURSOR C_ListPedidos IS
+        Select DISTINCT P.IDPEDIDO,P.VALORPEDIDO,
+            (SELECT SUM(PI.PRECOUNITARIO*PI.QUANTIDADE) FROM PEDIDOITEM PI WHERE PI.IDPEDIDO=P.IDPEDIDO) AS ValorCalculado
+        FROM PEDIDO P ORDER BY 1 ASC;
+BEGIN
+    FOR pedido in C_ListPedidos LOOP
+        UPDATE PEDIDO P
+        SET P.VALORPEDIDO= pedido.ValorCalculado
+        WHERE P.IDPEDIDO=pedido.IDPEDIDO;
+    END LOOP;
+    COMMIT;
+END;
+
+-- Questão 3
