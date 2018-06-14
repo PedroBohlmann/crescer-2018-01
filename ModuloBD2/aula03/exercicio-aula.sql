@@ -1,0 +1,46 @@
+-- Questão 1
+-- simples
+CREATE OR REPLACE 
+PROCEDURE AtualizaProdutos AS
+    CURSOR C_ProdutoLista IS
+      Select P.IDPRODUTO,P.NOME,P.SITUACAO, P.PRECOVENDA,(P.PRECOVENDA*1.05) VALORMUDADO
+      FROM PRODUTO P WHERE P.SITUACAO='A';
+  BEGIN
+    FOR produto IN C_ProdutoLista LOOP
+      UPDATE PRODUTO P
+      SET P.PRECOVENDA = (P.PRECOVENDA*1.05)
+      WHERE P.IDPRODUTO=produto.IDPRODUTO;
+    END LOOP;
+END AtualizaProdutos;
+
+-- correto
+
+CREATE OR REPLACE 
+PROCEDURE AtualizaProdutos AS
+    CURSOR C_ProdutoLista IS
+      Select P.IDPRODUTO,P.NOME,P.SITUACAO, P.PRECOVENDA
+      FROM PRODUTO P;
+    vSituacao PRODUTO.SITUACAO%TYPE;
+  BEGIN
+    FOR produto IN C_ProdutoLista LOOP
+      vSituacao:= PEGASITUACAO(produto.IDPRODUTO);
+      IF vSituacao = 'A' THEN
+        UPDATE PRODUTO P
+        SET P.PRECOVENDA = (P.PRECOVENDA*1.05)
+        WHERE P.IDPRODUTO=produto.IDPRODUTO;
+      END IF;
+    END LOOP;
+END AtualizaProdutos;
+
+
+CREATE OR REPLACE FUNCTION PegaSituacao(IdProdutop INTEGER) RETURN VARCHAR2 AS
+  vSituacao PRODUTO.SITUACAO%TYPE;
+BEGIN 
+  SELECT P.SITUACAO
+  INTO vSituacao
+  FROM PRODUTO P
+  WHERE P.IDPRODUTO=IdProdutop;
+  
+  return vSituacao;
+END;
+
