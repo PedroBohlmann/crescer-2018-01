@@ -88,10 +88,17 @@ create or replace package body pck_megasena is
       vIdConcurso:=vIdConcurso+1;
       
       IF vAcumulou=1 THEN
-        
+        SELECT C.PREMIO_SENA
+            INTO vValorAcumulado
+            FROM CONCURSO C 
+            WHERE C.IDCONCURSO = (SELECT MAX(IDCONCURSO) FROM CONCURSO);
+        vValorTotal:= vValorTotal+vValorAcumulado;
       END IF;
-         
-         
+      
+      DBMS_OUTPUT.PUT_LINE('valor total:' ||vValorTotal ||'|id concurso'|| vIdConcurso);
+      
+      salvaConcurso(vIdConcurso,sysdate,vValorTotal);
+      
    end geraProximoConcurso;
   ---------------------------------------------------------------------------------------------------------------------------------------
     /*
