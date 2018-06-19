@@ -9,13 +9,14 @@ import lombok.Getter;
 @Builder
 public class Triangle extends Shape {
 
-    private double sidaA,sidaB,sidaC;
+    private double sideA, sideB, sideC;
 
     public double area() {
-        return 0;
+        double semiPerimeter = (sideA+sideB+sideC)/2;
+        return Math.sqrt(semiPerimeter*(semiPerimeter-sideA)*(semiPerimeter-sideB)*(semiPerimeter-sideC));
     }
 
     public double perimeter() {
-        return sidaA+sidaB+sidaC;
+        return sideA + sideB + sideC;
     }
 }
