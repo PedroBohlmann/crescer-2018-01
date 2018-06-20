@@ -1,4 +1,4 @@
-package models;
+package dominio;
 
 import lombok.Getter;
 
@@ -54,6 +54,7 @@ public class Locadora {
         } else {
             pedido.adicionaFita(fita);
         }
+        fita.loca();
     }
 
     public void realizaPedido(List<String> listaDeTitulos, String cpfCliente) {
@@ -73,20 +74,29 @@ public class Locadora {
             pedidos.add(pedido);
         }
 
-        for(String titulo : listaDeTitulos){
+        List<Fita> fitas = new ArrayList<>();
+
+        for (String titulo : listaDeTitulos) {
             Filme filme = filmes.stream()
                     .filter(p -> p.getTitulo().equals(titulo))
                     .findFirst()
                     .orElseThrow(() -> new IllegalArgumentException("Filme inválido"));
 
             Fita fita = filme.primeiraFitaNaoLocada();
-            pedido.adicionaFita(fita);
+            fitas.add(fita);
+            fita.loca();
         }
+
+        //adiciona lista de fitas no pedido
     }
 
-    public void devolveFita(Fita fita){
-        Pedido pedidoProcurado  = pedidos.stream().filter(p->p.getFitas().contains(fita)).findFirst().orElseThrow(()->new RuntimeException());
+    public void devolveFita(Fita fita, Cliente cliente) {
+        Pedido pedidoProcurado = (
+                pedidos.stream()
+                        .filter(p -> p.getCliente().equals(cliente) && p.getStatus()==StatusPedido.PENDENTE)
+                        .findFirst()
+                        .orElseThrow(() -> new RuntimeException("Essa fita não esta em algum pedido")));
 
-        pedidoProcurado.removeFita(fita);
+        pedidoProcurado.devolveFita(fita);
     }
 }

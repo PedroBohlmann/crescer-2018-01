@@ -1,9 +1,6 @@
 package tests;
 
-import models.Cliente;
-import models.Filme;
-import models.Fita;
-import models.Locadora;
+import dominio.*;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -18,7 +15,7 @@ public class TestLocadora {
         Fita fita2 = new Fita();
         Fita fita3 = new Fita();
 
-        Filme filme = new Filme("Rei leão", 5, 3);
+        Filme filme = new Filme("Rei leão",Categoria.DOURADA);
 
         filme.adicionaFita(fita1);
         filme.adicionaFita(fita2);
@@ -36,7 +33,7 @@ public class TestLocadora {
 
         assertEquals(0,locadora.getPedidos().get(0).getIdPedido());
         assertEquals(cliente.getCpf(),locadora.getPedidos().get(0).getCliente().getCpf());
-        assertEquals(5,locadora.getPedidos().get(0).getValorTotal(),0.001);
+        assertEquals(10,locadora.getPedidos().get(0).getValorTotal(),0.001);
     }
 
     @Test
@@ -45,13 +42,13 @@ public class TestLocadora {
         Fita fita2 = new Fita();
         Fita fita3 = new Fita();
 
-        Filme filme = new Filme("Rei leão", 5, 3);
+        Filme filme = new Filme("Rei leão", Categoria.DOURADA);
 
         filme.adicionaFita(fita1);
         filme.adicionaFita(fita2);
         filme.adicionaFita(fita3);
 
-        Filme filme2 = new Filme("Todo mundo odeia o cris", 10, 3);
+        Filme filme2 = new Filme("Todo mundo odeia o cris", Categoria.BRONZE);
 
         Fita fita1Nova = new Fita();
         filme2.adicionaFita(fita1Nova);
@@ -71,7 +68,7 @@ public class TestLocadora {
 
         assertEquals(0,locadora.getPedidos().get(0).getIdPedido());
         assertEquals(cliente.getCpf(),locadora.getPedidos().get(0).getCliente().getCpf());
-        assertEquals(15,locadora.getPedidos().get(0).getValorTotal(),0.001);
+        assertEquals(13,locadora.getPedidos().get(0).getValorTotal(),0.001);
     }
 
     @Test
@@ -80,13 +77,13 @@ public class TestLocadora {
         Fita fita2 = new Fita();
         Fita fita3 = new Fita();
 
-        Filme filme = new Filme("Rei leão", 5, 3);
+        Filme filme = new Filme("Rei leão", Categoria.DOURADA);
 
         filme.adicionaFita(fita1);
         filme.adicionaFita(fita2);
         filme.adicionaFita(fita3);
 
-        Filme filme2 = new Filme("Todo mundo odeia o cris", 10, 3);
+        Filme filme2 = new Filme("Todo mundo odeia o cris", Categoria.BRONZE);
 
         Fita fita1Nova = new Fita();
         filme2.adicionaFita(fita1Nova);
@@ -110,7 +107,7 @@ public class TestLocadora {
 
         assertEquals(0,locadora.getPedidos().get(0).getIdPedido());
         assertEquals(cliente.getCpf(),locadora.getPedidos().get(0).getCliente().getCpf());
-        assertEquals(15,locadora.getPedidos().get(0).getValorTotal(),0.001);
+        assertEquals(13,locadora.getPedidos().get(0).getValorTotal(),0.001);
     }
 
     @Test
@@ -119,13 +116,13 @@ public class TestLocadora {
         Fita fita2 = new Fita();
         Fita fita3 = new Fita();
 
-        Filme filme = new Filme("Rei leão", 5, 3);
+        Filme filme = new Filme("Rei leão", Categoria.DOURADA);
 
         filme.adicionaFita(fita1);
         filme.adicionaFita(fita2);
         filme.adicionaFita(fita3);
 
-        Filme filme2 = new Filme("Todo mundo odeia o cris", 10, 3);
+        Filme filme2 = new Filme("Todo mundo odeia o cris", Categoria.BRONZE);
 
         Fita fita1Nova = new Fita();
         filme2.adicionaFita(fita1Nova);
@@ -149,12 +146,12 @@ public class TestLocadora {
 
         assertEquals(0,locadora.getPedidos().get(0).getIdPedido());
         assertEquals(cliente.getCpf(),locadora.getPedidos().get(0).getCliente().getCpf());
-        assertEquals(15,locadora.getPedidos().get(0).getValorTotal(),0.001);
+        assertEquals(13,locadora.getPedidos().get(0).getValorTotal(),0.001);
 
-        locadora.devolveFita(fita1);
+        locadora.devolveFita(fita1,cliente);
 
         assertEquals(0,locadora.getPedidos().get(0).getIdPedido());
         assertEquals(cliente.getCpf(),locadora.getPedidos().get(0).getCliente().getCpf());
-        assertEquals(10,locadora.getPedidos().get(0).getValorTotal(),0.001);
+        assertEquals(3,locadora.getPedidos().get(0).getValorTotal(),0.001);
     }
 }

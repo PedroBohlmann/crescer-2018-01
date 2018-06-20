@@ -1,9 +1,6 @@
 package tests;
 
-import models.Cliente;
-import models.Filme;
-import models.Fita;
-import models.Pedido;
+import dominio.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,7 +12,7 @@ public class TestPedido {
         Fita fita2 = new Fita();
         Fita fita3 = new Fita();
 
-        Filme filme = new Filme("Rei leão", 5, 3);
+        Filme filme = new Filme("Rei leão", Categoria.DOURADA);
 
         filme.adicionaFita(fita1);
         filme.adicionaFita(fita2);
@@ -29,9 +26,9 @@ public class TestPedido {
         pedido.adicionaFita(fita2);
         pedido.adicionaFita(fita3);
 
-        assertEquals(fita1,pedido.getFitas().get(0));
-        assertEquals(fita2,pedido.getFitas().get(1));
-        assertEquals(fita3,pedido.getFitas().get(2));
+        assertEquals(fita1,pedido.getLocacaos().get(0).getFita());
+        assertEquals(fita2,pedido.getLocacaos().get(1).getFita());
+        assertEquals(fita3,pedido.getLocacaos().get(2).getFita());
     }
 
     @Test
@@ -40,7 +37,7 @@ public class TestPedido {
         Fita fita2 = new Fita();
         Fita fita3 = new Fita();
 
-        Filme filme = new Filme("Rei leão", 5, 3);
+        Filme filme = new Filme("Rei leão", Categoria.DOURADA);
 
         filme.adicionaFita(fita1);
         filme.adicionaFita(fita2);
@@ -50,11 +47,15 @@ public class TestPedido {
 
         Pedido pedido = new Pedido(1,cliente);
 
-        pedido.adicionaFita(fita1);
-        pedido.adicionaFita(fita2);
-        pedido.adicionaFita(fita3);
+        Filme filme2 = new Filme("Todo mundo odeia o cris", Categoria.BRONZE);
 
-        assertEquals(15,pedido.getValorTotal(),0.001);
+        Fita fita1Nova = new Fita();
+        filme2.adicionaFita(fita1Nova);
+
+        pedido.adicionaFita(fita1);
+        pedido.adicionaFita(fita1Nova);
+
+        assertEquals(13,pedido.getValorTotal(),0.001);
     }
 
     @Test

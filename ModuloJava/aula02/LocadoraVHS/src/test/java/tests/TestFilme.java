@@ -1,7 +1,8 @@
 package tests;
 
-import models.Filme;
-import models.Fita;
+import dominio.Categoria;
+import dominio.Filme;
+import dominio.Fita;
 import org.junit.Test;
 
 
@@ -17,7 +18,7 @@ public class TestFilme {
         fita2.loca();
         fita3.loca();
 
-        Filme filme = new Filme("Rei leão", 5, 3);
+        Filme filme = new Filme("Rei leão",Categoria.DOURADA);
 
         filme.adicionaFita(fita1);
         filme.adicionaFita(fita2);
@@ -37,7 +38,7 @@ public class TestFilme {
         fita1.loca();
         fita3.loca();
 
-        Filme filme = new Filme("Rei leão", 5, 3);
+        Filme filme = new Filme("Rei leão", Categoria.DOURADA);
 
         filme.adicionaFita(fita1);
         filme.adicionaFita(fita2);
@@ -58,7 +59,7 @@ public class TestFilme {
         fita2.loca();
         fita3.loca();
 
-        Filme filme = new Filme("Rei leão", 5, 3);
+        Filme filme = new Filme("Rei leão", Categoria.DOURADA);
 
         filme.adicionaFita(fita1);
         filme.adicionaFita(fita2);
@@ -74,7 +75,7 @@ public class TestFilme {
         Fita fita3 = new Fita();
 
 
-        Filme filme = new Filme("Rei leão", 5, 3);
+        Filme filme = new Filme("Rei leão", Categoria.DOURADA);
         filme.adicionaFita(fita1);
         filme.adicionaFita(fita2);
         filme.adicionaFita(fita3);

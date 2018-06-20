@@ -1,4 +1,4 @@
-package models;
+package dominio;
 
 import lombok.Getter;
 
@@ -13,13 +13,15 @@ public class Filme {
     private double valor;
     private int prazoEntrega;
     private int idFitas;
+    private Categoria categoria;
 
     private List<Fita> fitas;
 
-    public Filme(String titulo, double valor, int prazoEntrega) {
+    public Filme(String titulo, Categoria categoria) {
         this.titulo = titulo;
-        this.valor = valor;
-        this.prazoEntrega = prazoEntrega;
+        this.categoria = categoria;
+        this.valor = categoria.getValor();
+        this.prazoEntrega = categoria.getPrazo();
         this.fitas = new ArrayList<>();
         this.idFitas = 0;
     }
