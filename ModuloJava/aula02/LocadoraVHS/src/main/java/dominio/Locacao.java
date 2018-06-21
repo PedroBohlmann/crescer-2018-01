@@ -17,10 +17,15 @@ public class Locacao {
         this.fita = fita;
         this.status = StatusLocacao.LOCADO;
         this.prazo = LocalDate.now();
-        prazo.plusDays(fita.getPrazo());
+        this.prazo = prazo.plusDays(fita.getPrazo());
     }
 
-    public void devolve(){
+    public void devolve() {
         this.status = StatusLocacao.DEVOLVIDO;
+    }
+
+    public void atualizaPrazo(int dias) {
+        prazo = prazo.minusDays(fita.getPrazo());
+        prazo = prazo.plusDays(dias);
     }
 }

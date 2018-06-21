@@ -31,14 +31,15 @@ public class Pedido {
         }
     }
 
-    public void adicionarFitas(List<Fita> novasFitas){
-        if(status == StatusPedido.ATIVO){
-            for(Fita fita : novasFitas){
+    public void adicionarFitas(List<Fita> novasFitas) {
+        if (status == StatusPedido.ATIVO) {
+            for (Fita fita : novasFitas) {
                 fita.loca();
                 Locacao locacao = new Locacao(fita);
                 locacoes.add(locacao);
             }
         }
+        verificaSeECombo();
         calcularValorTotal();
         status = StatusPedido.PENDENTE;
     }
@@ -55,16 +56,56 @@ public class Pedido {
             Locacao locacao = locacoes.stream().filter(p -> p.getFita().equals(fita)).findFirst().orElseThrow(() -> new RuntimeException("Essa fita não está locada neste pedido"));
             locacao.devolve();
             locacao.getFita().entrega();
-            if (quantidadeDeLocacoesLocados()==0){
+            if (quantidadeDeLocacoesLocados() == 0) {
                 status = StatusPedido.FECHADO;
             }
         }
     }
 
-    private int quantidadeDeLocacoesLocados(){
-        int contador =0;
+    private int quantidadeDeLocacoesLocados() {
+        int contador = 0;
+        for (Locacao locacao : locacoes) {
+            if (locacao.getStatus() == StatusLocacao.LOCADO) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    public void verificaSeECombo() {
+        int quantidadeDeFitasBronze = quantidadeDeLocacoesComFitasBronze();
+        int quantidadeDeFitasPratas = quantidadeDeLocacoesComFitasPrata();
+
+        if (quantidadeDeFitasBronze > quantidadeDeFitasPratas && quantidadeDeFitasPratas > 0) {
+            atualizaPrazoDeLocacoesNoCombo(Categoria.BRONZE.getPrazo());
+        } else if (quantidadeDeFitasPratas > quantidadeDeFitasBronze && quantidadeDeFitasBronze > 0) {
+            atualizaPrazoDeLocacoesNoCombo(Categoria.PRATA.getPrazo());
+        }
+
+    }
+
+    private void atualizaPrazoDeLocacoesNoCombo(int dias) {
         for(Locacao locacao:locacoes){
-            if(locacao.getStatus()==StatusLocacao.LOCADO){
+            if(locacao.getFita().getCategoria()==Categoria.BRONZE||locacao.getFita().getCategoria()==Categoria.PRATA){
+                locacao.atualizaPrazo(dias);
+            }
+        }
+    }
+
+    private int quantidadeDeLocacoesComFitasBronze() {
+        int contador = 0;
+        for (Locacao locacao : locacoes) {
+            if (locacao.getFita().getCategoria() == Categoria.BRONZE) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    private int quantidadeDeLocacoesComFitasPrata() {
+        int contador = 0;
+        for (Locacao locacao : locacoes) {
+            if (locacao.getFita().getCategoria() == Categoria.PRATA) {
                 contador++;
             }
         }

@@ -44,6 +44,10 @@ public class Fita {
         return filme.getValor();
     }
 
+    public Categoria getCategoria(){
+        return filme.getCategoria();
+    }
+
     public String getTituloFilme(){
         return filme.getTitulo();
     }

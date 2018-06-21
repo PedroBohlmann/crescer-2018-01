@@ -3,6 +3,7 @@ package tests;
 import dominio.*;
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -181,5 +182,36 @@ public class TestPedido {
         pedido.devolveFita(fita1Nova);
 
         assertEquals(StatusPedido.FECHADO,pedido.getStatus());
+    }
+
+    @Test
+    public void testaCriandoUmCombo(){
+        Fita fita1 = new Fita();
+        Fita fita2 = new Fita();
+
+        Filme filme = new Filme("Rei leão", Categoria.PRATA);
+
+        filme.adicionaFita(fita1);
+        filme.adicionaFita(fita2);
+
+        Cliente cliente = new Cliente("Pedro","111111111111");
+
+        Pedido pedido = new Pedido(1,cliente);
+
+        Filme filme2 = new Filme("Todo mundo odeia o cris", Categoria.BRONZE);
+
+        Fita fita1Nova = new Fita();
+        filme2.adicionaFita(fita1Nova);
+
+        List<Fita> fitas = new ArrayList<>();
+
+        fitas.add(fita1);
+        fitas.add(fita2);
+        fitas.add(fita1Nova);
+
+        pedido.adicionarFitas(fitas);
+
+        assertEquals(LocalDate.now().plusDays(Categoria.PRATA.getPrazo()),pedido.getLocacoes().get(2).getPrazo());
+
     }
 }
