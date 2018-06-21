@@ -53,12 +53,13 @@ public class Fita {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fita fita = (Fita) o;
-        return idFita == fita.idFita;
+        return idFita == fita.idFita &&
+                Objects.equals(filme, fita.filme);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(idFita);
+        return Objects.hash(filme, idFita);
     }
 }

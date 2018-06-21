@@ -2,6 +2,8 @@ package dominio;
 
 import lombok.Getter;
 
+import java.time.LocalDate;
+
 @Getter
 public class Locacao {
 
@@ -9,12 +11,13 @@ public class Locacao {
 
     private StatusLocacao status;
 
-    private int prazo;
+    private LocalDate prazo;
 
-    public Locacao(Fita fita, int prazo) {
+    public Locacao(Fita fita) {
         this.fita = fita;
         this.status = StatusLocacao.LOCADO;
-        this.prazo = prazo;
+        this.prazo = LocalDate.now();
+        prazo.plusDays(fita.getPrazo());
     }
 
     public void devolve(){

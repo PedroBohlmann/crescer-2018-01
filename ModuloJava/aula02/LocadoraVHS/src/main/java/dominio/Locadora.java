@@ -7,9 +7,9 @@ import java.util.List;
 
 @Getter
 public class Locadora {
-    public List<Cliente> clientes;
-    public List<Filme> filmes;
-    public List<Pedido> pedidos;
+    private List<Cliente> clientes;
+    private List<Filme> filmes;
+    private List<Pedido> pedidos;
 
     private int idPedidos;
 
@@ -54,7 +54,6 @@ public class Locadora {
         } else {
             pedido.adicionaFita(fita);
         }
-        fita.loca();
     }
 
     public void realizaPedido(List<String> listaDeTitulos, String cpfCliente) {
@@ -84,10 +83,10 @@ public class Locadora {
 
             Fita fita = filme.primeiraFitaNaoLocada();
             fitas.add(fita);
-            fita.loca();
         }
 
-        //adiciona lista de fitas no pedido
+        pedido.adicionarFitas(fitas);
+
     }
 
     public void devolveFita(Fita fita, Cliente cliente) {
