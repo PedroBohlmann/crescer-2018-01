@@ -3,6 +3,7 @@ package br.com.cwi.crescer.oldflix.web;
 import br.com.cwi.crescer.oldflix.dominio.Cliente;
 import br.com.cwi.crescer.oldflix.dominio.repository.IClienteRepository;
 import br.com.cwi.crescer.oldflix.exception.ClienteNaoCadastrado;
+import br.com.cwi.crescer.oldflix.service.cliente.BuscarClientePorIdService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,9 @@ public class ClienteController {
 
     @Autowired
     private IClienteRepository repository;
+
+    @Autowired
+    private BuscarClientePorIdService service;
 
 
     @GetMapping()

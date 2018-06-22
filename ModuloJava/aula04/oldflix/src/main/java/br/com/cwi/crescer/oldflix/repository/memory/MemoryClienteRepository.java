@@ -2,13 +2,11 @@ package br.com.cwi.crescer.oldflix.repository.memory;
 
 import br.com.cwi.crescer.oldflix.dominio.Cliente;
 import br.com.cwi.crescer.oldflix.dominio.repository.IClienteRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
 public class MemoryClienteRepository implements IClienteRepository {
 
     private List<Cliente> clientes = new ArrayList<>();

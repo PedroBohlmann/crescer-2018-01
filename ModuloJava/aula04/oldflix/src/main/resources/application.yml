@@ -1,2 +1,9 @@
 server:
   port: 9090
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: OLDFLIX
+    password: OLDFLIX
+    driver-class-name: oracle.jdbc.OracleDriver
