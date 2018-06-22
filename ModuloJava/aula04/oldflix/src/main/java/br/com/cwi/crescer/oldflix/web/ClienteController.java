@@ -29,20 +29,28 @@ public class ClienteController {
     }
 
     @GetMapping("/{id}")
-    public Cliente buscarPorId(@PathVariable("id")long id){
-        return repository.findById(id).orElseThrow(()->new ClienteNaoCadastrado(id));
+    public Cliente buscarPorId(@PathVariable("id")Long id){
+        return repository
+                .findById(id)
+                .orElseThrow(()->new ClienteNaoCadastrado(id));
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Cliente atualizarCliente(@PathVariable("id")long id, @RequestBody Cliente cliente){
-        return cliente;
+        repository.save(cliente);
+
+        return repository
+                .findById(id)
+                .orElseThrow(()->new ClienteNaoCadastrado(id));
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deletarPorId(@PathVariable("id")long id){
-        Cliente cliente =  repository.findById(id).orElseThrow(()->new ClienteNaoCadastrado(id));
+    public void deletarPorId(@PathVariable("id")Long id){
+        Cliente cliente =  repository
+                            .findById(id)
+                            .orElseThrow(()->new ClienteNaoCadastrado(id));
 
         repository.delete(cliente);
     }
