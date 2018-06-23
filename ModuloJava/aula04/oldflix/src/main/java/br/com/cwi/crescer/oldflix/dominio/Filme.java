@@ -8,7 +8,6 @@ import lombok.Setter;
 import java.util.Objects;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 public class Filme {
@@ -27,6 +26,8 @@ public class Filme {
         this.id = id;
     }
 
+    public Filme(){ }
+
     public void atualizaDados(Filme filme){
         this.titulo = filme.titulo;
         this.valor = filme.valor;
@@ -44,7 +45,6 @@ public class Filme {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(id);
     }
 }
