@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
 public class MemoryFilmeRepository implements IFilmeRepository {
 
     private List<Filme> filmes = new ArrayList<>();

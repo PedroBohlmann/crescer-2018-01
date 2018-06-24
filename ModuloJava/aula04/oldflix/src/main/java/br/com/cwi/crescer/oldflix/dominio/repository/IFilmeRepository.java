@@ -1,11 +1,12 @@
 package br.com.cwi.crescer.oldflix.dominio.repository;
 
 import br.com.cwi.crescer.oldflix.dominio.Filme;
+import org.springframework.data.repository.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface IFilmeRepository {
+public interface IFilmeRepository extends Repository<Filme,Long> {
 
     List<Filme> findAll();
 
