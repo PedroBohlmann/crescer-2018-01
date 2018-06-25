@@ -23,6 +23,11 @@ public class MemoryFilmeRepository implements IFilmeRepository {
     }
 
     @Override
+    public Optional<Filme> findFilmeByTitulo(String titulo) {
+        return Optional.empty();
+    }
+
+    @Override
     public void save(Filme filme) {
         Optional<Filme> filmeOptional = this.findById(filme.getId());
         if(filmeOptional.isPresent()){

@@ -100,6 +100,6 @@ public class FilmeController {
     }
 
     private Filme mapearFilmeRequestParaFilme(FilmeRequest filmeRequest){
-        return new Filme(filmeRequest.getId(),filmeRequest.getTitulo(),filmeRequest.getCategoria());
+        return new Filme(filmeRequest.getTitulo(),filmeRequest.getCategoria());
     }
 }

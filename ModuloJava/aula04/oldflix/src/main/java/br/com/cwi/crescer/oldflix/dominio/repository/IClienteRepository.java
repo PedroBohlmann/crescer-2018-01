@@ -16,4 +16,5 @@ public interface IClienteRepository extends Repository<Cliente,Long> {
 
     void delete(Cliente cliente);
 
+    Optional<Cliente> findByCpf(String cpf);
 }

@@ -43,12 +43,11 @@ public class Filme {
 //    @JsonManagedReference
     private List<Fita> fitas;
 
-    public Filme(Long id,String titulo, Categoria categoria) {
+    public Filme(String titulo, Categoria categoria) {
         this.titulo = titulo;
         this.categoria = categoria;
         this.valor = categoria.getValor();
         this.prazoEntrega = categoria.getPrazo();
-        this.id = id;
         this.fitas = new ArrayList<>();
     }
 

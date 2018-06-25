@@ -13,13 +13,17 @@ public class AtualizarClientePorIdService {
     @Autowired
     private IClienteRepository repository;
 
+    @Autowired
+    private BuscarClientePorIdService buscarClientePorIdService;
+
     public void atualizar(Long id, Cliente cliente){
         if(Objects.isNull(id)){
             throw new IllegalArgumentException("id invalido");
         }
+        Cliente clienteCarregado = buscarClientePorIdService.buscar(id);
 
-        cliente.setId(id);
+        clienteCarregado.atualizar(cliente);
 
-        repository.save(cliente);
+        repository.save(clienteCarregado);
     }
 }

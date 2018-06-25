@@ -53,6 +53,18 @@ public class Fita {
         this.locado = false;
     }
 
+    public int getPrazo() {
+        return filme.getPrazoEntrega();
+    }
+
+    public double getValor() {
+        return filme.getValor();
+    }
+
+    public Categoria getCategoria(){
+        return filme.getCategoria();
+    }
+
     public void atualiza(Fita fita){
         this.locado = fita.isLocado();
     }

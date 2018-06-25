@@ -37,4 +37,9 @@ public class MemoryClienteRepository implements IClienteRepository {
     public void delete(Cliente cliente) {
         clientes.remove(cliente);
     }
+
+    @Override
+    public Optional<Cliente> findByCpf(String cpf) {
+        return Optional.empty();
+    }
 }
