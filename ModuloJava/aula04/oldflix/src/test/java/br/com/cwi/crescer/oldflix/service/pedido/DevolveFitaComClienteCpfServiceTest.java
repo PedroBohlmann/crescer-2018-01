@@ -57,6 +57,8 @@ public class DevolveFitaComClienteCpfServiceTest {
         pedido.setLocacoes(new ArrayList<Locacao>());
         pedido.adicionaFita(fita);
 
+        cliente.getPedidos().add(pedido);
+
         PedidoDevolveRequest pedidoDevolveRequest =new PedidoDevolveRequest(cpf,idFita);
 
         //mock
