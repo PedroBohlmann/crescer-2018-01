@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
 public class MemoryFilmeRepository implements IFilmeRepository {
 
     private List<Filme> filmes = new ArrayList<>();
@@ -21,6 +20,11 @@ public class MemoryFilmeRepository implements IFilmeRepository {
     @Override
     public Optional<Filme> findById(Long id) {
         return filmes.stream().filter(f->f.getId().equals(id)).findFirst();
+    }
+
+    @Override
+    public Optional<Filme> findFilmeByTitulo(String titulo) {
+        return Optional.empty();
     }
 
     @Override
