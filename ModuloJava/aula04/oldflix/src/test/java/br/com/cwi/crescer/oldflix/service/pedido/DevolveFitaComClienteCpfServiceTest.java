@@ -10,7 +10,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.*;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.mockito.stubbing.Answer;
 
 import java.util.ArrayList;
 
@@ -56,6 +55,8 @@ public class DevolveFitaComClienteCpfServiceTest {
         pedido.setStatus(StatusPedido.ATIVO);
         pedido.setLocacoes(new ArrayList<Locacao>());
         pedido.adicionaFita(fita);
+
+        cliente.getPedidos().add(pedido);
 
         PedidoDevolveRequest pedidoDevolveRequest =new PedidoDevolveRequest(cpf,idFita);
 

@@ -2,9 +2,6 @@ package br.com.cwi.crescer.oldflix.web;
 
 
 import br.com.cwi.crescer.oldflix.dominio.*;
-import br.com.cwi.crescer.oldflix.service.cliente.BuscarClientePorCpfService;
-import br.com.cwi.crescer.oldflix.service.cliente.BuscarClientePorIdService;
-import br.com.cwi.crescer.oldflix.service.filme.BuscarFilmePeloTituloService;
 import br.com.cwi.crescer.oldflix.service.pedido.BuscaPedidoPorIdService;
 import br.com.cwi.crescer.oldflix.service.pedido.DevolveFitaComClienteCpfService;
 import br.com.cwi.crescer.oldflix.service.pedido.SalvaPedidoService;
@@ -27,12 +24,6 @@ public class PedidoController {
     private SalvaPedidoService salvaPedidoService;
 
     @Autowired
-    private BuscarFilmePeloTituloService buscarFilmePeloTituloService;
-
-    @Autowired
-    private BuscarClientePorCpfService buscarClientePorCpfService;
-
-    @Autowired
     private BuscaPedidoPorIdService buscaPedidoPorIdService;
 
     @Autowired
@@ -40,25 +31,7 @@ public class PedidoController {
 
     @PostMapping
     public void criarPedido(@RequestBody PedidoRequest pedidoRequest){
-        Cliente cliente = buscarClientePorCpfService.buscar(pedidoRequest.getCpf());
-        Pedido pedidoExistente = cliente.getPedidos()
-                .stream()
-                .filter(p->p.getStatus()==StatusPedido.PENDENTE)
-                .findFirst()
-                .orElse(null);
-
-        if(pedidoExistente==null) {
-
-            List<Fita> fitas = new ArrayList<>();
-            for (String titulo : pedidoRequest.getFilmes()) {
-                fitas.add(buscarFilmePeloTituloService.buscarFilme(titulo).primeiraFitaNaoLocada());
-            }
-
-            Pedido pedido = new Pedido(cliente);
-            pedido.adicionarFitas(fitas);
-
-            salvaPedidoService.salvar(pedido);
-        }
+        salvaPedidoService.salvar(pedidoRequest);
     }
 
     @GetMapping("/{id}")
