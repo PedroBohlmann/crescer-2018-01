@@ -38,10 +38,12 @@ public class ClienteController {
     @GetMapping()
     public List<ClienteResponse> listar() {
         List<Cliente> clientes = listarClientesService.listar();
+
         List<ClienteResponse> response = new ArrayList<>();
         for(Cliente cliente:clientes){
             response.add(mapearClienteParaResponse(cliente));
         }
+
         return response;
     }
 
