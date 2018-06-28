@@ -34,4 +34,8 @@ public class Post {
 
     @OneToMany(mappedBy = "post")
     private List<Comentario> comentarios;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "VISIBILIDADE")
+    private VisibilidadePost visibilidade;
 }

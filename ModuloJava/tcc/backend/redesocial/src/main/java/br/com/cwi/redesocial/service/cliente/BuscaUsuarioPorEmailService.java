@@ -18,6 +18,6 @@ public class BuscaUsuarioPorEmailService {
             throw new IllegalArgumentException("Email está nulo");
         }
 
-        return usuarioRepository.findByEmail(email);
+        return usuarioRepository.findByEmail(email).orElse(null);
     }
 }

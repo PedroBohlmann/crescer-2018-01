@@ -53,4 +53,7 @@ public class Usuario {
 
     @OneToMany(mappedBy = "usuario")
     private List<Comentario> comentarios;
+
+//    @OneToMany(mappedBy = "usuario")
+//    private List<Usuario> amigos;
 }

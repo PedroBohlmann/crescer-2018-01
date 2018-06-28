@@ -9,5 +9,7 @@ public interface IUsuarioRepository extends Repository<Usuario,Long> {
 
     void save(Usuario usuario);
 
-    Usuario findByEmail(String email);
+    Optional<Usuario> findByEmail(String email);
+
+    Optional<Usuario> findById(Long id);
 }
