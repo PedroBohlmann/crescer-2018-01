@@ -5,7 +5,7 @@ import br.com.cwi.redesocial.dominio.Post;
 import br.com.cwi.redesocial.dominio.Usuario;
 import br.com.cwi.redesocial.dominio.repository.IComentarioRepository;
 import br.com.cwi.redesocial.service.cliente.BuscaUsuarioPorEmailService;
-import br.com.cwi.redesocial.service.post.BuscarPostPorId;
+import br.com.cwi.redesocial.service.post.BuscarPostPorIdService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,11 +21,11 @@ public class CriarComentarioService {
     private BuscaUsuarioPorEmailService buscaUsuarioPorEmailService;
 
     @Autowired
-    private BuscarPostPorId buscarPostPorId;
+    private BuscarPostPorIdService buscarPostPorIdService;
 
     public void criar(String email, Long idPost,Comentario comentario){
         Usuario usuarioCarregado = buscaUsuarioPorEmailService.buscar(email);
-        Post post = buscarPostPorId.buscar(idPost);
+        Post post = buscarPostPorIdService.buscar(idPost);
 
         if(Objects.isNull(usuarioCarregado)){
             throw new IllegalArgumentException("Sem Usuario com esse email");

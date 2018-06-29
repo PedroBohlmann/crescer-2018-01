@@ -5,10 +5,11 @@ import br.com.cwi.redesocial.dominio.repository.IUsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 
-@Repository
+@Service
 public class CadastraUsuarioService {
     @Autowired
     private IUsuarioRepository usuarioRepository;

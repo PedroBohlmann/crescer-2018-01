@@ -3,10 +3,11 @@ package br.com.cwi.redesocial.service.mapeamento;
 import br.com.cwi.redesocial.dominio.Usuario;
 import br.com.cwi.redesocial.web.model.request.UsuarioRequest;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 
-@Repository
+@Service
 public class MapearUsuarioService {
 
     public Usuario mapearUsuarioRequestParaUsuario(UsuarioRequest request){

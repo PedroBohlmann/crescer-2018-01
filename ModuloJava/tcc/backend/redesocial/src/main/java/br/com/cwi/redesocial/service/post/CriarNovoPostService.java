@@ -6,10 +6,11 @@ import br.com.cwi.redesocial.dominio.repository.IPostRepository;
 import br.com.cwi.redesocial.service.cliente.BuscaUsuarioPorEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 
-@Repository
+@Service
 public class CriarNovoPostService {
 
     @Autowired

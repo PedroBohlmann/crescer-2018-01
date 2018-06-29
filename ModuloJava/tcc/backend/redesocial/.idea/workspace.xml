@@ -11,73 +11,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/redesocial$br_com_cwi_redesocial_service_in_redesocial.ic" NAME="br.com.cwi.redesocial.service in redesocial Coverage Results" MODIFIED="1530244027633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/redesocial$br_com_cwi_redesocial_service_in_redesocial.ic" NAME="br.com.cwi.redesocial.service in redesocial Coverage Results" MODIFIED="1530296818230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>br.com.cwi.redesocial.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/redesocial$All_in_redesocial.ic" NAME="All in redesocial Coverage Results" MODIFIED="1530229094592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="ComentarioController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/ComentarioController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="26" selection-start-line="26" selection-end-line="26" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UserPrincipal.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/security/UserPrincipal.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="28" selection-start-line="28" selection-end-line="28" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ComentarioRequest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/request/ComentarioRequest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CriarComentarioService.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/comentario/CriarComentarioService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="649">
-                  <caret line="42" column="48" lean-forward="true" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="MapearComentarioService.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearComentarioService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="ICurtidaRepository.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/ICurtidaRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,8 +44,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/usuario/CadastraUsuarioServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/BuscaUsuarioPorEmailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/login/LoginService.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/login/LoginServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/usuario/BuscaUsuarioPorEmailServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/mapeamento/MapearClienteService.java" />
@@ -101,23 +52,33 @@
         <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/mapeamento/MapearUsuarioServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/UsuarioController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/Usuario.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/AtualizaUsuarioService.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/usuario/AtualizaUsuarioServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/CriarNovoPostService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearUsuarioService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/PostController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/request/PostRequest.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/post/CriarNovoPostServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearPostService.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/mapeamento/MapearPostServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/IComentarioRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/IPostRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/BuscarPostPorId.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MaoearComentarioService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/ComentarioController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearComentarioService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/request/ComentarioRequest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/mapeamento/MapearPostService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/mapeamento/MapearComentarioServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/post/BuscarPostPorId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/BuscarPostPorId.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/comentario/CriarComentarioServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/post/BuscarPostPorIdServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/AtualizaUsuarioService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/BuscaUsuarioPorEmailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/CadastraUsuarioService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/comentario/CriarComentarioService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/login/LoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearComentarioService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearPostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearUsuarioService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/BuscarPostPorIdService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/CriarNovoPostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/ICurtidaRepository.java" />
       </list>
     </option>
   </component>
@@ -148,7 +109,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,36 +149,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="dominio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="dominio" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="mapeamento" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
@@ -243,17 +174,6 @@
               <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
               <item name="redesocial" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="request" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -270,31 +190,13 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="mapeamento" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -322,23 +224,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OldflixApplication">
+  <component name="RunManager" selected="JUnit.br.com.cwi.redesocial.service in redesocial">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComDadosValidos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdNulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="redesocial" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.cwi.redesocial.service.mapeamento.*" />
+          <option name="PATTERN" value="br.com.cwi.redesocial.service.post.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="br.com.cwi.redesocial.service.mapeamento" />
-      <option name="MAIN_CLASS_NAME" value="br.com.cwi.redesocial.service.mapeamento.MapearPostServiceTest" />
-      <option name="METHOD_NAME" value="testaMapearRequestParaPostComDadosValidos" />
+      <option name="PACKAGE_NAME" value="br.com.cwi.redesocial.service.post" />
+      <option name="MAIN_CLASS_NAME" value="br.com.cwi.redesocial.service.post.BuscarPostPorIdServiceTest" />
+      <option name="METHOD_NAME" value="testaBuscarPostComIdNulo" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -349,19 +251,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComTextoVazio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="redesocial" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.cwi.redesocial.service.mapeamento.*" />
+          <option name="PATTERN" value="br.com.cwi.redesocial.service.post.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="br.com.cwi.redesocial.service.mapeamento" />
-      <option name="MAIN_CLASS_NAME" value="br.com.cwi.redesocial.service.mapeamento.MapearPostServiceTest" />
-      <option name="METHOD_NAME" value="testaMapearRequestParaPostComTextoVazio" />
+      <option name="PACKAGE_NAME" value="br.com.cwi.redesocial.service.post" />
+      <option name="MAIN_CLASS_NAME" value="br.com.cwi.redesocial.service.post.BuscarPostPorIdServiceTest" />
+      <option name="METHOD_NAME" value="testaBuscarPostComIdValidoE" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -372,7 +274,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComVisibilidadeNula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoEPostExistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="redesocial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.cwi.redesocial.service.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="br.com.cwi.redesocial.service.post" />
+      <option name="MAIN_CLASS_NAME" value="br.com.cwi.redesocial.service.post.BuscarPostPorIdServiceTest" />
+      <option name="METHOD_NAME" value="testaBuscarPostComIdValidoEPostExistente" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MapearComentarioServiceTest.testaMapeamentoRequestParaComentarioComIdPostNulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="redesocial" />
       <extension name="coverage">
         <pattern>
@@ -383,8 +308,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="br.com.cwi.redesocial.service.mapeamento" />
-      <option name="MAIN_CLASS_NAME" value="br.com.cwi.redesocial.service.mapeamento.MapearPostServiceTest" />
-      <option name="METHOD_NAME" value="testaMapearRequestParaPostComVisibilidadeNula" />
+      <option name="MAIN_CLASS_NAME" value="br.com.cwi.redesocial.service.mapeamento.MapearComentarioServiceTest" />
+      <option name="METHOD_NAME" value="testaMapeamentoRequestParaComentarioComIdPostNulo" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -434,16 +359,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="OldflixApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="redesocial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.cwi.redesocial.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.cwi.redesocial.OldflixApplication" />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -467,19 +382,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.MapearPostServiceTest.testaMapearRequestParaPostComTextoVazio" />
-      <item itemvalue="JUnit.MapearPostServiceTest.testaMapearRequestParaPostComVisibilidadeNula" />
-      <item itemvalue="JUnit.MapearPostServiceTest.testaMapearRequestParaPostComDadosValidos" />
       <item itemvalue="JUnit.br.com.cwi.redesocial.service in redesocial" />
-      <item itemvalue="Spring Boot.OldflixApplication" />
+      <item itemvalue="JUnit.MapearComentarioServiceTest.testaMapeamentoRequestParaComentarioComIdPostNulo" />
+      <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdNulo" />
+      <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" />
+      <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoEPostExistente" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.OldflixApplication" />
         <item itemvalue="JUnit.br.com.cwi.redesocial.service in redesocial" />
-        <item itemvalue="JUnit.MapearPostServiceTest.testaMapearRequestParaPostComDadosValidos" />
-        <item itemvalue="JUnit.MapearPostServiceTest.testaMapearRequestParaPostComVisibilidadeNula" />
-        <item itemvalue="JUnit.MapearPostServiceTest.testaMapearRequestParaPostComTextoVazio" />
+        <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoEPostExistente" />
+        <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" />
+        <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdNulo" />
+        <item itemvalue="JUnit.MapearComentarioServiceTest.testaMapeamentoRequestParaComentarioComIdPostNulo" />
       </list>
     </recent_temporary>
   </component>
@@ -498,34 +413,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MapearPostServiceTest_testaMapearRequestParaPostComRequestNulo - 2018.06.29 at 00h 42m 21s.xml">
-      <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComRequestNulo" configurationId="JUnit" />
+    <history-entry file="BuscarPostPorIdServiceTest_testaBuscarPostComIdValidoE - 2018.06.29 at 15h 21m 26s.xml">
+      <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapearPostServiceTest_testaMapearRequestParaPostComTextoNulo - 2018.06.29 at 00h 43m 17s.xml">
-      <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComTextoNulo" configurationId="JUnit" />
+    <history-entry file="BuscarPostPorIdServiceTest_testaBuscarPostComIdValidoE - 2018.06.29 at 15h 21m 35s.xml">
+      <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapearPostServiceTest_testaMapearRequestParaPostComTextoVazio - 2018.06.29 at 00h 44m 55s.xml">
-      <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComTextoVazio" configurationId="JUnit" />
+    <history-entry file="BuscarPostPorIdServiceTest_testaBuscarPostComIdValidoE - 2018.06.29 at 15h 21m 39s.xml">
+      <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapearPostServiceTest_testaMapearRequestParaPostComVisibilidadeNula - 2018.06.29 at 00h 45m 16s.xml">
-      <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComVisibilidadeNula" configurationId="JUnit" />
+    <history-entry file="BuscarPostPorIdServiceTest_testaBuscarPostComIdValidoE - 2018.06.29 at 15h 22m 38s.xml">
+      <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapearPostServiceTest_testaMapearRequestParaPostComVisibilidadeNula - 2018.06.29 at 00h 45m 28s.xml">
-      <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComVisibilidadeNula" configurationId="JUnit" />
+    <history-entry file="BuscarPostPorIdServiceTest_testaBuscarPostComIdValidoE - 2018.06.29 at 15h 22m 40s.xml">
+      <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapearPostServiceTest_testaMapearRequestParaPostComDadosValidos - 2018.06.29 at 00h 45m 47s.xml">
-      <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComDadosValidos" configurationId="JUnit" />
+    <history-entry file="BuscarPostPorIdServiceTest_testaBuscarPostComIdValidoE - 2018.06.29 at 15h 22m 45s.xml">
+      <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapearPostServiceTest_testaMapearRequestParaPostComDadosValidos - 2018.06.29 at 00h 45m 58s.xml">
-      <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComDadosValidos" configurationId="JUnit" />
+    <history-entry file="BuscarPostPorIdServiceTest_testaBuscarPostComIdValidoE - 2018.06.29 at 15h 23m 30s.xml">
+      <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapearPostServiceTest_testaMapearRequestParaPostComDadosValidos - 2018.06.29 at 00h 46m 47s.xml">
-      <configuration name="MapearPostServiceTest.testaMapearRequestParaPostComDadosValidos" configurationId="JUnit" />
+    <history-entry file="BuscarPostPorIdServiceTest_testaBuscarPostComIdValidoEPostExistente - 2018.06.29 at 15h 26m 45s.xml">
+      <configuration name="BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoEPostExistente" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="br_com_cwi_redesocial_service_in_redesocial - 2018.06.29 at 00h 47m 09s.xml">
+    <history-entry file="br_com_cwi_redesocial_service_in_redesocial - 2018.06.29 at 15h 27m 04s.xml">
       <configuration name="br.com.cwi.redesocial.service in redesocial" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="br_com_cwi_redesocial_service_in_redesocial - 2018.06.29 at 01h 27m 34s.xml">
+    <history-entry file="br_com_cwi_redesocial_service_in_redesocial - 2018.06.29 at 15h 31m 15s.xml">
       <configuration name="br.com.cwi.redesocial.service in redesocial" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -533,41 +448,41 @@
     <option name="totallyTimeSpent" value="24763000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32838285" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32673267" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32980332" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3398693" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29847494" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32995737" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.14765458" />
-      <window_info anchor="right" id="Bean Validation" />
-      <window_info id="Web" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33828384" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,15 +493,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/ComentarioController.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="36" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -597,51 +504,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/login/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/login/LoginServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Objects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="246" selection-start-line="246" selection-end-line="246" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/reflect/InvocationTargetException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="328" selection-start-line="328" selection-end-line="328" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Objects.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/reflect/InvocationTargetException.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/usuario/BuscaUsuarioPorEmailServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
           <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,9 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -666,13 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/CadastraUsuarioService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -690,26 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/AtualizaUsuarioService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearUsuarioService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/VisibilidadePost.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -721,9 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -731,20 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/BuscaUsuarioPorEmailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -759,99 +587,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="175" column="46" selection-start-line="175" selection-start-column="46" selection-end-line="175" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/post/CriarNovoPostServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1108">
-          <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/mapeamento/MapearPostServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearPostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="69" lean-forward="true" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/br.com.cwi.redesocial.dominio.repository.IUsuarioRepository">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>br.com.cwi.redesocial.dominio.repository.IUsuarioRepository</OriginalElement>
-          <nodes>
-            <node x="" y="">org.springframework.data.repository.Repository</node>
-            <node x="" y="">br.com.cwi.redesocial.dominio.repository.IUsuarioRepository</node>
-            <node x="" y="">java.io.Serializable</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="73.5" y="93.5" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/br.com.cwi.redesocial.web.PostController">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>br.com.cwi.redesocial.web.PostController</OriginalElement>
-          <nodes>
-            <node x="" y="">org.springframework.web.bind.annotation.RequestMapping</node>
-            <node x="" y="">org.springframework.web.bind.annotation.RestController</node>
-            <node x="" y="">br.com.cwi.redesocial.web.PostController</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="140.5" y="54.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/CriarNovoPostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="25" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="uml://JAVA/br.com.cwi.redesocial.dominio.repository.IUsuarioRepository" />
+    <entry file="uml://JAVA/br.com.cwi.redesocial.web.PostController" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/IPostRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,19 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/BuscarPostPorId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,24 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearComentarioService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/OldflixApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/security/UserPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -920,20 +637,234 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/security/UserPrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/mapeamento/MapearPostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/statements/ExpectException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/mapeamento/MapearPostServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+          <folding>
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/Comentario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/security/JwtTokenProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/ComentarioController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="371">
+          <caret line="24" column="68" lean-forward="true" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/mapeamento/MapearComentarioServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/post/CriarNovoPostServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/comentario/CriarComentarioServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/BlockJUnit4ClassRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19-sources.jar!/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runner/JUnitCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19-sources.jar!/org/mockito/runners/MockitoJUnitRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#2142#2143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="370" selection-start-line="370" selection-end-line="370" />
+          <folding>
+            <element signature="e#2922#2923#0" expanded="true" />
+            <element signature="e#2966#2967#0" expanded="true" />
+            <element signature="e#10310#10449#0" expanded="true" />
+            <element signature="e#10448#10449#0" expanded="true" />
+            <element signature="e#11040#11204#0" expanded="true" />
+            <element signature="e#11203#11204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/post/BuscarPostPorIdServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/AtualizaUsuarioService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/BuscaUsuarioPorEmailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/cliente/CadastraUsuarioService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/comentario/CriarComentarioService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="42" column="48" lean-forward="true" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+        <state relative-caret-position="187">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/login/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearUsuarioService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearPostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearComentarioService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/BuscarPostPorIdService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/CriarNovoPostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/ICurtidaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
