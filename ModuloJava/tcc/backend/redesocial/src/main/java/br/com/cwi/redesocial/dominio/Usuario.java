@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -53,6 +54,15 @@ public class Usuario {
 
     @OneToMany(mappedBy = "usuario")
     private List<Comentario> comentarios;
+
+    public void atualizar(Usuario usuario) {
+        this.nome = usuario.getNome();
+        this.email = usuario.getEmail();
+        this.apelido = usuario.getApelido();
+        this.senha = BCrypt.hashpw(usuario.getSenha(),BCrypt.gensalt());
+        this.imagemUrl = usuario.getImagemUrl();
+        this.dataDeNascimento = usuario.getDataDeNascimento();
+    }
 
 //    @OneToMany(mappedBy = "usuario")
 //    private List<Usuario> amigos;
