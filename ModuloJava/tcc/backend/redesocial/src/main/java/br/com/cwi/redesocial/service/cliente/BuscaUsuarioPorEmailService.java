@@ -14,7 +14,7 @@ public class BuscaUsuarioPorEmailService {
     private IUsuarioRepository usuarioRepository;
 
     public Usuario buscar(String email){
-        if(Objects.isNull(email)){
+        if(Objects.isNull(email)||email.equals("")){
             throw new IllegalArgumentException("Email está nulo");
         }
 

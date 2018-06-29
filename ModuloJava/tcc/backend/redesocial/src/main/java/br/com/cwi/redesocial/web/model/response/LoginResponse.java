@@ -1,4 +1,4 @@
-package br.com.cwi.redesocial.web;
+package br.com.cwi.redesocial.web.model.response;
 
 import lombok.Data;
 

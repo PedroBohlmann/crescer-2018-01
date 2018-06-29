@@ -3,10 +3,11 @@ package br.com.cwi.redesocial.web;
 
 import br.com.cwi.redesocial.security.AuthenticationService;
 import br.com.cwi.redesocial.service.cliente.CadastraUsuarioService;
-import br.com.cwi.redesocial.service.cliente.LoginService;
-import br.com.cwi.redesocial.service.cliente.MapearClienteService;
+import br.com.cwi.redesocial.service.login.LoginService;
+import br.com.cwi.redesocial.service.mapeamento.MapearUsuarioService;
 import br.com.cwi.redesocial.web.model.request.LoginRequest;
 import br.com.cwi.redesocial.web.model.request.UsuarioRequest;
+import br.com.cwi.redesocial.web.model.response.LoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public class UsuarioController {
     private CadastraUsuarioService cadastraUsuarioService;
 
     @Autowired
-    private MapearClienteService mapearClienteService;
+    private MapearUsuarioService mapearUsuarioService;
 
 
     @Autowired
@@ -31,7 +32,7 @@ public class UsuarioController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void cadastra(@RequestBody UsuarioRequest request){
-        cadastraUsuarioService.cadastra(mapearClienteService.mapearUsuarioRequestParaUsuario(request));
+        cadastraUsuarioService.cadastra(mapearUsuarioService.mapearUsuarioRequestParaUsuario(request));
     }
 
     @PostMapping("/login")

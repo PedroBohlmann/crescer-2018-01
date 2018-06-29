@@ -75,8 +75,6 @@ public class CadastraUsuarioServiceTest {
         usuario.setSenha("1234");
         usuario.setDataDeNascimento(LocalDate.now());
 
-        String email ="pedro@gmail.com";
-
         cadastraUsuarioService.cadastra(usuario);
     }
 
