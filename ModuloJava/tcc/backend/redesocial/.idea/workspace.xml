@@ -18,11 +18,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ICurtidaRepository.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ICurtidaRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/ICurtidaRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="204">
+              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Curtida.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/Curtida.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CriarCurtidaService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/CriarCurtidaService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuscarCurtidaPorUsuarioEPostService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/BuscarCurtidaPorUsuarioEPostService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurtidaController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/CurtidaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,7 +123,10 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearUsuarioService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/BuscarPostPorIdService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/CriarNovoPostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/CurtidaController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/ICurtidaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/CriarCurtidaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/BuscarCurtidaPorUsuarioEPostService.java" />
       </list>
     </option>
   </component>
@@ -158,7 +206,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="redesocial" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="curtida" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
@@ -168,7 +217,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="redesocial" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
@@ -190,6 +238,35 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="redesocial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="comentario" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -224,7 +301,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.br.com.cwi.redesocial.service in redesocial">
+  <component name="RunManager" selected="Application.OldflixApplication">
+    <configuration name="OldflixApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.cwi.redesocial.OldflixApplication" />
+      <module name="redesocial" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.cwi.redesocial.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -287,29 +375,6 @@
       <option name="PACKAGE_NAME" value="br.com.cwi.redesocial.service.post" />
       <option name="MAIN_CLASS_NAME" value="br.com.cwi.redesocial.service.post.BuscarPostPorIdServiceTest" />
       <option name="METHOD_NAME" value="testaBuscarPostComIdValidoEPostExistente" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="MapearComentarioServiceTest.testaMapeamentoRequestParaComentarioComIdPostNulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="redesocial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.cwi.redesocial.service.mapeamento.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="br.com.cwi.redesocial.service.mapeamento" />
-      <option name="MAIN_CLASS_NAME" value="br.com.cwi.redesocial.service.mapeamento.MapearComentarioServiceTest" />
-      <option name="METHOD_NAME" value="testaMapeamentoRequestParaComentarioComIdPostNulo" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -383,18 +448,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.br.com.cwi.redesocial.service in redesocial" />
-      <item itemvalue="JUnit.MapearComentarioServiceTest.testaMapeamentoRequestParaComentarioComIdPostNulo" />
       <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdNulo" />
       <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" />
       <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoEPostExistente" />
+      <item itemvalue="Application.OldflixApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OldflixApplication" />
         <item itemvalue="JUnit.br.com.cwi.redesocial.service in redesocial" />
         <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoEPostExistente" />
         <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdValidoE" />
         <item itemvalue="JUnit.BuscarPostPorIdServiceTest.testaBuscarPostComIdNulo" />
-        <item itemvalue="JUnit.MapearComentarioServiceTest.testaMapeamentoRequestParaComentarioComIdPostNulo" />
       </list>
     </recent_temporary>
   </component>
@@ -449,6 +514,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -464,7 +530,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20196672" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -493,26 +559,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/response/LoginResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/login/LoginServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Objects.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/reflect/InvocationTargetException.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/usuario/BuscaUsuarioPorEmailServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
@@ -613,23 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="74" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/OldflixApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/request/ComentarioRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -700,13 +733,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/post/CriarNovoPostServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
@@ -847,13 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/BuscarPostPorIdService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/CriarNovoPostService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -861,10 +880,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/post/CriarNovoPostServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="70" column="34" lean-forward="true" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="74" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/ICurtidaRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        <state relative-caret-position="204">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/BuscarPostPorIdService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/OldflixApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/Curtida.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/CurtidaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/CriarCurtidaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/BuscarCurtidaPorUsuarioEPostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
