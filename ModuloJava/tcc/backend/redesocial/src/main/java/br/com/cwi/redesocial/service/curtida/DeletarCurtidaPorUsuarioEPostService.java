@@ -8,13 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BuscarCurtidaPorUsuarioEPostService {
+public class DeletarCurtidaPorUsuarioEPostService {
 
     @Autowired
     private ICurtidaRepository curtidaRepository;
 
-    public Curtida buscar(Usuario usuario, Post post){
-        return curtidaRepository.findFirstByUsuarioAndPost(usuario,post).orElse(null);
+    public void deletar(Curtida curitida){
+        curtidaRepository.delete(curitida);
     }
-
 }

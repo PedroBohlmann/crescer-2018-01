@@ -23,6 +23,12 @@ public class CriarCurtidaService {
     @Autowired
     private BuscaUsuarioPorEmailService buscaUsuarioPorEmailService;
 
+    @Autowired
+    private BuscarCurtidaPorUsuarioEPostService buscarCurtidaPorUsuarioEPostService;
+
+    @Autowired
+    private DeletarCurtidaPorUsuarioEPostService deletarCurtidaPorUsuarioEPostService;
+
     public void criar(String email, Long idPost){
         Usuario usuario = buscaUsuarioPorEmailService.buscar(email);
 
@@ -36,12 +42,16 @@ public class CriarCurtidaService {
             throw new IllegalArgumentException("Sem post com esse id");
         }
 
+        Curtida curtidaExistente = buscarCurtidaPorUsuarioEPostService.buscar(usuario,post);
+        if(curtidaExistente==null) {
 
+            Curtida curtida = new Curtida();
+            curtida.setPost(post);
+            curtida.setUsuario(usuario);
 
-        Curtida curtida = new Curtida();
-        curtida.setPost(post);
-        curtida.setUsuario(usuario);
-
-        curtidaRepository.save(curtida);
+            curtidaRepository.save(curtida);
+        }else{
+              deletarCurtidaPorUsuarioEPostService.deletar(curtidaExistente);
+        }
     }
 }

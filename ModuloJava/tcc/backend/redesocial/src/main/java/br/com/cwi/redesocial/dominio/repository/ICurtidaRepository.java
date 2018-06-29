@@ -5,10 +5,12 @@ import br.com.cwi.redesocial.dominio.Post;
 import br.com.cwi.redesocial.dominio.Usuario;
 import org.springframework.data.repository.Repository;
 
+import java.util.Optional;
+
 public interface ICurtidaRepository extends Repository<Curtida, Long> {
     void save(Curtida curtida);
 
-    void deleteByUsuarioAndPost(Usuario usuario,Post post);
+    void delete(Curtida curtida);
 
-    void findByUsuarioAndPost(Usuario usuario,Post post);
+    Optional<Curtida> findFirstByUsuarioAndPost(Usuario usuario, Post post);
 }
