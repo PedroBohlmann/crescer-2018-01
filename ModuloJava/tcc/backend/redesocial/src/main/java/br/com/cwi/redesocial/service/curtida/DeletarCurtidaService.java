@@ -7,13 +7,19 @@ import br.com.cwi.redesocial.dominio.repository.ICurtidaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 @Service
-public class DeletarCurtidaPorUsuarioEPostService {
+public class DeletarCurtidaService {
 
     @Autowired
     private ICurtidaRepository curtidaRepository;
 
     public void deletar(Curtida curitida){
+        if(Objects.isNull(curitida)){
+            throw new IllegalArgumentException("Curtida nula");
+        }
+
         curtidaRepository.delete(curitida);
     }
 }

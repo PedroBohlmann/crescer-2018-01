@@ -27,7 +27,7 @@ public class CriarCurtidaService {
     private BuscarCurtidaPorUsuarioEPostService buscarCurtidaPorUsuarioEPostService;
 
     @Autowired
-    private DeletarCurtidaPorUsuarioEPostService deletarCurtidaPorUsuarioEPostService;
+    private DeletarCurtidaService deletarCurtidaService;
 
     public void criar(String email, Long idPost){
         Usuario usuario = buscaUsuarioPorEmailService.buscar(email);
@@ -51,7 +51,7 @@ public class CriarCurtidaService {
 
             curtidaRepository.save(curtida);
         }else{
-              deletarCurtidaPorUsuarioEPostService.deletar(curtidaExistente);
+              deletarCurtidaService.deletar(curtidaExistente);
         }
     }
 }
