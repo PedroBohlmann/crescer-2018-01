@@ -18,7 +18,7 @@ public class Contato {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE)
     @SequenceGenerator(name = SEQUENCE, sequenceName = SEQUENCE, allocationSize = 1)
-    @Column(name = "ID_POST", nullable = false, precision = 10, unique = true)
+    @Column(name = "ID_CONTATO", nullable = false, precision = 10, unique = true)
     private Long id;
 
     @ManyToOne

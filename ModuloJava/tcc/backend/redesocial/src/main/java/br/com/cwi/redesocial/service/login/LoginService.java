@@ -1,10 +1,9 @@
 package br.com.cwi.redesocial.service.login;
 
 import br.com.cwi.redesocial.dominio.Usuario;
-import br.com.cwi.redesocial.service.cliente.BuscaUsuarioPorEmailService;
+import br.com.cwi.redesocial.service.usuario.BuscaUsuarioPorEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;

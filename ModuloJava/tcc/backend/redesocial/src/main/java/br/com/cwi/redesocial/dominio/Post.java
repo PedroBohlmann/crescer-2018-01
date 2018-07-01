@@ -38,4 +38,8 @@ public class Post {
     @Enumerated(EnumType.STRING)
     @Column(name = "VISIBILIDADE")
     private VisibilidadePost visibilidade;
+
+    public void atualizarVisibilidade(VisibilidadePost visibilidade){
+        this.visibilidade = visibilidade;
+    }
 }

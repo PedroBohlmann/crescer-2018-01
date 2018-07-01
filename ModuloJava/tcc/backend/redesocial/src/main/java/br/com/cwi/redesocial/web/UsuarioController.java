@@ -4,13 +4,19 @@ package br.com.cwi.redesocial.web;
 import br.com.cwi.redesocial.dominio.Usuario;
 import br.com.cwi.redesocial.security.AuthenticationService;
 import br.com.cwi.redesocial.security.UserPrincipal;
-import br.com.cwi.redesocial.service.cliente.AtualizaUsuarioService;
-import br.com.cwi.redesocial.service.cliente.CadastraUsuarioService;
+import br.com.cwi.redesocial.service.contato.AceitarPedidoDeAmizadeService;
+import br.com.cwi.redesocial.service.contato.ConvidarParaAmizadeService;
+import br.com.cwi.redesocial.service.contato.DeletarAmizadeService;
+import br.com.cwi.redesocial.service.usuario.AtualizaUsuarioService;
+import br.com.cwi.redesocial.service.usuario.BuscarUsuarioPorIdService;
+import br.com.cwi.redesocial.service.usuario.CadastraUsuarioService;
 import br.com.cwi.redesocial.service.login.LoginService;
 import br.com.cwi.redesocial.service.mapeamento.MapearUsuarioService;
+import br.com.cwi.redesocial.web.model.request.ContatoConviteRequest;
 import br.com.cwi.redesocial.web.model.request.LoginRequest;
 import br.com.cwi.redesocial.web.model.request.UsuarioRequest;
 import br.com.cwi.redesocial.web.model.response.LoginResponse;
+import br.com.cwi.redesocial.web.model.response.UsuarioResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.annotation.Secured;
@@ -36,6 +42,18 @@ public class UsuarioController {
     @Autowired
     private AtualizaUsuarioService atualizaUsuarioService;
 
+    @Autowired
+    private ConvidarParaAmizadeService convidarParaAmizadeService;
+
+    @Autowired
+    private AceitarPedidoDeAmizadeService aceitarPedidoDeAmizadeService;
+
+    @Autowired
+    private DeletarAmizadeService deletarAmizadeService;
+
+    @Autowired
+    private BuscarUsuarioPorIdService buscarUsuarioPorIdService;
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void cadastra(@RequestBody UsuarioRequest request){
@@ -54,12 +72,38 @@ public class UsuarioController {
         return new LoginResponse(token);
     }
 
+    @GetMapping("/{idUsuario}")
+    public UsuarioResponse buscar(@AuthenticationPrincipal UserPrincipal usuarioLogado,@PathVariable("idUsuario")Long id){
+        return mapearUsuarioService.mapearUsuarioParaUsuarioResponse(buscarUsuarioPorIdService.buscar(id));
+    }
+
     @PutMapping()
     @Secured("ROLE_USER")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void atualizar(@AuthenticationPrincipal UserPrincipal usuarioLogado,@RequestBody UsuarioRequest request){
         Usuario usuarioMapeado = mapearUsuarioService.mapearUsuarioRequestParaUsuario(request);
         atualizaUsuarioService.atualiza(usuarioLogado.getEmail(),usuarioMapeado);
+    }
+
+    @PostMapping("/convidar")
+    @Secured("ROLE_USER")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void convidar(@AuthenticationPrincipal UserPrincipal usuarioLogado,@RequestBody ContatoConviteRequest request){
+        convidarParaAmizadeService.criarAmizada(usuarioLogado.getEmail(),request.getEmailConvidado());
+    }
+
+    @PostMapping("/aceitar/{idConvidado}")
+    @Secured("ROLE_USER")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void convidar(@AuthenticationPrincipal UserPrincipal usuarioLogado,@PathVariable("idConvidado") Long convidado){
+        aceitarPedidoDeAmizadeService.aceitar(usuarioLogado.getId(),convidado);
+    }
+
+    @DeleteMapping("/excluir/{idConvidado}")
+    @Secured("ROLE_USER")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void deletar(@AuthenticationPrincipal UserPrincipal usuarioLogado,@PathVariable("idConvidado") Long convidado){
+        deletarAmizadeService.deletar(usuarioLogado.getId(),convidado);
     }
 
 }

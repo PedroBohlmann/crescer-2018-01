@@ -46,13 +46,14 @@ public class Usuario {
     @Column(name = "IMAGEM_DE_PERFIL",length =512)
     private String imagemUrl;
 
+
     @OneToMany(mappedBy = "criador")
     private List<Post> posts;
 
     @OneToMany(mappedBy = "usuario")
     private List<Curtida> curtidas;
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany(mappedBy = "usuario",fetch = FetchType.EAGER)
     private List<Comentario> comentarios;
 
     public void atualizar(Usuario usuario) {
@@ -64,6 +65,6 @@ public class Usuario {
         this.dataDeNascimento = usuario.getDataDeNascimento();
     }
 
-//    @OneToMany(mappedBy = "usuario")
-//    private List<Usuario> amigos;
+    @OneToMany(mappedBy = "usuario")
+    private List<Contato> amigos;
 }

@@ -4,7 +4,7 @@ import br.com.cwi.redesocial.dominio.Comentario;
 import br.com.cwi.redesocial.dominio.Post;
 import br.com.cwi.redesocial.dominio.Usuario;
 import br.com.cwi.redesocial.dominio.repository.IComentarioRepository;
-import br.com.cwi.redesocial.service.cliente.BuscaUsuarioPorEmailService;
+import br.com.cwi.redesocial.service.usuario.BuscaUsuarioPorEmailService;
 import br.com.cwi.redesocial.service.post.BuscarPostPorIdService;
 import org.junit.Assert;
 import org.junit.Test;

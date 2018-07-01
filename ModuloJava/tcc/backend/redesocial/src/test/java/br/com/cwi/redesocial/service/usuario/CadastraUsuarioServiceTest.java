@@ -2,8 +2,6 @@ package br.com.cwi.redesocial.service.usuario;
 
 import br.com.cwi.redesocial.dominio.Usuario;
 import br.com.cwi.redesocial.dominio.repository.IUsuarioRepository;
-import br.com.cwi.redesocial.service.cliente.BuscaUsuarioPorEmailService;
-import br.com.cwi.redesocial.service.cliente.CadastraUsuarioService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

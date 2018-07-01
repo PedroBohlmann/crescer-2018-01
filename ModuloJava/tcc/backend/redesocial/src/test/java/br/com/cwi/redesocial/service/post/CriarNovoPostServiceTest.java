@@ -4,7 +4,7 @@ import br.com.cwi.redesocial.dominio.Post;
 import br.com.cwi.redesocial.dominio.Usuario;
 import br.com.cwi.redesocial.dominio.VisibilidadePost;
 import br.com.cwi.redesocial.dominio.repository.IPostRepository;
-import br.com.cwi.redesocial.service.cliente.BuscaUsuarioPorEmailService;
+import br.com.cwi.redesocial.service.usuario.BuscaUsuarioPorEmailService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
