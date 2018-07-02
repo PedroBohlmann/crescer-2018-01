@@ -63,10 +63,10 @@ export default class Register extends React.Component{
     render(){
         return(
             <div className="register-container">
-                {this.state.directToRegister ? (<Redirect to="/"/>): (undefined)}
+                <img src="https://cdn.discordapp.com/attachments/361913998851178507/463173846007152641/logo_do_petter_white.png" width="25%" className="floating-logo-register"/>
+                {this.state.toLogin ? (<Redirect to="/"/>): (undefined)}
                 <div className="register-form-container">
-                    <img src="https://cdn.discordapp.com/attachments/361913998851178507/463173846007152641/logo_do_petter_white.png" width="55%"/>
-                        <div className="register-form-container-group">
+                       <div className="register-form-container-group">
                             <h2>Register</h2>
                             <Label for="email">Email</Label>
                             <Input
@@ -90,7 +90,7 @@ export default class Register extends React.Component{
                             <Input
                                 type="password"
                                 id="password"
-                                placeholder="senha aqui!"
+                                placeholder="password here!"
                                 onChange={this.handleChange}
                                 name="password"
                             />

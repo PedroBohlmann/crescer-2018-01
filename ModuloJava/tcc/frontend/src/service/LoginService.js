@@ -2,7 +2,7 @@ import CONFIG from "../config";
 
 import axios from "axios";
 
-export default class UsuarioService{
+export default class LoginService{
 
     static login(email,password){
         var data = {

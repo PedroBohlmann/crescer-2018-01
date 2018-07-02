@@ -1,10 +1,124 @@
 import React from 'react';
 
+import UsuarioService from "../../../service/UsuarioService";
+import Post from "../../Post/Post";
+
+import { Input, Label, Button } from "reactstrap";
+
+import "./Home.css"
+
 export default class Home extends React.Component{
+
+    constructor(){
+        super()
+        this.state ={
+            id: 0,
+            name: "",
+            email: "",
+            nickname: "",
+            dateOfBirth: "",
+            imageUrl: "",
+            isPublic:false,
+            posts:[]
+        }
+        this.loadLoggedUserDataFromApi = this.loadLoggedUserDataFromApi.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+        this.toggleIsPublic = this.toggleIsPublic.bind(this)
+    }
+
+    loadLoggedUserDataFromApi(){
+        UsuarioService.getLoggedUserData(localStorage.token)
+            .then((result)=>{
+                this.setState({
+                    id:result.data.id,
+                    name: result.data.nome,
+                    email:result.data.email,
+                    nickname: result.data.apelido,
+                    dateOfBirth: result.data.dataDeNascimento,
+                    imageUrl:result.data.imagemUrl
+                })
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+    }
+
+    loadTimeForTheLoggedUser(){
+        UsuarioService.getTimeline(localStorage.token)
+            .then((result)=>{
+                this.setState({
+                    posts:result.data.content
+                })
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+    }
+
+    renderPosts() {
+        return this.state.posts.map((post, index) => {
+            return <Post userCreator={post.nomeCriador} text={post.texto}/>
+        })
+    }
+
+    handleChange(event) {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        this.setState({
+          [name]: value
+        });
+    }
+
+    toggleIsPublic(event) {
+        let isPublic = this.state.isPublic
+        isPublic = !isPublic
+        this.setState({
+            isPublic
+        })
+    }
+
+    componentDidMount(){
+        this.loadLoggedUserDataFromApi()
+        this.loadTimeForTheLoggedUser()
+    }
 
     render(){
         return(
-            <div>home</div>
+            <div className="home-container">
+                <div className="home-container-user-data">
+                    <div className="home-container-user-data-line"><img  className="user-image" src={this.state.imageUrl} alt=""/></div>
+                    <div className="home-container-user-data-line">Name :{this.state.name}</div>
+                    <div className="home-container-user-data-line">Email :{this.state.email}</div>
+                    <div className="home-container-user-data-line">Nickname :{this.state.nickname}</div>
+                    <div className="home-container-user-data-line">Date of Birth :{this.state.dateOfBirth}</div>
+                    <div className="home-container-user-data-line"><img  className="user-image" src="https://cdn.discordapp.com/attachments/361913998851178507/463174007521411083/logo_do_petter.png"/></div>
+                </div>
+                <div className="home-posts-container">
+                    <div className="home-new-post-container">
+                    <Label for="text">Post text</Label>
+                        <Input
+                            type="textarea"
+                            id="text"
+                            placeholder="Post text here"
+                            onChange={this.handleChange}
+                        />
+                    <Label for="isPublic">Is this post public?</Label>
+                        <Input
+                            type="checkbox"
+                            id="isPublic"
+                            onChange={this.toggleIsPublic}
+                            name="isPublic"
+                        />
+                    </div>
+                    <div className="home-posts-list">
+                        {this.renderPosts()}
+                    </div>
+                </div>
+                <div className="home-friends-container">
+                    amigos in column
+                </div>
+            </div>
         )
     }
 }

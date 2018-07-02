@@ -27,3 +27,9 @@
     justify-content: space-evenly;
     margin: 10px;
 }
+
+.floating-logo-login{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

@@ -54,10 +54,10 @@ export default class Login extends React.Component {
     render() {
         return (
             <div className="login-container">
+                <img src="https://cdn.discordapp.com/attachments/361913998851178507/463173846007152641/logo_do_petter_white.png" width="25%" className="floating-logo-login" />
                 <div className="login-form-container">
                     {this.state.directToRegister ? (<Redirect to="/register"/>): (undefined)}
                     {this.state.logged ? (<Redirect to="/home"/>): (undefined)}
-                    <img src="https://cdn.discordapp.com/attachments/361913998851178507/463173846007152641/logo_do_petter_white.png" width="100%"/>
                     <div className="login-form-container-group">
                         <h2>Login</h2>
                         <Label for="email">Email</Label>
@@ -73,7 +73,7 @@ export default class Login extends React.Component {
                         <Input
                             type="password"
                             id="password"
-                            placeholder="senha aqui!"
+                            placeholder="password here!"
                             onChange={this.handleChange}
                             name="password"
                         />

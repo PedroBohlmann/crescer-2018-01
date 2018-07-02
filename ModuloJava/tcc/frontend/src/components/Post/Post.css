@@ -1,0 +1,13 @@
+.post-container{
+    background-color: rgba(53, 73, 100, 0.808);
+    padding: 5px;
+}
+
+.post-container-line{
+    padding: 5px;
+    background-color: rgba(75, 75, 75, 0.808);
+}
+
+.post-container>*{
+    margin-bottom: 5px;
+}
