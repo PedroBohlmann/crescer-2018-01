@@ -8,6 +8,7 @@ import br.com.cwi.redesocial.service.contato.AceitarPedidoDeAmizadeService;
 import br.com.cwi.redesocial.service.contato.ConvidarParaAmizadeService;
 import br.com.cwi.redesocial.service.contato.DeletarAmizadeService;
 import br.com.cwi.redesocial.service.usuario.AtualizaUsuarioService;
+import br.com.cwi.redesocial.service.usuario.BuscarAmigosDeUmUsuarioService;
 import br.com.cwi.redesocial.service.usuario.BuscarUsuarioPorIdService;
 import br.com.cwi.redesocial.service.usuario.CadastraUsuarioService;
 import br.com.cwi.redesocial.service.login.LoginService;
@@ -22,6 +23,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequestMapping("/public/usuario")
 @RestController
@@ -54,6 +57,9 @@ public class UsuarioController {
     @Autowired
     private BuscarUsuarioPorIdService buscarUsuarioPorIdService;
 
+    @Autowired
+    private BuscarAmigosDeUmUsuarioService buscarAmigosDeUmUsuarioService;
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void cadastra(@RequestBody UsuarioRequest request){
@@ -72,7 +78,13 @@ public class UsuarioController {
         return new LoginResponse(token);
     }
 
+    @GetMapping("/amigos")
+    public List<UsuarioResponse> getAmigos(@AuthenticationPrincipal UserPrincipal usuarioLogado){
+        return buscarAmigosDeUmUsuarioService.listar(usuarioLogado.getId());
+    }
+
     @GetMapping("/{idUsuario}")
+    @Secured("ROLE_USER")
     public UsuarioResponse buscar(@AuthenticationPrincipal UserPrincipal usuarioLogado,@PathVariable("idUsuario")Long id){
         return mapearUsuarioService.mapearUsuarioParaUsuarioResponse(buscarUsuarioPorIdService.buscar(id));
     }

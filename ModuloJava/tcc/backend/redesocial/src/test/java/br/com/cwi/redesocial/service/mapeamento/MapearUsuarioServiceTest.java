@@ -2,6 +2,7 @@ package br.com.cwi.redesocial.service.mapeamento;
 
 import br.com.cwi.redesocial.dominio.Usuario;
 import br.com.cwi.redesocial.web.model.request.UsuarioRequest;
+import br.com.cwi.redesocial.web.model.response.UsuarioResponse;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +23,7 @@ public class MapearUsuarioServiceTest {
     }
 
     @Test
-    public void testaMepeamentoUsurioRequestParaUsuarioCorreto(){
+    public void testaMepeamentoUsuarioRequestParaUsuarioCorreto(){
         UsuarioRequest request = new UsuarioRequest();
         request.setId(1L);
         request.setApelido("Pedroka");
@@ -41,5 +42,31 @@ public class MapearUsuarioServiceTest {
         Assert.assertEquals(request.getNome(),usuarioMapeado.getNome());
         Assert.assertEquals(request.getImagemUrl(),usuarioMapeado.getImagemUrl());
         Assert.assertEquals(request.getSenha(),usuarioMapeado.getSenha());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testaMapeamentoUsuarioParaResponseComUsuarioNulo(){
+        mapearUsuarioService.mapearUsuarioParaUsuarioResponse(null);
+    }
+
+    @Test
+    public void testaMapeamentoUsuarioParaResponseComSucesso(){
+        Usuario usuario = new Usuario();
+        usuario.setId(1L);
+        usuario.setNome("pedro");
+        usuario.setEmail("pedro@gmail.com");
+        usuario.setApelido("pedroka");
+        usuario.setDataDeNascimento(LocalDate.now());
+        usuario.setImagemUrl("www.google.com");
+
+        UsuarioResponse response = mapearUsuarioService.mapearUsuarioParaUsuarioResponse(usuario);
+
+        Assert.assertEquals(usuario.getId(),response.getId());
+        Assert.assertEquals(usuario.getNome(),response.getNome());
+        Assert.assertEquals(usuario.getEmail(),response.getEmail());
+        Assert.assertEquals(usuario.getApelido(),response.getApelido());
+        Assert.assertEquals(usuario.getId(),response.getId());
+        Assert.assertEquals(usuario.getDataDeNascimento(),response.getDataDeNascimento());
+        Assert.assertEquals(usuario.getImagemUrl(),response.getImagemUrl());
     }
 }

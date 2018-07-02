@@ -17,4 +17,6 @@ public class PostResponse {
 
     private List<CurtidaResponse> curtidas;
 
+    private List<ComentarioResponse> comentarios;
+
 }

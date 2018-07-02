@@ -1,9 +1,11 @@
 package br.com.cwi.redesocial.service.mapeamento;
 
+import br.com.cwi.redesocial.dominio.Comentario;
 import br.com.cwi.redesocial.dominio.Curtida;
 import br.com.cwi.redesocial.dominio.Post;
 import br.com.cwi.redesocial.dominio.Usuario;
 import br.com.cwi.redesocial.web.model.request.PostRequest;
+import br.com.cwi.redesocial.web.model.response.ComentarioResponse;
 import br.com.cwi.redesocial.web.model.response.CurtidaResponse;
 import br.com.cwi.redesocial.web.model.response.PostResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,9 @@ public class MapearPostService {
 
     @Autowired
     private MapearCurtidaService mapearCurtidaService;
+
+    @Autowired
+    private MapearComentarioService mapearComentarioService;
 
     public Post mapearPostRequestParaPost(PostRequest request){
         if(Objects.isNull(request)){
@@ -70,6 +75,20 @@ public class MapearPostService {
         }
 
         response.setCurtidas(curtidaResponses);
+
+        List<Comentario> comentarios = post.getComentarios();
+
+        if(Objects.isNull(comentarios)){
+            throw new IllegalArgumentException("Post sem comentarios");
+        }
+
+        List<ComentarioResponse> comentariosResponse = new ArrayList<>();
+
+        for(Comentario comentario : comentarios){
+            comentariosResponse.add(mapearComentarioService.mapearComentarioParaResponse(comentario));
+        }
+
+        response.setComentarios(comentariosResponse);
 
         return response;
     }

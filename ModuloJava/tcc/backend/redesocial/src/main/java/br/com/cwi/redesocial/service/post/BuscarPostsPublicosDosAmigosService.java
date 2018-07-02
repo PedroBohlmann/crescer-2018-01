@@ -18,7 +18,7 @@ public class BuscarPostsPublicosDosAmigosService {
 
     public List<Post> buscar(List<Usuario> amigos){
         if(Objects.isNull(amigos)){
-            throw new IllegalArgumentException("Lista de amigos vazia");
+            throw new IllegalArgumentException("Lista de amigos nula");
         }
 
         return postRepository.findByCriadorInAndVisibilidade(amigos,VisibilidadePost.PUBLICO);

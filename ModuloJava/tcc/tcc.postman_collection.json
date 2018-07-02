@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "fa1f77ca-6067-474c-a7b8-4bfe886e4106",
+		"name": "tcc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "usuario",
+			"description": "",
+			"item": [
+				{
+					"name": "/public/usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"tutu\",\n\t\"email\":\"artrue@gail.com\",\n\t\"senha\":\"artrue\",\n\t\"dataDeNascimento\":\"1996-09-22\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/public/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"public",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/public/usuario/{idUsuario}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwNDEzMDM1LCJleHAiOjE1MzA0OTk0MzUsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.XBGN7HlAyAUWJJ0F5ZxpB9PiarB2MzBfCjbbvEydHbdxWTeBKFUCwksyHYEEEfCWFfobmutlPVQGX31331y0_g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"tutu\",\n\t\"email\":\"artrue@gail.com\",\n\t\"senha\":\"artrue\",\n\t\"dataDeNascimento\":\"1996-09-22\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/public/usuario/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"public",
+								"usuario",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/public/usuario/amigos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwNDEzMDM1LCJleHAiOjE1MzA0OTk0MzUsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.XBGN7HlAyAUWJJ0F5ZxpB9PiarB2MzBfCjbbvEydHbdxWTeBKFUCwksyHYEEEfCWFfobmutlPVQGX31331y0_g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"tutu\",\n\t\"email\":\"artrue@gail.com\",\n\t\"senha\":\"artrue\",\n\t\"dataDeNascimento\":\"1996-09-22\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/public/usuario/amigos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"public",
+								"usuario",
+								"amigos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/public/usuario/convidar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwMzc2ODY4LCJleHAiOjE1MzA0NjMyNjgsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.aNJMRARo2DphwHboZrAFrg7nWoUkB9MPGZfLkF1yr6dl-SnBOEVdW0MhVX9am9NPo6dKdbpYUukYu-wOdjOpXQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"emailConvidado\":\"artrue@gail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/public/usuario/convidar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"public",
+								"usuario",
+								"convidar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/public/usuario/aceita/{idConvidado}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwMzc2ODY4LCJleHAiOjE1MzA0NjMyNjgsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.aNJMRARo2DphwHboZrAFrg7nWoUkB9MPGZfLkF1yr6dl-SnBOEVdW0MhVX9am9NPo6dKdbpYUukYu-wOdjOpXQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9090/public/usuario/aceitar/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"public",
+								"usuario",
+								"aceitar",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/public/usuario/excluir/{idConvidado}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwMzc2ODY4LCJleHAiOjE1MzA0NjMyNjgsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.aNJMRARo2DphwHboZrAFrg7nWoUkB9MPGZfLkF1yr6dl-SnBOEVdW0MhVX9am9NPo6dKdbpYUukYu-wOdjOpXQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9090/public/usuario/excluir/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"public",
+								"usuario",
+								"excluir",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/public/usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwMjM0NzIxLCJleHAiOjE1MzAzMjExMjEsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.6ErvvMiZe6JBdUyV4gfaEKQhLayms6ufUbmG_ZTz4OHPIXbUIkRO3dMTWI5nhOk_vDTCIVjK5IYHyv7WZorxRg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"pedroka\",\n\t\"email\":\"pedroka@gmail.com\",\n\t\"apelido\":\"pedroka\",\n\t\"senha\":\"pedroka\",\n\t\"dataDeNascimento\":\"1997-07-05\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/public/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"public",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/public/usuario/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"pedroka@gmail.com\",\n\t\"senha\":\"pedroka\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/public/usuario/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"public",
+								"usuario",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"description": "",
+			"item": [
+				{
+					"name": "/post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1IiwiaWF0IjoxNTMwNDUzNjAyLCJleHAiOjE1MzA1NDAwMDIsImVtYWlsIjoiYXJ0cnVlQGdhaWwuY29tIiwiaWQiOjV9.kWRclC_gYj8iJx09gEGt35KMes-JAHY1k-5V4CDMvF8x0AkcWNjcpr76GIPRKuQhJuihb9kLFpoFp4mC3Q9NlQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"texto\":\"textao loko\",\n\t\"visibilidade\":\"PUBLICO\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/post/timeline/{numeroPagina}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwNDEzMDM1LCJleHAiOjE1MzA0OTk0MzUsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.XBGN7HlAyAUWJJ0F5ZxpB9PiarB2MzBfCjbbvEydHbdxWTeBKFUCwksyHYEEEfCWFfobmutlPVQGX31331y0_g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"texto\":\"textao loko\",\n\t\"visibilidade\":\"PUBLICO\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/post/timeline/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"post",
+								"timeline",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/post/{postId}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwNDEzMDM1LCJleHAiOjE1MzA0OTk0MzUsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.XBGN7HlAyAUWJJ0F5ZxpB9PiarB2MzBfCjbbvEydHbdxWTeBKFUCwksyHYEEEfCWFfobmutlPVQGX31331y0_g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"texto\":\"textao loko\",\n\t\"visibilidade\":\"PUBLICO\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/post/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/post/{postId}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwNDEzMDM1LCJleHAiOjE1MzA0OTk0MzUsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.XBGN7HlAyAUWJJ0F5ZxpB9PiarB2MzBfCjbbvEydHbdxWTeBKFUCwksyHYEEEfCWFfobmutlPVQGX31331y0_g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"visibilidade\":\"PRIVADO\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/post/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"post",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comentario",
+			"description": "",
+			"item": [
+				{
+					"name": "/comentario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwMjM0NzIxLCJleHAiOjE1MzAzMjExMjEsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.6ErvvMiZe6JBdUyV4gfaEKQhLayms6ufUbmG_ZTz4OHPIXbUIkRO3dMTWI5nhOk_vDTCIVjK5IYHyv7WZorxRg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idPost\":1,\n\t\"texto\":\"texto comentario\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/comentario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"comentario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "curtida",
+			"description": "",
+			"item": [
+				{
+					"name": "/curtida/{idPost}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNTMwMzc2ODY4LCJleHAiOjE1MzA0NjMyNjgsImVtYWlsIjoicGVkcm9rYUBnbWFpbC5jb20iLCJpZCI6NH0.aNJMRARo2DphwHboZrAFrg7nWoUkB9MPGZfLkF1yr6dl-SnBOEVdW0MhVX9am9NPo6dKdbpYUukYu-wOdjOpXQ"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:9090/curtida/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"curtida",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

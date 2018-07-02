@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -32,8 +33,21 @@ public class ListarPostsService {
     private MapearPostService mapearPostService;
 
     public Page<PostResponse> listar(Long id, PageRequest pageRequest){
+        if(Objects.isNull(id)){
+            throw new IllegalArgumentException("Id nulo");
+        }
+        if(Objects.isNull(pageRequest)){
+            throw new IllegalArgumentException("PageRequest nulo");
+        }
+
         Usuario usuario = buscarUsuarioPorIdService.buscar(id);
+
+        if(Objects.isNull(usuario)){
+            throw new IllegalArgumentException("Sem Usuario Com esse id");
+        }
+
         List<Contato> contatos = contatoRepository.findByUsuario(usuario);
+
         List<Usuario> amigos = contatos.stream().map(Contato::getUsuarioConvidado).collect(Collectors.toList());
 
         List<Post> posts = buscarPostsPublicosDosAmigosService.buscar(amigos);
