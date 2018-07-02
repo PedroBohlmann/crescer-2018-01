@@ -1,6 +1,8 @@
 import React from 'react';
 
 import UsuarioService from "../../../service/UsuarioService";
+import PostService from "../../../service/PostService"
+
 import Post from "../../Post/Post";
 
 import { Input, Label, Button } from "reactstrap";
@@ -19,11 +21,13 @@ export default class Home extends React.Component{
             dateOfBirth: "",
             imageUrl: "",
             isPublic:false,
-            posts:[]
+            posts:[],
+            text:""
         }
         this.loadLoggedUserDataFromApi = this.loadLoggedUserDataFromApi.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.toggleIsPublic = this.toggleIsPublic.bind(this)
+        this.onCreatePost = this.onCreatePost.bind(this)
     }
 
     loadLoggedUserDataFromApi(){
@@ -37,6 +41,22 @@ export default class Home extends React.Component{
                     dateOfBirth: result.data.dataDeNascimento,
                     imageUrl:result.data.imagemUrl
                 })
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+    }
+
+    onCreatePost(){
+        let visibility = this.state.isPublic? "PUBLICO":"PRIVADO"
+        let data = {
+            texto:this.state.text,
+            visibilidade:visibility
+        }
+
+        PostService.createPost(data,localStorage.token)
+            .then((result)=>{
+                this.loadTimeForTheLoggedUser()
             })
             .catch((error)=>{
                 console.log(error)
@@ -71,10 +91,10 @@ export default class Home extends React.Component{
     }
 
     toggleIsPublic(event) {
-        let isPublic = this.state.isPublic
-        isPublic = !isPublic
+        let visibility = this.state.isPublic
+        visibility = !visibility
         this.setState({
-            isPublic
+            isPublic:visibility
         })
     }
 
@@ -110,6 +130,9 @@ export default class Home extends React.Component{
                             onChange={this.toggleIsPublic}
                             name="isPublic"
                         />
+                        <Button color="success" onClick={this.onCreatePost}>
+                                Create
+                            </Button>
                     </div>
                     <div className="home-posts-list">
                         {this.renderPosts()}

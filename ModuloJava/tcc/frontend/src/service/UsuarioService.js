@@ -12,11 +12,6 @@ export default class UserService{
             decoded = jwt_decode(localStorage.token);
         }
 
-        let headers={
-            'Content-Type': 'application/json',
-            'Authorization': token 
-        }
-
         return axios.get(`${CONFIG.API_URL_BASE}/public/usuario/${decoded["id"]}`,
         {
             headers:{
