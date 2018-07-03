@@ -7,6 +7,8 @@ import Post from "../../Post/Post";
 
 import { Input, Label, Button } from "reactstrap";
 
+import { Redirect } from "react-router-dom";
+
 import "./Home.css"
 
 export default class Home extends React.Component{
@@ -22,12 +24,14 @@ export default class Home extends React.Component{
             imageUrl: "",
             isPublic:false,
             posts:[],
-            text:""
+            text:"",
+            toLogin:false
         }
         this.loadLoggedUserDataFromApi = this.loadLoggedUserDataFromApi.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.toggleIsPublic = this.toggleIsPublic.bind(this)
         this.onCreatePost = this.onCreatePost.bind(this)
+        this.onLogout = this.onLogout.bind(this)
     }
 
     loadLoggedUserDataFromApi(){
@@ -103,9 +107,17 @@ export default class Home extends React.Component{
         this.loadTimeForTheLoggedUser()
     }
 
+    onLogout(){
+        localStorage.token = ""
+        this.setState({
+            toLogin:true
+        })
+    }
+
     render(){
         return(
             <div className="home-container">
+                {this.state.toLogin ? (<Redirect to="/"/>): (undefined)}
                 <div className="home-container-user-data">
                     <div className="home-container-user-data-line"><img  className="user-image" src={this.state.imageUrl} alt=""/></div>
                     <div className="home-container-user-data-line">Name :{this.state.name}</div>
@@ -113,6 +125,9 @@ export default class Home extends React.Component{
                     <div className="home-container-user-data-line">Nickname :{this.state.nickname}</div>
                     <div className="home-container-user-data-line">Date of Birth :{this.state.dateOfBirth}</div>
                     <div className="home-container-user-data-line"><img  className="user-image" src="https://cdn.discordapp.com/attachments/361913998851178507/463174007521411083/logo_do_petter.png"/></div>
+                    <Button color="danger" onClick={this.onLogout}>
+                        Logout
+                    </Button>
                 </div>
                 <div className="home-posts-container">
                     <div className="home-new-post-container">
@@ -122,6 +137,7 @@ export default class Home extends React.Component{
                             id="text"
                             placeholder="Post text here"
                             onChange={this.handleChange}
+                            name="text"
                         />
                     <Label for="isPublic">Is this post public?</Label>
                         <Input
@@ -132,7 +148,7 @@ export default class Home extends React.Component{
                         />
                         <Button color="success" onClick={this.onCreatePost}>
                                 Create
-                            </Button>
+                        </Button>
                     </div>
                     <div className="home-posts-list">
                         {this.renderPosts()}

@@ -6,6 +6,7 @@ import br.com.cwi.redesocial.dominio.repository.IPostRepository;
 import br.com.cwi.redesocial.service.usuario.BuscaUsuarioPorEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Objects;
 
@@ -18,6 +19,7 @@ public class CriarNovoPostService {
     @Autowired
     private BuscaUsuarioPorEmailService buscaUsuarioPorEmailService;
 
+    @Transactional
     public void criar(String email, Post post){
         Usuario usuarioCarregado = buscaUsuarioPorEmailService.buscar(email);
 

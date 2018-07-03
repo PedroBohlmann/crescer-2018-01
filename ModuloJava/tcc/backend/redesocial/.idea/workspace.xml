@@ -11,14 +11,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/redesocial$CriarCurtidaServiceTest.ic" NAME="CriarCurtidaServiceTest Coverage Results" MODIFIED="1530329649066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/redesocial$BuscarCurtidaPorUsuarioEPostServiceTest.ic" NAME="BuscarCurtidaPorUsuarioEPostServiceTest Coverage Results" MODIFIED="1530324617434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>br.com.cwi.redesocial.service.curtida.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/redesocial$br_com_cwi_redesocial_service_in_redesocial.ic" NAME="br.com.cwi.redesocial.service in redesocial Coverage Results" MODIFIED="1530551757256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>br.com.cwi.redesocial.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/redesocial$BuscarCurtidaPorUsuarioEPostServiceTest.ic" NAME="BuscarCurtidaPorUsuarioEPostServiceTest Coverage Results" MODIFIED="1530324617434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>br.com.cwi.redesocial.service.curtida.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/redesocial$br_com_cwi_redesocial_service_post_in_redesocial.ic" NAME="br.com.cwi.redesocial.service.post in redesocial Coverage Results" MODIFIED="1530488612814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>br.com.cwi.redesocial.service.post.*</FILTER>
@@ -26,63 +23,36 @@
     <SUITE FILE_PATH="coverage/redesocial$MapearPostServiceTest_testaMapearPostParaResponseComPostComDadosValidos.ic" NAME="MapearPostServiceTest.testaMapearPostParaResponseComPostComDadosValidos Coverage Results" MODIFIED="1530476376547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>br.com.cwi.redesocial.service.mapeamento.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/redesocial$CriarCurtidaServiceTest.ic" NAME="CriarCurtidaServiceTest Coverage Results" MODIFIED="1530329649066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.cwi.redesocial.service.curtida.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/redesocial$All_in_redesocial.ic" NAME="All in redesocial Coverage Results" MODIFIED="1530468089998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BuscarAmigosDeUmUsuarioServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/usuario/BuscarAmigosDeUmUsuarioServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/PostController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="46" column="91" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/response/LoginResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsuarioRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/request/UsuarioRequest.java">
+      <file leaf-file-name="CriarCurtidaService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/CriarCurtidaService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="27" column="28" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="28" />
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OldflixApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/OldflixApplication.java">
+      <file leaf-file-name="CriarNovoPostService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/CriarNovoPostService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="221">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/response/UsuarioResponse.java">
+      <file leaf-file-name="CadastraUsuarioService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/usuario/CadastraUsuarioService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="459">
+              <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -105,12 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/curtida/DeletarCurtidaServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/curtida/CriarCurtidaServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/request/ContatoRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/Contato.java" />
-        <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/contato/ConvidarParaAmizadeServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/StatusContato.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/request/ComentarioRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/request/ContatoConviteRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/usuario/BuscarUsuarioPorIdService.java" />
@@ -133,7 +97,6 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/IPostRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/BuscarPostPublicoPorIdService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/Post.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/AtualizarVisibilidadePostService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/request/AtualizarPostRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/PostController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/response/UsuarioResponse.java" />
@@ -156,6 +119,13 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/UsuarioController.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/usuario/BuscarAmigosDeUmUsuarioServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/security/WebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/comentario/CriarComentarioService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/CriarCurtidaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/DeletarCurtidaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/AtualizarVisibilidadePostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/CriarNovoPostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/usuario/AtualizaUsuarioService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/usuario/CadastraUsuarioService.java" />
       </list>
     </option>
   </component>
@@ -175,7 +145,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -187,8 +157,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,6 +225,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="redesocial" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redesocial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="redesocial" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="usuario" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -313,6 +291,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -522,6 +502,7 @@
       <workItem from="1530391043878" duration="17724000" />
       <workItem from="1530453025837" duration="7834000" />
       <workItem from="1530461272372" duration="32060000" />
+      <workItem from="1530582854242" duration="1867000" />
     </task>
     <servers />
   </component>
@@ -558,44 +539,45 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100567000" />
+    <option name="totallyTimeSpent" value="102434000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3769063" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3278867" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3019802" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.40015128" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13725491" />
+      <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32897604" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22087745" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22334754" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3769063" />
-      <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.40015128" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,51 +592,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/contato/DeletarAmizadeService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/CurtidaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/ComentarioController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.18.RELEASE/spring-aop-4.3.18.RELEASE-sources.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="176" selection-start-line="176" selection-end-line="176" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.18.RELEASE/spring-web-4.3.18.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="215" selection-start-line="215" selection-end-line="215" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/security/UserPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/IUsuarioRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/repository/IContatoRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/response/post/UsuarioSoComDadosResponse.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/model/response/CurtidaResponse.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/dominio/Curtida.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -723,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/CriarNovoPostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearCurtidaService.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/mapeamento/MapearCurtidaServiceTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/mapeamento/MapearComentarioService.java">
@@ -770,7 +700,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/post/BuscarPostPublicoPorIdServiceTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/post/AtualizarVisibilidadePostServiceTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/AtualizarVisibilidadePostService.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.13.RELEASE/spring-data-commons-1.13.13.RELEASE-sources.jar!/org/springframework/data/domain/PageRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -807,8 +736,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/OldflixApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="204">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -826,16 +755,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/UsuarioController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/cwi/redesocial/service/usuario/BuscarAmigosDeUmUsuarioServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="374">
           <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -843,10 +765,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/UsuarioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="96" column="81" lean-forward="true" selection-start-line="96" selection-start-column="81" selection-end-line="96" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/web/PostController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="46" column="91" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
+        <state relative-caret-position="445">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/contato/ConvidarParaAmizadeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/contato/AceitarPedidoDeAmizadeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/contato/DeletarAmizadeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/comentario/CriarComentarioService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/DeletarCurtidaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/login/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/curtida/CriarCurtidaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/AtualizarVisibilidadePostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/usuario/AtualizaUsuarioService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/post/CriarNovoPostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cwi/redesocial/service/usuario/CadastraUsuarioService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
         </state>
       </provider>
     </entry>

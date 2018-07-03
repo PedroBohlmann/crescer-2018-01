@@ -26,6 +26,11 @@
     margin: 10px;
 }
 
+.home-posts-list>*{
+    margin:10px;
+    color: white;
+}
+
 
 .user-image{
     width: 100px;

@@ -8,6 +8,7 @@ import br.com.cwi.redesocial.service.usuario.BuscaUsuarioPorEmailService;
 import br.com.cwi.redesocial.service.post.BuscarPostPorIdService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Objects;
 
@@ -23,6 +24,7 @@ public class CriarComentarioService {
     @Autowired
     private BuscarPostPorIdService buscarPostPorIdService;
 
+    @Transactional
     public void criar(String email, Long idPost,Comentario comentario){
         Usuario usuarioCarregado = buscaUsuarioPorEmailService.buscar(email);
         Post post = buscarPostPorIdService.buscar(idPost);

@@ -5,6 +5,7 @@ import br.com.cwi.redesocial.dominio.VisibilidadePost;
 import br.com.cwi.redesocial.dominio.repository.IPostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Objects;
 
@@ -17,6 +18,7 @@ public class AtualizarVisibilidadePostService {
     @Autowired
     private BuscarPostPorIdService buscarPostPorIdService;
 
+    @Transactional
     public void atualizar(Long id, VisibilidadePost visibilidade){
         if(Objects.isNull(id)){
             throw new IllegalArgumentException("Id post nulo");
