@@ -1,0 +1,35 @@
+.login-container{
+    display: flex;
+    background-image: url("https://cdn.discordapp.com/attachments/457910736912384008/463165260115738625/20180216213713_1.jpg");
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.login-form-container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+.login-form-container-group{
+    background-color: rgba(133, 130, 130, 0.74);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.login-form-container-button-group > *{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.floating-logo-login{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
