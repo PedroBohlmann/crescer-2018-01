@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Repository
 public class MemoryFitaRepository implements IFitaRepository {
 
     private List<Fita> fitas = new ArrayList<>();

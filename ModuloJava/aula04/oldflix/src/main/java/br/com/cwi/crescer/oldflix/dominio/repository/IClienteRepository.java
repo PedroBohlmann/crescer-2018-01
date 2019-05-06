@@ -1,11 +1,12 @@
 package br.com.cwi.crescer.oldflix.dominio.repository;
 
 import br.com.cwi.crescer.oldflix.dominio.Cliente;
+import org.springframework.data.repository.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface IClienteRepository {
+public interface IClienteRepository extends Repository<Cliente,Long> {
 
     List<Cliente> findAll();
 
@@ -15,4 +16,5 @@ public interface IClienteRepository {
 
     void delete(Cliente cliente);
 
+    Optional<Cliente> findByCpf(String cpf);
 }
